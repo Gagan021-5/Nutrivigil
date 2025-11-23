@@ -1,13 +1,13 @@
 import express from "express";
 import cors from "cors";
-import router from "./routers/processingroute.js";
+import foodrouter from "./routers/foodroute.js";
 import "dotenv/config";
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/analyze", router);
+app.use("/analyze", foodrouter);
 
 app.get("/", (req, res) => {
   res.send({ msg: "Hey mate ! Backend Running!" });
