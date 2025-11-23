@@ -61,7 +61,6 @@ const Navbar = () => {
         </motion.div>
 
         <div className="flex items-center gap-6">
-          {/* Desktop Navigation */}
           <div className="hidden md:flex gap-6">
             {navItem("/", "Home")}
             {navItem("/profile", "My Profile")}
@@ -70,9 +69,9 @@ const Navbar = () => {
           {/* Theme Toggle */}
           <motion.button
             onClick={toggleTheme}
-            className={`p-2 rounded-lg transition-all duration-300 flex items-center justify-center border ${
+            className={`p-2 rounded-lg  cursor-pointer transition-all duration-300 flex items-center justify-center border ${
               theme === "dark"
-                ? "bg-white/10 hover:bg-white/20 border-white/20"
+                ? "bg-white/10  hover:bg-white/20 border-white/20"
                 : "bg-gray-100 hover:bg-gray-200 border-gray-300"
             }`}
             whileHover={{ scale: 1.1 }}
@@ -80,7 +79,7 @@ const Navbar = () => {
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-yellow-400" />
+              <Sun className="w-5 h-5 text-white/90" />
             ) : (
               <Moon className="w-5 h-5 text-blue-600" />
             )}

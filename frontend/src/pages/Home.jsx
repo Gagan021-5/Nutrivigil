@@ -49,7 +49,7 @@ function Home() {
 
         <motion.p
           className={`text-lg md:text-xl mb-8 drop-shadow-md transition-colors ${
-            theme === 'dark' ? "text-white/90" : "text-gray-700"
+            theme === 'dark' ? "text-white/90" : "text-blue-800"
           }`}
           variants={fadeUp}
         >
@@ -59,10 +59,10 @@ function Home() {
         <motion.div variants={fadeUp}>
           <Link
             to="/scan"
-            className={`inline-block px-12 py-4 backdrop-blur-2xl focus:border-b-blue-800 focus:ring border text-lg font-semibold rounded-xl shadow-xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-1 ${
+            className={`inline-block px-12 py-4 backdrop-blur-2xl focus:border-b-blue-800 focus:ring border text-lg font-semibold rounded-xl shadow-xl hover:shadow-3xl transition-all duration-300 hover:scale-105 ${
               theme === 'dark'
                 ? "bg-[#3b3b49]/30 border-white/20 text-white"
-                : "bg-white/80 border-gray-300 text-gray-900 hover:bg-white"
+                : "bg-white/80 border-gray-300 text-indigo-600 hover:bg-white"
             }`}
           >
             Start Scanning
@@ -99,17 +99,17 @@ function Home() {
         >
           {[
             {
-              icon: <Camera size={32} className="text-blue-400" />,
+              icon: <Camera size={32} className="text-indigo-400" />,
               title: "1. Snap Photo",
               desc: "Take a picture of your food",
             },
             {
-              icon: <Brain size={32} className="text-purple-400" />,
+              icon: <Brain size={32} className="text-indigo-400" />,
               title: "2. AI Analysis",
               desc: "Our AI identifies nutrition",
             },
             {
-              icon: <Shield size={32} className="text-emerald-400" />,
+              icon: <Shield size={32} className="text-indigo-400" />,
               title: "3. Safety Score",
               desc: "Instant health recommendations",
             },
