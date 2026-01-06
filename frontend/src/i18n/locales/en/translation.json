@@ -16,7 +16,7 @@
     "profile.dark": "My Profile (Dark)",
     "profile.light": "My Profile (Light)"
   },
-  
+
   "steps": {
     "upload": {
       "title": "1. Upload Photo",
@@ -33,15 +33,15 @@
   },
 
   "profile": {
-  "title": "My Profile",
-  "subtitle": "Manage your health preferences",
-  "healthCondition": "Health Condition",
-  "selectCondition": "Select a condition...",
-  "saved": "✓ Saved automatically",
-  "whyTitle": "Why set your condition?",
-  "whyDesc": "This helps NutriVigil give you accurate, personalized food safety recommendations based on your health condition. Saved locally, not uploaded."
+    "title": "My Profile",
+    "subtitle": "Manage your health preferences",
+    "healthCondition": "Health Condition",
+    "selectCondition": "Select a condition...",
+    "saved": "✓ Saved automatically",
+    "whyTitle": "Why set your condition?",
+    "whyDesc": "This helps NutriVigil give you accurate, personalized food safety recommendations based on your health condition. Saved locally, not uploaded."
   },
-  
+
   "conditions": {
     "diabetes": "Diabetes",
     "hypertension": "Hypertension",
@@ -65,7 +65,9 @@
     "scanning": "Scanning...",
     "food": "Food",
     "reason": "Reason",
-    "suggestion": "Suggestion"
+    "suggestion": "Suggestion",
+    "submitQuery": "Submit Query",
+    "thinking": "Thinking..."
   },
   
   "errors": {

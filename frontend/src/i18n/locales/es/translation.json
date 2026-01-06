@@ -8,7 +8,7 @@
     "home": "Inicio",
     "profile": "Mi perfil"
   },
-  
+
   "steps": {
     "upload": {
       "title": "1. Subir foto",
@@ -33,7 +33,7 @@
     "whyTitle": "¿Por qué establecer tu condición?",
     "whyDesc": "Esto ayuda a NutriVigil a proporcionar recomendaciones de seguridad alimentaria precisas y personalizadas según tu condición de salud. Se guarda localmente, no se sube."
   },
-  
+
   "conditions": {
     "diabetes": "Diabetes",
     "hypertension": "Hipertensión",
@@ -57,9 +57,11 @@
     "scanning": "Escaneando...",
     "food": "Comida",
     "reason": "Razón",
-    "suggestion": "Sugerencia"
+    "suggestion": "Sugerencia",
+    "submitQuery": "Enviar consulta",
+    "thinking": "Pensando..."
   },
-  
+
   "errors": {
     "noImage": "Por favor selecciona un archivo de imagen",
     "noCondition": "Por favor establece primero tu condición de salud",

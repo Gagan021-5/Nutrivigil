@@ -11,12 +11,13 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
+import VoiceQuery from "../components/VoiceQuery";
 
 const STORAGE_KEY = "nutriguard";
 
 function ScanPage() {
   const { theme } = useTheme();
-  const {t}=useTranslation();
+  const { t } = useTranslation();
 
   const [selectedFile, setSelectedFile] = useState(null);
   const [preview, setPreview] = useState(null);
@@ -24,6 +25,8 @@ function ScanPage() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   const [condition, setCondition] = useState("");
+  const [followUpQuestion, setFollowUpQuestion] = useState("");
+  const [voiceAnswer, setVoiceAnswer] = useState(null);
 
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -42,26 +45,52 @@ function ScanPage() {
   //   reader.onloadend = () => setPreview(reader.result);
   //   reader.readAsDataURL(file);
   // };
+  const handleVoiceSubmit = async () => {
+    if (!followUpQuestion || !result) return;
+
+    setLoading(true);
+    setError(null);
+
+    try {
+      // send a JSON object, not FormData, because there is no NEW image
+      const res = await axios.post("https://nutb.onrender.com/analyze", {
+        condition: condition,
+        query: followUpQuestion,
+        foodName: result.food_name  
+      });
+
+      // Update the result state with the AI's answer to the voice query
+      setVoiceAnswer(res.data);
+      setFollowUpQuestion("");  
+    } catch (err) {
+      setError(
+        err.response?.data?.error ||
+        "Failed to get an answer from the assistant."
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
   const handleFileChange = (e) => {
-  const file = e.target.files?.[0];
-  if (!file) return;
+    const file = e.target.files?.[0];
+    if (!file) return;
 
-  // ✅ 10MB client-side check
-  if (file.size > 10 * 1024 * 1024) {
-    setError("Image size must be less than 10MB");
-    setSelectedFile(null);
-    setPreview(null);
-    return;
-  }
+    // ✅ 10MB client-side check
+    if (file.size > 10 * 1024 * 1024) {
+      setError("Image size must be less than 10MB");
+      setSelectedFile(null);
+      setPreview(null);
+      return;
+    }
 
-  setSelectedFile(file);
-  setError(null);
-  setResult(null);
+    setSelectedFile(file);
+    setError(null);
+    setResult(null);
 
-  const reader = new FileReader();
-  reader.onloadend = () => setPreview(reader.result);
-  reader.readAsDataURL(file);
-};
+    const reader = new FileReader();
+    reader.onloadend = () => setPreview(reader.result);
+    reader.readAsDataURL(file);
+  };
 
 
   const handleScan = async () => {
@@ -78,7 +107,7 @@ function ScanPage() {
       formData.append("condition", condition);
 
       const res = await axios.post("https://nutb.onrender.com/analyze", formData);
-
+      
       setResult(res.data);
     } catch (err) {
       setError(
@@ -120,8 +149,8 @@ function ScanPage() {
         >
           <h1
             className={`text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r mb-2 transition-colors ${theme === 'dark'
-                ? "from-purple-500 to-blue-500 drop-shadow-[0_0_20px_rgba(0,150,255,0.5)]"
-                : "from-purple-600 to-blue-600"
+              ? "from-purple-500 to-blue-500 drop-shadow-[0_0_20px_rgba(0,150,255,0.5)]"
+              : "from-purple-600 to-blue-600"
               }`}
           >
             {t("scan.title")}
@@ -137,8 +166,8 @@ function ScanPage() {
               <motion.div
                 key="badge"
                 className={`inline-block px-5 py-2 rounded-full text-xs font-semibold backdrop-blur-xl border transition-colors ${theme === 'dark'
-                    ? "bg-blue-400/10 text-blue-300 border-blue-400/20"
-                    : "bg-blue-100 text-blue-700 border-blue-300"
+                  ? "bg-blue-400/10 text-blue-300 border-blue-400/20"
+                  : "bg-blue-100 text-blue-700 border-blue-300"
                   }`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -150,8 +179,8 @@ function ScanPage() {
               <motion.div
                 key="warning"
                 className={`inline-block px-5 py-2 rounded-full text-xs backdrop-blur-xl border transition-colors ${theme === 'dark'
-                    ? "bg-yellow-400/10 text-yellow-300 border-yellow-300/20"
-                    : "bg-yellow-100 text-yellow-700 border-yellow-300"
+                  ? "bg-yellow-400/10 text-yellow-300 border-yellow-300/20"
+                  : "bg-yellow-100 text-yellow-700 border-yellow-300"
                   }`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -243,8 +272,8 @@ function ScanPage() {
             onClick={handleScan}
             disabled={loading || !selectedFile || !condition}
             className={`w-full py-4 rounded-2xl text-base font-semibold text-white shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed transition-all cursor-pointer flex items-center justify-center gap-2 ${theme === 'dark'
-                ? "bg-gradient-to-r from-purple-800 to-indigo-500"
-                : "bg-gradient-to-r from-purple-600 to-indigo-600"
+              ? "bg-gradient-to-r from-purple-800 to-indigo-500"
+              : "bg-gradient-to-r from-purple-600 to-indigo-600"
               }`}
             whileHover={{ scale: !loading ? 1.05 : 1 }}
             whileTap={{ scale: !loading ? 0.95 : 1 }}
@@ -264,8 +293,8 @@ function ScanPage() {
           {error && (
             <motion.div
               className={`mt-6 p-4 border rounded-2xl flex items-center gap-3 backdrop-blur-xl transition-colors ${theme === 'dark'
-                  ? "bg-red-500/10 border-red-500/20 text-red-300"
-                  : "bg-red-50 border-red-200 text-red-700"
+                ? "bg-red-500/10 border-red-500/20 text-red-300"
+                : "bg-red-50 border-red-200 text-red-700"
                 }`}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -281,8 +310,8 @@ function ScanPage() {
           {result && (
             <motion.div
               className={`mt-6 p-7 rounded-2xl shadow-xl backdrop-blur-xl border transition-colors ${theme === 'dark'
-                  ? "bg-blue-500/5 border-blue-400/10"
-                  : "bg-blue-50 border-blue-200"
+                ? "bg-blue-500/5 border-blue-400/10"
+                : "bg-blue-50 border-blue-200"
                 }`}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -322,6 +351,44 @@ function ScanPage() {
                     {result.suggestion}
                   </div>
                 )}
+              </div>
+              <AnimatePresence>
+                {voiceAnswer && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`mt-7 p-6 rounded-2xl border-l-4 ${theme === 'dark' ? "bg-purple-500/10 border-purple-500" : "bg-purple-50 border-purple-500"}`}
+                  >
+                    <h3 className="text-s font-bold text-purple-400 uppercase mb-2">Here’s what we found</h3>
+                    {voiceAnswer.answer && (
+                      <p className="text-s italic opacity-70">{voiceAnswer.answer}</p>
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+              <div className={`mt-6 pt-6 border-t ${theme === 'dark' ? "border-blue-400/10" : "border-blue-200"}`}>
+                <h3 className="text-s font-bold text-blue-400 uppercase mb-3">Ask About This Food</h3>
+                <VoiceQuery onTranscriptChange={(text) => setFollowUpQuestion(text)} />
+
+                <motion.button
+                  onClick={handleVoiceSubmit}
+                  disabled={loading || !followUpQuestion}
+                  className={`w-full py-4 rounded-2xl text-base font-semibold text-white shadow-lg hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed transition-all cursor-pointer flex items-center justify-center gap-2 ${theme === 'dark'
+                    ? "bg-gradient-to-r from-purple-800 to-indigo-500"
+                    : "bg-gradient-to-r from-purple-600 to-indigo-600"
+                    }`}
+                  whileHover={{ scale: !loading ? 1.05 : 1 }}
+                  whileTap={{ scale: !loading ? 0.95 : 1 }}
+                >
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-6 h-6 animate-spin" />
+                      <span>{t("scan.thinking")}</span>
+                    </>
+                  ) : (
+                    <span>{t("scan.submitQuery")}</span>
+                  )}
+                </motion.button>
               </div>
             </motion.div>
           )}

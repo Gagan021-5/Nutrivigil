@@ -3,12 +3,10 @@
   "tagline": "Votre scanner de santé personnel basé sur l’IA",
   "startScanning": "Commencer l’analyse",
   "howItWorks": "Comment ça marche",
-
   "nav": {
     "home": "Accueil",
     "profile": "Mon profil"
   },
-  
   "steps": {
     "upload": {
       "title": "1. Télécharger une photo",
@@ -23,7 +21,6 @@
       "desc": "Recommandations de santé instantanées"
     }
   },
-
   "profile": {
     "title": "Mon Profil",
     "subtitle": "Gérez vos préférences de santé",
@@ -33,7 +30,6 @@
     "whyTitle": "Pourquoi définir votre condition ?",
     "whyDesc": "Cela aide NutriVigil à fournir des recommandations de sécurité alimentaire précises et personnalisées en fonction de votre état de santé. Les données sont stockées localement, pas téléchargées."
   },
-  
   "conditions": {
     "diabetes": "Diabète",
     "hypertension": "Hypertension",
@@ -44,7 +40,6 @@
     "lactose": "Intolérance au lactose",
     "none": "Aucune"
   },
-
   "scan": {
     "title": "Scanner un aliment",
     "subtitle": "Téléchargez une photo pour analyser la sécurité nutritionnelle",
@@ -57,9 +52,10 @@
     "scanning": "Analyse en cours...",
     "food": "Aliment",
     "reason": "Raison",
-    "suggestion": "Suggestion"
+    "suggestion": "Suggestion",
+    "submitQuery": "Soumettre la question",
+    "thinking": "Réflexion..."
   },
-  
   "errors": {
     "noImage": "Veuillez sélectionner un fichier image",
     "noCondition": "Veuillez d'abord définir votre condition de santé",

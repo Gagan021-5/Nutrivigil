@@ -6,6 +6,35 @@ import getMimeType from "../utils/getmemetype.js";
 
 export const analyzeFood = async (req, res) => {
   try {
+    const condition = req.body.condition;
+    const query = req.body.query;
+    const existingFoodName = req.body.foodName;
+
+    if (!req.file && query) {
+      const followUpPrompt = `
+        Context: The user is asking about ${existingFoodName || "this food"}.
+        Health Condition: ${condition}
+        User's Question: "${query}"
+        
+        Analyze if this is safe based on the condition. 
+        Output ONLY JSON:
+        {
+          "traffic_light": "green", 
+          "verdict_title": "Follow-up Answer",
+          "answer": "Direct answer to the user's question and a add helpful tip.",
+        }
+      `;
+
+      const result = await geminiModel.generateContent(followUpPrompt);
+      let responseText = result.response.candidates[0].content.parts[0].text;
+      
+      responseText = responseText.replace(/```json/g, "").replace(/```/g, "").trim();
+      
+      return res.json({ 
+        food_name: existingFoodName, 
+        ...JSON.parse(responseText) 
+      });
+    }
     if (!req.file)
       return res.status(400).json({ error: "No image file provided" });
 
@@ -13,8 +42,7 @@ export const analyzeFood = async (req, res) => {
       return res.status(400).json({ error: "No condition provided" });
 
     const imagePath = req.file.path;
-    const condition = req.body.condition;
-
+    
     const base64 = imageToBase64(imagePath);
     const mimeType = getMimeType(imagePath);
 
@@ -34,7 +62,7 @@ export const analyzeFood = async (req, res) => {
       identify.response.candidates[0].content.parts[0].text.trim();
 
     // Nutrition API
-    const nutrition = await axios.get(
+     const nutrition = await axios.get(
       "https://api.api-ninjas.com/v1/nutrition",
       {
         params: { query: foodName },
@@ -44,7 +72,7 @@ export const analyzeFood = async (req, res) => {
 
     //check
     const nutritionData = nutrition.data && nutrition.data.length > 0 ? nutrition.data[0] : {};
-
+   
     // Analysis Prompt
     const analysisPrompt = `
       Here is the nutritional data for ${foodName}: 

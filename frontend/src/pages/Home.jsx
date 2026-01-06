@@ -213,43 +213,9 @@ function Home() {
             </div>
           </div>
         </div>
-
-      </div>
+      </motion.div>
     </div>
   );
-}
-
-function FeatureCard({ isDark, icon, title, desc, delay }) {
-  return (
-    <motion.div
-      variants={fadeInUp}
-      className={`p-8 rounded-2xl border transition-all duration-300 hover:-translate-y-2 hover:shadow-xl ${isDark
-        ? "bg-[#121216] border-gray-800 hover:border-gray-700 hover:shadow-blue-900/10"
-        : "bg-white border-gray-100 hover:border-blue-100 hover:shadow-blue-100"
-        }`}
-    >
-      <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 ${isDark ? "bg-gray-800" : "bg-blue-50"}`}>
-        {icon}
-      </div>
-      <h3 className={`text-xl font-bold mb-3 ${isDark ? "text-white" : "text-gray-900"}`}>{title}</h3>
-      <p className={`leading-relaxed ${isDark ? "text-gray-400" : "text-gray-600"}`}>
-        {desc}
-      </p>
-    </motion.div>
-  );
-}
-
-function BenefitRow({ isDark, icon, text }) {
-  return (
-    <div className="flex items-center gap-4">
-      <div className={`p-2 rounded-lg ${isDark ? "bg-blue-500/20 text-blue-400" : "bg-blue-100 text-blue-600"}`}>
-        {icon}
-      </div>
-      <span className={`font-medium ${isDark ? "text-gray-300" : "text-gray-700"}`}>
-        {text}
-      </span>
-    </div>
-  )
 }
 
 export default Home;

@@ -8,7 +8,7 @@
     "home": "होम",
     "profile": "मेरा प्रोफ़ाइल"
   },
-  
+
   "steps": {
     "upload": {
       "title": "1. फोटो अपलोड करें",
@@ -57,7 +57,9 @@
     "scanning": "स्कैन किया जा रहा है...",
     "food": "भोजन",
     "reason": "कारण",
-    "suggestion": "सुझाव"
+    "suggestion": "सुझाव",
+    "submitQuery": "प्रश्न भेजें",
+    "thinking": "सोच रहा हूँ..."
   },
   
   "errors": {
