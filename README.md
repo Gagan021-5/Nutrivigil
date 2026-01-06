@@ -150,6 +150,15 @@ cd ../backend && npm run dev
 - PWA-ready, responsive
 
 ---
+## ✨ Contributors
+
+Thanks to all the amazing people who contributed to **NutriVigil** 💚  
+
+<a href="https://github.com/Gagan021-5/Nutrivigil/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Gagan021-5/Nutrivigil" />
+</a>
+
+---
 
 ## 🚨 Disclaimer
 
