@@ -1,216 +1,221 @@
-import React, { useState, useEffect } from "react";
-import {
-  Zap,
-  ArrowRight,
-  Github,
-  Sparkles,
-  Scan,
-  Brain,
-  ShieldCheck,
-} from "lucide-react";
+import { Link } from "react-router-dom";
+import { Camera, Brain, Shield, ArrowRight, Activity, CheckCircle2, Zap, Smartphone, ChevronRight, Star, Heart } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; 
-import { useNavigate } from "react-router-dom";
+import { useTheme } from "../contexts/ThemeContext";
+import { useTranslation } from "react-i18next";
+import heroImg from "../assets/nutrivigile.jpeg";
 
-const steps = [
-  {
-    icon: <Scan size={28} />,
-    title: "Scan the Product",
-    desc: "Use your camera to instantly scan packaged food labels.",
-  },
-  {
-    icon: <Brain size={28} />,
-    title: "Smart Analysis",
-    desc: "On-device AI analyzes nutrients, additives & more.",
-  },
-  {
-    icon: <ShieldCheck size={28} />,
-    title: "Private & Secure",
-    desc: "Everything happens locally — no data is stored.",
-  },
-];
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
-const HowItWorks = ({ isLight }) => (
+const staggerContainer = {
+  visible: { transition: { staggerChildren: 0.15 } }
+};
 
+function Home() {
+  const { theme } = useTheme();
+  const { t } = useTranslation();
 
-  <section className="relative z-10 max-w-7xl mx-auto px-6 py-32">
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="text-center mb-20"
-    >
-      <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight">
-        How It <span className="text-indigo-500">Works</span>
-      </h2>
-      <p className="mt-6 text-xl max-w-2xl mx-auto text-slate-500">
-        Three simple steps to smarter, safer food decisions.
-      </p>
-    </motion.div>
-
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-      {steps.map((step, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: i * 0.15 }}
-          className={`rounded-3xl p-10 border backdrop-blur-xl transition-all hover:-translate-y-2 ${
-            isLight
-              ? "bg-white border-slate-200 shadow-xl"
-              : "bg-white/5 border-white/10"
-          }`}
-        >
-          <div className="w-14 h-14 rounded-2xl bg-indigo-600 text-white flex items-center justify-center mb-6">
-            {step.icon}
-          </div>
-          <h3 className="text-2xl font-bold mb-4">{step.title}</h3>
-          <p className="text-lg text-slate-500">{step.desc}</p>
-        </motion.div>
-      ))}
-    </div>
-  </section>
-);
-
-const Home = () => {
-  const [currentTheme, setCurrentTheme] = useState("dark");
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const updateTheme = () => {
-      const isDark =
-        document.documentElement.classList.contains("dark") ||
-        document.documentElement.getAttribute("data-theme") === "dark";
-      setCurrentTheme(isDark ? "dark" : "light");
-    };
-    updateTheme();
-    const observer = new MutationObserver(updateTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class", "data-theme"],
-    });
-    return () => observer.disconnect();
-  }, []);
-
-  const isLight = currentTheme === "light";
+  const isDark = theme === "dark";
 
   return (
-    <div
-      className={`min-h-screen relative flex flex-col items-center justify-center px-6 overflow-hidden transition-colors duration-1000 ${
-        isLight ? "bg-[#fcfdff] text-slate-900" : "bg-[#02020a] text-white"
-      }`}
-    >
-      {/* Hero Section */}
-      <div className="max-w-7xl mx-auto w-full flex flex-col lg:flex-row items-center justify-between gap-16 py-20 relative z-10">
-        {/* LEFT */}
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex-1 text-center lg:text-left space-y-10"
-        >
-          <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase border ${
-              isLight
-                ? "bg-indigo-50 border-indigo-100 text-indigo-600"
-                : "bg-white/5 border-white/10 text-indigo-400"
-            }`}
-          >
-            <Sparkles size={14} /> Intelligence Protocol v1.0
-          </div>
+    <div className={`min-h-screen relative overflow-hidden transition-colors duration-500 ${isDark ? "bg-[#0a0a0c]" : "bg-gray-50"}`}>
 
-          <h1 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter">
-            Nutri
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-blue-500 to-purple-500">
-              Vigil
-            </span>
-          </h1>
-
-          <p
-            className={`text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 font-medium leading-relaxed ${
-              isLight ? "text-slate-500" : "text-slate-400"
-            }`}
-          >
-            Personalized scanning engine built for the next generation of dietary
-            awareness. On-device analysis. Absolute privacy.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-5">
-            <button 
-            onClick={() => navigate('/scan')}
-              className={`group px-10 py-5 text-lg font-bold rounded-2xl transition-all flex items-center gap-3 shadow-2xl hover:scale-105 active:scale-95 ${
-                isLight
-                  ? "bg-indigo-600 text-white shadow-indigo-200"
-                  : "bg-white text-black hover:bg-indigo-50 shadow-white/5"
-              }`}
-            >
-              Start Scanning{" "}
-              <ArrowRight
-                size={20}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </button>
-
-            <button
-              className={`px-10 py-5 text-lg font-bold rounded-2xl border transition-all flex items-center gap-2 hover:bg-current/5 ${
-                isLight ? "border-slate-200 text-slate-800" : "border-white/10 text-white"
-              }`}
-            >
-              <Github size={20} /> Open Source
-            </button>
-          </div>
-        </motion.div>
-
-        {/* RIGHT VISUAL */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, rotate: 5 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex-1 relative w-full flex justify-center lg:justify-end"
-        >
-          {/* Main Phone Mockup */}
-          <div className="relative w-[300px] h-[550px] md:w-[350px] md:h-[600px]">
-            <div
-              className={`absolute inset-0 z-20 rounded-[3rem] border-[8px] overflow-hidden shadow-2xl transition-colors ${
-                isLight ? "border-slate-900" : "border-slate-800"
-              }`}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c"
-                alt="App Interface"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div
-              className={`absolute -right-12 top-20 w-full h-full z-10 rounded-[3rem] border-4 opacity-40 transform rotate-12 transition-colors ${
-                isLight ? "bg-white border-slate-100" : "bg-slate-900 border-white/5"
-              }`}
-            >
-              <img
-                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061"
-                alt="Food & Nutrition"
-                className="w-full h-full object-cover rounded-[2.5rem]"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-3xl z-30 flex items-center justify-center text-white shadow-xl animate-bounce">
-              <Zap size={40} fill="currentColor" />
-            </div>
-          </div>
-        </motion.div>
+      {/* Dynamic Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className={`absolute top-[-20%] right-[-10%] w-[800px] h-[800px] rounded-full blur-[120px] opacity-30 ${isDark ? "bg-blue-600" : "bg-blue-300"}`} />
+        <div className={`absolute bottom-[-10%] left-[-10%] w-[600px] h-[600px] rounded-full blur-[100px] opacity-20 ${isDark ? "bg-purple-600" : "bg-purple-300"}`} />
       </div>
 
-      {/* HOW IT WORKS SECTION */}
-      <HowItWorks isLight={isLight} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-32 pb-20">
 
-      <style dangerouslySetInnerHTML={{ __html: `
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; -webkit-font-smoothing: antialiased; }
-      `}} />
+        {/* HERO SECTION */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24">
+
+          {/* Left Content */}
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
+            className="text-center lg:text-left"
+          >
+            <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border mb-6 text-sm font-semibold backdrop-blur-md shadow-sm"
+              style={{
+                borderColor: isDark ? "rgba(59, 130, 246, 0.3)" : "rgba(37, 99, 235, 0.2)",
+                backgroundColor: isDark ? "rgba(59, 130, 246, 0.1)" : "rgba(255, 255, 255, 0.8)",
+                color: isDark ? "#60a5fa" : "#2563eb"
+              }}
+            >
+              <Activity size={14} className="animate-pulse" />
+              <span>AI-Powered Health Companion</span>
+            </motion.div>
+
+            <motion.h1 variants={fadeInUp} className={`text-5xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1] ${isDark ? "text-white" : "text-gray-900"}`}>
+              Eat Smart. <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+                Live Healthy.
+              </span>
+            </motion.h1>
+
+            <motion.p variants={fadeInUp} className={`text-lg lg:text-xl mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0 ${isDark ? "text-gray-400" : "text-gray-600"}`}>
+              {t("tagline")}. Instantly analyze nutritional value and get personalized safety scores based on your health profile.
+            </motion.p>
+
+            <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <Link
+                to="/scan"
+                className={`group relative overflow-hidden rounded-xl px-8 py-4 font-bold text-white shadow-xl transition-all hover:scale-105 hover:shadow-2xl ${isDark ? "bg-blue-600 hover:bg-blue-500 shadow-blue-900/40" : "bg-blue-600 hover:bg-blue-700 shadow-blue-200"}`}
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  {t("startScanning")}
+                  <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
+                </span>
+              </Link>
+
+              <button
+                onClick={() => document.getElementById('features').scrollIntoView({ behavior: 'smooth' })}
+                className={`flex items-center gap-2 px-8 py-4 rounded-xl font-semibold border transition-all hover:bg-opacity-10 ${isDark ? "border-gray-700 text-gray-300 hover:bg-white" : "border-gray-300 text-gray-700 hover:bg-black"}`}
+              >
+                How it Works
+              </button>
+            </motion.div>
+
+            {/* Social Proof */}
+            <motion.div variants={fadeInUp} className="mt-10 flex items-center justify-center lg:justify-start gap-4 text-sm font-medium opacity-80">
+              <div className="flex -space-x-2">
+                {[1, 2, 3].map(i => (
+                  <div key={i} className={`w-8 h-8 rounded-full border-2 flex items-center justify-center text-xs font-bold ${isDark ? "border-gray-900 bg-gray-800" : "border-white bg-gray-200"}`}>
+                    U{i}
+                  </div>
+                ))}
+              </div>
+              <div className={isDark ? "text-gray-400" : "text-gray-600"}>
+                Trusted by <span className={isDark ? "text-gray-200" : "text-gray-900"}>1,000+</span> health enthusiasts
+              </div>
+            </motion.div>
+          </motion.div>
+
+          {/* Right Visual */}
+          <motion.div
+            initial={{ opacity: 0, x: 50, rotate: 5 }}
+            animate={{ opacity: 1, x: 0, rotate: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative hidden lg:block"
+          >
+            <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-opacity-50"
+              style={{ borderColor: isDark ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.05)" }}>
+              <img src={heroImg} alt="App Dashboard" className="w-full h-auto object-cover transform transition-transform hover:scale-105 duration-700" />
+
+              {/* Floating Badge */}
+              <motion.div
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                className={`absolute bottom-6 left-6 px-4 py-3 rounded-2xl flex items-center gap-3 shadow-lg backdrop-blur-md ${isDark ? "bg-black/60 text-white" : "bg-white/80 text-gray-900"}`}
+              >
+                <div className="bg-green-500 rounded-full p-1.5">
+                  <CheckCircle2 size={16} className="text-white" />
+                </div>
+                <div>
+                  <div className="text-xs opacity-70">Safety Score</div>
+                  <div className="font-bold">98/100</div>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Background Blob for Image */}
+            <div className={`absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-[2.5rem] -z-10 blur-xl opacity-30 animate-pulse`} />
+          </motion.div>
+        </div>
+
+
+        {/* FEATURES GRID */}
+        <motion.div
+          id="features"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={staggerContainer}
+          className="mb-32"
+        >
+          <div className="text-center mb-16">
+            <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${isDark ? "text-white" : "text-gray-900"}`}>
+              Advanced Nutrition Intelligence
+            </h2>
+            <p className={`text-xl max-w-2xl mx-auto ${isDark ? "text-gray-400" : "text-gray-600"}`}>
+              Everything you need to make safer, healthier food choices in seconds.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <FeatureCard
+              isDark={isDark}
+              icon={<Camera className="text-purple-500" size={32} />}
+              title={t("steps.upload.title")}
+              desc={t("steps.upload.desc")}
+              delay={0}
+            />
+            {/* Feature 2 */}
+            <FeatureCard
+              isDark={isDark}
+              icon={<Brain className="text-blue-500" size={32} />}
+              title={t("steps.analysis.title")}
+              desc={t("steps.analysis.desc")}
+              delay={0.1}
+            />
+            {/* Feature 3 */}
+            <FeatureCard
+              isDark={isDark}
+              icon={<Shield className="text-emerald-500" size={32} />}
+              title={t("steps.safety.title")}
+              desc={t("steps.safety.desc")}
+              delay={0.2}
+            />
+          </div>
+        </motion.div>
+
+
+        {/* WHY US SECTION */}
+        <div className={`rounded-3xl p-10 md:p-16 relative overflow-hidden ${isDark ? "bg-gray-900" : "bg-white"} shadow-2xl`}>
+          <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 blur-3xl rounded-full pointer-events-none`} />
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className={`text-3xl font-bold mb-6 ${isDark ? "text-white" : "text-gray-900"}`}>
+                Why Trust NutriVigil?
+              </h3>
+              <div className="space-y-6">
+                <BenefitRow isDark={isDark} icon={<Zap size={20} />} text="Instant analysis results in < 2 seconds" />
+                <BenefitRow isDark={isDark} icon={<Smartphone size={20} />} text="Works on any device, anywhere" />
+                <BenefitRow isDark={isDark} icon={<Heart size={20} />} text="Tailored to your specific health conditions" />
+                <BenefitRow isDark={isDark} icon={<Star size={20} />} text="Powered by advanced AI models" />
+              </div>
+
+              <div className="mt-8">
+                <Link to="/profile" className={`text-blue-500 font-semibold hover:text-blue-400 inline-flex items-center gap-1`}>
+                  Customize your profile <ChevronRight size={18} />
+                </Link>
+              </div>
+            </div>
+
+            <div className={`h-80 rounded-2xl flex items-center justify-center ${isDark ? "bg-gray-800" : "bg-gray-100"}`}>
+              <div className="text-center">
+                <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-emerald-400 mb-2">
+                  100%
+                </div>
+                <div className={isDark ? "text-gray-400" : "text-gray-600"}>
+                  Focus on Your Health
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
-};
+}
 
 export default Home;
