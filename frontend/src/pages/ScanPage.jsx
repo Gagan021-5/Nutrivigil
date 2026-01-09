@@ -147,9 +147,10 @@ function ScanPage() {
       <div className="absolute inset-0 -z-10 pointer-events-none  blur-3xl"></div>
 
       <motion.div
-        className={`w-full max-w-[600px] backdrop-blur-2xl rounded-3xl p-12 transition-colors ${theme === 'dark'
-          ? "bg-black/40"
-          : "bg-white/90 border border-gray-200"
+        className={`w-full max-w-[600px] backdrop-blur-2xl rounded-3xl p-6 sm:p-8 md:p-12
+ transition-colors ${theme === 'dark'
+            ? "bg-black/40"
+            : "bg-white/90 border border-gray-200"
           }`}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -226,9 +227,10 @@ function ScanPage() {
             </label>
 
             <motion.div
-              className={`relative border-2 border-dashed rounded-2xl p-10 text-center backdrop-blur-xl cursor-pointer overflow-hidden transition-all ring-0 ${theme === 'dark'
-                ? "border-blue-500/30 bg-blue-500/5 hover:border-cyan-400 hover:bg-cyan-500/10"
-                : "border-blue-300 bg-blue-50/50 hover:border-blue-400 hover:bg-blue-100"
+              className={`relative border-2 border-dashed rounded-2xl p-6 sm:p-8 md:p-10
+ text-center backdrop-blur-xl cursor-pointer overflow-hidden transition-all ring-0 ${theme === 'dark'
+                  ? "border-blue-500/30 bg-blue-500/5 hover:border-cyan-400 hover:bg-cyan-500/10"
+                  : "border-blue-300 bg-blue-50/50 hover:border-blue-400 hover:bg-blue-100"
                 }`}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
@@ -339,7 +341,7 @@ function ScanPage() {
                 </h2>
               </div>
 
-              <div className={`flex flex-col gap-4 transition-colors ${theme === 'dark' ? "text-gray-200" : "text-gray-700"
+              <div className={`flex flex-col gap-4 break-words transition-colors ${theme === 'dark' ? "text-gray-200" : "text-gray-700"
                 }`}>
                 <div>
                   <strong className={`block mb-1 transition-colors ${theme === 'dark' ? "text-white/80" : "text-gray-900"

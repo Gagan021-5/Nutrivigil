@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import ScanPage from "./pages/ScanPage";
+import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col relative overflow-hidden">
+        <div className="min-h-screen flex flex-col relative overflow-x-hidden">
+
         <Navbar />
 
         <Routes>
@@ -27,6 +29,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/scan" element={<ScanPage />} />
         </Routes>
+        <Footer />
       </div>
     </ThemeProvider>
   );

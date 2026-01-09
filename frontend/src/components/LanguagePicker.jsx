@@ -106,10 +106,11 @@ const LanguagePicker = () => {
 
 
     return (
-        <div className="relative" ref={dropdownRef}>
+            <div className="relative w-full sm:w-auto" ref={dropdownRef}>
+
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm border transition-colors ${theme === "dark"
+                className={`flex items-center gap-2 px-3 py-2 min-h-[44px] rounded-lg text-sm border transition-colors ${theme === "dark"
                     ? "bg-[#1e1e2e] text-white border-white/20 hover:bg-white/10"
                     : "bg-white text-gray-900 border-gray-300 hover:bg-gray-50"
                     }`}
@@ -125,7 +126,7 @@ const LanguagePicker = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className={`absolute right-0 mt-2 w-64 rounded-xl shadow-xl border overflow-hidden z-50 ${theme === "dark"
+                        className={`absolute sm:right-0 left-0 sm:left-auto mt-2 w-full sm:w-64 max-w-[90vw] rounded-xl shadow-xl border overflow-hidden z-50 ${theme === "dark"
                             ? "bg-[#1e1e2e] border-white/10"
                             : "bg-white border-gray-200"
                             }`}
@@ -140,21 +141,21 @@ const LanguagePicker = () => {
                                     placeholder="Search language..."
                                     value={searchQuery}
                                     onChange={(e) => setSearchQuery(e.target.value)}
-                                    className={`w-full bg-transparent border-none outline-none text-sm placeholder-gray-500 ${theme === "dark" ? "text-white" : "text-gray-900"
+                                    className={`w-full bg-transparent border-none outline-none text-base sm:text-sm placeholder-gray-500 ${theme === "dark" ? "text-white" : "text-gray-900"
                                         }`}
                                     onKeyDown={handleKeyDown}
                                 />
                             </div>
                         </div>
 
-                        <div className="max-h-60 overflow-y-auto py-1">
+                        <div className="max-h-[60vh] sm:max-h-60 overflow-y-auto py-1">
                             {filteredLanguages.length > 0 ? (
                                 filteredLanguages.map((lang, index) => (
                                     <button
                                         key={lang.code}
                                         onClick={() => handleLanguageSelect(lang.code)}
                                         onMouseEnter={() => setFocusedIndex(index)}
-                                        className={`w-full px-4 py-2 text-left flex items-center justify-between text-sm transition-colors cursor-pointer ${theme === "dark"
+                                        className={`w-full px-4 py-2 min-h-[44px] text-left flex items-center justify-between text-sm transition-colors cursor-pointer ${theme === "dark"
                                                 ? "text-gray-200"
                                                 : "text-gray-700"
                                             } ${index === focusedIndex

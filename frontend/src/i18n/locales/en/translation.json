@@ -1,12 +1,20 @@
 {
   "appName": "NutriVigil",
+  "appName.dark": "NutriVigil (Night Mode)",
+  "appName.light": "NutriVigil (Day Mode)",
   "tagline": "Your Personal AI Health Scanner",
+  "tagline.dark": "Scanning in the Dark...",
+  "tagline.light": "Scanning in the Light...",
   "startScanning": "Start Scanning",
   "howItWorks": "How it Works",
 
   "nav": {
     "home": "Home",
-    "profile": "My Profile"
+    "home.dark": "Home (Dark)",
+    "home.light": "Home (Light)",
+    "profile": "My Profile",
+    "profile.dark": "My Profile (Dark)",
+    "profile.light": "My Profile (Light)"
   },
 
   "steps": {
