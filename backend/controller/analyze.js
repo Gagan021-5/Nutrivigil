@@ -36,7 +36,7 @@ export const analyzeFood = async (req, res) => {
           ...parsedData 
         });
       } catch (parseError) {
-        console.error("Follow-up query JSON parse error:", parseError.message);
+        console.error("Follow-up query JSON parse error:", parseError);
         return res.status(500).json({
           error: "Failed to parse AI response",
           message: parseError.message,
@@ -107,23 +107,23 @@ export const analyzeFood = async (req, res) => {
 
     try {
       cleanJson = parseGeminiJson(analysisText);
+      
+      res.json({
+        food_name: foodName,
+        nutrition: nutritionData,
+        ...cleanJson,
+      });
     } catch (parseError) {
-      console.error("Analysis JSON parse error:", parseError.message);
-      return res.status(500).json({
+      console.error("Analysis JSON parse error:", parseError);
+      res.status(500).json({
         error: "Failed to parse AI response",
         message: parseError.message,
         raw: analysisText.substring(0, 200)
       });
+    } finally {
+      //delete upload
+      fs.unlinkSync(imagePath);
     }
-
-    //delete upload
-    fs.unlinkSync(imagePath);
-
-    res.json({
-      food_name: foodName,
-      nutrition: nutritionData,
-      ...cleanJson,
-    });
   } 
   
   catch (err) {
