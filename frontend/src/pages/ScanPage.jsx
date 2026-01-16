@@ -54,7 +54,13 @@ function ScanPage() {
 
     try {
       // send a JSON object, not FormData, because there is no NEW image
-      const res = await axios.post("https://nutb.onrender.com/analyze", {
+      // const res = await axios.post("https://nutb.onrender.com/analyze", {
+      //   condition: condition,
+      //   query: followUpQuestion,
+      //   foodName: result.food_name
+      // });
+
+      const res = await axios.post("https://localhost:5000/analyze", {
         condition: condition,
         query: followUpQuestion,
         foodName: result.food_name
