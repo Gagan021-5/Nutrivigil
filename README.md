@@ -69,3 +69,81 @@ NutriVigil/
 
 1. Gemini API Key: Google AI Studio
 2. API Ninjas Key: API Ninjas Nutrition
+
+---
+
+## Project Structure 
+
+```
+
+Nutrivigil/
+│
+├── backend/                               # Backend server handling API and AI processing
+│   ├── controller/                        # Contains request handling logic
+│   │   └── analyze.js                     # Main controller to analyze uploaded food images
+│   │
+│   ├── middleware/                        # Middleware functions for request processing
+│   │   └── upload.js                      # Handles image uploads (e.g., using Multer)
+│   │
+│   ├── services/                          # External service integrations
+│   │   └── googleservices.js              # Connects to Google Gemini / AI services
+│   │
+│   ├── utils/                             # Helper utility functions
+│   │   ├── getmimetype.js                 # Detects MIME type of uploaded files
+│   │   ├── imgconversion.js               # Converts images to required formats
+│   │   └── parseGeminiJson.js             # Parses AI-generated JSON responses
+│   │
+│   ├── .gitignore                         # Ignores backend node_modules and env files
+│   ├── index.js                           # Entry point of the backend server
+│   ├── package.json                       # Backend dependencies and scripts
+│   └── package-lock.json                  # Locked dependency versions
+│
+├── frontend/                              # Frontend React + Vite application
+│   ├── src/
+│   │   ├── assets/                        # Static assets like images
+│   │   │   └── nutrivigile.jpeg           # App logo / banner image
+│   │   │
+│   │   ├── components/                    # Reusable UI components
+│   │   │   ├── Footer.jsx                 # Footer component
+│   │   │   ├── LanguagePicker.jsx         # Language selection component
+│   │   │   ├── Navbar.jsx                 # Navigation bar component
+│   │   │   └── VoiceQuery.jsx             # Voice-based food query component
+│   │   │
+│   │   ├── contexts/                      # React Context for global state
+│   │   │   └── ThemeContext.jsx           # Manages light/dark theme
+│   │   │
+│   │   ├── hooks/                         # Custom React hooks
+│   │   │   └── useThemeTranslation.js     # Combines theme and language logic
+│   │   │
+│   │   ├── i18n/                          # Multi-language translation setup
+│   │   │   ├── locales/                   # Language JSON files
+│   │   │   └── index.js                   # i18n configuration
+│   │   │
+│   │   ├── pages/                         # Application pages
+│   │   │   ├── Home.jsx                   # Landing page
+│   │   │   ├── Profile.jsx                # User profile page
+│   │   │   └── ScanPage.jsx               # Food image scanning page
+│   │   │
+│   │   ├── App.jsx                        # Root React component
+│   │   ├── index.css                      # Global styles
+│   │   └── main.jsx                       # Frontend entry point
+│   │
+│   ├── index.html                         # Main HTML template
+│   ├── nutrivigile.jpeg                  # Additional image asset
+│   ├── package.json                       # Frontend dependencies and scripts
+│   ├── package-lock.json                  # Locked dependency versions
+│   ├── vite.config.js                     # Vite build configuration
+│   └── .gitignore                         # Ignores frontend node_modules
+│
+├── .gitignore                             # Global git ignore rules
+├── CODE-OF-CONDUCT.md                     # Community behavior guidelines
+├── CONTRIBUTING.md                        # Contribution instructions
+├── License.md                             # License information
+├── MIT LICENSE.md                         # MIT license text
+├── README.md                              # Project documentation
+├── SECURITY.md                            # Security policy
+└── package-lock.json                      # Root lock file (if present)
+
+
+```
+---
