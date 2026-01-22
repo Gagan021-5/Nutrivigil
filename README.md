@@ -64,11 +64,68 @@ NutriVigil/
  ├─ backend/        # Node.js + Express + Multer
  └─ README.md
 
- ## APIs Required
- To replicate this project, you will need your own API keys:
+## 🔐 Security & Environment Setup
 
-1. Gemini API Key: Google AI Studio
-2. API Ninjas Key: API Ninjas Nutrition
+### Required API Keys
+To run this project locally, you'll need to obtain API keys from:
+
+1. **Gemini API Key** - Google AI Studio
+2. **API Ninjas Key** - API Ninjas Nutrition Database
+
+### Environment Variables Setup
+
+**IMPORTANT:** Never commit API keys to version control. Always use environment variables.
+
+#### Step 1: Copy the Example Environment File
+
+```bash
+# In the backend directory
+cd backend
+cp .env.example .env
+```
+
+#### Step 2: Get Your API Keys
+
+**For Gemini API:**
+1. Visit [Google AI Studio](https://ai.google.dev/)
+2. Click "Get API Key"
+3. Create a new project or select existing one
+4. Generate an API key
+5. Copy the key and paste it in `.env` as `GEMINI_API_KEY`
+
+**For API Ninjas:**
+1. Sign up at [API Ninjas](https://api-ninjas.com/)
+2. Go to your dashboard
+3. Create a new API key
+4. Copy the key and paste it in `.env` as `NINJA_API_KEY`
+
+#### Step 3: Update Your .env File
+
+Edit `backend/.env`:
+```env
+PORT=3000
+NODE_ENV=development
+GEMINI_API_KEY=your_actual_gemini_key_here
+NINJA_API_KEY=your_actual_api_ninjas_key_here
+```
+
+#### Step 4: Verify .env is Ignored
+
+The `.gitignore` file already includes `.env`. Verify before committing:
+
+```bash
+# Check that .env is listed in .gitignore
+cat .gitignore | grep ".env"
+```
+
+### ✅ Best Practices for Security
+
+✔️ Use `.env` files for local development (already in `.gitignore`)  
+✔️ Use platform secrets for production (Render, Vercel, Docker, etc.)  
+✔️ Never share or commit `.env` files  
+✔️ Use `.env.example` as a template for required variables  
+✔️ Rotate API keys regularly  
+✔️ Restrict API key permissions in provider dashboards  
 
 ---
 

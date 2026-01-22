@@ -81,25 +81,60 @@ git push origin feature/short-description
 * Clearly explain what you changed and why
 
 ## 💻 Local Development Setup
-***Frontend Setup***
+
+### Prerequisites
+- Node.js v18+ 
+- Git
+- Gemini API Key (from [Google AI Studio](https://ai.google.dev/))
+- API Ninjas Key (from [API Ninjas](https://api-ninjas.com/))
+
+### Frontend Setup
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-***Backend Setup***
+### Backend Setup
 ```bash
 cd backend
 npm install
 npm run dev
 ```
 
-Environment Variables
+### 🔑 Environment Variables Configuration (IMPORTANT)
 
-* Copy .env.example to .env
-* Add required API keys (Gemini, API Ninjas)
-* Never commit .env files
+1. **Copy the template file:**
+   ```bash
+   cd backend
+   cp .env.example .env
+   ```
+
+2. **Get your API keys:**
+   - **Gemini API Key**: Visit [Google AI Studio](https://ai.google.dev/) → Create API Key
+   - **API Ninjas Key**: Sign up at [API Ninjas](https://api-ninjas.com/) → Get API Key
+
+3. **Add keys to `.env` file:**
+   ```env
+   PORT=3000
+   NODE_ENV=development
+   GEMINI_API_KEY=your_actual_gemini_key_here
+   NINJA_API_KEY=your_actual_api_ninjas_key_here
+   ```
+
+4. **⚠️ SECURITY REMINDER:**
+   - ✅ `.env` is already listed in `.gitignore` — never commit it!
+   - ✅ Use `.env.example` as a template for your local setup
+   - ✅ Each contributor should have their own `.env` file
+   - ✅ Never share or commit API keys to the repository
+
+### Verify Setup
+```bash
+# Backend should start without errors
+npm run dev
+
+# You should see: "Server running at port 3000"
+```
 
 🧩 Issue Selection Guidelines (Important for SWOC)
 ✅ How to Choose an Issue

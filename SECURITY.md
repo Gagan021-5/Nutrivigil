@@ -46,11 +46,66 @@ We ask that you:
 
 ## ✅ Security Best Practices
 
-While using this project, we recommend you:
+### API Key Management
+
+**CRITICAL**: Never commit API keys to version control. NutriVigil uses environment variables for secure credential management.
+
+**Why This Matters:**
+- ⚠️ Exposed API keys can lead to unauthorized access, quota exhaustion, and unexpected billing
+- ⚠️ Attackers can misuse your credentials to make API calls on your behalf
+- ✅ Using environment variables follows industry best practices and regulatory compliance
+
+**Implementation:**
+1. Copy `.env.example` to `.env` in the backend directory
+2. Add your actual API keys to `.env` (never commit this file)
+3. The `.gitignore` file already prevents accidental commits
+
+**Required Environment Variables:**
+```env
+GEMINI_API_KEY=your_gemini_api_key_here
+NINJA_API_KEY=your_api_ninjas_key_here
+PORT=3000
+NODE_ENV=development
+```
+
+**For Each Environment:**
+- **Local Development**: Use `.env` file (ignored by git)
+- **Production**: Set variables in your hosting platform (Render, Vercel, Docker, etc.)
+
+### General Recommendations
 
 - Always run software in a secure and isolated environment.
-- Keep your dependencies up to date.
+- Keep your dependencies up to date using `npm audit` and `npm update`.
 - Avoid sharing sensitive API keys or credentials in `.env` or other public files.
+- Rotate API keys regularly (recommended: every 90 days).
+- Restrict API key permissions in provider dashboards to only required scopes.
+- Use git-secrets or similar pre-commit hooks to prevent accidental key commits.
+
+### Monitoring & Incident Response
+
+1. **Regular Audits**: Review API provider dashboards for unusual activity
+2. **Key Rotation**: Implement a schedule to refresh API keys
+3. **Incident Response**: If a key is exposed:
+   - Immediately revoke it in the provider dashboard
+   - Update `.env` and production environment variables
+   - Monitor API logs for unauthorized access
+   - Document the incident for review
+
+### Deployment Security
+
+**For Render.com:**
+- Set environment variables in Service Dashboard → Environment
+- Never hardcode keys in code or config files
+
+**For Docker Deployments:**
+- Use Docker secrets or environment variables
+- Never include `.env` in Docker image
+- Use `.dockerignore` to exclude sensitive files
+
+**For Production:**
+- Enable HTTPS/TLS for all API communications
+- Use API rate limiting to prevent abuse
+- Monitor API usage and set up alerts for anomalies
 
 ---
 
