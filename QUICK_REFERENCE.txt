@@ -1,0 +1,133 @@
+# ⚡ QUICK REFERENCE CARD
+
+## 🚀 Setup in 5 Steps (2 minutes)
+
+```
+1️⃣ cd backend && cp .env.example .env
+2️⃣ Get keys: https://ai.google.dev/ & https://api-ninjas.com/
+3️⃣ nano .env → Add GEMINI_API_KEY & NINJA_API_KEY
+4️⃣ npm install
+5️⃣ npm run dev
+✅ DONE!
+```
+
+---
+
+## 📝 What Goes in .env
+
+```env
+PORT=3000
+NODE_ENV=development
+GEMINI_API_KEY=your_key_from_google
+NINJA_API_KEY=your_key_from_api_ninjas
+```
+
+---
+
+## 🔑 Getting Your Keys
+
+**Google Gemini** (2 min)
+```
+1. Go to https://ai.google.dev/
+2. Click "Get API Key"
+3. Create new project or use existing
+4. Copy your key → paste to .env as GEMINI_API_KEY
+```
+
+**API Ninjas** (2 min)
+```
+1. Sign up at https://api-ninjas.com/
+2. Go to dashboard
+3. Create new API key
+4. Copy your key → paste to .env as NINJA_API_KEY
+```
+
+---
+
+## ✅ Verify Setup
+
+```bash
+# Check .env exists
+ls backend/.env
+
+# Start the server
+npm run dev
+
+# Should see: "Server running at port 3000"
+
+# Check .env is ignored
+git check-ignore -v backend/.env
+# Should output the .env path (meaning it's ignored) ✓
+```
+
+---
+
+## 🚨 Common Issues
+
+| Issue | Solution |
+|-------|----------|
+| "Cannot find module 'dotenv'" | `npm install` in backend/ |
+| "GEMINI_API_KEY is undefined" | Check .env exists, restart npm run dev |
+| "401 Unauthorized" | Verify API key is correct in .env |
+| ".env showing in git" | Run: `git check-ignore -v backend/.env` |
+
+---
+
+## 🔒 Security Rules
+
+✅ **DO**
+- Use .env for local development
+- Keep .env in .gitignore
+- Use platform secrets for production
+- Rotate keys monthly
+
+❌ **DON'T**
+- Commit .env to git
+- Share .env via email/chat
+- Hardcode keys in code
+- Use same key everywhere
+
+---
+
+## 📂 File Locations
+
+```
+backend/
+├─ .env.example      ← Reference (committed)
+├─ .env              ← Your keys (ignored)
+└─ services/
+   └─ googleservices.js
+      └─ Uses: process.env.GEMINI_API_KEY
+```
+
+---
+
+## 🌐 Production Setup
+
+**Render.com**
+```
+Dashboard → Service → Environment
++ GEMINI_API_KEY = your_prod_key
++ NINJA_API_KEY = your_prod_key
++ NODE_ENV = production
+Deploy ✓
+```
+
+---
+
+## 📚 Documentation Files
+
+| File | Purpose | Time |
+|------|---------|------|
+| **START_HERE.md** | Overview | 2 min |
+| **ENV_QUICKSTART.md** | Setup guide | 2 min |
+| **SECURITY.md** | Policy | 15 min |
+| **README.md** | Full docs | 20 min |
+
+---
+
+## ✨ That's It!
+
+You're secure. Your keys are protected. Happy coding! 🎉
+
+More help? → [SECURITY_DOCUMENTATION_INDEX.md](SECURITY_DOCUMENTATION_INDEX.md)
