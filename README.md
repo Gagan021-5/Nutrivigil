@@ -58,11 +58,54 @@ graph TD
   FE -->|Render Data| UX[UI Components]
 
 ```
-## Local Installation 
-NutriVigil/
- ├─ frontend/       # React + Vite + Tailwind
- ├─ backend/        # Node.js + Express + Multer
- └─ README.md
+## Local Installation and Setup
+
+### 📌 Prerequisites
+- Node.js (v14 or higher)
+- npm (comes with Node.js)
+- Git
+- Modern web browser (Chrome/Firefox recommended)
+
+### 📥 Step 1: Clone the Repository
+1. Open terminal
+2. Run:
+   ```bash
+   git clone https://github.com/Gagan021-5/Nutrivigil.git
+   cd Nutrivigil
+
+---
+
+### 4️⃣ Add Backend/Frontend Installation
+
+```markdown
+### 📦 Step 2: Install Dependencies
+
+#### Backend and Frontend
+```bash
+cd backend
+npm install
+
+cd frontend
+npm install
+
+
+---
+
+### 5️⃣ Add Running Commands
+
+```markdown
+### ▶️ Step 3: Run the Application
+
+#### Start Backend Server and Frontend server
+
+```bash
+cd backend
+npm start
+
+cd frontend
+npm run dev
+
+```
 
  ## APIs Required
  To replicate this project, you will need your own API keys:
