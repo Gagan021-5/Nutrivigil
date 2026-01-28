@@ -1,0 +1,253 @@
+{
+  "appName": "NutriVigil",
+
+  "nav": {
+    "home": "Início",
+    "profile": "Meu Perfil"
+  },
+
+  "home": {
+    "startScanning": "Iniciar Escaneamento",
+    "badge": "Protocolo de Inteligência v1.0",
+    "heroDesc": "Motor de escaneamento personalizado criado para a próxima geração de consciência alimentar. Análise no dispositivo. Privacidade absoluta.",
+    "openSource": "Código Aberto",
+
+    "how": {
+      "title": "Como",
+      "highlight": "Funciona",
+      "subtitle": "Três passos simples para decisões alimentares mais inteligentes e seguras."
+    },
+
+    "steps": {
+      "scan": {
+        "title": "Escanear o Produto",
+        "desc": "Use a câmera para escanear instantaneamente rótulos de alimentos embalados."
+      },
+      "analysis": {
+        "title": "Análise Inteligente",
+        "desc": "A IA no dispositivo analisa nutrientes, aditivos e muito mais."
+      },
+      "security": {
+        "title": "Privado e Seguro",
+        "desc": "Tudo acontece localmente — nenhum dado é armazenado."
+      }
+    }
+  },
+
+  "howSteps": {
+    "upload": {
+      "title": "1. Enviar Foto",
+      "desc": "Tire uma foto do seu alimento e envie para o aplicativo"
+    },
+    "analysis": {
+      "title": "2. Análise por IA",
+      "desc": "Nossa IA identifica as informações nutricionais"
+    },
+    "safety": {
+      "title": "3. Pontuação de Segurança",
+      "desc": "Recomendações de saúde instantâneas"
+    }
+  },
+
+  "profile": {
+    "title": "Meu Perfil",
+    "subtitle": "Gerencie suas preferências de saúde",
+    "healthCondition": "Condição de Saúde",
+    "selectCondition": "Selecione uma condição...",
+    "select_subtitle": "Escolha seu principal foco de saúde",
+
+    "active": "Ativo",
+    "saved": "✓ Salvo automaticamente",
+    "updated": "Seu perfil foi atualizado com sucesso",
+    "whatYouGet": "O que você recebe:",
+
+    "whyTitle": "Por que definir sua condição?",
+    "whyDesc": "Isso ajuda o NutriVigil a fornecer recomendações de segurança alimentar precisas e personalizadas com base na sua condição de saúde. Salvo localmente, não é enviado.",
+
+    "securityTitle": "Seus dados estão seguros",
+    "securityDesc": "Todas as informações de saúde são criptografadas e armazenadas localmente no seu dispositivo. Nunca compartilhamos seus dados pessoais com terceiros.",
+
+    "platformHighlights": "Destaques da Plataforma",
+
+    "stats": {
+      "insights": {
+        "label": "Insights Assistidos por IA",
+        "value": "Suporte de análise automatizado"
+      },
+      "foodData": {
+        "label": "Dados de Referência Alimentar",
+        "value": "Ampla cobertura de itens"
+      },
+      "confidence": {
+        "label": "Confiabilidade dos Resultados",
+        "value": "Modelos continuamente aprimorados"
+      }
+    }
+  },
+
+  "health": {
+    "desc": {
+      "diabetes": "Controle da glicemia",
+      "hypertension": "Controle da pressão arterial",
+      "heart": "Saúde cardiovascular",
+      "kidney": "Suporte à função renal",
+      "cholesterol": "Gerenciamento de lipídios",
+      "celiac": "Dieta sem glúten",
+      "lactose": "Alternativas aos laticínios",
+      "none": "Bem-estar geral"
+    },
+
+    "benefits": {
+      "diabetes": {
+        "lowGlycemic": "Alimentos de baixo índice glicêmico",
+        "carbTracking": "Controle de carboidratos",
+        "sugarAlternatives": "Alternativas ao açúcar"
+      },
+      "hypertension": {
+        "lowSodium": "Opções com baixo teor de sódio",
+        "heartHealthyFats": "Gorduras saudáveis para o coração",
+        "potassiumRichFoods": "Alimentos ricos em potássio"
+      },
+      "heart": {
+        "omega3RichFoods": "Alimentos ricos em ômega-3",
+        "lowCholesterol": "Baixo colesterol",
+        "antiInflammatory": "Anti-inflamatório"
+      },
+      "kidney": {
+        "lowPhosphorus": "Baixo fósforo",
+        "proteinMonitoring": "Monitoramento de proteínas",
+        "fluidBalance": "Equilíbrio de líquidos"
+      },
+      "cholesterol": {
+        "hdlBoostingFoods": "Alimentos que aumentam o HDL",
+        "lowSaturatedFats": "Baixo teor de gorduras saturadas",
+        "fiberRichOptions": "Opções ricas em fibras"
+      },
+      "celiac": {
+        "glutenFreeAlternatives": "Alternativas sem glúten",
+        "safeGrains": "Grãos seguros",
+        "crossContaminationAlerts": "Alertas de contaminação cruzada"
+      },
+      "lactose": {
+        "lactoseFreeOptions": "Opções sem lactose",
+        "plantBasedMilk": "Leite vegetal",
+        "calciumAlternatives": "Alternativas de cálcio"
+      },
+      "none": {
+        "balancedNutrition": "Nutrição equilibrada",
+        "macroTracking": "Acompanhamento de macronutrientes",
+        "healthyLifestyleTips": "Dicas de estilo de vida saudável"
+      }
+    }
+  },
+
+  "conditions": {
+    "diabetes": "Diabetes",
+    "hypertension": "Hipertensão",
+    "heart": "Doença Cardíaca",
+    "kidney": "Doença Renal",
+    "cholesterol": "Colesterol Alto",
+    "celiac": "Doença Celíaca",
+    "lactose": "Intolerância à Lactose",
+    "none": "Nenhuma"
+  },
+
+  "scan": {
+    "title": "Escanear Alimento",
+    "subtitle": "Envie uma foto para analisar a segurança nutricional",
+    "condition": "Condição",
+    "setCondition": "Por favor, defina sua condição em",
+    "foodPhoto": "Foto do Alimento",
+    "uploadHint": "Clique para enviar ou arraste e solte",
+    "fileTypes": "PNG, JPG, GIF até 10MB",
+    "scanButton": "Escanear Alimento",
+    "scanning": "Escaneando...",
+    "thinking": "Analisando...",
+    "submitQuery": "Enviar Pergunta",
+    "labels": {
+      "food": "Alimento",
+      "reason": "Motivo",
+      "suggestion": "Sugestão",
+      "healthySwaps": "Substituições Saudáveis",
+      "askFood": "Perguntar sobre este alimento",
+      "foundTitle": "Veja o que encontramos",
+      "listen": "Ouvir resposta"
+    }
+  },
+
+  "errors": {
+    "noImage": "Por favor, selecione um arquivo de imagem",
+    "noCondition": "Por favor, defina primeiro sua condição de saúde",
+    "analysisFailed": "Falha ao analisar o alimento"
+  },
+
+  "safety": {
+    "safe": "Seguro",
+    "moderate": "Moderado",
+    "unsafe": "Não Seguro"
+  },
+
+  "footer": {
+    "scrollTop": "Voltar ao topo",
+
+    "brandDesc": "Seu scanner pessoal de saúde com IA. Analise refeições instantaneamente com a avançada IA Gemini v2.5 para manter sua nutrição alinhada com seus objetivos de saúde.",
+
+    "badges": {
+      "gemini": "Gemini AI",
+      "secure": "Seguro"
+    },
+
+    "connect": "Conecte-se Conosco",
+
+    "sections": {
+      "product": "Produto",
+      "company": "Empresa",
+      "newsletter": "Mantenha-se Saudável"
+    },
+
+    "links": {
+      "product": {
+        "aiScanner": "Scanner de IA",
+        "nutritionDecoded": "Nutrição Decodificada",
+        "safetySignals": "Sinais de Segurança",
+        "healthProfile": "Perfil de Saúde"
+      },
+      "company": {
+        "aboutUs": "Sobre Nós",
+        "ourMission": "Nossa Missão",
+        "careers": "Carreiras",
+        "contact": "Contato"
+      },
+      "legal": {
+        "privacyPolicy": "Política de Privacidade",
+        "termsOfService": "Termos de Serviço",
+        "cookiePolicy": "Política de Cookies"
+      }
+    },
+
+    "newsletter": {
+      "desc": "Junte-se a mais de 50.000 entusiastas da saúde que recebem semanalmente insights nutricionais com tecnologia de IA.",
+      "placeholder": "Digite seu e-mail",
+      "subscribe": "Inscrever-se",
+      "subscribed": "Inscrito!",
+
+      "errors": {
+        "required": "O e-mail é obrigatório",
+        "invalid": "Por favor, insira um e-mail válido"
+      },
+
+      "trust": {
+        "noSpam": "Sem spam",
+        "unsubscribe": "Cancelar a qualquer momento"
+      }
+    },
+
+    "bottom": {
+      "rights": "Todos os direitos reservados.",
+      "builtWithCare": "Construído com cuidado para sua saúde",
+      "language": "Português (Brasil)"
+    },
+
+    "extra": "Desenvolvido com Gemini 2.5 AI • Compatível com HIPAA • Certificação SOC 2 Tipo II • Análise em tempo real • Base de dados com mais de 500.000 alimentos • Precisão de 99,2% • Suporte multilíngue • Modo offline • Criptografia de ponta a ponta • Integração com diretrizes da FDA • Recomendações personalizadas • Verificado pela comunidade"
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "appName": "NutriVigil",
+
+  "nav": {
+    "home": "Home",
+    "profile": "My Profile"
+  },
+
+  "home": {
+    "startScanning": "Start Scanning",
+    "badge": "Intelligence Protocol v1.0",
+    "heroDesc": "Personalized scanning engine built for the next generation of dietary awareness. On-device analysis. Absolute privacy.",
+    "openSource": "Open Source",
+
+    "how": {
+      "title": "How It",
+      "highlight": "Works",
+      "subtitle": "Three simple steps to smarter, safer food decisions."
+    },
+
+    "steps": {
+      "scan": {
+        "title": "Scan the Product",
+        "desc": "Use your camera to instantly scan packaged food labels."
+      },
+      "analysis": {
+        "title": "Smart Analysis",
+        "desc": "On-device AI analyzes nutrients, additives & more."
+      },
+      "security": {
+        "title": "Private & Secure",
+        "desc": "Everything happens locally — no data is stored."
+      }
+    }
+  },
+
+  "howSteps": {
+    "upload": {
+      "title": "1. Upload Photo",
+      "desc": "Take a picture of your food and upload to the app"
+    },
+    "analysis": {
+      "title": "2. AI Analysis",
+      "desc": "Our AI identifies nutrition"
+    },
+    "safety": {
+      "title": "3. Safety Score",
+      "desc": "Instant health recommendations"
+    }
+  },
+
+  "profile": {
+    "title": "My Profile",
+    "subtitle": "Manage your health preferences",
+    "healthCondition": "Health Condition",
+    "selectCondition": "Select a condition...",
+    "select_subtitle": "Choose your primary health focus",
+
+    "active": "Active",
+    "saved": "✓ Saved automatically",
+    "updated": "Your profile has been updated successfully",
+    "whatYouGet": "What you'll get:",
+
+    "whyTitle": "Why set your condition?",
+    "whyDesc": "This helps NutriVigil give you accurate, personalized food safety recommendations based on your health condition. Saved locally, not uploaded.",
+
+    "securityTitle": "Your Data is Secure",
+    "securityDesc": "All health information is encrypted and stored locally on your device. We never share your personal data with third parties.",
+
+    "platformHighlights": "Platform Highlights",
+
+    "stats": {
+      "insights": {
+        "label": "AI-Assisted Insights",
+        "value": "Automated analysis support"
+      },
+      "foodData": {
+        "label": "Food Reference Data",
+        "value": "Extensive item coverage"
+      },
+      "confidence": {
+        "label": "Result Confidence",
+        "value": "Continuously improved models"
+      }
+    }
+  },
+
+  "health": {
+    "desc": {
+      "diabetes": "Blood sugar management",
+      "hypertension": "Blood pressure control",
+      "heart": "Cardiovascular health",
+      "kidney": "Renal function support",
+      "cholesterol": "Lipid management",
+      "celiac": "Gluten-free diet",
+      "lactose": "Dairy alternatives",
+      "none": "General wellness"
+    },
+
+    "benefits": {
+      "diabetes": {
+        "lowGlycemic": "Low glycemic index foods",
+        "carbTracking": "Carb tracking",
+        "sugarAlternatives": "Sugar alternatives"
+      },
+      "hypertension": {
+        "lowSodium": "Low sodium options",
+        "heartHealthyFats": "Heart-healthy fats",
+        "potassiumRichFoods": "Potassium-rich foods"
+      },
+      "heart": {
+        "omega3RichFoods": "Omega-3 rich foods",
+        "lowCholesterol": "Low cholesterol",
+        "antiInflammatory": "Anti-inflammatory"
+      },
+      "kidney": {
+        "lowPhosphorus": "Low phosphorus",
+        "proteinMonitoring": "Protein monitoring",
+        "fluidBalance": "Fluid balance"
+      },
+      "cholesterol": {
+        "hdlBoostingFoods": "HDL boosting foods",
+        "lowSaturatedFats": "Low saturated fats",
+        "fiberRichOptions": "Fiber-rich options"
+      },
+      "celiac": {
+        "glutenFreeAlternatives": "Gluten-free alternatives",
+        "safeGrains": "Safe grains",
+        "crossContaminationAlerts": "Cross-contamination alerts"
+      },
+      "lactose": {
+        "lactoseFreeOptions": "Lactose-free options",
+        "plantBasedMilk": "Plant-based milk",
+        "calciumAlternatives": "Calcium alternatives"
+      },
+      "none": {
+        "balancedNutrition": "Balanced nutrition",
+        "macroTracking": "Macro tracking",
+        "healthyLifestyleTips": "Healthy lifestyle tips"
+      }
+    }
+  },
+
+  "conditions": {
+    "diabetes": "Diabetes",
+    "hypertension": "Hypertension",
+    "heart": "Heart Disease",
+    "kidney": "Kidney Disease",
+    "cholesterol": "High Cholesterol",
+    "celiac": "Celiac Disease",
+    "lactose": "Lactose Intolerance",
+    "none": "None"
+  },
+
+  "scan": {
+    "title": "Scan Food",
+    "subtitle": "Upload a photo to analyze nutritional safety",
+    "condition": "Condition",
+    "setCondition": "Please set your condition in",
+    "foodPhoto": "Food Photo",
+    "uploadHint": "Click to upload or drag and drop",
+    "fileTypes": "PNG, JPG, GIF up to 10MB",
+    "scanButton": "Scan Food",
+    "scanning": "Scanning...",
+     "thinking":"Thinking...",
+    "submitQuery":"Submit Query",
+     "labels": {
+      "food": "Food",
+      "reason": "Reason",
+      "suggestion": "Suggestion",
+      "healthySwaps": "Healthy Swaps",
+      "askFood": "Ask About This Food",
+      "foundTitle": "Here’s what we found",
+      "listen": "Listen to response"
+    }
+  },
+     
+  "errors": {
+    "noImage": "Please select an image file",
+    "noCondition": "Please set your health condition first",
+    "analysisFailed": "Failed to analyze food"
+  },
+
+  "safety": {
+    "safe": "Safe",
+    "moderate": "Moderate",
+    "unsafe": "Unsafe"
+  },
+
+  "footer": {
+    "scrollTop": "Scroll to top",
+
+    "brandDesc": "Your Personal AI Health Scanner. Instantly analyze meals with cutting-edge Gemini v2.5 AI to keep your nutrition perfectly aligned with your health goals.",
+
+    "badges": {
+      "gemini": "Gemini AI",
+      "secure": "Secure"
+    },
+
+    "connect": "Connect With Us",
+
+    "sections": {
+      "product": "Product",
+      "company": "Company",
+      "newsletter": "Stay Healthy"
+    },
+
+    "links": {
+      "product": {
+        "aiScanner": "AI Scanner",
+        "nutritionDecoded": "Nutrition Decoded",
+        "safetySignals": "Safety Signals",
+        "healthProfile": "Health Profile"
+      },
+      "company": {
+        "aboutUs": "About Us",
+        "ourMission": "Our Mission",
+        "careers": "Careers",
+        "contact": "Contact"
+      },
+      "legal": {
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "cookiePolicy": "Cookie Policy"
+      }
+    },
+
+    "newsletter": {
+      "desc": "Join 50,000+ health enthusiasts receiving weekly AI-powered nutrition insights and tips.",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "subscribed": "Subscribed!",
+
+      "errors": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address"
+      },
+
+      "trust": {
+        "noSpam": "No spam",
+        "unsubscribe": "Unsubscribe anytime"
+      }
+    },
+
+    "bottom": {
+      "rights": "All rights reserved.",
+      "builtWithCare": "Built with care for your health",
+      "language": "English (US)"
+    },
+
+    "extra": "Powered by Gemini 2.5 AI • HIPAA Compliant • SOC 2 Type II Certified • Real-time Analysis • 500K+ Food Database • 99.2% Accuracy • Multi-language Support • Offline Mode • End-to-End Encryption • FDA Guidelines Integration • Personalized Recommendations • Community Verified"
+  }
+}

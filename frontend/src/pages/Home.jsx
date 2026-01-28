@@ -11,28 +11,34 @@ import {
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; 
 import { useNavigate } from "react-router-dom";
-
-const steps = [
-  {
-    icon: <Scan size={28} />,
-    title: "Scan the Product",
-    desc: "Use your camera to instantly scan packaged food labels.",
-  },
-  {
-    icon: <Brain size={28} />,
-    title: "Smart Analysis",
-    desc: "On-device AI analyzes nutrients, additives & more.",
-  },
-  {
-    icon: <ShieldCheck size={28} />,
-    title: "Private & Secure",
-    desc: "Everything happens locally — no data is stored.",
-  },
-];
-
-const HowItWorks = ({ isLight }) => (
+import { useTranslation } from "react-i18next";
 
 
+const HowItWorks = ({ isLight }) => {
+
+
+   const { t } = useTranslation();
+
+  const steps = [
+    {
+      icon: <Scan size={28} />,
+      title: t("home.steps.scan.title"),
+      desc: t("home.steps.scan.desc"),
+    },
+    {
+      icon: <Brain size={28} />,
+      title: t("home.steps.analysis.title"),
+      desc: t("home.steps.analysis.desc"),
+    },
+    {
+      icon: <ShieldCheck size={28} />,
+      title: t("home.steps.security.title"),
+      desc: t("home.steps.security.desc"),
+    },
+  ];
+  
+
+  return (
   <section className="relative z-10 max-w-7xl mx-auto px-6 py-32">
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -42,10 +48,11 @@ const HowItWorks = ({ isLight }) => (
       className="text-center mb-20"
     >
       <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight">
-        How It <span className="text-indigo-500">Works</span>
+        {t("home.how.title")}{" "}
+          <span className="text-indigo-500">{t("home.how.highlight")}</span>
       </h2>
       <p className="mt-6 text-xl max-w-2xl mx-auto text-slate-500">
-        Three simple steps to smarter, safer food decisions.
+         {t("home.how.subtitle")}
       </p>
     </motion.div>
 
@@ -73,8 +80,14 @@ const HowItWorks = ({ isLight }) => (
     </div>
   </section>
 );
+};
+
+
+
+
 
 const Home = () => {
+   const { t } = useTranslation();
   const [currentTheme, setCurrentTheme] = useState("dark");
 
   const navigate = useNavigate();
@@ -119,7 +132,7 @@ const Home = () => {
                 : "bg-white/5 border-white/10 text-indigo-400"
             }`}
           >
-            <Sparkles size={14} /> Intelligence Protocol v1.0
+            <Sparkles size={14} /> {t("home.badge")}
           </div>
 
           <h1 className="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter">
@@ -134,8 +147,7 @@ const Home = () => {
               isLight ? "text-slate-500" : "text-slate-400"
             }`}
           >
-            Personalized scanning engine built for the next generation of dietary
-            awareness. On-device analysis. Absolute privacy.
+            {t("home.heroDesc")}
           </p>
 
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-5">
@@ -147,7 +159,7 @@ const Home = () => {
                   : "bg-white text-black hover:bg-indigo-50 shadow-white/5"
               }`}
             >
-              Start Scanning{" "}
+              {t("home.startScanning")}{" "}
               <ArrowRight
                 size={20}
                 className="group-hover:translate-x-1 transition-transform"
@@ -159,7 +171,7 @@ const Home = () => {
                 isLight ? "border-slate-200 text-slate-800" : "border-white/10 text-white"
               }`}
             >
-              <Github size={20} /> Open Source
+              <Github size={20} /> {t("home.openSource")}
             </button>
           </div>
         </motion.div>
