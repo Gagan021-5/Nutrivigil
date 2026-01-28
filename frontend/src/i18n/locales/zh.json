@@ -1,0 +1,253 @@
+{
+  "appName": "NutriVigil",
+
+  "nav": {
+    "home": "首页",
+    "profile": "我的资料"
+  },
+
+  "home": {
+    "startScanning": "开始扫描",
+    "badge": "智能协议 v1.0",
+    "heroDesc": "为下一代饮食健康意识打造的个性化扫描引擎。本地设备分析。绝对隐私。",
+    "openSource": "开源",
+
+    "how": {
+      "title": "如何",
+      "highlight": "运作",
+      "subtitle": "三步即可做出更智能、更安全的饮食选择。"
+    },
+
+    "steps": {
+      "scan": {
+        "title": "扫描产品",
+        "desc": "使用相机即时扫描包装食品标签。"
+      },
+      "analysis": {
+        "title": "智能分析",
+        "desc": "设备端 AI 分析营养成分、添加剂等信息。"
+      },
+      "security": {
+        "title": "隐私与安全",
+        "desc": "所有操作均在本地完成——不会存储任何数据。"
+      }
+    }
+  },
+
+  "howSteps": {
+    "upload": {
+      "title": "1. 上传照片",
+      "desc": "拍摄食物照片并上传到应用"
+    },
+    "analysis": {
+      "title": "2. AI 分析",
+      "desc": "我们的 AI 识别营养信息"
+    },
+    "safety": {
+      "title": "3. 安全评分",
+      "desc": "即时健康建议"
+    }
+  },
+
+  "profile": {
+    "title": "我的资料",
+    "subtitle": "管理您的健康偏好",
+    "healthCondition": "健康状况",
+    "selectCondition": "选择一种状况...",
+    "select_subtitle": "选择您的主要健康关注点",
+
+    "active": "已启用",
+    "saved": "✓ 已自动保存",
+    "updated": "您的资料已成功更新",
+    "whatYouGet": "您将获得：",
+
+    "whyTitle": "为什么要设置健康状况？",
+    "whyDesc": "这有助于 NutriVigil 根据您的健康状况提供准确、个性化的食品安全建议。数据仅本地保存，不会上传。",
+
+    "securityTitle": "您的数据是安全的",
+    "securityDesc": "所有健康信息均已加密并仅存储在您的设备上。我们绝不会与第三方共享您的个人数据。",
+
+    "platformHighlights": "平台亮点",
+
+    "stats": {
+      "insights": {
+        "label": "AI 辅助洞察",
+        "value": "自动化分析支持"
+      },
+      "foodData": {
+        "label": "食品参考数据",
+        "value": "广泛的项目覆盖"
+      },
+      "confidence": {
+        "label": "结果可信度",
+        "value": "持续改进的模型"
+      }
+    }
+  },
+
+  "health": {
+    "desc": {
+      "diabetes": "血糖管理",
+      "hypertension": "血压控制",
+      "heart": "心血管健康",
+      "kidney": "肾功能支持",
+      "cholesterol": "脂类管理",
+      "celiac": "无麸质饮食",
+      "lactose": "乳制品替代品",
+      "none": "综合健康"
+    },
+
+    "benefits": {
+      "diabetes": {
+        "lowGlycemic": "低血糖生成指数食物",
+        "carbTracking": "碳水化合物追踪",
+        "sugarAlternatives": "糖替代品"
+      },
+      "hypertension": {
+        "lowSodium": "低钠选择",
+        "heartHealthyFats": "有益心脏的脂肪",
+        "potassiumRichFoods": "富含钾的食物"
+      },
+      "heart": {
+        "omega3RichFoods": "富含 Omega-3 的食物",
+        "lowCholesterol": "低胆固醇",
+        "antiInflammatory": "抗炎"
+      },
+      "kidney": {
+        "lowPhosphorus": "低磷",
+        "proteinMonitoring": "蛋白质监测",
+        "fluidBalance": "液体平衡"
+      },
+      "cholesterol": {
+        "hdlBoostingFoods": "提高 HDL 的食物",
+        "lowSaturatedFats": "低饱和脂肪",
+        "fiberRichOptions": "高纤维选择"
+      },
+      "celiac": {
+        "glutenFreeAlternatives": "无麸质替代品",
+        "safeGrains": "安全谷物",
+        "crossContaminationAlerts": "交叉污染警告"
+      },
+      "lactose": {
+        "lactoseFreeOptions": "无乳糖选择",
+        "plantBasedMilk": "植物奶",
+        "calciumAlternatives": "钙替代品"
+      },
+      "none": {
+        "balancedNutrition": "均衡营养",
+        "macroTracking": "宏量营养追踪",
+        "healthyLifestyleTips": "健康生活方式建议"
+      }
+    }
+  },
+
+  "conditions": {
+    "diabetes": "糖尿病",
+    "hypertension": "高血压",
+    "heart": "心脏病",
+    "kidney": "肾病",
+    "cholesterol": "高胆固醇",
+    "celiac": "乳糜泻",
+    "lactose": "乳糖不耐受",
+    "none": "无"
+  },
+
+  "scan": {
+    "title": "扫描食物",
+    "subtitle": "上传照片以分析营养安全性",
+    "condition": "健康状况",
+    "setCondition": "请先设置您的健康状况",
+    "foodPhoto": "食物照片",
+    "uploadHint": "点击上传或拖拽文件",
+    "fileTypes": "PNG、JPG、GIF（最大 10MB）",
+    "scanButton": "扫描食物",
+    "scanning": "正在扫描...",
+    "thinking": "正在分析...",
+    "submitQuery": "提交问题",
+    "labels": {
+      "food": "食物",
+      "reason": "原因",
+      "suggestion": "建议",
+      "healthySwaps": "健康替代方案",
+      "askFood": "询问此食物",
+      "foundTitle": "我们发现了以下内容",
+      "listen": "收听回复"
+    }
+  },
+
+  "errors": {
+    "noImage": "请选择一张图片文件",
+    "noCondition": "请先设置您的健康状况",
+    "analysisFailed": "食物分析失败"
+  },
+
+  "safety": {
+    "safe": "安全",
+    "moderate": "适量",
+    "unsafe": "不安全"
+  },
+
+  "footer": {
+    "scrollTop": "返回顶部",
+
+    "brandDesc": "您的个人 AI 健康扫描器。使用先进的 Gemini v2.5 AI 即时分析餐食，让营养与您的健康目标完美匹配。",
+
+    "badges": {
+      "gemini": "Gemini AI",
+      "secure": "安全"
+    },
+
+    "connect": "联系我们",
+
+    "sections": {
+      "product": "产品",
+      "company": "公司",
+      "newsletter": "保持健康"
+    },
+
+    "links": {
+      "product": {
+        "aiScanner": "AI 扫描器",
+        "nutritionDecoded": "营养解析",
+        "safetySignals": "安全信号",
+        "healthProfile": "健康档案"
+      },
+      "company": {
+        "aboutUs": "关于我们",
+        "ourMission": "我们的使命",
+        "careers": "招聘",
+        "contact": "联系方式"
+      },
+      "legal": {
+        "privacyPolicy": "隐私政策",
+        "termsOfService": "服务条款",
+        "cookiePolicy": "Cookie 政策"
+      }
+    },
+
+    "newsletter": {
+      "desc": "加入 50,000+ 名健康爱好者，每周接收 AI 驱动的营养洞察。",
+      "placeholder": "输入您的邮箱",
+      "subscribe": "订阅",
+      "subscribed": "已订阅！",
+
+      "errors": {
+        "required": "邮箱为必填项",
+        "invalid": "请输入有效的邮箱地址"
+      },
+
+      "trust": {
+        "noSpam": "无垃圾邮件",
+        "unsubscribe": "可随时取消订阅"
+      }
+    },
+
+    "bottom": {
+      "rights": "版权所有。",
+      "builtWithCare": "用心打造，只为您的健康",
+      "language": "简体中文 (ZH)"
+    },
+
+    "extra": "由 Gemini 2.5 AI 驱动 • 符合 HIPAA 标准 • SOC 2 Type II 认证 • 实时分析 • 500K+ 食品数据库 • 99.2% 准确率 • 多语言支持 • 离线模式 • 端到端加密 • FDA 指南集成 • 个性化推荐 • 社区验证"
+  }
+}

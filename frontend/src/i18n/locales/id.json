@@ -1,0 +1,253 @@
+{
+  "appName": "NutriVigil",
+
+  "nav": {
+    "home": "Beranda",
+    "profile": "Profil Saya"
+  },
+
+  "home": {
+    "startScanning": "Mulai Pemindaian",
+    "badge": "Protokol Intelijen v1.0",
+    "heroDesc": "Mesin pemindaian personal yang dirancang untuk generasi baru kesadaran nutrisi. Analisis di perangkat. Privasi mutlak.",
+    "openSource": "Sumber Terbuka",
+
+    "how": {
+      "title": "Cara",
+      "highlight": "Kerja",
+      "subtitle": "Tiga langkah sederhana untuk keputusan makanan yang lebih cerdas dan aman."
+    },
+
+    "steps": {
+      "scan": {
+        "title": "Pindai Produk",
+        "desc": "Gunakan kamera Anda untuk langsung memindai label makanan kemasan."
+      },
+      "analysis": {
+        "title": "Analisis Cerdas",
+        "desc": "AI di perangkat menganalisis nutrisi, bahan tambahan, dan lainnya."
+      },
+      "security": {
+        "title": "Pribadi & Aman",
+        "desc": "Semua proses terjadi secara lokal — tidak ada data yang disimpan."
+      }
+    }
+  },
+
+  "howSteps": {
+    "upload": {
+      "title": "1. Unggah Foto",
+      "desc": "Ambil foto makanan Anda dan unggah ke aplikasi"
+    },
+    "analysis": {
+      "title": "2. Analisis AI",
+      "desc": "AI kami mengidentifikasi informasi nutrisi"
+    },
+    "safety": {
+      "title": "3. Skor Keamanan",
+      "desc": "Rekomendasi kesehatan instan"
+    }
+  },
+
+  "profile": {
+    "title": "Profil Saya",
+    "subtitle": "Kelola preferensi kesehatan Anda",
+    "healthCondition": "Kondisi Kesehatan",
+    "selectCondition": "Pilih kondisi...",
+    "select_subtitle": "Pilih fokus kesehatan utama Anda",
+
+    "active": "Aktif",
+    "saved": "✓ Disimpan otomatis",
+    "updated": "Profil Anda berhasil diperbarui",
+    "whatYouGet": "Apa yang Anda dapatkan:",
+
+    "whyTitle": "Mengapa mengatur kondisi?",
+    "whyDesc": "Ini membantu NutriVigil memberikan rekomendasi keamanan makanan yang akurat dan personal berdasarkan kondisi kesehatan Anda. Disimpan secara lokal, tidak diunggah.",
+
+    "securityTitle": "Data Anda Aman",
+    "securityDesc": "Semua informasi kesehatan dienkripsi dan disimpan secara lokal di perangkat Anda. Kami tidak pernah membagikan data pribadi Anda kepada pihak ketiga.",
+
+    "platformHighlights": "Sorotan Platform",
+
+    "stats": {
+      "insights": {
+        "label": "Wawasan Berbantuan AI",
+        "value": "Dukungan analisis otomatis"
+      },
+      "foodData": {
+        "label": "Data Referensi Makanan",
+        "value": "Cakupan item yang luas"
+      },
+      "confidence": {
+        "label": "Kepercayaan Hasil",
+        "value": "Model yang terus ditingkatkan"
+      }
+    }
+  },
+
+  "health": {
+    "desc": {
+      "diabetes": "Pengelolaan gula darah",
+      "hypertension": "Kontrol tekanan darah",
+      "heart": "Kesehatan kardiovaskular",
+      "kidney": "Dukungan fungsi ginjal",
+      "cholesterol": "Pengelolaan lipid",
+      "celiac": "Diet bebas gluten",
+      "lactose": "Alternatif produk susu",
+      "none": "Kesehatan umum"
+    },
+
+    "benefits": {
+      "diabetes": {
+        "lowGlycemic": "Makanan indeks glikemik rendah",
+        "carbTracking": "Pelacakan karbohidrat",
+        "sugarAlternatives": "Alternatif gula"
+      },
+      "hypertension": {
+        "lowSodium": "Pilihan rendah natrium",
+        "heartHealthyFats": "Lemak sehat untuk jantung",
+        "potassiumRichFoods": "Makanan kaya kalium"
+      },
+      "heart": {
+        "omega3RichFoods": "Makanan kaya omega-3",
+        "lowCholesterol": "Rendah kolesterol",
+        "antiInflammatory": "Anti-inflamasi"
+      },
+      "kidney": {
+        "lowPhosphorus": "Rendah fosfor",
+        "proteinMonitoring": "Pemantauan protein",
+        "fluidBalance": "Keseimbangan cairan"
+      },
+      "cholesterol": {
+        "hdlBoostingFoods": "Makanan peningkat HDL",
+        "lowSaturatedFats": "Lemak jenuh rendah",
+        "fiberRichOptions": "Pilihan kaya serat"
+      },
+      "celiac": {
+        "glutenFreeAlternatives": "Alternatif bebas gluten",
+        "safeGrains": "Biji-bijian aman",
+        "crossContaminationAlerts": "Peringatan kontaminasi silang"
+      },
+      "lactose": {
+        "lactoseFreeOptions": "Pilihan bebas laktosa",
+        "plantBasedMilk": "Susu nabati",
+        "calciumAlternatives": "Alternatif kalsium"
+      },
+      "none": {
+        "balancedNutrition": "Nutrisi seimbang",
+        "macroTracking": "Pelacakan makronutrien",
+        "healthyLifestyleTips": "Tips gaya hidup sehat"
+      }
+    }
+  },
+
+  "conditions": {
+    "diabetes": "Diabetes",
+    "hypertension": "Hipertensi",
+    "heart": "Penyakit Jantung",
+    "kidney": "Penyakit Ginjal",
+    "cholesterol": "Kolesterol Tinggi",
+    "celiac": "Penyakit Celiac",
+    "lactose": "Intoleransi Laktosa",
+    "none": "Tidak Ada"
+  },
+
+  "scan": {
+    "title": "Pindai Makanan",
+    "subtitle": "Unggah foto untuk menganalisis keamanan nutrisi",
+    "condition": "Kondisi",
+    "setCondition": "Silakan atur kondisi Anda di",
+    "foodPhoto": "Foto Makanan",
+    "uploadHint": "Klik untuk mengunggah atau seret dan lepas",
+    "fileTypes": "PNG, JPG, GIF hingga 10MB",
+    "scanButton": "Pindai Makanan",
+    "scanning": "Memindai...",
+    "thinking": "Menganalisis...",
+    "submitQuery": "Kirim Pertanyaan",
+    "labels": {
+      "food": "Makanan",
+      "reason": "Alasan",
+      "suggestion": "Saran",
+      "healthySwaps": "Alternatif Sehat",
+      "askFood": "Tanya Tentang Makanan Ini",
+      "foundTitle": "Inilah yang kami temukan",
+      "listen": "Dengarkan respons"
+    }
+  },
+
+  "errors": {
+    "noImage": "Silakan pilih file gambar",
+    "noCondition": "Silakan atur kondisi kesehatan Anda terlebih dahulu",
+    "analysisFailed": "Gagal menganalisis makanan"
+  },
+
+  "safety": {
+    "safe": "Aman",
+    "moderate": "Sedang",
+    "unsafe": "Tidak Aman"
+  },
+
+  "footer": {
+    "scrollTop": "Gulir ke atas",
+
+    "brandDesc": "Pemindai kesehatan AI pribadi Anda. Analisis makanan secara instan dengan Gemini v2.5 AI canggih untuk menjaga nutrisi Anda tetap selaras dengan tujuan kesehatan.",
+
+    "badges": {
+      "gemini": "Gemini AI",
+      "secure": "Aman"
+    },
+
+    "connect": "Terhubung Dengan Kami",
+
+    "sections": {
+      "product": "Produk",
+      "company": "Perusahaan",
+      "newsletter": "Tetap Sehat"
+    },
+
+    "links": {
+      "product": {
+        "aiScanner": "Pemindai AI",
+        "nutritionDecoded": "Nutrisi Terurai",
+        "safetySignals": "Sinyal Keamanan",
+        "healthProfile": "Profil Kesehatan"
+      },
+      "company": {
+        "aboutUs": "Tentang Kami",
+        "ourMission": "Misi Kami",
+        "careers": "Karier",
+        "contact": "Kontak"
+      },
+      "legal": {
+        "privacyPolicy": "Kebijakan Privasi",
+        "termsOfService": "Syarat Layanan",
+        "cookiePolicy": "Kebijakan Cookie"
+      }
+    },
+
+    "newsletter": {
+      "desc": "Bergabunglah dengan 50.000+ penggemar kesehatan yang menerima wawasan nutrisi mingguan berbasis AI.",
+      "placeholder": "Masukkan email Anda",
+      "subscribe": "Berlangganan",
+      "subscribed": "Berlangganan!",
+
+      "errors": {
+        "required": "Email wajib diisi",
+        "invalid": "Silakan masukkan alamat email yang valid"
+      },
+
+      "trust": {
+        "noSpam": "Tanpa spam",
+        "unsubscribe": "Berhenti berlangganan kapan saja"
+      }
+    },
+
+    "bottom": {
+      "rights": "Hak cipta dilindungi.",
+      "builtWithCare": "Dibuat dengan kepedulian untuk kesehatan Anda",
+      "language": "Bahasa Indonesia (ID)"
+    },
+
+    "extra": "Didukung oleh Gemini 2.5 AI • Sesuai HIPAA • Tersertifikasi SOC 2 Tipe II • Analisis real-time • Basis data 500K+ makanan • Akurasi 99,2% • Dukungan multibahasa • Mode offline • Enkripsi end-to-end • Integrasi pedoman FDA • Rekomendasi personal • Diverifikasi komunitas"
+  }
+}

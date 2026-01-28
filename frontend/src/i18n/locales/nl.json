@@ -1,0 +1,253 @@
+{
+  "appName": "NutriVigil",
+
+  "nav": {
+    "home": "Home",
+    "profile": "Mijn profiel"
+  },
+
+  "home": {
+    "startScanning": "Scan starten",
+    "badge": "Intelligentieprotocol v1.0",
+    "heroDesc": "Gepersonaliseerde scan-engine gebouwd voor de volgende generatie voedingsbewustzijn. Analyse op het apparaat. Absolute privacy.",
+    "openSource": "Open source",
+
+    "how": {
+      "title": "Hoe het",
+      "highlight": "werkt",
+      "subtitle": "Drie eenvoudige stappen voor slimmere en veiligere voedingskeuzes."
+    },
+
+    "steps": {
+      "scan": {
+        "title": "Product scannen",
+        "desc": "Gebruik je camera om verpakte voedingsetiketten direct te scannen."
+      },
+      "analysis": {
+        "title": "Slimme analyse",
+        "desc": "AI op het apparaat analyseert voedingsstoffen, additieven en meer."
+      },
+      "security": {
+        "title": "Privé en veilig",
+        "desc": "Alles gebeurt lokaal — er worden geen gegevens opgeslagen."
+      }
+    }
+  },
+
+  "howSteps": {
+    "upload": {
+      "title": "1. Foto uploaden",
+      "desc": "Maak een foto van je eten en upload deze naar de app"
+    },
+    "analysis": {
+      "title": "2. AI-analyse",
+      "desc": "Onze AI herkent voedingsinformatie"
+    },
+    "safety": {
+      "title": "3. Veiligheidsscore",
+      "desc": "Directe gezondheidsaanbevelingen"
+    }
+  },
+
+  "profile": {
+    "title": "Mijn profiel",
+    "subtitle": "Beheer je gezondheidsvoorkeuren",
+    "healthCondition": "Gezondheidstoestand",
+    "selectCondition": "Selecteer een toestand...",
+    "select_subtitle": "Kies je primaire gezondheidsfocus",
+
+    "active": "Actief",
+    "saved": "✓ Automatisch opgeslagen",
+    "updated": "Je profiel is succesvol bijgewerkt",
+    "whatYouGet": "Wat je krijgt:",
+
+    "whyTitle": "Waarom je toestand instellen?",
+    "whyDesc": "Dit helpt NutriVigil om nauwkeurige en gepersonaliseerde voedselveiligheidsaanbevelingen te geven op basis van je gezondheidstoestand. Lokaal opgeslagen, niet geüpload.",
+
+    "securityTitle": "Je gegevens zijn veilig",
+    "securityDesc": "Alle gezondheidsinformatie wordt versleuteld en lokaal op je apparaat opgeslagen. We delen je persoonlijke gegevens nooit met derden.",
+
+    "platformHighlights": "Platformhoogtepunten",
+
+    "stats": {
+      "insights": {
+        "label": "AI-ondersteunde inzichten",
+        "value": "Geautomatiseerde analyseondersteuning"
+      },
+      "foodData": {
+        "label": "Voedselreferentiegegevens",
+        "value": "Uitgebreide dekking"
+      },
+      "confidence": {
+        "label": "Betrouwbaarheid van resultaten",
+        "value": "Continu verbeterde modellen"
+      }
+    }
+  },
+
+  "health": {
+    "desc": {
+      "diabetes": "Bloedsuikerbeheer",
+      "hypertension": "Bloeddrukcontrole",
+      "heart": "Cardiovasculaire gezondheid",
+      "kidney": "Ondersteuning van nierfunctie",
+      "cholesterol": "Lipidemanagement",
+      "celiac": "Glutenvrij dieet",
+      "lactose": "Zuivelalternatieven",
+      "none": "Algemeen welzijn"
+    },
+
+    "benefits": {
+      "diabetes": {
+        "lowGlycemic": "Voedsel met lage glycemische index",
+        "carbTracking": "Koolhydraatregistratie",
+        "sugarAlternatives": "Suikeralternatieven"
+      },
+      "hypertension": {
+        "lowSodium": "Natriumarme opties",
+        "heartHealthyFats": "Hartgezonde vetten",
+        "potassiumRichFoods": "Kaliumrijke voedingsmiddelen"
+      },
+      "heart": {
+        "omega3RichFoods": "Omega-3-rijke voedingsmiddelen",
+        "lowCholesterol": "Cholesterolarm",
+        "antiInflammatory": "Ontstekingsremmend"
+      },
+      "kidney": {
+        "lowPhosphorus": "Fosforarm",
+        "proteinMonitoring": "Eiwitmonitoring",
+        "fluidBalance": "Vochtbalans"
+      },
+      "cholesterol": {
+        "hdlBoostingFoods": "HDL-verhogende voedingsmiddelen",
+        "lowSaturatedFats": "Weinig verzadigde vetten",
+        "fiberRichOptions": "Vezelrijke opties"
+      },
+      "celiac": {
+        "glutenFreeAlternatives": "Glutenvrije alternatieven",
+        "safeGrains": "Veilige granen",
+        "crossContaminationAlerts": "Waarschuwingen voor kruisbesmetting"
+      },
+      "lactose": {
+        "lactoseFreeOptions": "Lactosevrije opties",
+        "plantBasedMilk": "Plantaardige melk",
+        "calciumAlternatives": "Calciumalternatieven"
+      },
+      "none": {
+        "balancedNutrition": "Evenwichtige voeding",
+        "macroTracking": "Macronutriënten tracking",
+        "healthyLifestyleTips": "Tips voor een gezonde levensstijl"
+      }
+    }
+  },
+
+  "conditions": {
+    "diabetes": "Diabetes",
+    "hypertension": "Hypertensie",
+    "heart": "Hartziekte",
+    "kidney": "Nierziekte",
+    "cholesterol": "Hoog cholesterol",
+    "celiac": "Coeliakie",
+    "lactose": "Lactose-intolerantie",
+    "none": "Geen"
+  },
+
+  "scan": {
+    "title": "Voedsel scannen",
+    "subtitle": "Upload een foto om de voedingsveiligheid te analyseren",
+    "condition": "Toestand",
+    "setCondition": "Stel je toestand in bij",
+    "foodPhoto": "Foto van voedsel",
+    "uploadHint": "Klik om te uploaden of sleep en zet neer",
+    "fileTypes": "PNG, JPG, GIF tot 10MB",
+    "scanButton": "Voedsel scannen",
+    "scanning": "Bezig met scannen...",
+    "thinking": "Bezig met analyseren...",
+    "submitQuery": "Vraag indienen",
+    "labels": {
+      "food": "Voedsel",
+      "reason": "Reden",
+      "suggestion": "Suggestie",
+      "healthySwaps": "Gezonde alternatieven",
+      "askFood": "Vraag over dit voedsel",
+      "foundTitle": "Dit hebben we gevonden",
+      "listen": "Luister naar antwoord"
+    }
+  },
+
+  "errors": {
+    "noImage": "Selecteer een afbeeldingsbestand",
+    "noCondition": "Stel eerst je gezondheidstoestand in",
+    "analysisFailed": "Analyse van het voedsel is mislukt"
+  },
+
+  "safety": {
+    "safe": "Veilig",
+    "moderate": "Matig",
+    "unsafe": "Onveilig"
+  },
+
+  "footer": {
+    "scrollTop": "Scroll naar boven",
+
+    "brandDesc": "Jouw persoonlijke AI-gezondheidsscanner. Analyseer maaltijden direct met geavanceerde Gemini v2.5 AI om je voeding perfect af te stemmen op je gezondheidsdoelen.",
+
+    "badges": {
+      "gemini": "Gemini AI",
+      "secure": "Beveiligd"
+    },
+
+    "connect": "Verbind met ons",
+
+    "sections": {
+      "product": "Product",
+      "company": "Bedrijf",
+      "newsletter": "Blijf gezond"
+    },
+
+    "links": {
+      "product": {
+        "aiScanner": "AI-scanner",
+        "nutritionDecoded": "Voeding uitgelegd",
+        "safetySignals": "Veiligheidssignalen",
+        "healthProfile": "Gezondheidsprofiel"
+      },
+      "company": {
+        "aboutUs": "Over ons",
+        "ourMission": "Onze missie",
+        "careers": "Carrières",
+        "contact": "Contact"
+      },
+      "legal": {
+        "privacyPolicy": "Privacybeleid",
+        "termsOfService": "Servicevoorwaarden",
+        "cookiePolicy": "Cookiebeleid"
+      }
+    },
+
+    "newsletter": {
+      "desc": "Sluit je aan bij meer dan 50.000 gezondheidsliefhebbers die wekelijks AI-gestuurde voedingsinzichten ontvangen.",
+      "placeholder": "Voer je e-mailadres in",
+      "subscribe": "Abonneren",
+      "subscribed": "Geabonneerd!",
+
+      "errors": {
+        "required": "E-mailadres is verplicht",
+        "invalid": "Voer een geldig e-mailadres in"
+      },
+
+      "trust": {
+        "noSpam": "Geen spam",
+        "unsubscribe": "Altijd uitschrijven mogelijk"
+      }
+    },
+
+    "bottom": {
+      "rights": "Alle rechten voorbehouden.",
+      "builtWithCare": "Met zorg gebouwd voor jouw gezondheid",
+      "language": "Nederlands (NL)"
+    },
+
+    "extra": "Aangedreven door Gemini 2.5 AI • HIPAA-conform • SOC 2 Type II gecertificeerd • Realtime analyse • 500K+ voedseldatabase • 99,2% nauwkeurigheid • Meertalige ondersteuning • Offline modus • End-to-end encryptie • Integratie van FDA-richtlijnen • Gepersonaliseerde aanbevelingen • Door de community geverifieerd"
+  }
+}

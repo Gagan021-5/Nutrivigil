@@ -18,12 +18,17 @@ import {
 export const analyzeFood = async (req, res) => {
   let imagePath = null;
 
+  const language =
+    typeof req.body?.language === "string" && req.body.language.trim()
+      ? req.body.language
+      : "English";
+
   try {
     const condition = req.body.condition;
     const query = req.body.query;
     const existingFoodName = req.body.foodName;
 
-    // Handle follow-up queries without image
+    // ---------------- FOLLOW-UP QUERY (NO IMAGE) ----------------
     if (!req.file && query) {
       if (!existingFoodName) {
         return res.status(400).json({
@@ -36,50 +41,61 @@ export const analyzeFood = async (req, res) => {
       }
 
       const followUpPrompt = `
-        Context: The user is asking about ${existingFoodName || "this food"}.
-        Health Condition: ${condition}
-        User's Question: "${query}"
-        
-        Analyze if this is safe based on the condition. 
-        Output ONLY JSON:
-        {
-          "traffic_light": "green", 
-          "verdict_title": "Follow-up Answer",
-          "answer": "Direct answer to the user's question and a add helpful tip.",
-        }
+      FOOD NAME (KEEP IN ENGLISH, DO NOT TRANSLATE):
+      ${existingFoodName}
+
+      Health Condition: ${condition}
+      User's Question: "${query}"
+
+      IMPORTANT RULES:
+      - Food name MUST remain in English
+      - Respond STRICTLY in ${language} for explanations
+      - Do NOT mix languages
+      - Do NOT add text outside JSON
+      - ALL explanation text must be in ${language}
+
+      Analyze if this food is safe based on the condition.
+
+      Output ONLY valid JSON:
+      {
+      "traffic_light": "green" | "yellow" | "red",
+      "verdict_title": "",
+      "answer": ""
+      }
       `;
 
       try {
         const result = await generateGeminiContent(followUpPrompt);
-        const responseText = result.response.candidates[0].content.parts[0].text;
+        const responseText =
+          result.response.candidates[0].content.parts[0].text;
 
-        try {
-          const parsedData = parseGeminiJson(responseText);
-          return res.json({
-            success: true,
-            food_name: existingFoodName,
-            ...parsedData,
-          });
-        } catch (parseError) {
-          logError(parseError, "[Analyze] Follow-up JSON parsing failed");
-          return res.status(500).json({
-            success: false,
-            error: {
-              message: "Failed to parse AI response. Please try again.",
-              code: "PARSE_ERROR",
-            },
-          });
-        }
+        const parsedData = parseGeminiJson(responseText);
+
+        return res.json({
+          success: true,
+          food_name: existingFoodName,
+          ...parsedData,
+        });
       } catch (error) {
         if (error instanceof APIError) {
           logError(error, "[Analyze] Follow-up Gemini call failed");
-          return res.status(error.statusCode).json(formatErrorResponse(error));
+          return res
+            .status(error.statusCode)
+            .json(formatErrorResponse(error));
         }
-        throw error;
+
+        logError(error, "[Analyze] Follow-up processing error");
+        return res.status(500).json({
+          success: false,
+          error: {
+            message: "Failed to process follow-up query.",
+            code: "FOLLOWUP_ERROR",
+          },
+        });
       }
     }
 
-    // Validate image upload
+    // ---------------- IMAGE VALIDATION ----------------
     if (!req.file) {
       return res.status(400).json({
         success: false,
@@ -90,7 +106,6 @@ export const analyzeFood = async (req, res) => {
       });
     }
 
-    // Validate condition
     if (!condition) {
       return res.status(400).json({
         success: false,
@@ -107,7 +122,7 @@ export const analyzeFood = async (req, res) => {
       const base64 = imageToBase64(imagePath);
       const mimeType = getMimeType(imagePath);
 
-      // Step 1: Identify food in image
+      // ---------------- STEP 1: FOOD IDENTIFICATION ----------------
       let foodName;
       try {
         const identify = await generateGeminiContent({
@@ -116,56 +131,80 @@ export const analyzeFood = async (req, res) => {
               role: "user",
               parts: [
                 { inlineData: { data: base64, mimeType } },
-                { text: "Identify the dish. Output ONLY the name." },
+                { text: "Identify the dish. Output ONLY the name in English." },
               ],
             },
           ],
         });
 
-        foodName = identify.response.candidates[0].content.parts[0].text.trim();
+        foodName =
+          identify.response.candidates[0].content.parts[0].text.trim();
 
-        if (!foodName || foodName.length === 0) {
+        if (!foodName) {
           throw new Error("Could not identify the food in the image");
         }
       } catch (error) {
         if (error instanceof APIError) {
           logError(error, "[Analyze] Food identification failed");
-          return res.status(error.statusCode).json(formatErrorResponse(error));
+          return res
+            .status(error.statusCode)
+            .json(formatErrorResponse(error));
         }
         throw error;
       }
 
-      // Step 2: Get nutrition data
+      // ---------------- STEP 2: NUTRITION DATA (ENGLISH ONLY) ----------------
       let nutritionData = {};
       try {
         nutritionData = await getNutritionData(foodName);
       } catch (error) {
         if (error instanceof APIError) {
           logError(error, "[Analyze] Nutrition data fetch failed");
-          // Don't fail completely, continue with empty nutrition data
-          console.warn("Nutrition data unavailable, continuing with analysis...");
+          console.warn(
+            "Nutrition data unavailable, continuing with analysis..."
+          );
         } else {
           throw error;
         }
       }
 
-      // Step 3: Analyze food based on condition
+      // ---------------- STEP 3: ANALYSIS ----------------
       const analysisPrompt = `
-        Here is the nutritional data for ${foodName}: 
-        ${JSON.stringify(nutritionData)}
+      FOOD NAME (KEEP IN ENGLISH, DO NOT TRANSLATE):
+      ${foodName}
 
-        Analyze this food for someone with the condition: "${condition}"
-        If the food is not "green", suggest 2-3 healthy alternatives safe for this condition.
-        Output ONLY JSON in this exact format:
-        {
-          "traffic_light": "green" | "yellow" | "red",
-          "verdict_title": "",
-          "reason": "",
-          "suggestion": "",
-          "alternatives": [
-            { "name": "Alternative Name", "why": "Why it is safe" }
-          ]
-        }
+      Here is the NUTRITIONAL DATA(KEEP EXACTLY IT AS IS, ENGLISH ONLY):
+      ${JSON.stringify(nutritionData)}
+
+      Health condition: "${condition}"
+
+      CRITICAL INSTRUCTIONS:
+      1. Food name MUST remain in English
+      2. Nutritional data MUST remain in English
+      3. Do NOT translate nutrient names or values
+      4. ONLY translate the following fields into ${language}:
+      - verdict_title
+      - reason
+      - suggestion
+      - alternatives[].name
+      - alternatives[].why
+      5. Do NOT mix languages
+      6. Do NOT add explanations outside JSON
+      7. ALL translated text MUST be in ${language}
+
+      Analyze this food for the given condition.
+      If the food is not "green", suggest 2–3 healthy alternatives safe for this condition.
+
+      Output ONLY valid JSON in this exact format:
+      {
+        "traffic_light": "green" | "yellow" | "red",
+        "verdict_title": "",
+        "reason": "",
+        "suggestion": "",
+        "alternatives": [
+      { "name": "", "why": "" }
+      ]
+      }
       `;
 
       let analysis;
@@ -176,21 +215,24 @@ export const analyzeFood = async (req, res) => {
       } catch (error) {
         if (error instanceof APIError) {
           logError(error, "[Analyze] Analysis generation failed");
-          return res.status(error.statusCode).json(formatErrorResponse(error));
+          return res
+            .status(error.statusCode)
+            .json(formatErrorResponse(error));
         }
         throw error;
       }
 
-      const analysisText = analysis.response.candidates[0].content.parts[0].text || "";
+      const analysisText =
+        analysis.response.candidates[0].content.parts[0].text || "";
 
       try {
         const cleanJson = parseGeminiJson(analysisText);
 
-        res.json({
+        return res.json({
           success: true,
-          food_name: foodName,
-          nutrition: nutritionData,
-          ...cleanJson,
+          food_name: foodName, // English
+          nutrition: nutritionData, // English
+          ...cleanJson, // localized explanations
         });
       } catch (parseError) {
         logError(parseError, "[Analyze] Analysis JSON parsing failed");
@@ -203,17 +245,19 @@ export const analyzeFood = async (req, res) => {
         });
       }
     } catch (error) {
-      // Handle unexpected errors during analysis
       if (error instanceof APIError) {
         logError(error, "[Analyze] API Error during analysis");
-        return res.status(error.statusCode).json(formatErrorResponse(error));
+        return res
+          .status(error.statusCode)
+          .json(formatErrorResponse(error));
       }
 
       logError(error, "[Analyze] Unexpected error during processing");
       return res.status(500).json({
         success: false,
         error: {
-          message: "An unexpected error occurred during analysis. Please try again.",
+          message:
+            "An unexpected error occurred during analysis. Please try again.",
           code: "ANALYSIS_ERROR",
         },
       });
@@ -229,12 +273,15 @@ export const analyzeFood = async (req, res) => {
       },
     });
   } finally {
-    // Clean up uploaded file
+    // ---------------- CLEANUP ----------------
     if (imagePath && fs.existsSync(imagePath)) {
       try {
         fs.unlinkSync(imagePath);
       } catch (unlinkError) {
-        console.warn("Failed to delete uploaded file:", unlinkError.message);
+        console.warn(
+          "Failed to delete uploaded file:",
+          unlinkError.message
+        );
       }
     }
   }
