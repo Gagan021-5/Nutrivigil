@@ -21,7 +21,7 @@ const Navbar = () => {
     >
       <Link
         to={path}
-        className={`block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300
+        className={`block px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 cursor-pointer
           ${
             pathname === path
               ? theme === "dark"
@@ -67,6 +67,10 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-6">
           {navItem("/", t("nav.home"))}
           {navItem("/profile", t("nav.profile"))}
+          {navItem("/protocol", "Protocol v1.0")}
+          {navItem("/app", "App Interface")}
+          {navItem("/nutrition", "Food & Nutrition")}
+          {navItem("/how-it-works", "How It Works")}
         </div>
 
         {/* Right Actions */}
@@ -131,7 +135,11 @@ const Navbar = () => {
                   : "border-gray-200 bg-white"
               }
             `}
-          >
+          >  {navItem("/protocol", "Protocol v1.0", true)}
+              {navItem("/app", "App Interface", true)}
+              {navItem("/nutrition", "Food & Nutrition", true)}
+              {navItem("/how-it-works", "How It Works", true)}
+            
             <div className="px-4 py-4 flex flex-col gap-2">
               {navItem("/", t("nav.home"), true)}
               {navItem("/profile", t("nav.profile"), true)}

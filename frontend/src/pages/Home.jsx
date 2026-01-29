@@ -141,7 +141,7 @@ const Home = () => {
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-5">
             <button 
             onClick={() => navigate('/scan')}
-              className={`group px-10 py-5 text-lg font-bold rounded-2xl transition-all flex items-center gap-3 shadow-2xl hover:scale-105 active:scale-95 ${
+              className={`group px-10 py-5 text-lg font-bold rounded-2xl transition-all flex items-center gap-3 shadow-2xl hover:scale-105 active:scale-95 cursor-pointer ${
                 isLight
                   ? "bg-indigo-600 text-white shadow-indigo-200"
                   : "bg-white text-black hover:bg-indigo-50 shadow-white/5"
@@ -154,13 +154,16 @@ const Home = () => {
               />
             </button>
 
-            <button
-              className={`px-10 py-5 text-lg font-bold rounded-2xl border transition-all flex items-center gap-2 hover:bg-current/5 ${
+            <a
+              href="https://github.com/Gagan021-5/Nutrivigil"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`px-10 py-5 text-lg font-bold rounded-2xl border transition-all flex items-center gap-2 hover:bg-current/5 cursor-pointer ${
                 isLight ? "border-slate-200 text-slate-800" : "border-white/10 text-white"
               }`}
             >
               <Github size={20} /> Open Source
-            </button>
+            </a>
           </div>
         </motion.div>
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   ShieldCheck, 
@@ -34,21 +35,21 @@ const Footer = () => {
   // Footer navigation data with proper links and icons
   const footerLinks = {
     product: [
-      { name: 'AI Scanner', icon: Scan , href: '#'},
-      { name: 'Nutrition Decoded', icon: Heart , href: '#'},
-      { name: 'Safety Signals', icon: Shield , href: '#'},
-      { name: 'Health Profile', icon: User , href: '#'},
+      { name: 'AI Scanner', icon: Scan , href: '/scanner'},
+      { name: 'Nutrition Decoded', icon: Heart , href: '/nutrition-decoded'},
+      { name: 'Safety Signals', icon: Shield , href: '/safety-signals'},
+      { name: 'Health Profile', icon: User , href: '/health-profile'},
     ],
     company: [
-      { name: 'About Us', icon: Info , href: '#'},
-      { name: 'Our Mission', icon: Target , href: '#'},
-      { name: 'Careers', icon: Briefcase , href: '#'},
-      { name: 'Contact', icon: MessageCircle , href: '#'},
+      { name: 'About Us', icon: Info , href: '/about'},
+      { name: 'Our Mission', icon: Target , href: '/mission'},
+      { name: 'Careers', icon: Briefcase , href: '/careers'},
+      { name: 'Contact', icon: MessageCircle , href: '/contact'},
     ],
     legal: [
-      { name: 'Privacy Policy', icon: ShieldCheck , href: '#'},
-      { name: 'Terms of Service', icon: Scale , href: '#'},
-      { name: 'Cookie Policy', icon: Cookie , href: '#'},
+      { name: 'Privacy Policy', icon: ShieldCheck , href: '/privacy-policy'},
+      { name: 'Terms of Service', icon: Scale , href: '/terms'},
+      { name: 'Cookie Policy', icon: Cookie , href: '/cookies'},
     ]
   };
 
@@ -240,14 +241,14 @@ const Footer = () => {
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <a 
-                      href={item.href} 
-                      className="group flex items-center gap-3 text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-200"
+                    <Link 
+                      to={item.href} 
+                      className="group flex items-center gap-3 text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-200 cursor-pointer"
                     >
                       <Icon className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-1 transition-transform duration-200">{item.name}</span>
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
+                    </Link>
                   </motion.li>
                 );
               })}
@@ -275,14 +276,14 @@ const Footer = () => {
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <a 
-                      href={item.href} 
-                      className="group flex items-center gap-3 text-sm text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                    <Link 
+                      to={item.href} 
+                      className="group flex items-center gap-3 text-sm text-gray-400 hover:text-purple-400 transition-colors duration-200 cursor-pointer"
                     >
                       <Icon className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-1 transition-transform duration-200">{item.name}</span>
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    </a>
+                    </Link>
                   </motion.li>
                 );
               })}
@@ -382,15 +383,15 @@ const Footer = () => {
             {footerLinks.legal.map((item) => {
               const Icon = item.icon;
               return (
-                <motion.a
+                <motion.Link
                   key={item.name}
-                  href={item.href}
-                  className="group flex items-center gap-2 text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                  to={item.href}
+                  className="group flex items-center gap-2 text-xs text-gray-500 hover:text-gray-300 transition-colors cursor-pointer"
                   whileHover={{ y: -2 }}
                 >
                   <Icon className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
                   {item.name}
-                </motion.a>
+                </motion.Link>
               );
             })}
           </div>
