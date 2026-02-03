@@ -1,0 +1,253 @@
+{
+  "appName": "NutriVigil",
+
+  "nav": {
+    "home": "홈",
+    "profile": "내 프로필"
+  },
+
+  "home": {
+    "startScanning": "스캔 시작",
+    "badge": "인텔리전스 프로토콜 v1.0",
+    "heroDesc": "차세대 식이 인식을 위해 설계된 개인 맞춤형 스캔 엔진. 기기 내 분석. 완벽한 개인정보 보호.",
+    "openSource": "오픈 소스",
+
+    "how": {
+      "title": "작동",
+      "highlight": "방식",
+      "subtitle": "더 똑똑하고 안전한 식품 선택을 위한 세 가지 간단한 단계."
+    },
+
+    "steps": {
+      "scan": {
+        "title": "제품 스캔",
+        "desc": "카메라를 사용하여 포장 식품 라벨을 즉시 스캔하세요."
+      },
+      "analysis": {
+        "title": "스마트 분석",
+        "desc": "기기 내 AI가 영양소, 첨가물 등을 분석합니다."
+      },
+      "security": {
+        "title": "개인 정보 보호 및 보안",
+        "desc": "모든 작업은 로컬에서 처리되며 데이터는 저장되지 않습니다."
+      }
+    }
+  },
+
+  "howSteps": {
+    "upload": {
+      "title": "1. 사진 업로드",
+      "desc": "음식 사진을 촬영하여 앱에 업로드하세요"
+    },
+    "analysis": {
+      "title": "2. AI 분석",
+      "desc": "AI가 영양 정보를 식별합니다"
+    },
+    "safety": {
+      "title": "3. 안전 점수",
+      "desc": "즉각적인 건강 권장 사항"
+    }
+  },
+
+  "profile": {
+    "title": "내 프로필",
+    "subtitle": "건강 선호 설정 관리",
+    "healthCondition": "건강 상태",
+    "selectCondition": "상태 선택...",
+    "select_subtitle": "주요 건강 목표를 선택하세요",
+
+    "active": "활성",
+    "saved": "✓ 자동 저장됨",
+    "updated": "프로필이 성공적으로 업데이트되었습니다",
+    "whatYouGet": "제공되는 내용:",
+
+    "whyTitle": "상태를 설정해야 하는 이유는?",
+    "whyDesc": "건강 상태에 기반하여 NutriVigil이 정확하고 개인화된 식품 안전 권장 사항을 제공할 수 있도록 도와줍니다. 데이터는 로컬에 저장되며 업로드되지 않습니다.",
+
+    "securityTitle": "데이터는 안전합니다",
+    "securityDesc": "모든 건강 정보는 암호화되어 기기에 로컬로 저장됩니다. 개인 데이터는 제3자와 공유되지 않습니다.",
+
+    "platformHighlights": "플랫폼 주요 기능",
+
+    "stats": {
+      "insights": {
+        "label": "AI 지원 인사이트",
+        "value": "자동 분석 지원"
+      },
+      "foodData": {
+        "label": "식품 참조 데이터",
+        "value": "광범위한 항목 범위"
+      },
+      "confidence": {
+        "label": "결과 신뢰도",
+        "value": "지속적으로 개선되는 모델"
+      }
+    }
+  },
+
+  "health": {
+    "desc": {
+      "diabetes": "혈당 관리",
+      "hypertension": "혈압 조절",
+      "heart": "심혈관 건강",
+      "kidney": "신장 기능 지원",
+      "cholesterol": "지질 관리",
+      "celiac": "글루텐 프리 식단",
+      "lactose": "유제품 대체",
+      "none": "일반적인 웰빙"
+    },
+
+    "benefits": {
+      "diabetes": {
+        "lowGlycemic": "저혈당지수 식품",
+        "carbTracking": "탄수화물 추적",
+        "sugarAlternatives": "당 대체 식품"
+      },
+      "hypertension": {
+        "lowSodium": "저나트륨 옵션",
+        "heartHealthyFats": "심장에 좋은 지방",
+        "potassiumRichFoods": "칼륨이 풍부한 식품"
+      },
+      "heart": {
+        "omega3RichFoods": "오메가-3 풍부한 식품",
+        "lowCholesterol": "저콜레스테롤",
+        "antiInflammatory": "항염증"
+      },
+      "kidney": {
+        "lowPhosphorus": "저인",
+        "proteinMonitoring": "단백질 모니터링",
+        "fluidBalance": "체액 균형"
+      },
+      "cholesterol": {
+        "hdlBoostingFoods": "HDL을 높이는 식품",
+        "lowSaturatedFats": "저포화지방",
+        "fiberRichOptions": "식이섬유 풍부"
+      },
+      "celiac": {
+        "glutenFreeAlternatives": "글루텐 프리 대체식",
+        "safeGrains": "안전한 곡물",
+        "crossContaminationAlerts": "교차 오염 경고"
+      },
+      "lactose": {
+        "lactoseFreeOptions": "무유당 옵션",
+        "plantBasedMilk": "식물성 우유",
+        "calciumAlternatives": "칼슘 대체 식품"
+      },
+      "none": {
+        "balancedNutrition": "균형 잡힌 영양",
+        "macroTracking": "거대 영양소 추적",
+        "healthyLifestyleTips": "건강한 생활 습관 팁"
+      }
+    }
+  },
+
+  "conditions": {
+    "diabetes": "당뇨병",
+    "hypertension": "고혈압",
+    "heart": "심장 질환",
+    "kidney": "신장 질환",
+    "cholesterol": "고콜레스테롤",
+    "celiac": "셀리악병",
+    "lactose": "유당 불내증",
+    "none": "없음"
+  },
+
+  "scan": {
+    "title": "식품 스캔",
+    "subtitle": "사진을 업로드하여 영양 안전성을 분석하세요",
+    "condition": "상태",
+    "setCondition": "다음에서 상태를 설정하세요",
+    "foodPhoto": "식품 사진",
+    "uploadHint": "클릭하여 업로드하거나 드래그 앤 드롭",
+    "fileTypes": "PNG, JPG, GIF 최대 10MB",
+    "scanButton": "식품 스캔",
+    "scanning": "스캔 중...",
+    "thinking": "분석 중...",
+    "submitQuery": "질문 제출",
+    "labels": {
+      "food": "식품",
+      "reason": "이유",
+      "suggestion": "제안",
+      "healthySwaps": "건강한 대체 식품",
+      "askFood": "이 식품에 대해 질문",
+      "foundTitle": "분석 결과",
+      "listen": "응답 듣기"
+    }
+  },
+
+  "errors": {
+    "noImage": "이미지 파일을 선택하세요",
+    "noCondition": "먼저 건강 상태를 설정하세요",
+    "analysisFailed": "식품 분석에 실패했습니다"
+  },
+
+  "safety": {
+    "safe": "안전",
+    "moderate": "보통",
+    "unsafe": "위험"
+  },
+
+  "footer": {
+    "scrollTop": "위로 스크롤",
+
+    "brandDesc": "당신만의 AI 건강 스캐너. 최첨단 Gemini v2.5 AI로 식사를 즉시 분석하여 영양을 건강 목표에 완벽히 맞춰드립니다.",
+
+    "badges": {
+      "gemini": "Gemini AI",
+      "secure": "보안"
+    },
+
+    "connect": "문의하기",
+
+    "sections": {
+      "product": "제품",
+      "company": "회사",
+      "newsletter": "건강 유지"
+    },
+
+    "links": {
+      "product": {
+        "aiScanner": "AI 스캐너",
+        "nutritionDecoded": "영양 분석",
+        "safetySignals": "안전 신호",
+        "healthProfile": "건강 프로필"
+      },
+      "company": {
+        "aboutUs": "회사 소개",
+        "ourMission": "우리의 미션",
+        "careers": "채용",
+        "contact": "연락처"
+      },
+      "legal": {
+        "privacyPolicy": "개인정보 처리방침",
+        "termsOfService": "서비스 약관",
+        "cookiePolicy": "쿠키 정책"
+      }
+    },
+
+    "newsletter": {
+      "desc": "매주 AI 기반 영양 팁을 받는 50,000명 이상의 건강 관심 사용자와 함께하세요.",
+      "placeholder": "이메일을 입력하세요",
+      "subscribe": "구독",
+      "subscribed": "구독 완료!",
+
+      "errors": {
+        "required": "이메일은 필수입니다",
+        "invalid": "유효한 이메일 주소를 입력하세요"
+      },
+
+      "trust": {
+        "noSpam": "스팸 없음",
+        "unsubscribe": "언제든지 구독 해지"
+      }
+    },
+
+    "bottom": {
+      "rights": "모든 권리 보유.",
+      "builtWithCare": "당신의 건강을 생각하며 제작되었습니다",
+      "language": "한국어 (KR)"
+    },
+
+    "extra": "Gemini 2.5 AI 기반 • HIPAA 준수 • SOC 2 Type II 인증 • 실시간 분석 • 500K+ 식품 데이터베이스 • 정확도 99.2% • 다국어 지원 • 오프라인 모드 • 종단 간 암호화 • FDA 가이드라인 통합 • 개인 맞춤 추천 • 커뮤니티 검증"
+  }
+}

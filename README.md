@@ -144,11 +144,14 @@ NutriVigil/
 ├── frontend/
 │   ├── src/
 │   │   ├── assets/
+│   │   │   └── flags/
 │   │   ├── components/
 │   │   ├── contexts/
 │   │   ├── hooks/
 │   │   ├── i18n/
 │   │   ├── pages/
+│   │   ├── utils/
+│   │   │   └── languageMap.js
 │   │   ├── App.jsx
 │   │   └── main.jsx
 │   ├── index.html

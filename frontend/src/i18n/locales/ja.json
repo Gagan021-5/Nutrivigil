@@ -1,0 +1,253 @@
+{
+  "appName": "NutriVigil",
+
+  "nav": {
+    "home": "ホーム",
+    "profile": "マイプロフィール"
+  },
+
+  "home": {
+    "startScanning": "スキャン開始",
+    "badge": "インテリジェンス・プロトコル v1.0",
+    "heroDesc": "次世代の食事意識のために構築されたパーソナライズドスキャンエンジン。端末上で解析。完全なプライバシー。",
+    "openSource": "オープンソース",
+
+    "how": {
+      "title": "仕組み",
+      "highlight": "について",
+      "subtitle": "より賢く、安全な食事判断のための3つの簡単なステップ。"
+    },
+
+    "steps": {
+      "scan": {
+        "title": "商品をスキャン",
+        "desc": "カメラを使って、包装食品のラベルを即座にスキャンします。"
+      },
+      "analysis": {
+        "title": "スマート解析",
+        "desc": "端末上のAIが栄養素や添加物などを解析します。"
+      },
+      "security": {
+        "title": "プライベート＆安全",
+        "desc": "すべての処理はローカルで実行され、データは保存されません。"
+      }
+    }
+  },
+
+  "howSteps": {
+    "upload": {
+      "title": "1. 写真をアップロード",
+      "desc": "食事の写真を撮影し、アプリにアップロードします"
+    },
+    "analysis": {
+      "title": "2. AI解析",
+      "desc": "AIが栄養情報を識別します"
+    },
+    "safety": {
+      "title": "3. 安全スコア",
+      "desc": "即時の健康アドバイス"
+    }
+  },
+
+  "profile": {
+    "title": "マイプロフィール",
+    "subtitle": "健康設定を管理",
+    "healthCondition": "健康状態",
+    "selectCondition": "状態を選択...",
+    "select_subtitle": "主な健康目標を選択してください",
+
+    "active": "有効",
+    "saved": "✓ 自動的に保存されました",
+    "updated": "プロフィールが正常に更新されました",
+    "whatYouGet": "得られる内容：",
+
+    "whyTitle": "なぜ状態を設定するのですか？",
+    "whyDesc": "健康状態に基づき、NutriVigilが正確でパーソナライズされた食品安全の提案を行うためです。データはローカル保存され、アップロードされません。",
+
+    "securityTitle": "データは安全です",
+    "securityDesc": "すべての健康情報は暗号化され、端末内にローカル保存されます。個人データを第三者と共有することはありません。",
+
+    "platformHighlights": "プラットフォームの特長",
+
+    "stats": {
+      "insights": {
+        "label": "AI支援インサイト",
+        "value": "自動解析サポート"
+      },
+      "foodData": {
+        "label": "食品リファレンスデータ",
+        "value": "幅広い食品カバレッジ"
+      },
+      "confidence": {
+        "label": "結果の信頼性",
+        "value": "継続的に改善されるモデル"
+      }
+    }
+  },
+
+  "health": {
+    "desc": {
+      "diabetes": "血糖値管理",
+      "hypertension": "血圧管理",
+      "heart": "心血管の健康",
+      "kidney": "腎機能サポート",
+      "cholesterol": "脂質管理",
+      "celiac": "グルテンフリー食",
+      "lactose": "乳製品の代替",
+      "none": "一般的な健康"
+    },
+
+    "benefits": {
+      "diabetes": {
+        "lowGlycemic": "低GI食品",
+        "carbTracking": "炭水化物トラッキング",
+        "sugarAlternatives": "砂糖の代替"
+      },
+      "hypertension": {
+        "lowSodium": "低ナトリウム食品",
+        "heartHealthyFats": "心臓に良い脂質",
+        "potassiumRichFoods": "カリウム豊富な食品"
+      },
+      "heart": {
+        "omega3RichFoods": "オメガ3豊富な食品",
+        "lowCholesterol": "低コレステロール",
+        "antiInflammatory": "抗炎症"
+      },
+      "kidney": {
+        "lowPhosphorus": "低リン",
+        "proteinMonitoring": "たんぱく質管理",
+        "fluidBalance": "水分バランス"
+      },
+      "cholesterol": {
+        "hdlBoostingFoods": "HDLを高める食品",
+        "lowSaturatedFats": "低飽和脂肪",
+        "fiberRichOptions": "食物繊維が豊富な食品"
+      },
+      "celiac": {
+        "glutenFreeAlternatives": "グルテンフリー代替品",
+        "safeGrains": "安全な穀物",
+        "crossContaminationAlerts": "交差汚染アラート"
+      },
+      "lactose": {
+        "lactoseFreeOptions": "乳糖不使用オプション",
+        "plantBasedMilk": "植物性ミルク",
+        "calciumAlternatives": "カルシウム代替"
+      },
+      "none": {
+        "balancedNutrition": "バランスの取れた栄養",
+        "macroTracking": "マクロ栄養素管理",
+        "healthyLifestyleTips": "健康的な生活習慣のヒント"
+      }
+    }
+  },
+
+  "conditions": {
+    "diabetes": "糖尿病",
+    "hypertension": "高血圧",
+    "heart": "心疾患",
+    "kidney": "腎疾患",
+    "cholesterol": "高コレステロール",
+    "celiac": "セリアック病",
+    "lactose": "乳糖不耐症",
+    "none": "なし"
+  },
+
+  "scan": {
+    "title": "食品をスキャン",
+    "subtitle": "写真をアップロードして栄養安全性を解析",
+    "condition": "状態",
+    "setCondition": "次で健康状態を設定してください",
+    "foodPhoto": "食品の写真",
+    "uploadHint": "クリックしてアップロード、またはドラッグ＆ドロップ",
+    "fileTypes": "PNG, JPG, GIF（最大10MB）",
+    "scanButton": "食品をスキャン",
+    "scanning": "スキャン中...",
+    "thinking": "解析中...",
+    "submitQuery": "質問を送信",
+    "labels": {
+      "food": "食品",
+      "reason": "理由",
+      "suggestion": "提案",
+      "healthySwaps": "健康的な代替案",
+      "askFood": "この食品について質問",
+      "foundTitle": "解析結果はこちら",
+      "listen": "回答を聞く"
+    }
+  },
+
+  "errors": {
+    "noImage": "画像ファイルを選択してください",
+    "noCondition": "先に健康状態を設定してください",
+    "analysisFailed": "食品の解析に失敗しました"
+  },
+
+  "safety": {
+    "safe": "安全",
+    "moderate": "注意",
+    "unsafe": "危険"
+  },
+
+  "footer": {
+    "scrollTop": "トップへ戻る",
+
+    "brandDesc": "あなた専用のAI健康スキャナー。最先端の Gemini v2.5 AI により食事を即座に解析し、健康目標に最適な栄養管理を実現します。",
+
+    "badges": {
+      "gemini": "Gemini AI",
+      "secure": "セキュア"
+    },
+
+    "connect": "私たちとつながる",
+
+    "sections": {
+      "product": "製品",
+      "company": "会社",
+      "newsletter": "健康を維持"
+    },
+
+    "links": {
+      "product": {
+        "aiScanner": "AIスキャナー",
+        "nutritionDecoded": "栄養解析",
+        "safetySignals": "安全シグナル",
+        "healthProfile": "健康プロフィール"
+      },
+      "company": {
+        "aboutUs": "私たちについて",
+        "ourMission": "ミッション",
+        "careers": "採用情報",
+        "contact": "お問い合わせ"
+      },
+      "legal": {
+        "privacyPolicy": "プライバシーポリシー",
+        "termsOfService": "利用規約",
+        "cookiePolicy": "Cookieポリシー"
+      }
+    },
+
+    "newsletter": {
+      "desc": "50,000人以上の健康志向ユーザーが、毎週AIによる栄養アドバイスを受け取っています。",
+      "placeholder": "メールアドレスを入力",
+      "subscribe": "登録",
+      "subscribed": "登録済み！",
+
+      "errors": {
+        "required": "メールアドレスは必須です",
+        "invalid": "有効なメールアドレスを入力してください"
+      },
+
+      "trust": {
+        "noSpam": "スパムなし",
+        "unsubscribe": "いつでも解除可能"
+      }
+    },
+
+    "bottom": {
+      "rights": "無断転載を禁じます。",
+      "builtWithCare": "あなたの健康を考えて開発されました",
+      "language": "日本語 (JP)"
+    },
+
+    "extra": "Gemini 2.5 AI 搭載 • HIPAA 準拠 • SOC 2 Type II 認証 • リアルタイム解析 • 50万件以上の食品データベース • 精度99.2% • 多言語対応 • オフラインモード • エンドツーエンド暗号化 • FDA ガイドライン統合 • パーソナライズされた提案 • コミュニティ検証済み"
+  }
+}

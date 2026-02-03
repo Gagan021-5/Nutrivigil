@@ -1,22 +1,30 @@
 {
   "appName": "NutriVigil",
-  "tagline": "Dein persönlicher KI-Gesundheitsscanner",
+  "appName.dark": "NutriVigil",
+  "appName.light": "NutriVigil",
+  "tagline": "Ihr persönlicher AI Gesundheits-Scanner",
+  "tagline.dark": "Scannen im Dunkeln...",
+  "tagline.light": "Scannen im Licht...",
   "startScanning": "Scan starten",
-  "howItWorks": "So funktioniert es",
+  "howItWorks": "Wie es funktioniert",
 
   "nav": {
     "home": "Startseite",
-    "profile": "Mein Profil"
+    "home.dark": "Startseite",
+    "home.light": "Startseite",
+    "profile": "Mein Profil",
+    "profile.dark": "Mein Profil",
+    "profile.light": "Mein Profil"
   },
 
   "steps": {
     "upload": {
       "title": "1. Foto hochladen",
-      "desc": "Mache ein Foto von deinem Essen und lade es in die App hoch"
+      "desc": "Machen Sie ein Bild von Ihrem Essen und laden Sie es in die App hoch"
     },
     "analysis": {
-      "title": "2. KI-Analyse",
-      "desc": "Unsere KI erkennt die Nährwertinformationen"
+      "title": "2. AI Analyse",
+      "desc": "Unsere KI erkennt die Nährwerte"
     },
     "safety": {
       "title": "3. Sicherheitsbewertung",
@@ -26,18 +34,18 @@
 
   "profile": {
     "title": "Mein Profil",
-    "subtitle": "Verwalte deine Gesundheitseinstellungen",
+    "subtitle": "Verwalten Sie Ihre Gesundheitseinstellungen",
     "healthCondition": "Gesundheitszustand",
-    "selectCondition": "Wähle einen Zustand aus...",
+    "selectCondition": "Wählen Sie einen Zustand...",
     "saved": "✓ Automatisch gespeichert",
-    "whyTitle": "Warum deinen Zustand festlegen?",
-    "whyDesc": "Dies hilft NutriVigil, genaue und personalisierte Empfehlungen zur Lebensmittelsicherheit basierend auf deinem Gesundheitszustand zu geben. Die Daten werden lokal gespeichert und nicht hochgeladen."
+    "whyTitle": "Warum Ihren Zustand festlegen?",
+    "whyDesc": "Dies hilft NutriVigil, Ihnen genaue, personalisierte Ernährungssicherheits-Empfehlungen basierend auf Ihrem Gesundheitszustand zu geben. Lokal gespeichert, nicht hochgeladen."
   },
 
   "conditions": {
     "diabetes": "Diabetes",
     "hypertension": "Bluthochdruck",
-    "heart": "Herzerkrankung",
+    "heart": "Herzkrankheit",
     "kidney": "Nierenerkrankung",
     "cholesterol": "Hoher Cholesterinspiegel",
     "celiac": "Zöliakie",
@@ -47,24 +55,30 @@
 
   "scan": {
     "title": "Essen scannen",
-    "subtitle": "Lade ein Foto hoch, um die Ernährungssicherheit zu analysieren",
+    "subtitle": "Laden Sie ein Foto hoch, um die Ernährungssicherheit zu analysieren",
     "condition": "Zustand",
-    "setCondition": "Bitte lege deinen Zustand fest in",
-    "foodPhoto": "Foto des Essens",
-    "uploadHint": "Klicken zum Hochladen oder ziehen und ablegen",
-    "fileTypes": "PNG, JPG, GIF bis zu 10MB",
+    "setCondition": "Bitte legen Sie Ihren Zustand fest",
+    "foodPhoto": "Essen-Foto",
+    "uploadHint": "Klicken Sie, um hochzuladen oder ziehen Sie die Datei hierher",
+    "fileTypes": "PNG, JPG, GIF bis 10MB",
     "scanButton": "Essen scannen",
-    "scanning": "Wird gescannt...",
+    "scanning": "Scannen...",
     "food": "Essen",
     "reason": "Grund",
     "suggestion": "Vorschlag",
-    "submitQuery": "Anfrage senden",
-    "thinking": "Denkt nach..."
+    "submitQuery": "Frage stellen",
+    "thinking": "Analyse läuft..."
   },
 
   "errors": {
-    "noImage": "Bitte wähle eine Bilddatei aus",
-    "noCondition": "Bitte lege zuerst deinen Gesundheitszustand fest",
-    "analysisFailed": "Fehler bei der Analyse des Essens"
+    "noImage": "Bitte wählen Sie eine Bilddatei aus",
+    "noCondition": "Bitte legen Sie zuerst Ihren Gesundheitszustand fest",
+    "analysisFailed": "Analyse des Essens fehlgeschlagen"
+  },
+
+  "safety": {
+    "safe": "Sicher",
+    "moderate": "Mäßig",
+    "unsafe": "Unsicher"
   }
 }

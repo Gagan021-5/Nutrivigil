@@ -13,6 +13,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
 import VoiceQuery from "../components/VoiceQuery";
+import { LANGUAGE_MAP } from "../utils/languageMap";
 
 const STORAGE_KEY = "nutriguard";
 
@@ -54,7 +55,7 @@ function ScanPage() {
 
     try {
       // send a JSON object, not FormData, because there is no NEW image
-      const res = await axios.post("https://nutb.onrender.com/analyze", {
+      const res = await axios.post("https://nutb.onrender.com/analyze", {  
         condition: condition,
         query: followUpQuestion,
         foodName: result.food_name
@@ -64,10 +65,28 @@ function ScanPage() {
       setVoiceAnswer(res.data);
       setFollowUpQuestion("");
     } catch (err) {
-      setError(
-        err.response?.data?.error ||
-        "Failed to get an answer from the assistant."
-      );
+  console.log("FULL ERROR:", err.response?.data);
+
+ let errorMessage = t("errors.analysisFailed");
+
+      if (err.response?.status === 429) {
+        errorMessage = "Too many requests. Please wait a moment and try again.";
+      } else if (err.response?.data) {
+        const backendError = err.response.data;
+        
+        // Handle different backend error formats
+        if (typeof backendError === "string") {
+          errorMessage = backendError;
+        } else if (backendError.error) {
+          errorMessage = backendError.error;
+        } else if (backendError.message) {
+          errorMessage = backendError.message;
+        }
+      } else if (err.message) {
+        errorMessage = err.message;
+      }
+
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -106,22 +125,42 @@ function ScanPage() {
       const formData = new FormData();
       formData.append("image", selectedFile);
       formData.append("condition", condition);
+      formData.append(
+       "language",
+      LANGUAGE_MAP[i18n.language] || "English"
+        );
 
       const res = await axios.post("https://nutb.onrender.com/analyze", formData);
 
       setResult(res.data);
     } catch (err) {
-      setError(
-        err.response?.data?.error ||
-        err.message ||
-        "Failed to analyze food"
-      );
+   console.log("SCAN ERROR:", err);
 
+      // ✅ FIX: Always extract error as STRING
+      let errorMessage = t("errors.analysisFailed");
+
+      if (err.response?.status === 429) {
+        errorMessage = "Too many requests. Please wait a moment and try again.";
+      } else if (err.response?.data) {
+        const backendError = err.response.data;
+        
+        // Handle different backend error formats
+        if (typeof backendError === "string") {
+          errorMessage = backendError;
+        } else if (backendError.error) {
+          errorMessage = backendError.error;
+        } else if (backendError.message) {
+          errorMessage = backendError.message;
+        }
+      } else if (err.message) {
+        errorMessage = err.message;
+      }
+
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
   };
-
   const TrafficIcon = {
     green: <CheckCircle className="w-8 h-8 text-green-400" />,
     yellow: <AlertCircle className="w-8 h-8 text-yellow-400" />,
@@ -178,7 +217,7 @@ function ScanPage() {
 
           <p className={`text-sm mb-4 transition-colors ${theme === 'dark' ? "text-gray-300" : "text-gray-600"
             }`}>
-            Upload a photo to analyze nutritional safety
+           {t("scan.subtitle")}
           </p>
 
           <AnimatePresence mode="wait">
@@ -228,7 +267,7 @@ function ScanPage() {
           <div className="flex flex-col gap-2">
             <label className={`font-semibold text-sm transition-colors ${theme === 'dark' ? "text-gray-200" : "text-gray-700"
               }`}>
-              Food Photo
+             {t("scan.foodPhoto")}
             </label>
 
             <motion.div
@@ -276,11 +315,11 @@ function ScanPage() {
                       }`} />
                     <p className={`text-sm font-medium transition-colors ${theme === 'dark' ? "text-gray-300" : "text-gray-700"
                       }`}>
-                      Click to upload or drag and drop
+                      {t("scan.uploadHint")}
                     </p>
                     <p className={`text-xs transition-colors ${theme === 'dark' ? "text-gray-400" : "text-gray-500"
                       }`}>
-                      PNG, JPG, GIF up to 10MB
+                       {t("scan.fileTypes")}
                     </p>
                   </motion.div>
                 )}
@@ -350,14 +389,14 @@ function ScanPage() {
                 }`}>
                 <div>
                   <strong className={`block mb-1 transition-colors ${theme === 'dark' ? "text-white/80" : "text-gray-900"
-                    }`}>Food:</strong>
+                    }`}>{t("scan.labels.food")}:</strong>
                   {result.food_name}
                 </div>
 
                 <div className={`pt-4 border-t transition-colors ${theme === 'dark' ? "border-blue-400/10" : "border-blue-200"
                   }`}>
                   <strong className={`block mb-1 transition-colors ${theme === 'dark' ? "text-white/80" : "text-gray-900"
-                    }`}>Reason:</strong>
+                    }`}> {t("scan.labels.reason")}:</strong>
                   {result.reason}
                 </div>
 
@@ -366,7 +405,7 @@ function ScanPage() {
                     }`}>
                     <strong className={`block mb-1 transition-colors ${theme === 'dark' ? "text-white/80" : "text-gray-900"
                       }`}>
-                      Suggestion:
+                     {t("scan.labels.suggestion")}:
                     </strong>
                     {result.suggestion}
                   </div>
@@ -374,7 +413,7 @@ function ScanPage() {
                 {result.alternatives && result.traffic_light !== "green" && (
                   <div className={`pt-4 mt-4 border-t ${theme === 'dark' ? "border-blue-400/10" : "border-blue-200"}`}>
                     <strong className={`text-xl block mb-2 font-bold flex items-center gap-2 ${theme === 'dark' ? "text-green-400" : "text-green-600"}`}>
-                      <CheckCircle size={16} /> Healthy Swaps:
+                      <CheckCircle size={16} /> {t("scan.labels.healthySwaps")}:
                     </strong>
                     <div className="grid grid-cols-1 gap-2">
                       {result.alternatives.map((alt, idx) => (
@@ -397,7 +436,7 @@ function ScanPage() {
                     animate={{ opacity: 1, y: 0 }}
                     className={`mt-7 p-6 rounded-2xl border-l-4 ${theme === 'dark' ? "bg-purple-500/10 border-purple-500" : "bg-purple-50 border-purple-500"}`}
                   >
-                    <h3 className="text-s font-bold text-purple-400 uppercase mb-2">Here’s what we found</h3>
+                    <h3 className="text-s font-bold text-purple-400 uppercase mb-2"> {t("scan.labels.foundTitle")}</h3>
                     <button
                       onClick={() => speak(voiceAnswer.answer)}
                       className="p-2 -mt-2 hover:bg-purple-500/20 rounded-full transition-all text-purple-400"
@@ -412,7 +451,7 @@ function ScanPage() {
                 )}
               </AnimatePresence>
               <div className={`mt-6 pt-6 border-t ${theme === 'dark' ? "border-blue-400/10" : "border-blue-200"}`}>
-                <h3 className="text-s font-bold text-blue-400 uppercase mb-3">Ask About This Food</h3>
+                <h3 className="text-s font-bold text-blue-400 uppercase mb-3">{t("scan.labels.askFood")}</h3>
                 <VoiceQuery onTranscriptChange={(text) => setFollowUpQuestion(text)} />
 
                 <motion.button

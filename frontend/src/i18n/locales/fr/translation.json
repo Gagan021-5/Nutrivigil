@@ -1,35 +1,47 @@
 {
   "appName": "NutriVigil",
-  "tagline": "Votre scanner de santé personnel basé sur l’IA",
-  "startScanning": "Commencer l’analyse",
-  "howItWorks": "Comment ça marche",
+  "appName.dark": "NutriVigil",
+  "appName.light": "NutriVigil",
+  "tagline": "Votre scanner santé AI personnel",
+  "tagline.dark": "Analyse dans l'obscurité...",
+  "tagline.light": "Analyse à la lumière...",
+  "startScanning": "Commencer le Scan",
+  "howItWorks": "Comment ça fonctionne",
+
   "nav": {
     "home": "Accueil",
-    "profile": "Mon profil"
+    "home.dark": "Accueil",
+    "home.light": "Accueil",
+    "profile": "Mon Profil",
+    "profile.dark": "Mon Profil",
+    "profile.light": "Mon Profil"
   },
+
   "steps": {
     "upload": {
-      "title": "1. Télécharger une photo",
-      "desc": "Prenez une photo de votre repas et téléchargez-la dans l’application"
+      "title": "1. Télécharger la Photo",
+      "desc": "Prenez une photo de votre nourriture et téléchargez-la dans l'application"
     },
     "analysis": {
-      "title": "2. Analyse par IA",
-      "desc": "Notre IA identifie les informations nutritionnelles"
+      "title": "2. Analyse AI",
+      "desc": "Notre IA identifie la nutrition"
     },
     "safety": {
-      "title": "3. Score de sécurité",
+      "title": "3. Score de Sécurité",
       "desc": "Recommandations de santé instantanées"
     }
   },
+
   "profile": {
     "title": "Mon Profil",
     "subtitle": "Gérez vos préférences de santé",
     "healthCondition": "État de santé",
     "selectCondition": "Sélectionnez une condition...",
-    "saved": "✓ Enregistré automatiquement",
+    "saved": "✓ Sauvegardé automatiquement",
     "whyTitle": "Pourquoi définir votre condition ?",
-    "whyDesc": "Cela aide NutriVigil à fournir des recommandations de sécurité alimentaire précises et personnalisées en fonction de votre état de santé. Les données sont stockées localement, pas téléchargées."
+    "whyDesc": "Cela aide NutriVigil à vous fournir des recommandations alimentaires précises et personnalisées en fonction de votre état de santé. Enregistré localement, non téléchargé."
   },
+
   "conditions": {
     "diabetes": "Diabète",
     "hypertension": "Hypertension",
@@ -40,25 +52,33 @@
     "lactose": "Intolérance au lactose",
     "none": "Aucune"
   },
+
   "scan": {
-    "title": "Scanner un aliment",
+    "title": "Scanner la Nourriture",
     "subtitle": "Téléchargez une photo pour analyser la sécurité nutritionnelle",
     "condition": "Condition",
-    "setCondition": "Veuillez définir votre condition dans",
-    "foodPhoto": "Photo de l'aliment",
-    "uploadHint": "Cliquez pour télécharger ou glisser-déposer",
-    "fileTypes": "PNG, JPG, GIF jusqu'à 10 Mo",
-    "scanButton": "Scanner l'aliment",
+    "setCondition": "Veuillez définir votre condition",
+    "foodPhoto": "Photo de la Nourriture",
+    "uploadHint": "Cliquez pour télécharger ou glissez-déposez",
+    "fileTypes": "PNG, JPG, GIF jusqu'à 10MB",
+    "scanButton": "Scanner la Nourriture",
     "scanning": "Analyse en cours...",
-    "food": "Aliment",
+    "food": "Nourriture",
     "reason": "Raison",
     "suggestion": "Suggestion",
-    "submitQuery": "Soumettre la question",
+    "submitQuery": "Soumettre la Question",
     "thinking": "Réflexion..."
   },
+
   "errors": {
     "noImage": "Veuillez sélectionner un fichier image",
-    "noCondition": "Veuillez d'abord définir votre condition de santé",
-    "analysisFailed": "Échec de l'analyse de l'aliment"
+    "noCondition": "Veuillez définir d'abord votre état de santé",
+    "analysisFailed": "Échec de l'analyse de la nourriture"
+  },
+
+  "safety": {
+    "safe": "Sûr",
+    "moderate": "Modéré",
+    "unsafe": "Non sûr"
   }
 }

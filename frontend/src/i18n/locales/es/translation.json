@@ -1,25 +1,33 @@
 {
   "appName": "NutriVigil",
-  "tagline": "Tu escáner personal de salud con IA",
-  "startScanning": "Comenzar escaneo",
-  "howItWorks": "Cómo funciona",
+  "appName.dark": "NutriVigil",
+  "appName.light": "NutriVigil",
+  "tagline": "Tu escáner de salud AI personal",
+  "tagline.dark": "Escaneando en la oscuridad...",
+  "tagline.light": "Escaneando a la luz...",
+  "startScanning": "Comenzar Escaneo",
+  "howItWorks": "Cómo Funciona",
 
   "nav": {
     "home": "Inicio",
-    "profile": "Mi perfil"
+    "home.dark": "Inicio",
+    "home.light": "Inicio",
+    "profile": "Mi Perfil",
+    "profile.dark": "Mi Perfil",
+    "profile.light": "Mi Perfil"
   },
 
   "steps": {
     "upload": {
-      "title": "1. Subir foto",
-      "desc": "Toma una foto de tu comida y súbela a la aplicación"
+      "title": "1. Subir Foto",
+      "desc": "Toma una foto de tu comida y súbela a la app"
     },
     "analysis": {
-      "title": "2. Análisis con IA",
-      "desc": "Nuestra IA identifica la información nutricional"
+      "title": "2. Análisis AI",
+      "desc": "Nuestra IA identifica la nutrición"
     },
     "safety": {
-      "title": "3. Puntuación de seguridad",
+      "title": "3. Puntuación de Seguridad",
       "desc": "Recomendaciones de salud instantáneas"
     }
   },
@@ -27,44 +35,50 @@
   "profile": {
     "title": "Mi Perfil",
     "subtitle": "Gestiona tus preferencias de salud",
-    "healthCondition": "Condición de salud",
+    "healthCondition": "Condición de Salud",
     "selectCondition": "Selecciona una condición...",
     "saved": "✓ Guardado automáticamente",
     "whyTitle": "¿Por qué establecer tu condición?",
-    "whyDesc": "Esto ayuda a NutriVigil a proporcionar recomendaciones de seguridad alimentaria precisas y personalizadas según tu condición de salud. Se guarda localmente, no se sube."
+    "whyDesc": "Esto ayuda a NutriVigil a darte recomendaciones de seguridad alimentaria precisas y personalizadas según tu condición de salud. Guardado localmente, no se sube."
   },
 
   "conditions": {
     "diabetes": "Diabetes",
     "hypertension": "Hipertensión",
-    "heart": "Enfermedad cardíaca",
-    "kidney": "Enfermedad renal",
-    "cholesterol": "Colesterol alto",
-    "celiac": "Enfermedad celíaca",
-    "lactose": "Intolerancia a la lactosa",
+    "heart": "Enfermedad del Corazón",
+    "kidney": "Enfermedad Renal",
+    "cholesterol": "Colesterol Alto",
+    "celiac": "Enfermedad Celíaca",
+    "lactose": "Intolerancia a la Lactosa",
     "none": "Ninguna"
   },
 
   "scan": {
-    "title": "Escanear comida",
+    "title": "Escanear Comida",
     "subtitle": "Sube una foto para analizar la seguridad nutricional",
     "condition": "Condición",
-    "setCondition": "Por favor, establece tu condición en",
-    "foodPhoto": "Foto de la comida",
+    "setCondition": "Por favor establece tu condición",
+    "foodPhoto": "Foto de la Comida",
     "uploadHint": "Haz clic para subir o arrastra y suelta",
     "fileTypes": "PNG, JPG, GIF hasta 10MB",
-    "scanButton": "Escanear comida",
+    "scanButton": "Escanear Comida",
     "scanning": "Escaneando...",
     "food": "Comida",
     "reason": "Razón",
     "suggestion": "Sugerencia",
-    "submitQuery": "Enviar consulta",
-    "thinking": "Pensando..."
+    "submitQuery": "Enviar Pregunta",
+    "thinking": "Analizando..."
   },
 
   "errors": {
     "noImage": "Por favor selecciona un archivo de imagen",
-    "noCondition": "Por favor establece primero tu condición de salud",
+    "noCondition": "Por favor establece tu condición de salud primero",
     "analysisFailed": "Error al analizar la comida"
+  },
+
+  "safety": {
+    "safe": "Seguro",
+    "moderate": "Moderado",
+    "unsafe": "No seguro"
   }
 }
