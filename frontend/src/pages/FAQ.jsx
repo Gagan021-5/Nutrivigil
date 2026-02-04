@@ -183,7 +183,7 @@ const FAQ = () => {
             {/* Category Tabs */}
             <section className="sticky top-0 z-10 bg-[#0a0e1a]/95 backdrop-blur-sm border-b border-gray-800 py-4 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+                    <div className="flex gap-2 overflow-x-auto pb-2 [-webkit-scrollbar]:hidden [scrollbar-width:none]">
                         {categories.map((category) => (
                             <button
                                 key={category.id}
