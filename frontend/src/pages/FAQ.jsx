@@ -267,12 +267,14 @@ const FAQ = () => {
                             Can't find the answer you're looking for? Our support team is here to help!
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link 
-                                to="/contact" 
+                            <a
+                                href="https://github.com/Gagan021-5/Nutrivigil/issues"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
                             >
                                 Contact Support
-                            </Link>
+                            </a>
                             <a 
                                 href="https://github.com/Gagan021-5/Nutrivigil/discussions" 
                                 target="_blank"
