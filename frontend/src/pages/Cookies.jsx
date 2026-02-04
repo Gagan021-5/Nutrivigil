@@ -308,7 +308,7 @@ const CookiePolicy = () => {
                     {/* Related Links */}
                     <div className="flex flex-wrap gap-4 justify-center pt-6">
                         <Link 
-                            to="/privacy"
+                            to="/privacy-policy"
                             className="px-6 py-3 bg-[#1a1f2e] hover:bg-[#252a3a] border border-gray-700 rounded-lg transition-all flex items-center gap-2"
                         >
                             <Shield className="w-4 h-4" />
