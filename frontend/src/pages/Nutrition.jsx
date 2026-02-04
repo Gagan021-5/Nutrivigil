@@ -245,7 +245,7 @@ const Nutrition = () => {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className={`${item.color} border backdrop-blur-sm p-6 rounded-2xl`}
                             >
-                                <div className="text-purple-400 mb-4">
+                                <div className="mb-4">
                                     {item.icon}
                                 </div>
                                 <h3 className="text-lg font-bold mb-2">{item.condition}</h3>
