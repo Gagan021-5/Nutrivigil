@@ -229,7 +229,7 @@ const Protocol = () => {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                                className={`${protocol.bgColor} border ${protocol.borderColor} rounded-2xl overflow-hidden backdrop-blur-sm`}
+                                className={`${protocol.bgColor} border ${protocol.borderColor} rounded-3xl overflow-hidden backdrop-blur-xl transition-all hover:-translate-y-2`}
                             >
                                 {/* Protocol Header */}
                                 <button
@@ -266,7 +266,7 @@ const Protocol = () => {
                                                 {/* Do's and Don'ts */}
                                                 <div className="grid md:grid-cols-2 gap-6 pt-6">
                                                     {/* Do's */}
-                                                    <div className="bg-[#0a0e1a]/50 p-5 rounded-xl border border-green-500/20">
+                                                    <div className="bg-white/5 border-white/10 p-5 rounded-3xl border backdrop-blur-xl">
                                                         <div className="flex items-center gap-2 mb-4">
                                                             <CheckCircle className="w-5 h-5 text-green-400" />
                                                             <h4 className="font-bold text-green-400">Recommended (Do's)</h4>
@@ -282,7 +282,7 @@ const Protocol = () => {
                                                     </div>
 
                                                     {/* Don'ts */}
-                                                    <div className="bg-[#0a0e1a]/50 p-5 rounded-xl border border-red-500/20">
+                                                    <div className="bg-white/5 border-white/10 p-5 rounded-3xl border backdrop-blur-xl">
                                                         <div className="flex items-center gap-2 mb-4">
                                                             <XCircle className="w-5 h-5 text-red-400" />
                                                             <h4 className="font-bold text-red-400">Avoid (Don'ts)</h4>
@@ -299,7 +299,7 @@ const Protocol = () => {
                                                 </div>
 
                                                 {/* Key Nutrients */}
-                                                <div className="bg-[#0a0e1a]/50 p-5 rounded-xl border border-purple-500/20">
+                                                <div className="bg-white/5 border-white/10 p-5 rounded-3xl border backdrop-blur-xl">
                                                     <h4 className="font-bold text-purple-400 mb-4 flex items-center gap-2">
                                                         <AlertCircle className="w-5 h-5" />
                                                         Key Nutrients to Monitor
@@ -333,7 +333,7 @@ const Protocol = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
-                            className="bg-[#1a1f2e] p-6 rounded-2xl border border-gray-800 text-center"
+                            className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2"
                         >
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white mx-auto mb-4">
                                 <Brain className="w-8 h-8" />
@@ -349,7 +349,7 @@ const Protocol = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="bg-[#1a1f2e] p-6 rounded-2xl border border-gray-800 text-center"
+                            className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2"
                         >
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white mx-auto mb-4">
                                 <Heart className="w-8 h-8" />
@@ -365,7 +365,7 @@ const Protocol = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.2 }}
-                            className="bg-[#1a1f2e] p-6 rounded-2xl border border-gray-800 text-center"
+                            className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2"
                         >
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white mx-auto mb-4">
                                 <Zap className="w-8 h-8" />

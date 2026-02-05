@@ -67,7 +67,7 @@ const SafetySignals = () => {
                             {/* Traffic Light Visual */}
                             <div className="mx-auto max-w-md">
                                 <div className="flex items-center justify-center gap-8">
-                                    <div className="w-24 rounded-3xl p-4 bg-[#0a0e1a]/30 border border-gray-800 flex flex-col items-center gap-4">
+                                    <div className="w-24 rounded-3xl p-4 bg-white/5 border border-white/10 backdrop-blur-xl flex flex-col items-center gap-4">
                                         <div className="w-14 h-14 rounded-full bg-green-600/90 flex items-center justify-center shadow-lg">
                                             <CheckCircle className="w-6 h-6 text-white" />
                                         </div>
@@ -94,7 +94,7 @@ const SafetySignals = () => {
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">How the Traffic Light Works</h2>
                     <div className="grid md:grid-cols-3 gap-6">
                         {signals.map((s, idx) => (
-                            <motion.div key={s.key} className="bg-[#1a1f2e]/50 p-6 rounded-2xl border border-gray-800" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: idx * 0.08 }}>
+                            <motion.div key={s.key} className="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: idx * 0.08 }}>
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className={`${s.color} w-12 h-12 rounded-lg flex items-center justify-center`}>{s.icon}</div>
                                     <div>
@@ -127,7 +127,7 @@ const SafetySignals = () => {
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Based on Your Health</h2>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {conditionExamples.map((c, idx) => (
-                            <motion.div key={idx} className="bg-[#0a0e1a] p-6 rounded-2xl border border-gray-800" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: idx * 0.06 }}>
+                            <motion.div key={idx} className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: idx * 0.06 }}>
                                 <h3 className="font-bold text-lg mb-2">{c.condition}</h3>
                                 <p className="text-sm text-gray-300 mb-3">{c.notes}</p>
                                 <p className="text-sm text-gray-400"><strong>Example:</strong> {c.example}</p>
@@ -143,7 +143,7 @@ const SafetySignals = () => {
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Real Food Examples</h2>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {/* Example Cards */}
-                        <motion.div className="bg-[#1a1f2e] p-4 rounded-2xl border border-gray-800" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                        <motion.div className="bg-white/5 border-white/10 p-4 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                             <div className="flex items-center gap-3">
                                 <div className="w-12 h-12 rounded-lg bg-green-600/90 flex items-center justify-center"> <Apple className="w-6 h-6 text-white" /> </div>
                                 <div>
@@ -153,7 +153,7 @@ const SafetySignals = () => {
                             </div>
                         </motion.div>
 
-                        <motion.div className="bg-[#1a1f2e] p-4 rounded-2xl border border-gray-800" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                        <motion.div className="bg-white/5 border-white/10 p-4 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                             <div className="flex items-center gap-3">
                                 <div className="w-12 h-12 rounded-lg bg-yellow-500/90 flex items-center justify-center"> <Coffee className="w-6 h-6 text-white" /> </div>
                                 <div>
@@ -163,7 +163,7 @@ const SafetySignals = () => {
                             </div>
                         </motion.div>
 
-                        <motion.div className="bg-[#1a1f2e] p-4 rounded-2xl border border-gray-800" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                        <motion.div className="bg-white/5 border-white/10 p-4 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                             <div className="flex items-center gap-3">
                                 <div className="w-12 h-12 rounded-lg bg-red-600/90 flex items-center justify-center"> <Pizza className="w-6 h-6 text-white" /> </div>
                                 <div>
@@ -173,7 +173,7 @@ const SafetySignals = () => {
                             </div>
                         </motion.div>
 
-                        <motion.div className="bg-[#1a1f2e] p-4 rounded-2xl border border-gray-800" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                        <motion.div className="bg-white/5 border-white/10 p-4 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2" initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
                             <div className="flex items-center gap-3">
                                 <div className="w-12 h-12 rounded-lg bg-green-600/90 flex items-center justify-center"> <Heart className="w-6 h-6 text-white" /> </div>
                                 <div>

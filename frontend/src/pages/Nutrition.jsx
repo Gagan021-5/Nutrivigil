@@ -141,7 +141,7 @@ const Nutrition = () => {
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="relative"
                             >
-                                <div className="bg-[#1a1f2e]/50 backdrop-blur-sm p-8 rounded-2xl">
+                                <div className="bg-white/5 border-white/10 backdrop-blur-xl p-8 rounded-3xl border transition-all hover:-translate-y-2">
                                     <div className="flex items-start gap-4 mb-4">
                                         <span className="text-5xl font-bold text-purple-400/20">{step.number}</span>
                                         <div className="text-purple-400 mt-2">
@@ -206,7 +206,7 @@ const Nutrition = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-[#1a1f2e]/50 backdrop-blur-sm p-6 rounded-2xl"
+                                className="bg-white/5 border-white/10 backdrop-blur-xl p-6 rounded-3xl border transition-all hover:-translate-y-2"
                             >
                                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${nutrient.color} flex items-center justify-center text-white mb-4`}>
                                     {nutrient.icon}

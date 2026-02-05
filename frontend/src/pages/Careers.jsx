@@ -140,7 +140,7 @@ const Careers = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-[#1a1f2e] p-6 rounded-xl border border-gray-800 text-center hover:border-purple-500 transition-all"
+                                className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl text-center transition-all hover:-translate-y-2"
                             >
                                 <div className="text-purple-400 mb-4 flex justify-center">
                                     {value.icon}
@@ -168,7 +168,7 @@ const Careers = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="bg-[#0a0e1a] p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all group"
+                                className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2 group"
                             >
                                 <div className="flex items-start gap-4">
                                     <div className="text-purple-400 mt-1 group-hover:scale-110 transition-transform">
@@ -212,7 +212,7 @@ const Careers = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                                className="bg-[#1a1f2e] p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all"
+                                className="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2"
                             >
                                 <div className="text-purple-400 mb-4">
                                     {benefit.icon}

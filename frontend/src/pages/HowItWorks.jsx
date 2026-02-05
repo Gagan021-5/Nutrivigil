@@ -107,7 +107,7 @@ const HowItWorks = () => {
                                     </div>
 
                                     {/* Step Content */}
-                                    <div className={`flex-1 bg-[#1a1f2e] p-8 rounded-xl border border-gray-800 ${index % 2 === 1 ? 'md:text-right' : ''}`}>
+                                    <div className={`flex-1 bg-white/5 border-white/10 p-8 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2 ${index % 2 === 1 ? 'md:text-right' : ''}`}>
                                         <h3 className="text-2xl font-bold mb-3">{step.title}</h3>
                                         <p className="text-gray-400 leading-relaxed">{step.description}</p>
                                     </div>
@@ -141,7 +141,7 @@ const HowItWorks = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="flex items-start gap-4 p-6 bg-[#0a0e1a] rounded-lg border border-gray-800"
+                                className="flex items-start gap-4 p-6 bg-white/5 border border-white/10 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2"
                             >
                                 <div className="text-purple-400 mt-1">
                                     {feature.icon}
