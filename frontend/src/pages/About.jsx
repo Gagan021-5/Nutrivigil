@@ -186,7 +186,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: idx * 0.08 }}
-                className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2"
+                className="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2"
               >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-semibold">
