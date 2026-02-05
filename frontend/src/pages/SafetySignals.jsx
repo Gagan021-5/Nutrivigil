@@ -94,7 +94,7 @@ const SafetySignals = () => {
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">How the Traffic Light Works</h2>
                     <div className="grid md:grid-cols-3 gap-6">
                         {signals.map((s, idx) => (
-                            <motion.div key={s.key} className="bg-white/5 border-white/10 p-6 rounded-3xl border backdrop-blur-xl transition-all hover:-translate-y-2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: idx * 0.08 }}>
+                            <motion.div key={s.key} className="bg-white/5 border border-white/10 p-6 rounded-3xl backdrop-blur-xl transition-all hover:-translate-y-2" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: idx * 0.08 }}>
                                 <div className="flex items-center gap-4 mb-4">
                                     <div className={`${s.color} w-12 h-12 rounded-lg flex items-center justify-center`}>{s.icon}</div>
                                     <div>
