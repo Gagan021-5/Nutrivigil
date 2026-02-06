@@ -240,7 +240,7 @@ const SafetySignals = () => {
                 <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-3xl sm:text-4xl font-bold mb-4">Try the Safety Scanner</h2>
                     <p className={`mb-6 max-w-2xl mx-auto transition-colors duration-300 ${
-                        theme === 'dark' ? 'text-gray-300' : 'text-gray-200'
+                        theme === 'dark' ? 'text-gray-300' : 'text-gray-800'
                     }`}>Scan your food to see instant safety signals tailored for you.</p>
                     <Link to="/scan" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 px-6 py-3 rounded-lg font-semibold shadow hover:scale-105 transition-transform">Try Scanner</Link>
                 </div>
