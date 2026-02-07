@@ -67,6 +67,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-6">
           {navItem("/", t("nav.home"))}
           {navItem("/profile", t("nav.profile"))}
+          {navItem("/browse", "Browse Foods")}
           {navItem("/protocol", "Protocol")}
           {navItem("/app", "App Interface")}
           {navItem("/nutrition", "Nutrition")}
@@ -139,6 +140,7 @@ const Navbar = () => {
             <div className="px-4 py-4 flex flex-col gap-2">
               {navItem("/", t("nav.home"), true)}
               {navItem("/profile", t("nav.profile"), true)}
+              {navItem("/browse", "Browse Foods", true)}
               {navItem("/protocol", "Protocol", true)}
               {navItem("/app", "App Interface", true)}
               {navItem("/nutrition", "Nutrition", true)}
