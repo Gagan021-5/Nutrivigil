@@ -379,7 +379,6 @@ const Footer = () => {
         >
           <div className="flex flex-wrap justify-center gap-6 items-center">
             {footerLinks.legal.map((item, index) => {
-              const Icon = item.icon;
               return (
                 <React.Fragment key={item.name}>
                   <Link
