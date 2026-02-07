@@ -186,7 +186,7 @@ const Footer = () => {
 
             {/* Social Links */}
             <div>
-              <p className={`text-xs uppercase tracking-wider mb-3 font-semibold ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>
+              <p className="text-xs uppercase tracking-wider mb-3 font-semibold text-gray-500">
                 {t("footer.connect")}
               </p>
 
