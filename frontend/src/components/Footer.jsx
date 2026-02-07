@@ -339,8 +339,8 @@ const Footer = () => {
                 onClick={handleSubscribe}
                 disabled={!!emailError || !email}
                 className={`w-full px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg ${emailError || !email ? 'bg-gray-600 cursor-not-allowed' : (theme === 'dark' ? 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 hover:shadow-indigo-500/50' : 'bg-blue-600 text-white hover:bg-blue-700')}`}
-                whileHover={!emailError ? { scale: 1.03, y: -2 } : {}}
-                whileTap={!emailError ? { scale: 0.97 } : {}}
+                whileHover={!emailError && email ? { scale: 1.03, y: -2 } : {}}
+                whileTap={!emailError && email ? { scale: 0.97 } : {}}
               >
                 {isSubscribed ? (
                   <>
