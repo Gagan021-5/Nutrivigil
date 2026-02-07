@@ -25,9 +25,11 @@ import {
   Youtube
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../contexts/ThemeContext";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const { theme } = useTheme();
 
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
@@ -94,24 +96,27 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#05050A] via-[#0A0A14] to-black text-gray-300 overflow-hidden">
+    <footer className={`relative overflow-hidden border-t ${theme === 'dark' ? 'bg-gradient-to-b from-[#05050A] via-[#0A0A14] to-black text-gray-300 border-white/5' : 'bg-gray-50 text-gray-700 border-gray-200'}`}>
+      {/* Subtle gradient border at top */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
+      
       {/* Animated Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e1e2e_1px,transparent_1px),linear-gradient(to_bottom,#1e1e2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000,transparent)]" />
+        <div className={`absolute inset-0 ${theme === 'dark' ? 'bg-[linear-gradient(to_right,#1e1e2e_1px,transparent_1px),linear-gradient(to_bottom,#1e1e2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000,transparent)]' : 'bg-[linear-gradient(to_right,#e9e9ee_1px,transparent_1px),linear-gradient(to_bottom,#e9e9ee_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30'}`} />
 
         <motion.div
-          className="absolute -top-40 -left-40 w-80 h-80 bg-indigo-600/10 rounded-full blur-[120px]"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+          className={`${theme === 'dark' ? 'absolute top-4 left-4 w-48 h-48 bg-indigo-600/8 rounded-full blur-[80px]' : 'absolute top-4 left-4 w-40 h-40 bg-indigo-200/6 rounded-full blur-[40px] opacity-60'}`}
+          animate={{ scale: [1, 1.12, 1], opacity: [0.35, 0.55, 0.35] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute -bottom-40 -right-40 w-80 h-80 bg-purple-600/10 rounded-full blur-[120px]"
-          animate={{ scale: [1.2, 1, 1.2], opacity: [0.5, 0.3, 0.5] }}
+          className={`${theme === 'dark' ? 'absolute bottom-4 right-4 w-48 h-48 bg-purple-600/8 rounded-full blur-[80px]' : 'absolute bottom-4 right-4 w-40 h-40 bg-purple-200/6 rounded-full blur-[40px] opacity-60'}`}
+          animate={{ scale: [1.1, 1, 1.1], opacity: [0.45, 0.35, 0.45] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-600/5 rounded-full blur-[150px]"
-          animate={{ scale: [1, 1.3, 1], rotate: [0, 180, 360] }}
+          className={`${theme === 'dark' ? 'absolute left-1/2 -translate-x-1/2 bottom-8 w-72 h-72 bg-cyan-600/6 rounded-full blur-[120px]' : 'absolute left-1/2 -translate-x-1/2 bottom-6 w-56 h-56 bg-cyan-200/6 rounded-full blur-[60px] opacity-50'}`}
+          animate={{ scale: [1, 1.18, 1], rotate: [0, 180, 360] }}
           transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
@@ -120,15 +125,15 @@ const Footer = () => {
       <motion.button
         onClick={scrollToTop}
         aria-label={t("footer.scrollTop")}
-        className="absolute top-8 right-8 z-20 p-3 rounded-full bg-indigo-600/20 border border-indigo-500/30 hover:bg-indigo-600/40 transition-all duration-300 group"
+        className={`absolute top-8 right-8 z-20 p-3 rounded-full transition-all duration-300 group ${theme === 'dark' ? 'bg-indigo-600/20 border border-indigo-500/30 hover:bg-indigo-600/40' : 'bg-gray-100 border border-gray-300 hover:bg-gray-200'}`}
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.95 }}
       >
-        <ChevronUp className="w-5 h-5 text-indigo-400 group-hover:text-indigo-300" />
+        <ChevronUp className={`${theme === 'dark' ? 'w-5 h-5 text-indigo-400 group-hover:text-indigo-300' : 'w-5 h-5 text-gray-600 group-hover:text-gray-800'}`} />
       </motion.button>
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-20 pb-12 z-10">
-        <div className="flex flex-nowrap gap-12 mb-16 overflow-x-auto">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 pt-12 pb-6 z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8 mb-8">
           {/* Brand Column */}
           <motion.div
             className="lg:col-span-4 space-y-6"
@@ -137,7 +142,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="space-y-4">
+            <div className="space-y-3">
               <motion.div
                 className="flex items-center gap-3 group cursor-pointer"
                 whileHover={{ x: 5 }}
@@ -155,7 +160,7 @@ const Footer = () => {
                 </span>
               </motion.div>
 
-              <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
+              <p className={`${theme === 'dark' ? 'text-sm text-gray-400' : 'text-sm text-gray-600'} leading-relaxed max-w-sm`}>
                 {t("footer.brandDesc")}
               </p>
 
@@ -181,7 +186,7 @@ const Footer = () => {
 
             {/* Social Links */}
             <div>
-              <p className="text-xs uppercase tracking-wider text-gray-500 mb-3 font-semibold">
+              <p className="text-xs uppercase tracking-wider mb-3 font-semibold text-gray-500">
                 {t("footer.connect")}
               </p>
 
@@ -195,15 +200,15 @@ const Footer = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.name}
-                      className={`p-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-400 ${social.color} transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-110`}
-                      whileHover={{ y: -3 }}
+                      className={`${theme === 'dark' ? 'p-3 rounded-xl bg-white/5 border border-white/10 text-gray-400 hover:bg-white/10 hover:border-white/20 hover:shadow-lg hover:shadow-current/20' : 'p-3 rounded-xl bg-gray-100 border border-gray-200 text-gray-600 hover:bg-gray-200 hover:border-gray-300 hover:shadow-sm'} ${social.color} transition-all duration-300`}
+                      whileHover={{ y: -5, scale: 1.15 }}
                       whileTap={{ scale: 0.95 }}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: idx * 0.1 }}
                     >
-                      <Icon className="w-4 h-4" />
+                      <Icon className="w-6 h-6" />
                     </motion.a>
                   );
                 })}
@@ -213,18 +218,18 @@ const Footer = () => {
 
           {/* Product Links */}
           <motion.div
-            className="lg:col-span-2 lg:col-start-6"
+            className="lg:col-span-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider flex items-center gap-2">
+            <h3 className={`font-bold mb-5 text-sm uppercase tracking-wider flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               <div className="w-1 h-4 bg-gradient-to-b from-indigo-500 to-purple-500 rounded-full" />
               {t("footer.sections.product")}
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {footerLinks.product.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -235,7 +240,7 @@ const Footer = () => {
                   >
                     <Link 
                       to={item.href} 
-                      className="group flex items-center gap-3 text-sm text-gray-400 hover:text-indigo-400 transition-colors duration-200"
+                      className={`group flex items-center gap-3 text-sm transition-colors duration-200 ${theme === 'dark' ? 'text-gray-400 hover:text-indigo-400' : 'text-gray-600 hover:text-indigo-600'}`}
                     >
                       <Icon className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -257,12 +262,12 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider flex items-center gap-2">
+            <h3 className={`font-bold mb-5 text-sm uppercase tracking-wider flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
               <div className="w-1 h-4 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full" />
               {t("footer.sections.company")}
             </h3>
 
-            <ul className="space-y-3">
+            <ul className="space-y-2.5">
               {footerLinks.company.map((item) => {
                 const Icon = item.icon;
                 return (
@@ -273,7 +278,7 @@ const Footer = () => {
                   >
                     <Link 
                       to={item.href} 
-                      className="group flex items-center gap-3 text-sm text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                      className={`group flex items-center gap-3 text-sm transition-colors duration-200 ${theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'}`}
                     >
                       <Icon className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
                       <span className="group-hover:translate-x-1 transition-transform duration-200">
@@ -289,18 +294,18 @@ const Footer = () => {
 
           {/* Newsletter Column */}
           <motion.div
-            className="lg:col-span-4"
+            className={`lg:col-span-4 rounded-2xl p-4 ${theme === 'dark' ? 'bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20' : 'bg-white border border-gray-200 shadow-sm'}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="text-white font-bold mb-6 text-sm uppercase tracking-wider flex items-center gap-2">
-              <div className="w-1 h-4 bg-gradient-to-b from-emerald-500 to-teal-500 rounded-full" />
+            <h3 className={`font-bold mb-3 text-base uppercase tracking-wider flex items-center gap-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+              <div className="w-1 h-5 bg-gradient-to-b from-emerald-500 to-teal-500 rounded-full" />
               {t("footer.sections.newsletter")}
             </h3>
 
-            <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+            <p className={`${theme === 'dark' ? 'text-sm text-gray-300' : 'text-sm text-gray-600'} mb-4 leading-relaxed`}>
               {t("footer.newsletter.desc")}
             </p>
 
@@ -316,7 +321,7 @@ const Footer = () => {
                     setEmailError(validateEmail(value));
                   }}
                   placeholder={t("footer.newsletter.placeholder")}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 transition-all hover:bg-white/10"
+                  className={`w-full rounded-xl pl-11 pr-4 py-3 text-sm focus:outline-none transition-all ${theme === 'dark' ? 'bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 hover:bg-white/10' : 'bg-white border border-gray-200 text-gray-900 placeholder-gray-400 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20'}`}
                 />
               </div>
 
@@ -333,15 +338,9 @@ const Footer = () => {
               <motion.button
                 onClick={handleSubscribe}
                 disabled={!!emailError || !email}
-                className={`w-full px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 group
-                  ${
-                    emailError || !email
-                      ? "bg-gray-600 cursor-not-allowed"
-                      : "bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500"
-                  }
-                `}
-                whileHover={!emailError ? { scale: 1.02 } : {}}
-                whileTap={!emailError ? { scale: 0.98 } : {}}
+                className={`w-full px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 flex items-center justify-center gap-2 group shadow-lg ${emailError || !email ? 'bg-gray-600 cursor-not-allowed' : (theme === 'dark' ? 'bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 hover:shadow-indigo-500/50' : 'bg-blue-600 text-white hover:bg-blue-700')}`}
+                whileHover={!emailError && email ? { scale: 1.03, y: -2 } : {}}
+                whileTap={!emailError && email ? { scale: 0.97 } : {}}
               >
                 {isSubscribed ? (
                   <>
@@ -357,7 +356,7 @@ const Footer = () => {
               </motion.button>
             </div>
 
-            <div className="mt-6 flex items-center gap-4 text-xs text-gray-500">
+            <div className={`mt-4 flex items-center gap-4 text-xs ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>
               <div className="flex items-center gap-1">
                 <ShieldCheck className="w-3 h-3" />
                 <span>{t("footer.newsletter.trust.noSpam")}</span>
@@ -372,43 +371,52 @@ const Footer = () => {
 
         {/* Legal Links */}
         <motion.div
-          className="border-t border-white/5 pt-8 mb-8"
+          className={`border-t ${theme === 'dark' ? 'border-white/5' : 'border-gray-200'} pt-6 mb-6`}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <div className="flex flex-wrap gap-6 justify-center">
-            {footerLinks.legal.map((item) => {
-              const Icon = item.icon;
+          <div className="flex flex-wrap justify-center gap-6 items-center">
+            {footerLinks.legal.map((item, index) => {
               return (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="group flex items-center gap-2 text-xs text-gray-500 hover:text-gray-300 transition-colors"
-                >
-                  <Icon className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
-                  {item.name}
-                </Link>
+                <React.Fragment key={item.name}>
+                  <Link
+                    to={item.href}
+                    className={`text-sm transition-colors duration-200 ${theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'}`}
+                  >
+                    {item.name}
+                  </Link>
+                  {index < footerLinks.legal.length - 1 && (
+                    <span className="text-gray-500 mx-2">•</span>
+                  )}
+                </React.Fragment>
               );
             })}
           </div>
         </motion.div>
 
+        {/* Model Note */}
+        <div className="flex justify-center">
+          <p className={`text-center text-xs mt-3 ${theme === 'dark' ? 'text-gray-500' : 'text-gray-500'}`}>
+            {t("footer.modelNote")}
+          </p>
+        </div>
+
         {/* Bottom Bar */}
         <motion.div
-          className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4"
+          className={`pt-4 border-t ${theme === 'dark' ? 'border-white/10' : 'border-gray-200'} flex flex-col md:flex-row justify-between items-center gap-3`}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <div className="flex flex-col md:flex-row gap-4 items-center text-xs text-gray-500">
+          <div className={`flex flex-col md:flex-row gap-3 items-center text-xs ${theme === 'dark' ? 'text-gray-500' : 'text-gray-600'}`}>
             <p className="flex items-center gap-2">
               © {currentYear} NutriVigil. {t("footer.bottom.rights")}
             </p>
 
-            <div className="hidden md:block w-1 h-1 rounded-full bg-gray-700" />
+            <div className={`${theme === 'dark' ? 'hidden md:block w-1 h-1 rounded-full bg-gray-700' : 'hidden md:block w-1 h-1 rounded-full bg-gray-300'}`} />
 
             <p className="flex items-center gap-2">
               <Heart className="w-3 h-3 fill-red-500 text-red-500" />
@@ -417,26 +425,13 @@ const Footer = () => {
           </div>
 
           <motion.button
-            className="flex items-center gap-2 text-xs text-gray-500 hover:text-gray-300 transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
+            className={`flex items-center gap-2 text-xs transition-colors px-3 py-2 rounded-lg ${theme === 'dark' ? 'text-gray-500 hover:text-gray-300 hover:bg-white/5' : 'text-gray-600 hover:text-gray-800 hover:bg-gray-100'}`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <Globe className="w-3 h-3" />
             <span>{t("footer.bottom.language")}</span>
           </motion.button>
-        </motion.div>
-
-        {/* Extra Branding */}
-        <motion.div
-          className="mt-8 text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-        >
-          <p className="text-xs text-gray-600 leading-relaxed">
-            {t("footer.extra")}
-          </p>
         </motion.div>
       </div>
     </footer>

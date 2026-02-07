@@ -190,10 +190,12 @@
   "footer": {
     "scrollTop": "Scroll to top",
 
-    "brandDesc": "Your Personal AI Health Scanner. Instantly analyze meals with cutting-edge Gemini v2.5 AI to keep your nutrition perfectly aligned with your health goals.",
+    "brandDesc": "Your Personal AI Health Scanner. Instantly analyze meals with cutting-edge AI to keep your nutrition perfectly aligned with your health goals.",
+
+    "modelNote": "Powered by Gemini v2.5 AI",
 
     "badges": {
-      "gemini": "Gemini AI",
+      "gemini": "Powered by Gemini",
       "secure": "Secure"
     },
 
