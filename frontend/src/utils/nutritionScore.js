@@ -137,30 +137,4 @@ export const getScoreColor = (score) => {
   }
 };
 
-/**
- * Format nutrition value for display
- * @param {number} value - Nutrition value
- * @param {string} unit - Unit (g, mg, etc.)
- * @returns {string} Formatted string
- */
-export const formatNutritionValue = (value, unit = 'g') => {
-  if (value === null || value === undefined) return 'N/A';
-  return `${value}${unit}`;
-};
-
-/**
- * Get nutrition summary text
- * @param {number} score - Nutrition score
- * @returns {string} Summary text
- */
-export const getNutritionSummary = (score) => {
-  if (score >= 70) {
-    return 'This is a nutritious choice with good nutritional value.';
-  } else if (score >= 40) {
-    return 'This has moderate nutritional value. Enjoy in moderation.';
-  } else {
-    return 'Consider healthier alternatives when possible.';
-  }
-};
-
 export default calculateNutritionScore;
