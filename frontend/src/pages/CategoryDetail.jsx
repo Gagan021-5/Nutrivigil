@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
-import { Home, ChevronRight, Package } from 'lucide-react';
+import { Home, ChevronRight, Package, SlidersHorizontal } from 'lucide-react';
 import FoodItemCard, { FoodItemCardSkeleton } from '../components/FoodItemCard';
+import FilterPanel from '../components/FilterPanel';
+import ActiveFilters from '../components/ActiveFilters';
 import FOOD_ITEMS from '../data/foodItems';
+import { calculateNutritionScore } from '../utils/nutritionScore';
 
 // Import category images
 import babyFoodImg from '../assets/baby-food.jpg';
@@ -179,6 +182,98 @@ const CategoryDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [category, setCategory] = useState(null);
   const [foodItems, setFoodItems] = useState([]);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [filters, setFilters] = useState(() => {
+    // Load filters from localStorage
+    const saved = localStorage.getItem('nutrivigil-filters');
+    return saved
+      ? JSON.parse(saved)
+      : { dietary: [], scoreRange: [], allergens: [], calorieRange: [] };
+  });
+
+  // Handle filter changes and save to localStorage
+  const handleFilterChange = (newFilters) => {
+    setFilters(newFilters);
+    localStorage.setItem('nutrivigil-filters', JSON.stringify(newFilters));
+  };
+
+  // Remove individual filter
+  const handleRemoveFilter = (category, value) => {
+    const newFilters = {
+      ...filters,
+      [category]: filters[category].filter((v) => v !== value),
+    };
+    handleFilterChange(newFilters);
+  };
+
+  // Clear all filters
+  const handleClearAllFilters = () => {
+    const emptyFilters = { dietary: [], scoreRange: [], allergens: [], calorieRange: [] };
+    handleFilterChange(emptyFilters);
+  };
+
+  // Check if any filters are active
+  const hasActiveFilters = useMemo(() => {
+    return Object.values(filters).some((arr) => arr.length > 0);
+  }, [filters]);
+
+  // Filter food items based on active filters
+  const filteredFoodItems = useMemo(() => {
+    if (!foodItems || foodItems.length === 0) return [];
+    if (!hasActiveFilters) return foodItems;
+
+    return foodItems.filter((item) => {
+      // Score range filter
+      if (filters.scoreRange && filters.scoreRange.length > 0) {
+        const score = item.nutrition ? calculateNutritionScore(item.nutrition) : 0;
+        const matchesScore = filters.scoreRange.some((range) => {
+          switch (range) {
+            case 'excellent':
+              return score >= 70 && score <= 100;
+            case 'good':
+              return score >= 50 && score < 70;
+            case 'fair':
+              return score >= 30 && score < 50;
+            case 'poor':
+              return score >= 0 && score < 30;
+            default:
+              return false;
+          }
+        });
+        if (!matchesScore) return false;
+      }
+
+      // Calorie range filter
+      if (filters.calorieRange && filters.calorieRange.length > 0) {
+        const calories = item.nutrition?.calories || 0;
+        const matchesCalories = filters.calorieRange.some((range) => {
+          switch (range) {
+            case 'very-low':
+              return calories >= 0 && calories <= 100;
+            case 'low':
+              return calories >= 101 && calories <= 200;
+            case 'medium':
+              return calories >= 201 && calories <= 400;
+            case 'high':
+              return calories >= 401 && calories <= 600;
+            case 'very-high':
+              return calories >= 601;
+            default:
+              return false;
+          }
+        });
+        if (!matchesCalories) return false;
+      }
+
+      // Dietary and allergen filters
+      // Note: Since our mock data doesn't have dietary/allergen info,
+      // these filters would always exclude items. In a real app,
+      // you'd check item properties here.
+      // For now, we'll let items pass these filters.
+
+      return true;
+    });
+  }, [foodItems, filters, hasActiveFilters]);
 
   // Find category by slug
   useEffect(() => {
@@ -193,11 +288,11 @@ const CategoryDetail = () => {
       setTimeout(() => {
         setCategory(foundCategory);
         // Load sample food items for this category
-        const items = SAMPLE_FOOD_ITEMS[categorySlug];
+        const items = FOOD_ITEMS[categorySlug];
         if ((!items || items.length === 0) && process.env.NODE_ENV === 'development') {
           console.warn(
             `[CategoryDetail] No mock data found for category slug "${categorySlug}". ` +
-              'EmptyState will be shown. Ensure SAMPLE_FOOD_ITEMS contains data for this category.'
+              'EmptyState will be shown. Ensure FOOD_ITEMS contains data for this category.'
           );
         }
         setFoodItems(items || []);
@@ -393,26 +488,140 @@ const CategoryDetail = () => {
           </div>
         </motion.div>
 
-        {/* Food Items Grid - Phase 2 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          role="region"
-          aria-label="Food products list"
-        >
-          {foodItems.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" role="list">
-              {foodItems.map((item, index) => (
-                <div key={`${category.name}-${item.id}`} role="listitem">
-                  <FoodItemCard item={item} index={index} />
+        {/* Active Filters */}
+        {hasActiveFilters && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-6"
+          >
+            <ActiveFilters
+              filters={filters}
+              onRemoveFilter={handleRemoveFilter}
+              onClearAll={handleClearAllFilters}
+            />
+          </motion.div>
+        )}
+
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          {/* Filter Panel - Desktop (Left Sidebar) */}
+          <div className="hidden lg:block lg:col-span-1">
+            <FilterPanel
+              filters={filters}
+              onFilterChange={handleFilterChange}
+              isOpen={true}
+              onClose={() => {}}
+              isMobile={false}
+            />
+          </div>
+
+          {/* Food Items Section */}
+          <div className="lg:col-span-3">
+            {/* Mobile Filter Button */}
+            {foodItems.length > 0 && (
+              <div className="lg:hidden mb-4">
+                <motion.button
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => setIsMobileFilterOpen(true)}
+                  className={`w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${
+                    theme === 'dark'
+                      ? 'bg-white/10 hover:bg-white/15 text-white border border-white/20 focus:ring-offset-gray-900'
+                      : 'bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 shadow-sm focus:ring-offset-white'
+                  }`}
+                >
+                  <SlidersHorizontal className="w-5 h-5" />
+                  <span>Filters</span>
+                  {hasActiveFilters && (
+                    <span className={`px-2 py-0.5 rounded-full text-xs ${
+                      theme === 'dark'
+                        ? 'bg-indigo-500/20 text-indigo-400'
+                        : 'bg-indigo-100 text-indigo-600'
+                    }`}>
+                      {Object.values(filters).flat().length}
+                    </span>
+                  )}
+                </motion.button>
+              </div>
+            )}
+
+            {/* Results Counter */}
+            {foodItems.length > 0 && (
+              <div className={`mb-4 text-sm font-medium ${
+                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+              }`}>
+                Showing {filteredFoodItems.length} of {foodItems.length} item{foodItems.length !== 1 ? 's' : ''}
+              </div>
+            )}
+
+            {/* Food Items Grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              role="region"
+              aria-label="Food products list"
+            >
+              {filteredFoodItems.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6" role="list">
+                  {filteredFoodItems.map((item, index) => (
+                    <div key={`${category.name}-${item.id}`} role="listitem">
+                      <FoodItemCard item={item} index={index} />
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          ) : (
-            <EmptyState />
-          )}
-        </motion.div>
+              ) : hasActiveFilters ? (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className={`text-center py-16 rounded-2xl border ${
+                    theme === 'dark'
+                      ? 'bg-white/5 border-white/10'
+                      : 'bg-white border-gray-200 shadow-lg'
+                  }`}
+                >
+                  <Package
+                    className={`w-20 h-20 mx-auto mb-6 ${
+                      theme === 'dark' ? 'text-gray-600' : 'text-gray-300'
+                    }`}
+                  />
+                  <h3 className={`text-2xl font-bold mb-3 ${
+                    theme === 'dark' ? 'text-white' : 'text-gray-900'
+                  }`}>
+                    No Products Match Your Filters
+                  </h3>
+                  <p className={`text-lg mb-6 ${
+                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                  }`}>
+                    Try adjusting your filters to see more results
+                  </p>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={handleClearAllFilters}
+                    className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  >
+                    Clear All Filters
+                  </motion.button>
+                </motion.div>
+              ) : (
+                <EmptyState />
+              )}
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Mobile Filter Panel */}
+        <FilterPanel
+          filters={filters}
+          onFilterChange={handleFilterChange}
+          isOpen={isMobileFilterOpen}
+          onClose={() => setIsMobileFilterOpen(false)}
+          isMobile={true}
+        />
       </div>
     </div>
   );
