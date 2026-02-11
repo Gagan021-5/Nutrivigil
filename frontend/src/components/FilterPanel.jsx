@@ -59,7 +59,7 @@ const FILTER_OPTIONS = {
       { id: 'low', label: 'Low (101-200)', min: 101, max: 200 },
       { id: 'medium', label: 'Medium (201-400)', min: 201, max: 400 },
       { id: 'high', label: 'High (401-600)', min: 401, max: 600 },
-      { id: 'very-high', label: 'Very High (600+)', min: 601, max: 9999 },
+      { id: 'very-high', label: 'Very High (601+)', min: 601, max: 9999 },
     ],
   },
 };
