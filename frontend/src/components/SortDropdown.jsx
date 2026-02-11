@@ -173,18 +173,14 @@ const SortDropdown = ({ currentSort, onSortChange }) => {
 
                     {/* Label and Description */}
                     <div className="flex-1 min-w-0">
-                      <div className="font-semibold text-sm">{option.label}</div>
-                      <div className={`text-xs mt-0.5 ${
-                        isSelected
-                          ? theme === 'dark'
-                            ? 'text-indigo-300'
-                            : 'text-indigo-500'
-                          : theme === 'dark'
-                          ? 'text-gray-500'
-                          : 'text-gray-500'
-                      }`}>
-                        {option.description}
-                      </div>
+                    <div className="font-semibold text-sm">{option.label}</div>
+                    <div className={`text-xs mt-0.5 ${
+                      isSelected
+                        ? (theme === 'dark' ? 'text-indigo-300' : 'text-indigo-500')
+                        : 'text-gray-500'
+                    }`}>
+                      {option.description}
+                    </div>
                     </div>
 
                     {/* Check Icon */}
