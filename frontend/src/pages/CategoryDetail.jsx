@@ -182,14 +182,28 @@ const CategoryDetail = () => {
   const [category, setCategory] = useState(null);
   const [foodItems, setFoodItems] = useState([]);
   const [currentSort, setCurrentSort] = useState(() => {
-    // Load sort preference from localStorage
-    return localStorage.getItem('nutrivigil-sort-preference') || 'name-asc';
+    // Load sort preference from localStorage safely
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        const stored = window.localStorage.getItem('nutrivigil-sort-preference');
+        return stored || 'name-asc';
+      }
+    } catch (e) {
+      // Ignore localStorage errors and fall back to default
+    }
+    return 'name-asc';
   });
 
   // Handle sort change and save to localStorage
   const handleSortChange = (sortId) => {
     setCurrentSort(sortId);
-    localStorage.setItem('nutrivigil-sort-preference', sortId);
+    try {
+      if (typeof window !== 'undefined' && window.localStorage) {
+        window.localStorage.setItem('nutrivigil-sort-preference', sortId);
+      }
+    } catch (e) {
+      // Ignore localStorage errors and continue
+    }
   };
 
   // Sort food items based on current sort option
