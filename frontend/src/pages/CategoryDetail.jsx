@@ -229,13 +229,15 @@ const CategoryDetail = () => {
         const matchesScore = filters.scoreRange.some((range) => {
           switch (range) {
             case 'excellent':
-              return score >= 70 && score <= 100;
             case 'good':
-              return score >= 50 && score < 70;
+              // Align with global "Good" bucket: score >= 70
+              return score >= 70;
             case 'fair':
-              return score >= 30 && score < 50;
+              // Align with global "Fair" bucket: 40 <= score < 70
+              return score >= 40 && score < 70;
             case 'poor':
-              return score >= 0 && score < 30;
+              // Align with global "Poor" bucket: score < 40
+              return score < 40;
             default:
               return false;
           }
