@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 import { Home, ChevronRight, Package } from 'lucide-react';
 import FoodItemCard, { FoodItemCardSkeleton } from '../components/FoodItemCard';
+import SearchBar from '../components/SearchBar';
+import ViewToggle from '../components/ViewToggle';
 import FOOD_ITEMS from '../data/foodItems';
 
 // Import category images
@@ -179,6 +181,31 @@ const CategoryDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [category, setCategory] = useState(null);
   const [foodItems, setFoodItems] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState(() => {
+    // Load view preference from localStorage
+    return localStorage.getItem('nutrivigil-view-mode') || 'grid';
+  });
+
+  // Handle view mode change and save to localStorage
+  const handleViewModeChange = (mode) => {
+    setViewMode(mode);
+    localStorage.setItem('nutrivigil-view-mode', mode);
+  };
+
+  // Filter food items by search query
+  const searchedFoodItems = useMemo(() => {
+    if (!foodItems || foodItems.length === 0) return [];
+    if (!searchQuery.trim()) return foodItems;
+
+    const query = searchQuery.toLowerCase().trim();
+    return foodItems.filter((item) => {
+      return (
+        item.name.toLowerCase().includes(query) ||
+        item.brand.toLowerCase().includes(query)
+      );
+    });
+  }, [foodItems, searchQuery]);
 
   // Find category by slug
   useEffect(() => {
@@ -193,11 +220,11 @@ const CategoryDetail = () => {
       setTimeout(() => {
         setCategory(foundCategory);
         // Load sample food items for this category
-        const items = SAMPLE_FOOD_ITEMS[categorySlug];
+        const items = FOOD_ITEMS[categorySlug];
         if ((!items || items.length === 0) && process.env.NODE_ENV === 'development') {
           console.warn(
             `[CategoryDetail] No mock data found for category slug "${categorySlug}". ` +
-              'EmptyState will be shown. Ensure SAMPLE_FOOD_ITEMS contains data for this category.'
+              'EmptyState will be shown. Ensure FOOD_ITEMS contains data for this category.'
           );
         }
         setFoodItems(items || []);
@@ -393,6 +420,36 @@ const CategoryDetail = () => {
           </div>
         </motion.div>
 
+        {/* Search and View Controls */}
+        {foodItems.length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-6 space-y-4"
+          >
+            {/* Search Bar */}
+            <SearchBar
+              value={searchQuery}
+              onChange={setSearchQuery}
+              placeholder="Search by product name or brand..."
+            />
+
+            {/* View Toggle and Results Counter */}
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              {/* Results Counter */}
+              <div className={`text-sm font-medium ${
+                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+              }`}>
+                Showing {searchedFoodItems.length} of {foodItems.length} item{foodItems.length !== 1 ? 's' : ''}
+              </div>
+
+              {/* View Toggle */}
+              <ViewToggle currentView={viewMode} onViewChange={handleViewModeChange} />
+            </div>
+          </motion.div>
+        )}
+
         {/* Food Items Grid - Phase 2 */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -401,14 +458,56 @@ const CategoryDetail = () => {
           role="region"
           aria-label="Food products list"
         >
-          {foodItems.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" role="list">
-              {foodItems.map((item, index) => (
+          {searchedFoodItems.length > 0 ? (
+            <div
+              className={`
+                ${viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : ''}
+                ${viewMode === 'list' ? 'grid grid-cols-1 gap-6' : ''}
+                ${viewMode === 'compact' ? 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4' : ''}
+              `}
+              role="list"
+            >
+              {searchedFoodItems.map((item, index) => (
                 <div key={`${category.name}-${item.id}`} role="listitem">
                   <FoodItemCard item={item} index={index} />
                 </div>
               ))}
             </div>
+          ) : searchQuery.trim() ? (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className={`text-center py-16 rounded-2xl border ${
+                theme === 'dark'
+                  ? 'bg-white/5 border-white/10'
+                  : 'bg-white border-gray-200 shadow-lg'
+              }`}
+            >
+              <Package
+                className={`w-20 h-20 mx-auto mb-6 ${
+                  theme === 'dark' ? 'text-gray-600' : 'text-gray-300'
+                }`}
+              />
+              <h3 className={`text-2xl font-bold mb-3 ${
+                theme === 'dark' ? 'text-white' : 'text-gray-900'
+              }`}>
+                No Products Found
+              </h3>
+              <p className={`text-lg mb-6 ${
+                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+              }`}>
+                No products match your search for "{searchQuery}"
+              </p>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setSearchQuery('')}
+                className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                Clear Search
+              </motion.button>
+            </motion.div>
           ) : (
             <EmptyState />
           )}
