@@ -277,9 +277,22 @@ Contributions are welcome! Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) 
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
-## 👥 Contributors
+## 👥 Hall of Contributors
 
-Thanks to all contributors who have helped improve NutriVigil!
+A huge thanks to all the amazing people who have contributed to NutriVigil! 🌟
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Gagan021-5">
+        <img src="https://github.com/Gagan021-5.png?s=100" width="100px;" alt="Gagan"/><br />
+        <sub><b>Gagan</b></sub>
+      </a>
+    </td>
+    </tr>
+</table>
+
+**Want to see your name here?** Check out our [CONTRIBUTING.md](./CONTRIBUTING.md) and start contributing!
 
 ## 📞 Support
 
