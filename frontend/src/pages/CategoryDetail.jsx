@@ -2,11 +2,15 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
-import { Home, ChevronRight, Package } from 'lucide-react';
+import { Home, ChevronRight, Package, SlidersHorizontal } from 'lucide-react';
 import FoodItemCard, { FoodItemCardSkeleton } from '../components/FoodItemCard';
+import FilterPanel from '../components/FilterPanel';
+import ActiveFilters from '../components/ActiveFilters';
 import SearchBar from '../components/SearchBar';
 import ViewToggle from '../components/ViewToggle';
 import FOOD_ITEMS from '../data/foodItems';
+import { calculateNutritionScore } from '../utils/nutritionScore';
+import { DEFAULT_FILTERS, validateFilters, getFilterRange } from '../constants/filterConstants';
 
 // Import category images
 import babyFoodImg from '../assets/baby-food.jpg';
@@ -186,6 +190,21 @@ const CategoryDetail = () => {
     // Load view preference from localStorage
     return localStorage.getItem('nutrivigil-view-mode') || 'grid';
   });
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [filters, setFilters] = useState(() => {
+    // Load filters from localStorage with error handling
+    try {
+      const saved = localStorage.getItem('nutrivigil-filters');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        // Validate and normalize the parsed filters
+        return validateFilters(parsed);
+      }
+    } catch (error) {
+      console.warn('[CategoryDetail] Failed to load filters from localStorage:', error);
+    }
+    return DEFAULT_FILTERS;
+  });
 
   // Handle view mode change and save to localStorage
   const handleViewModeChange = (mode) => {
@@ -193,19 +212,93 @@ const CategoryDetail = () => {
     localStorage.setItem('nutrivigil-view-mode', mode);
   };
 
-  // Filter food items by search query
-  const searchedFoodItems = useMemo(() => {
+  // Handle filter changes and save to localStorage
+  const handleFilterChange = (newFilters) => {
+    setFilters(newFilters);
+    localStorage.setItem('nutrivigil-filters', JSON.stringify(newFilters));
+  };
+
+  // Remove individual filter
+  const handleRemoveFilter = (category, value) => {
+    const newFilters = {
+      ...filters,
+      [category]: filters[category].filter((v) => v !== value),
+    };
+    handleFilterChange(newFilters);
+  };
+
+  // Clear all filters
+  const handleClearAllFilters = () => {
+    handleFilterChange(DEFAULT_FILTERS);
+  };
+
+  // Check if any filters are active
+  const hasActiveFilters = useMemo(() => {
+    return Object.values(filters).some((arr) => arr.length > 0);
+  }, [filters]);
+
+  // Filter food items based on active filters
+  const filteredFoodItems = useMemo(() => {
     if (!foodItems || foodItems.length === 0) return [];
-    if (!searchQuery.trim()) return foodItems;
+    if (!hasActiveFilters) return foodItems;
+
+    return foodItems.filter((item) => {
+      // Score range filter
+      if (filters.scoreRange && filters.scoreRange.length > 0) {
+        const score = item.nutrition ? calculateNutritionScore(item.nutrition) : 0;
+        const matchesScore = filters.scoreRange.some((rangeId) => {
+          const range = getFilterRange('scoreRange', rangeId);
+          if (range) {
+            return score >= range.min && score <= range.max;
+          }
+          return false;
+        });
+        if (!matchesScore) return false;
+      }
+
+      // Calorie range filter
+      if (filters.calorieRange && filters.calorieRange.length > 0) {
+        const calories = item.nutrition?.calories || 0;
+        const matchesCalories = filters.calorieRange.some((rangeId) => {
+          const range = getFilterRange('calorieRange', rangeId);
+          if (range) {
+            return calories >= range.min && calories <= range.max;
+          }
+          return false;
+        });
+        if (!matchesCalories) return false;
+      }
+
+      // Dietary and allergen filters
+      // Note: Mock data doesn't currently include dietary/allergen properties.
+      // These filters are displayed in the UI but won't filter items until
+      // the data model is extended to include fields like:
+      // - item.dietary: ['vegan', 'gluten-free', ...]
+      // - item.allergens: ['nuts', 'dairy', ...]
+      // When implementing, add checks like:
+      // if (filters.dietary.length > 0) {
+      //   const matchesDietary = filters.dietary.some(diet => item.dietary?.includes(diet));
+      //   if (!matchesDietary) return false;
+      // }
+
+      return true;
+    });
+  }, [foodItems, filters, hasActiveFilters]);
+
+  // Filter by search query (applies after filter filtering)
+  const searchedFoodItems = useMemo(() => {
+    const itemsToSearch = filteredFoodItems;
+    if (!itemsToSearch || itemsToSearch.length === 0) return [];
+    if (!searchQuery.trim()) return itemsToSearch;
 
     const query = searchQuery.toLowerCase().trim();
-    return foodItems.filter((item) => {
+    return itemsToSearch.filter((item) => {
       return (
         item.name.toLowerCase().includes(query) ||
         item.brand.toLowerCase().includes(query)
       );
     });
-  }, [foodItems, searchQuery]);
+  }, [filteredFoodItems, searchQuery]);
 
   // Find category by slug
   useEffect(() => {
