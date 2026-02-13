@@ -25,7 +25,15 @@ export function findBetterAlternatives(currentFood, allFoods, category, limit = 
 
   // Filter out the current product and calculate alternatives
   const alternatives = allFoods
-    .filter(food => food.id !== currentFood.id)
+    .filter(food => {
+      const sameCategory =
+        !category ||
+        food.category === category ||
+        food.categorySlug === category ||
+        (food.category && typeof food.category === 'object' && food.category.slug === category);
+
+      return food.id !== currentFood.id && sameCategory;
+    })
     .map(food => {
       const foodScore = food.nutrition ? calculateNutritionScore(food.nutrition) : 0;
       const foodNutrition = food.nutrition || {};
