@@ -1,10 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { ComparisonProvider } from "./contexts/ComparisonContext";
 
 import Navbar from "./components/Navbar";
 import LanguageModal from "./components/LanguageModal";
 import ScrollToTop from "./components/ScrollToTop";
+import ComparisonBar from "./components/ComparisonBar";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import ScanPage from "./pages/ScanPage";
@@ -56,41 +58,46 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen flex flex-col relative overflow-x-hidden">
-        {/* ✅ Language Modal */}
-        {showLanguageModal && (
-          <LanguageModal onClose={() => setShowLanguageModal(false)} />
-        )}
+      <ComparisonProvider>
+        <div className="min-h-screen flex flex-col relative overflow-x-hidden">
+          {/* ✅ Language Modal */}
+          {showLanguageModal && (
+            <LanguageModal onClose={() => setShowLanguageModal(false)} />
+          )}
 
-        <Navbar />
+          <Navbar />
 
-        <ScrollToTop />
+          <ScrollToTop />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/scan" element={<ScanPage />} />
-          <Route path="/browse" element={<BrowseFoods />} />
-          <Route path="/browse/:categorySlug" element={<CategoryDetail />} />
-          <Route path="/protocol" element={<Protocol />} />
-          <Route path="/app" element={<AppInterface />} />
-          <Route path="/nutrition" element={<Nutrition />} />
-          <Route path="/how-it-works" element={<HowItWorks />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/mission" element={<Mission />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/scanner" element={<Scanner />} />
-          <Route path="/safety-signals" element={<SafetySignals />} />
-          <Route path="/health-profile" element={<HealthProfile />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<Terms />} />
-          <Route path="/cookies" element={<Cookies />} />
-          <Route path="/faq" element={<FAQ />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/scan" element={<ScanPage />} />
+            <Route path="/browse" element={<BrowseFoods />} />
+            <Route path="/browse/:categorySlug" element={<CategoryDetail />} />
+            <Route path="/protocol" element={<Protocol />} />
+            <Route path="/app" element={<AppInterface />} />
+            <Route path="/nutrition" element={<Nutrition />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/mission" element={<Mission />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/scanner" element={<Scanner />} />
+            <Route path="/safety-signals" element={<SafetySignals />} />
+            <Route path="/health-profile" element={<HealthProfile />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/cookies" element={<Cookies />} />
+            <Route path="/faq" element={<FAQ />} />
+          </Routes>
 
-        <Footer />
-      </div>
+          <Footer />
+
+          {/* Comparison Bar */}
+          <ComparisonBar />
+        </div>
+      </ComparisonProvider>
     </ThemeProvider>
   );
 }

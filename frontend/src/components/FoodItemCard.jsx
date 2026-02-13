@@ -1,20 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
-import { Package } from 'lucide-react';
+import { useComparison } from '../contexts/ComparisonContext';
+import { Package, CheckCircle, Circle } from 'lucide-react';
 import { calculateNutritionScore, getScoreColor } from '../utils/nutritionScore';
 
 const FoodItemCard = ({ item, index = 0, onViewDetails }) => {
   const { theme } = useTheme();
+  const { addToComparison, removeFromComparison, isInComparison } = useComparison();
 
   // Calculate nutrition score
   const score = item.nutrition ? calculateNutritionScore(item.nutrition) : null;
   const scoreInfo = score !== null ? getScoreColor(score) : null;
 
+  const inComparison = isInComparison(item.id);
+
   const handleCardClick = () => {
     // Delegate click handling to parent so it can decide how to show details
     if (typeof onViewDetails === 'function') {
       onViewDetails(item);
+    }
+  };
+
+  const handleCompareToggle = (e) => {
+    e.stopPropagation(); // Prevent card click when clicking checkbox
+    if (inComparison) {
+      removeFromComparison(item.id);
+    } else {
+      addToComparison(item);
     }
   };
 
@@ -63,6 +76,33 @@ const FoodItemCard = ({ item, index = 0, onViewDetails }) => {
 
         {/* Gradient Overlay on Hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+        {/* Compare Checkbox - Top Left */}
+        <div
+          className="absolute top-3 left-3 z-10"
+          onClick={handleCompareToggle}
+          role="button"
+          tabIndex={0}
+          aria-label={inComparison ? 'Remove from comparison' : 'Add to comparison'}
+        >
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className={`p-1.5 rounded-lg backdrop-blur-md cursor-pointer transition-all duration-200 ${
+              inComparison
+                ? 'bg-indigo-600 text-white'
+                : theme === 'dark'
+                ? 'bg-white/20 text-white hover:bg-white/30'
+                : 'bg-black/20 text-white hover:bg-black/30'
+            }`}
+          >
+            {inComparison ? (
+              <CheckCircle className="w-5 h-5" />
+            ) : (
+              <Circle className="w-5 h-5" />
+            )}
+          </motion.div>
+        </div>
 
         {/* Nutrition Score Badge - Top Right */}
         {scoreInfo && (
