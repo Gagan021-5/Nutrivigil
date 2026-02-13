@@ -112,13 +112,13 @@ export const findBetterAlternatives = (currentFood, allFoods, category, limit = 
 
   // Find foods with better nutrition scores
   const betterOptions = allFoods
-    .filter(food => {
-      if (food.id === currentFood.id) return false;
-      const foodScore = calculateNutritionScore(food.nutrition);
-      return foodScore > currentScore; // Must have better score
-    })
+    .filter(food => food.id !== currentFood.id)
     .map(food => {
       const foodScore = calculateNutritionScore(food.nutrition);
+      return { food, foodScore };
+    })
+    .filter(({ foodScore }) => foodScore > currentScore) // Must have better score
+    .map(({ food, foodScore }) => {
       const improvements = calculateImprovements(currentNutrition, food.nutrition);
       const similarityScore = calculateSimilarity(currentFood, food, category);
 
