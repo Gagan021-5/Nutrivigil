@@ -8,6 +8,7 @@ import FilterPanel from '../components/FilterPanel';
 import ActiveFilters from '../components/ActiveFilters';
 import SearchBar from '../components/SearchBar';
 import ViewToggle from '../components/ViewToggle';
+import FoodDetailModal from '../components/FoodDetailModal';
 import FOOD_ITEMS from '../data/foodItems';
 import { calculateNutritionScore } from '../utils/nutritionScore';
 import { DEFAULT_FILTERS, validateFilters, getFilterRange } from '../constants/filterConstants';
@@ -186,6 +187,7 @@ const CategoryDetail = () => {
   const [category, setCategory] = useState(null);
   const [foodItems, setFoodItems] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedFood, setSelectedFood] = useState(null);
   const [viewMode, setViewMode] = useState(() => {
     // Load view preference from localStorage
     return localStorage.getItem('nutrivigil-view-mode') || 'grid';
@@ -230,6 +232,30 @@ const CategoryDetail = () => {
   // Clear all filters
   const handleClearAllFilters = () => {
     handleFilterChange(DEFAULT_FILTERS);
+  };
+
+  // Handle view details for food item
+  const handleViewDetails = (food) => {
+    setSelectedFood(food);
+  };
+
+  // Close food detail modal
+  const handleCloseModal = () => {
+    setSelectedFood(null);
+  };
+
+  // Handle navigation in modal (Previous/Next)
+  const handleModalNavigate = (direction) => {
+    if (!selectedFood) return;
+
+    const currentIndex = searchedFoodItems.findIndex((item) => item.id === selectedFood.id);
+    if (currentIndex === -1) return;
+
+    if (direction === 'previous' && currentIndex > 0) {
+      setSelectedFood(searchedFoodItems[currentIndex - 1]);
+    } else if (direction === 'next' && currentIndex < searchedFoodItems.length - 1) {
+      setSelectedFood(searchedFoodItems[currentIndex + 1]);
+    }
   };
 
   // Check if any filters are active
@@ -562,7 +588,11 @@ const CategoryDetail = () => {
             >
               {searchedFoodItems.map((item, index) => (
                 <div key={`${category.name}-${item.id}`} role="listitem">
-                  <FoodItemCard item={item} index={index} />
+                  <FoodItemCard
+                    item={item}
+                    index={index}
+                    onViewDetails={handleViewDetails}
+                  />
                 </div>
               ))}
             </div>
@@ -606,6 +636,17 @@ const CategoryDetail = () => {
           )}
         </motion.div>
       </div>
+
+      {/* Food Detail Modal */}
+      {selectedFood && (
+        <FoodDetailModal
+          food={selectedFood}
+          onClose={handleCloseModal}
+          allFoods={searchedFoodItems}
+          currentIndex={searchedFoodItems.findIndex((item) => item.id === selectedFood.id)}
+          onNavigate={handleModalNavigate}
+        />
+      )}
     </div>
   );
 };
