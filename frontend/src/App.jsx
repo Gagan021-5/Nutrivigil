@@ -17,6 +17,7 @@ import AppInterface from "./pages/AppInterface";
 import Nutrition from "./pages/Nutrition";
 import HowItWorks from "./pages/HowItWorks";
 import Scanner from "./pages/Scanner";
+import DietPlanner from "./pages/DietPlanner";
 import SafetySignals from "./pages/SafetySignals";
 import HealthProfile from "./pages/HealthProfile";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -87,6 +88,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/diet-planner" element={<DietPlanner />} />
         </Routes>
 
         <Footer />
