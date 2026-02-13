@@ -16,8 +16,8 @@ const IngredientsList = ({ ingredients, allergens }) => {
     'Preservatives (Calcium Propionate)',
   ];
 
-  // Mock allergens if none provided
-  const displayAllergens = allergens || ['Wheat', 'Soy'];
+  // Allergen list; default to empty when none provided to avoid false warnings
+  const displayAllergens = Array.isArray(allergens) ? allergens : [];
 
   // Check if an ingredient contains an allergen
   const isAllergen = (ingredient) => {
