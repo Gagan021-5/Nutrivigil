@@ -97,28 +97,21 @@ const HealthInsights = ({ nutrition, servingSize }) => {
 
   const { pros, cons, recommendations } = generateInsights();
 
-  // Get score details
+  // Get score details (aligned with shared nutrition score bands: Good/Fair/Poor with 70/40 cutoffs)
   const getScoreDetails = () => {
-    if (score >= 80) {
+    if (score >= 70) {
       return {
-        label: 'Excellent',
+        label: 'Good',
         color: theme === 'dark' ? 'text-green-400' : 'text-green-600',
         bgColor: theme === 'dark' ? 'bg-green-500/20' : 'bg-green-100',
         borderColor: theme === 'dark' ? 'border-green-500/50' : 'border-green-300',
       };
-    } else if (score >= 60) {
-      return {
-        label: 'Good',
-        color: theme === 'dark' ? 'text-yellow-400' : 'text-yellow-600',
-        bgColor: theme === 'dark' ? 'bg-yellow-500/20' : 'bg-yellow-100',
-        borderColor: theme === 'dark' ? 'border-yellow-500/50' : 'border-yellow-300',
-      };
     } else if (score >= 40) {
       return {
         label: 'Fair',
-        color: theme === 'dark' ? 'text-orange-400' : 'text-orange-600',
-        bgColor: theme === 'dark' ? 'bg-orange-500/20' : 'bg-orange-100',
-        borderColor: theme === 'dark' ? 'border-orange-500/50' : 'border-orange-300',
+        color: theme === 'dark' ? 'text-yellow-400' : 'text-yellow-600',
+        bgColor: theme === 'dark' ? 'bg-yellow-500/20' : 'bg-yellow-100',
+        borderColor: theme === 'dark' ? 'border-yellow-500/50' : 'border-yellow-300',
       };
     } else {
       return {
