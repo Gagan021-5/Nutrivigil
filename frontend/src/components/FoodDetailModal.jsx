@@ -31,10 +31,12 @@ const FoodDetailModal = ({ isOpen, onClose, foodItem, categoryName }) => {
 
   // Handle swipe down to close on mobile
   const handleTouchStart = (e) => {
+    if (!e.touches || e.touches.length === 0) return;
     setTouchStartY(e.touches[0].clientY);
   };
 
   const handleTouchMove = (e) => {
+    if (!e.touches || e.touches.length === 0) return;
     setTouchEndY(e.touches[0].clientY);
   };
 
