@@ -21,7 +21,7 @@ const FOOD_ITEMS = {
   'baby-food': [
     { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
     { id: 2, name: 'Banana Oat Puree', brand: "Earth's Best", servingSize: '15g', image: bananaOatPuree, nutrition: { calories: 60, protein: 2, carbs: 11, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 2, fiber: 2 } },
-    { id: 3, name: 'Sweet Potato & Corn Puree', brand: 'Beech-Nut', servingSize: '113g', image: appleSweetPotatoCorn, nutrition: { calories: 60, protein: 1, carbs: 14, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 5, fiber: 2 } },
+    { id: 3, name: 'Apple, Sweet Potato & Corn Puree', brand: 'Beech-Nut', servingSize: '113g', image: appleSweetPotatoCorn, nutrition: { calories: 60, protein: 1, carbs: 14, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 5, fiber: 2 } },
     { id: 4, name: 'Apple, Pea & Spinach', brand: 'Gerber', servingSize: '170g', image: applePeaSpinach, nutrition: { calories: 70, protein: 2, carbs: 13, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 15, sugar: 3, fiber: 3 } },
     { id: 5, name: 'Apple & Grape', brand: "Earth's Best", servingSize: '113g', image: appleGrape, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 10, fiber: 2 } },
     { id: 6, name: 'Chicken & Broth', brand: 'Gerber', servingSize: '170g', image: chickenBroth, nutrition: { calories: 80, protein: 3, carbs: 12, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 25, sugar: 2, fiber: 1 } },
