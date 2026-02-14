@@ -30,7 +30,7 @@ const FOOD_ITEMS = {
     { id: 9, name: 'Apple & Peach', brand: 'Gerber', servingSize: '113g', image: applePeach, nutrition: { calories: 60, protein: 0, carbs: 14, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 1 } },
     { id: 10, name: 'Turkey & Broth', brand: 'Beech-Nut', servingSize: '170g', image: turkeyBroth, nutrition: { calories: 90, protein: 4, carbs: 11, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 30, sugar: 2, fiber: 2 } },
     { id: 11, name: 'Beef & Broth', brand: "Earth's Best", servingSize: '7g', image: beefBroth, nutrition: { calories: 25, protein: 0, carbs: 5, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 1, fiber: 0 } },
-    { id: 12, name: 'Banana Puree (Stage 2)', brand: 'Gerber', servingSize: '7g', image: stage2Bananas, nutrition: { calories: 30, protein: 0, carbs: 5, totalFat: 1, saturatedFat: 0.5, transFat: 0, sodium: 15, sugar: 3, fiber: 0 } },
+    { id: 12, name: 'Banana Puree (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Bananas, nutrition: { calories: 90, protein: 1, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 2 } },
   ],
 
   'baking': [
