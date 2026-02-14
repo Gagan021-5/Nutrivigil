@@ -106,15 +106,9 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
     if (onProductSelect) {
       onProductSelect(product);
     } else {
-      // Fallback to navigation method
-      const productIndex = allFoods.findIndex(item => item.id === product.id);
-      if (productIndex !== -1 && onNavigate) {
-        const direction = productIndex > currentIndex ? 'next' : 'previous';
-        const stepsNeeded = Math.abs(productIndex - currentIndex);
-        for (let i = 0; i < stepsNeeded; i++) {
-          setTimeout(() => onNavigate(direction), i * 50);
-        }
-      }
+      // Fallback navigation via repeated timeouts has been removed to avoid
+      // inefficient and unreliable behavior. If needed, provide an onProductSelect
+      // callback to handle direct product selection.
     }
   };
 

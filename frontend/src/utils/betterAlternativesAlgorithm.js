@@ -79,8 +79,8 @@ function calculateImprovements(currentNutrition, alternativeNutrition) {
   const improvements = {};
 
   // Check sugar reduction
-  const currentSugar = parseFloat(currentNutrition.sugars) || 0;
-  const altSugar = parseFloat(alternativeNutrition.sugars) || 0;
+  const currentSugar = parseFloat(currentNutrition.sugar) || 0;
+  const altSugar = parseFloat(alternativeNutrition.sugar) || 0;
   if (currentSugar > 5 && altSugar < currentSugar) {
     const reduction = ((currentSugar - altSugar) / currentSugar) * 100;
     if (reduction >= 20) {
