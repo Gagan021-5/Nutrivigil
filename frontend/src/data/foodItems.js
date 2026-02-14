@@ -45,6 +45,21 @@ import peachPie from '../assets/cake/peach-pie.jpg';
 import raspberrySwirlCheesecake from '../assets/cake/raspberry-swirl-cheesecake.jpg';
 import sugarlessApplePie from '../assets/cake/sugarless-apple-pie.jpg';
 
+// canned-goods image imports (normalized)
+import bMOriginalBakedBeans from '../assets/canned-goods/b-m-original-baked-beans.jpg';
+import babyArtichokeHeartsInOil from '../assets/canned-goods/baby-artichoke-hearts-in-oil.jpg';
+import bakersAngelFlake from '../assets/canned-goods/bakers-angel-flake.jpg';
+import bestMaidDillRelish from '../assets/canned-goods/best-maid-dill-relish.jpg';
+import blackCerignolaOlives from '../assets/canned-goods/black-cerignola-olives.jpg';
+import blackChoppedRipeOlives from '../assets/canned-goods/black-chopped-ripe-olives.jpg';
+import bourbonBadaBingCherries from '../assets/canned-goods/bourbon-bada-bing-cherries.jpg';
+import breadAndButterChips from '../assets/canned-goods/bread-and-butter-chips.jpg';
+import bumbleBeeChubMackerel from '../assets/canned-goods/bumble-bee-chub-mackerel.jpg';
+import bumbleBeeSkinlessSmoked from '../assets/canned-goods/bumble-bee-skinless-smoked.jpg';
+import bushsBestLightRedKidney from '../assets/canned-goods/bushs-best-light-red-kidney.jpg';
+import cajunChefNachoSlices from '../assets/canned-goods/cajun-chef-nacho-slices.jpg';
+import castelvetranoOlives from '../assets/canned-goods/castelvetrano-olives.jpg';
+import choppedOliveTapenade from '../assets/canned-goods/chopped-olive-tapenade.jpg';
 // bread image imports (normalized)
 import bread100RyeBread from '../assets/bread/100-rye-bread.jpg';
 import bread100PureMapleSyrup from '../assets/bread/100-pure-maple-syrup.jpg';
@@ -157,20 +172,20 @@ const FOOD_ITEMS = {
   ],
 
   'canned-goods': [
-    { id: 1, name: 'Tomato Soup', brand: "Campbell's", servingSize: '1 cup (245g)', image: null, nutrition: { calories: 90, protein: 2, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 12, fiber: 2 } },
-    { id: 2, name: 'Chicken Noodle Soup', brand: 'Progresso', servingSize: '1 cup (245g)', image: null, nutrition: { calories: 100, protein: 7, carbs: 14, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 690, sugar: 2, fiber: 1 } },
-    { id: 3, name: 'Sweet Corn', brand: 'Green Giant', servingSize: '1/2 cup (125g)', image: null, nutrition: { calories: 60, protein: 2, carbs: 11, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 3, fiber: 2 } },
-    { id: 4, name: 'Black Beans', brand: 'Bush\'s Best', servingSize: '1/2 cup (130g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 460, sugar: 1, fiber: 7 } },
-    { id: 5, name: 'Diced Tomatoes', brand: 'Hunt\'s', servingSize: '1/2 cup (121g)', image: null, nutrition: { calories: 25, protein: 1, carbs: 5, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 3, fiber: 1 } },
-    { id: 6, name: 'Pinto Beans', brand: 'Ranch Style', servingSize: '1/2 cup (130g)', image: null, nutrition: { calories: 120, protein: 6, carbs: 20, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 490, sugar: 1, fiber: 6 } },
-    { id: 7, name: 'Green Beans', brand: 'Del Monte', servingSize: '1/2 cup (121g)', image: null, nutrition: { calories: 20, protein: 1, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 390, sugar: 2, fiber: 2 } },
-    { id: 8, name: 'Cream of Mushroom Soup', brand: "Campbell's", servingSize: '1/2 cup (124g)', image: null, nutrition: { calories: 100, protein: 2, carbs: 9, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 870, sugar: 1, fiber: 0 } },
-    { id: 9, name: 'Kidney Beans', brand: 'Goya', servingSize: '1/2 cup (130g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 340, sugar: 1, fiber: 7 } },
-    { id: 10, name: 'Chili with Beans', brand: 'Hormel', servingSize: '1 cup (247g)', image: null, nutrition: { calories: 260, protein: 13, carbs: 28, totalFat: 9, saturatedFat: 4, transFat: 0, sodium: 1010, sugar: 5, fiber: 7 } },
-    { id: 11, name: 'Tuna in Water', brand: "Bumble Bee", servingSize: '2 oz drained (56g)', image: null, nutrition: { calories: 50, protein: 11, carbs: 0, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 12, name: 'Canned Peaches', brand: 'Del Monte', servingSize: '1/2 cup (124g)', image: null, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 13, fiber: 1 } },
-    { id: 13, name: 'Pumpkin Puree', brand: 'Libby\'s', servingSize: '1/2 cup (122g)', image: null, nutrition: { calories: 40, protein: 1, carbs: 9, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 4, fiber: 3 } },
-    { id: 14, name: 'Refried Beans', brand: 'Rosarita', servingSize: '1/2 cup (127g)', image: null, nutrition: { calories: 120, protein: 6, carbs: 19, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 530, sugar: 0, fiber: 6 } },
+    { id: 1, name: 'b-m-original-baked-beans', brand: "Campbell's", servingSize: '1 cup (245g)', image: bMOriginalBakedBeans, nutrition: { calories: 90, protein: 2, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 12, fiber: 2 } },
+    { id: 2, name: 'baby-artichoke-hearts-in-oil', brand: 'Progresso', servingSize: '1 cup (245g)', image: babyArtichokeHeartsInOil, nutrition: { calories: 100, protein: 7, carbs: 14, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 690, sugar: 2, fiber: 1 } },
+    { id: 3, name: 'bakers-angel-flake', brand: 'Green Giant', servingSize: '1/2 cup (125g)', image: bakersAngelFlake, nutrition: { calories: 60, protein: 2, carbs: 11, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 3, fiber: 2 } },
+    { id: 4, name: 'best-maid-dill-relish', brand: 'Bush\'s Best', servingSize: '1/2 cup (130g)', image: bestMaidDillRelish, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 460, sugar: 1, fiber: 7 } },
+    { id: 5, name: 'black-cerignola-olives', brand: 'Hunt\'s', servingSize: '1/2 cup (121g)', image: blackCerignolaOlives, nutrition: { calories: 25, protein: 1, carbs: 5, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 3, fiber: 1 } },
+    { id: 6, name: 'black-chopped-ripe-olives', brand: 'Ranch Style', servingSize: '1/2 cup (130g)', image: blackChoppedRipeOlives, nutrition: { calories: 120, protein: 6, carbs: 20, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 490, sugar: 1, fiber: 6 } },
+    { id: 7, name: 'bourbon-bada-bing-cherries', brand: 'Del Monte', servingSize: '1/2 cup (121g)', image: bourbonBadaBingCherries, nutrition: { calories: 20, protein: 1, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 390, sugar: 2, fiber: 2 } },
+    { id: 8, name: 'bread-and-butter-chips', brand: "Campbell's", servingSize: '1/2 cup (124g)', image: breadAndButterChips, nutrition: { calories: 100, protein: 2, carbs: 9, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 870, sugar: 1, fiber: 0 } },
+    { id: 9, name: 'bumble-bee-chub-mackerel', brand: 'Goya', servingSize: '1/2 cup (130g)', image: bumbleBeeChubMackerel, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 340, sugar: 1, fiber: 7 } },
+    { id: 10, name: 'bumble-bee-skinless-smoked', brand: 'Hormel', servingSize: '1 cup (247g)', image: bumbleBeeSkinlessSmoked, nutrition: { calories: 260, protein: 13, carbs: 28, totalFat: 9, saturatedFat: 4, transFat: 0, sodium: 1010, sugar: 5, fiber: 7 } },
+    { id: 11, name: 'bushs-best-light-red-kidney', brand: "Bumble Bee", servingSize: '2 oz drained (56g)', image: bushsBestLightRedKidney, nutrition: { calories: 50, protein: 11, carbs: 0, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 12, name: 'cajun-chef-nacho-slices', brand: 'Del Monte', servingSize: '1/2 cup (124g)', image: cajunChefNachoSlices, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 13, fiber: 1 } },
+    { id: 13, name: 'castelvetrano-olives', brand: 'Libby\'s', servingSize: '1/2 cup (122g)', image: castelvetranoOlives, nutrition: { calories: 40, protein: 1, carbs: 9, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 4, fiber: 3 } },
+    { id: 14, name: 'chopped-olive-tapenade', brand: 'Rosarita', servingSize: '1/2 cup (127g)', image: choppedOliveTapenade, nutrition: { calories: 120, protein: 6, carbs: 19, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 530, sugar: 0, fiber: 6 } },
   ],
 
   'cereal': [
