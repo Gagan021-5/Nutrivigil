@@ -1,11 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
+import { useComparison } from '../contexts/ComparisonContext';
 import { Package } from 'lucide-react';
 import { calculateNutritionScore, getScoreColor } from '../utils/nutritionScore';
 
 const FoodItemCard = ({ item, index = 0, onViewDetails }) => {
   const { theme } = useTheme();
+  const { addToComparison, removeFromComparison, isInComparison } = useComparison();
+
+  const inComparison = isInComparison(item.id);
 
   // Calculate nutrition score
   const score = item.nutrition ? calculateNutritionScore(item.nutrition) : null;
@@ -15,6 +19,15 @@ const FoodItemCard = ({ item, index = 0, onViewDetails }) => {
     // Delegate click handling to parent so it can decide how to show details
     if (typeof onViewDetails === 'function') {
       onViewDetails(item);
+    }
+  };
+
+  const handleCompareToggle = (e) => {
+    e.stopPropagation();
+    if (inComparison) {
+      removeFromComparison(item.id);
+    } else {
+      addToComparison(item);
     }
   };
 
@@ -63,6 +76,37 @@ const FoodItemCard = ({ item, index = 0, onViewDetails }) => {
 
         {/* Gradient Overlay on Hover */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+        {/* Compare Checkbox - Top Left */}
+        <div className="absolute top-3 left-3 z-10">
+          <button
+            onClick={handleCompareToggle}
+            className={`w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-200 ${
+              inComparison
+                ? 'bg-blue-600 border-2 border-blue-600'
+                : theme === 'dark'
+                ? 'bg-gray-800/80 border-2 border-gray-600 hover:bg-gray-700/80'
+                : 'bg-white/80 border-2 border-gray-300 hover:bg-gray-50/80'
+            } backdrop-blur-sm`}
+            aria-label={inComparison ? 'Remove from comparison' : 'Add to comparison'}
+          >
+            {inComparison && (
+              <svg
+                className="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={3}
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
 
         {/* Nutrition Score Badge - Top Right */}
         {scoreInfo && (

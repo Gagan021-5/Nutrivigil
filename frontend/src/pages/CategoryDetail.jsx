@@ -244,26 +244,6 @@ const CategoryDetail = () => {
     setSelectedFood(null);
   };
 
-  // Memoized index of the currently selected food item within the searched results
-  const selectedFoodIndex = useMemo(() => {
-    if (!selectedFood || !searchedFoodItems || searchedFoodItems.length === 0) {
-      return -1;
-    }
-
-    return searchedFoodItems.findIndex((item) => item.id === selectedFood.id);
-  }, [selectedFood, searchedFoodItems]);
-
-  // Handle navigation in modal (Previous/Next)
-  const handleModalNavigate = (direction) => {
-    if (!selectedFood || selectedFoodIndex === -1) return;
-
-    if (direction === 'previous' && selectedFoodIndex > 0) {
-      setSelectedFood(searchedFoodItems[selectedFoodIndex - 1]);
-    } else if (direction === 'next' && selectedFoodIndex < searchedFoodItems.length - 1) {
-      setSelectedFood(searchedFoodItems[selectedFoodIndex + 1]);
-    }
-  };
-
   // Check if any filters are active
   const hasActiveFilters = useMemo(() => {
     return Object.values(filters).some((arr) => arr.length > 0);
@@ -331,6 +311,26 @@ const CategoryDetail = () => {
       );
     });
   }, [filteredFoodItems, searchQuery]);
+
+  // Memoized index of the currently selected food item within the searched results
+  const selectedFoodIndex = useMemo(() => {
+    if (!selectedFood || !searchedFoodItems || searchedFoodItems.length === 0) {
+      return -1;
+    }
+
+    return searchedFoodItems.findIndex((item) => item.id === selectedFood.id);
+  }, [selectedFood, searchedFoodItems]);
+
+  // Handle navigation in modal (Previous/Next)
+  const handleModalNavigate = (direction) => {
+    if (!selectedFood || selectedFoodIndex === -1) return;
+
+    if (direction === 'previous' && selectedFoodIndex > 0) {
+      setSelectedFood(searchedFoodItems[selectedFoodIndex - 1]);
+    } else if (direction === 'next' && selectedFoodIndex < searchedFoodItems.length - 1) {
+      setSelectedFood(searchedFoodItems[selectedFoodIndex + 1]);
+    }
+  };
 
   // Find category by slug
   useEffect(() => {
@@ -651,6 +651,8 @@ const CategoryDetail = () => {
           allFoods={searchedFoodItems}
           currentIndex={searchedFoodItems.findIndex((item) => item.id === selectedFood.id)}
           onNavigate={handleModalNavigate}
+          category={categorySlug}
+          onProductSelect={setSelectedFood}
         />
       )}
     </div>

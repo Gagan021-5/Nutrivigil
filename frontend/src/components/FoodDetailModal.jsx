@@ -5,10 +5,12 @@ import NutritionFactsTable from './NutritionFactsTable';
 import HealthInsights from './HealthInsights';
 import IngredientsList from './IngredientsList';
 import DietaryBadges from './DietaryBadges';
+import SimilarProducts from './SimilarProducts';
+import BetterAlternatives from './BetterAlternatives';
 import { calculateNutritionScore } from '../utils/nutritionScore';
 import './FoodDetailModal.css';
 
-const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNavigate }) => {
+const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNavigate, category, onProductSelect }) => {
   const { theme } = useTheme();
 
   const hasPrevious = currentIndex > 0;
@@ -86,12 +88,28 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
 
   // Handle view alternatives
   const handleViewAlternatives = () => {
-    alert('Healthier alternatives feature coming soon! This will show you better nutritional options.');
+    // Scroll to the Better Alternatives section
+    const alternativesSection = document.getElementById('better-alternatives-section');
+    if (alternativesSection) {
+      alternativesSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
   };
 
   // Handle report
   const handleReport = () => {
     alert('Report feature coming soon! You can report incorrect nutrition information here.');
+  };
+
+  // Handle similar product click
+  const handleSimilarProductClick = (product) => {
+    // If onProductSelect callback is provided, use it to directly set the product
+    if (onProductSelect) {
+      onProductSelect(product);
+    } else {
+      // Fallback navigation via repeated timeouts has been removed to avoid
+      // inefficient and unreliable behavior. If needed, provide an onProductSelect
+      // callback to handle direct product selection.
+    }
   };
 
   return (
@@ -255,6 +273,40 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
           <div className={`my-6 border-t ${
             theme === 'dark' ? 'border-white/10' : 'border-gray-200'
           }`} />
+
+          {/* Similar Products */}
+          {category && allFoods.length > 1 && (
+            <>
+              <div className="mb-6">
+                <SimilarProducts
+                  currentFood={food}
+                  allFoods={allFoods}
+                  category={category}
+                  onProductClick={handleSimilarProductClick}
+                />
+              </div>
+
+              {/* Divider */}
+              <div className={`my-6 border-t ${
+                theme === 'dark' ? 'border-white/10' : 'border-gray-200'
+              }`} />
+
+              {/* Better Alternatives */}
+              <div id="better-alternatives-section" className="mb-6">
+                <BetterAlternatives
+                  currentFood={food}
+                  allFoods={allFoods}
+                  category={category}
+                  onProductClick={handleSimilarProductClick}
+                />
+              </div>
+
+              {/* Divider */}
+              <div className={`my-6 border-t ${
+                theme === 'dark' ? 'border-white/10' : 'border-gray-200'
+              }`} />
+            </>
+          )}
 
           {/* Action Buttons */}
           <div className="mb-6">
