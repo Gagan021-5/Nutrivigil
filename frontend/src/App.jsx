@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import LanguageModal from "./components/LanguageModal";
 import ScrollToTop from "./components/ScrollToTop";
 import ComparisonBar from "./components/ComparisonBar";
+import ComparisonModal from "./components/ComparisonModal";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import ScanPage from "./pages/ScanPage";
@@ -93,9 +94,8 @@ function App() {
           </Routes>
 
           <Footer />
-
-          {/* Comparison Bar */}
           <ComparisonBar />
+          <ComparisonModal />
         </div>
       </ComparisonProvider>
     </ThemeProvider>
