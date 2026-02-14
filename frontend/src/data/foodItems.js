@@ -48,6 +48,22 @@ import bread7SproutedGrainsCinnamonRaisinBread from '../assets/bread/7-sprouted-
 import bread7DaysSoftCroissantChocolateBreakfastPastry from '../assets/bread/7days-soft-croissant-chocolate-breakfast-pastry.jpg';
 import breadAgainstTheGrainGlutenFreeRosemaryBaguettes from '../assets/bread/against-the-grain-gluten-free-fresh-rosemary-baguettes.jpg';
 
+// breakfast image imports (normalized)
+import mapleBreakfastSausage from '../assets/breakfast/maple-breakfast-sausage.jpg';
+import amysKitchenAmysGfVeganClassic from '../assets/breakfast/amys-kitchen-amys-gf-vegan-classic.jpg';
+import anniesOrganicPancake from '../assets/breakfast/annies-organic-pancake.jpg';
+import applegateNaturalSavoryTurkeyBreakfastSausage from '../assets/breakfast/applegate-natural-savory-turkey-breakfast-sausage.jpg';
+import archwayClassicSoftOatmealCookies from '../assets/breakfast/archway-classic-soft-oatmeal-cookies.jpg';
+import auntJemimaButterLiteSyrup from '../assets/breakfast/aunt-jemima-butter-lite-syrup.jpg';
+import auntJemimaButtermilkCompletePancake from '../assets/breakfast/aunt-jemima-buttermilk-complete-pancake.jpg';
+import auntJemimaButtermilk from '../assets/breakfast/aunt-jemima-buttermilk.jpg';
+import bajaBreakfastBurrito from '../assets/breakfast/baja-breakfast-burrito.jpg';
+import bananaPaleoPancake from '../assets/breakfast/banana-paleo-pancake.jpg';
+import belvitaPeanutButterBreakfastBiscuits from '../assets/breakfast/belvita-peanut-butter-breakfast-biscuits.jpg';
+import belvitaProteinOatsHoneyAndChocolateBreakfast from '../assets/breakfast/belvita-protein-oats-honey-and-chocolate-breakfast.jpg';
+import bettyCrockerBisquickPancake from '../assets/breakfast/betty-crocker-bisquick-pancake.jpg';
+import bettyCrockerBisquickShake from '../assets/breakfast/betty-crocker-bisquick-shake.jpg';
+
 const FOOD_ITEMS = {
   'baby-food': [
     { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
@@ -99,20 +115,20 @@ const FOOD_ITEMS = {
   ],
 
   'breakfast': [
-    { id: 1, name: 'Instant Oatmeal Maple Brown Sugar', brand: 'Quaker', servingSize: '1 packet (43g)', image: null, nutrition: { calories: 160, protein: 4, carbs: 32, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 12, fiber: 3 } },
-    { id: 2, name: 'Eggo Waffles Homestyle', brand: "Kellogg's", servingSize: '2 waffles (70g)', image: null, nutrition: { calories: 190, protein: 5, carbs: 30, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 420, sugar: 3, fiber: 1 } },
-    { id: 3, name: 'Toaster Strudel Strawberry', brand: 'Pillsbury', servingSize: '1 pastry (54g)', image: null, nutrition: { calories: 190, protein: 3, carbs: 25, totalFat: 9, saturatedFat: 3, transFat: 0, sodium: 190, sugar: 10, fiber: 0 } },
-    { id: 4, name: 'Breakfast Burrito', brand: "Amy's Kitchen", servingSize: '1 burrito (170g)', image: null, nutrition: { calories: 270, protein: 9, carbs: 38, totalFat: 9, saturatedFat: 3.5, transFat: 0, sodium: 540, sugar: 2, fiber: 6 } },
-    { id: 5, name: 'Granola Bars Oats & Honey', brand: 'Nature Valley', servingSize: '2 bars (42g)', image: null, nutrition: { calories: 190, protein: 4, carbs: 29, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 12, fiber: 2 } },
-    { id: 6, name: 'Pop-Tarts Brown Sugar Cinnamon', brand: "Kellogg's", servingSize: '1 pastry (50g)', image: null, nutrition: { calories: 200, protein: 2, carbs: 35, totalFat: 6, saturatedFat: 2, transFat: 0, sodium: 180, sugar: 16, fiber: 1 } },
-    { id: 7, name: 'Breakfast Sandwich Sausage Egg Cheese', brand: 'Jimmy Dean', servingSize: '1 sandwich (127g)', image: null, nutrition: { calories: 380, protein: 14, carbs: 30, totalFat: 22, saturatedFat: 8, transFat: 0, sodium: 760, sugar: 3, fiber: 2 } },
-    { id: 8, name: 'Blueberry Pancakes', brand: 'Krusteaz', servingSize: '3 pancakes (106g)', image: null, nutrition: { calories: 210, protein: 6, carbs: 39, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 650, sugar: 9, fiber: 1 } },
-    { id: 9, name: 'French Toast Sticks', brand: 'Eggo', servingSize: '4 sticks (84g)', image: null, nutrition: { calories: 230, protein: 6, carbs: 36, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 380, sugar: 9, fiber: 2 } },
-    { id: 10, name: 'Breakfast Bowl Eggs Bacon Potatoes', brand: 'Jimmy Dean', servingSize: '1 bowl (227g)', image: null, nutrition: { calories: 350, protein: 14, carbs: 27, totalFat: 21, saturatedFat: 7, transFat: 0, sodium: 750, sugar: 2, fiber: 2 } },
-    { id: 11, name: 'Toaster Scrambles Bacon Egg Cheese', brand: 'Pillsbury', servingSize: '1 scramble (89g)', image: null, nutrition: { calories: 180, protein: 7, carbs: 24, totalFat: 6, saturatedFat: 2.5, transFat: 0, sodium: 490, sugar: 2, fiber: 1 } },
-    { id: 12, name: 'Protein Breakfast Bar', brand: 'KIND', servingSize: '1 bar (50g)', image: null, nutrition: { calories: 230, protein: 12, carbs: 17, totalFat: 13, saturatedFat: 2.5, transFat: 0, sodium: 160, sugar: 8, fiber: 6 } },
-    { id: 13, name: 'Steel Cut Oatmeal', brand: "McCann's", servingSize: '1/4 cup dry (40g)', image: null, nutrition: { calories: 150, protein: 5, carbs: 27, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 4 } },
-    { id: 14, name: 'Protein Waffles', brand: 'Kodiak Cakes', servingSize: '2 waffles (76g)', image: null, nutrition: { calories: 260, protein: 13, carbs: 35, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 530, sugar: 6, fiber: 6 } },
+    { id: 1, name: 'maple-breakfast-sausage', brand: 'Quaker', servingSize: '1 packet (43g)', image: mapleBreakfastSausage, nutrition: { calories: 160, protein: 4, carbs: 32, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 12, fiber: 3 } },
+    { id: 2, name: 'amys-kitchen-amys-gf-vegan-classic', brand: "Kellogg's", servingSize: '2 waffles (70g)', image: amysKitchenAmysGfVeganClassic, nutrition: { calories: 190, protein: 5, carbs: 30, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 420, sugar: 3, fiber: 1 } },
+    { id: 3, name: 'annies-organic-pancake', brand: 'Pillsbury', servingSize: '1 pastry (54g)', image: anniesOrganicPancake, nutrition: { calories: 190, protein: 3, carbs: 25, totalFat: 9, saturatedFat: 3, transFat: 0, sodium: 190, sugar: 10, fiber: 0 } },
+    { id: 4, name: 'applegate-natural-savory-turkey-breakfast-sausage', brand: "Amy's Kitchen", servingSize: '1 burrito (170g)', image: applegateNaturalSavoryTurkeyBreakfastSausage, nutrition: { calories: 270, protein: 9, carbs: 38, totalFat: 9, saturatedFat: 3.5, transFat: 0, sodium: 540, sugar: 2, fiber: 6 } },
+    { id: 5, name: 'archway-classic-soft-oatmeal-cookies', brand: 'Nature Valley', servingSize: '2 bars (42g)', image: archwayClassicSoftOatmealCookies, nutrition: { calories: 190, protein: 4, carbs: 29, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 12, fiber: 2 } },
+    { id: 6, name: 'aunt-jemima-butter-lite-syrup', brand: "Kellogg's", servingSize: '1 pastry (50g)', image: auntJemimaButterLiteSyrup, nutrition: { calories: 200, protein: 2, carbs: 35, totalFat: 6, saturatedFat: 2, transFat: 0, sodium: 180, sugar: 16, fiber: 1 } },
+    { id: 7, name: 'aunt-jemima-buttermilk-complete-pancake', brand: 'Jimmy Dean', servingSize: '1 sandwich (127g)', image: auntJemimaButtermilkCompletePancake, nutrition: { calories: 380, protein: 14, carbs: 30, totalFat: 22, saturatedFat: 8, transFat: 0, sodium: 760, sugar: 3, fiber: 2 } },
+    { id: 8, name: 'aunt-jemima-buttermilk', brand: 'Krusteaz', servingSize: '3 pancakes (106g)', image: auntJemimaButtermilk, nutrition: { calories: 210, protein: 6, carbs: 39, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 650, sugar: 9, fiber: 1 } },
+    { id: 9, name: 'baja-breakfast-burrito', brand: 'Eggo', servingSize: '4 sticks (84g)', image: bajaBreakfastBurrito, nutrition: { calories: 230, protein: 6, carbs: 36, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 380, sugar: 9, fiber: 2 } },
+    { id: 10, name: 'banana-paleo-pancake', brand: 'Jimmy Dean', servingSize: '1 bowl (227g)', image: bananaPaleoPancake, nutrition: { calories: 350, protein: 14, carbs: 27, totalFat: 21, saturatedFat: 7, transFat: 0, sodium: 750, sugar: 2, fiber: 2 } },
+    { id: 11, name: 'belvita-peanut-butter-breakfast-biscuits', brand: 'Pillsbury', servingSize: '1 scramble (89g)', image: belvitaPeanutButterBreakfastBiscuits, nutrition: { calories: 180, protein: 7, carbs: 24, totalFat: 6, saturatedFat: 2.5, transFat: 0, sodium: 490, sugar: 2, fiber: 1 } },
+    { id: 12, name: 'belvita-protein-oats-honey-and-chocolate-breakfast', brand: 'KIND', servingSize: '1 bar (50g)', image: belvitaProteinOatsHoneyAndChocolateBreakfast, nutrition: { calories: 230, protein: 12, carbs: 17, totalFat: 13, saturatedFat: 2.5, transFat: 0, sodium: 160, sugar: 8, fiber: 6 } },
+    { id: 13, name: 'betty-crocker-bisquick-pancake', brand: "McCann's", servingSize: '1/4 cup dry (40g)', image: bettyCrockerBisquickPancake, nutrition: { calories: 150, protein: 5, carbs: 27, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 4 } },
+    { id: 14, name: 'betty-crocker-bisquick-shake', brand: 'Kodiak Cakes', servingSize: '2 waffles (76g)', image: bettyCrockerBisquickShake, nutrition: { calories: 260, protein: 13, carbs: 35, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 530, sugar: 6, fiber: 6 } },
   ],
 
   'cakes': [
