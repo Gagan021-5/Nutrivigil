@@ -16,6 +16,37 @@ import turkeyBroth from '../assets/baby-food/stage1-turkey-and-broth.jpg';
 import stage2Applesauce from '../assets/baby-food/stage2-applesauce.jpg';
 import stage2Bananas from '../assets/baby-food/stage2-bananas.jpg';
 import bananaOatPuree from '../assets/baby-food/banana-oat-puree.jpg';
+import fourCGlutenFreePlainPankoCrumbs from '../assets/baking/4c-gluten-free-plain-panko-crumbs.jpg';
+import fourCJapanesePankoBreadcrumbs from '../assets/baking/4c-japanese-panko-breadcrumbs.jpg';
+import fourCPlainBreadCrumbs from '../assets/baking/4c-plain-bread-crumbs.jpg';
+import fourCSeasonedBreadCrumbs from '../assets/baking/4c-seasoned-bread-crumbs.jpg';
+import fourCAJapaneseSeasonedPanko from '../assets/baking/4ca-japanese-seasoned-panko.jpg';
+import sevenSpiceCauliflowerBreadcrumbs from '../assets/baking/7-spice-cauliflower-breadcrumbs.jpg';
+import eightOzGlutenFreePanko from '../assets/baking/8oz-gluten-free-panko.jpg';
+import aTasteOfThaiUnsweetenedCoconutMilk from '../assets/baking/a-taste-of-thai-unsweetened-coconut-milk.jpg';
+import carnationEvaporatedMilk from '../assets/baking/carnation-evaporated-milk.jpg';
+import einkornAllPurposeFlour from '../assets/baking/einkorn-all-purpose-flour.jpg';
+import honeyCornMuffinMix from '../assets/baking/honey-corn-muffin-mix.jpg';
+import jiffyCornMuffin from '../assets/baking/jiffy-corn-muffin-mix.jpg';
+import oneToOneGlutenFreeFlour from '../assets/baking/one-to-one-gluten-free-baking-flour.jpg';
+import purePumpkin from '../assets/baking/pure-pumpkin.jpg';
+import semiSweetBakingChips from '../assets/baking/semi-sweet-baking-chips.jpg';
+import bakingHero from '../assets/baking.jpg';
+
+// bread image imports (normalized)
+import bread100RyeBread from '../assets/bread/100-rye-bread.jpg';
+import bread100PureMapleSyrup from '../assets/bread/100-pure-maple-syrup.jpg';
+import bread100PureMapleSyrup7 from '../assets/bread/100-pure-maple-syrup7.jpg';
+import bread100PureOrganicMaple from '../assets/bread/100-pure-organic-maple.jpg';
+import bread100WholeWheatBread from '../assets/bread/100-whole-wheat-bread.jpg';
+import bread100WholeWheatStoneBakedPizzaCrusts from '../assets/bread/100-whole-wheat-stone-baked-pizza-crusts.jpg';
+import bread3CheeseGarlicToast from '../assets/bread/3-cheese-garlic-toast.jpg';
+import bread6GrainPumpkinSeedBread from '../assets/bread/6-grain-pumpkin-seed-bread.jpg';
+import bread7GrainHalfDeliLoaf from '../assets/bread/7-grain-half-deli-loaf.jpg';
+import bread7NutSeedBread from '../assets/bread/7-nut-and-seed-bread.jpg';
+import bread7SproutedGrainsCinnamonRaisinBread from '../assets/bread/7-sprouted-grains-cinnamon-raisin-bread.jpg';
+import bread7DaysSoftCroissantChocolateBreakfastPastry from '../assets/bread/7days-soft-croissant-chocolate-breakfast-pastry.jpg';
+import breadAgainstTheGrainGlutenFreeRosemaryBaguettes from '../assets/bread/against-the-grain-gluten-free-fresh-rosemary-baguettes.jpg';
 
 const FOOD_ITEMS = {
   'baby-food': [
@@ -29,42 +60,42 @@ const FOOD_ITEMS = {
     { id: 8, name: 'Apple, Carrot & Squash', brand: "Earth's Best", servingSize: '15g', image: appleCarrotSquash, nutrition: { calories: 60, protein: 2, carbs: 12, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 0, fiber: 1 } },
     { id: 9, name: 'Apple & Peach', brand: 'Gerber', servingSize: '113g', image: applePeach, nutrition: { calories: 60, protein: 0, carbs: 14, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 1 } },
     { id: 10, name: 'Turkey & Broth', brand: 'Beech-Nut', servingSize: '170g', image: turkeyBroth, nutrition: { calories: 90, protein: 4, carbs: 11, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 30, sugar: 2, fiber: 2 } },
-    { id: 11, name: 'Beef & Broth', brand: "Earth's Best", servingSize: '170g', image: beefBroth, nutrition: { calories: 100, protein: 7, carbs: 3, totalFat: 5, saturatedFat: 2, transFat: 0, sodium: 35, sugar: 1, fiber: 0 } },
-    { id: 12, name: 'Banana Puree (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Bananas, nutrition: { calories: 90, protein: 1, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 2 } },
+    { id: 11, name: 'Beef & Broth', brand: "Earth's Best", servingSize: '113g', image: beefBroth, nutrition: { calories: 70, protein: 7, carbs: 3, totalFat: 3, saturatedFat: 1, transFat: 0, sodium: 35, sugar: 0, fiber: 0 } },
+    { id: 12, name: 'Banana Puree (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Bananas, nutrition: { calories: 80, protein: 1, carbs: 21, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 14, fiber: 2 } },
   ],
 
   'baking': [
-    { id: 1, name: 'Corn Muffin Mix', brand: 'Jiffy', servingSize: '1/6 package (33g)', image: null, nutrition: { calories: 130, protein: 2, carbs: 23, totalFat: 3.5, saturatedFat: 1, transFat: 0, sodium: 380, sugar: 7, fiber: 1 } },
-    { id: 2, name: 'All-Purpose Flour', brand: "Bob's Red Mill", servingSize: '30g', image: null, nutrition: { calories: 110, protein: 3, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 1 } },
-    { id: 3, name: 'Organic Whole Wheat Flour', brand: 'King Arthur', servingSize: '30g', image: null, nutrition: { calories: 100, protein: 4, carbs: 21, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 3 } },
-    { id: 4, name: 'Baking Powder', brand: 'Clabber Girl', servingSize: '1 tsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 0, fiber: 0 } },
-    { id: 5, name: 'Pure Vanilla Extract', brand: 'McCormick', servingSize: '1 tsp (4ml)', image: null, nutrition: { calories: 12, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 1, sugar: 1, fiber: 0 } },
-    { id: 6, name: 'Baking Soda', brand: 'Arm & Hammer', servingSize: '1 tsp (5g)', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 1260, sugar: 0, fiber: 0 } },
-    { id: 7, name: 'Granulated Sugar', brand: 'Domino', servingSize: '1 tsp (4g)', image: null, nutrition: { calories: 15, protein: 0, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 4, fiber: 0 } },
-    { id: 8, name: 'Brown Sugar', brand: 'C&H', servingSize: '1 tsp (4g)', image: null, nutrition: { calories: 15, protein: 0, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 4, fiber: 0 } },
-    { id: 9, name: 'Active Dry Yeast', brand: 'Fleischmann\'s', servingSize: '1 packet (7g)', image: null, nutrition: { calories: 20, protein: 3, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 0, fiber: 1 } },
-    { id: 10, name: 'Chocolate Chips', brand: 'Nestle Toll House', servingSize: '1 tbsp (14g)', image: null, nutrition: { calories: 70, protein: 1, carbs: 9, totalFat: 4, saturatedFat: 2.5, transFat: 0, sodium: 0, sugar: 8, fiber: 1 } },
-    { id: 11, name: 'Brownie Mix', brand: 'Ghirardelli', servingSize: '1/20 package (39g)', image: null, nutrition: { calories: 170, protein: 2, carbs: 27, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 105, sugar: 20, fiber: 2 } },
-    { id: 12, name: 'Pancake Mix', brand: 'Bisquick', servingSize: '1/3 cup (40g)', image: null, nutrition: { calories: 150, protein: 3, carbs: 27, totalFat: 3, saturatedFat: 0.5, transFat: 0, sodium: 490, sugar: 3, fiber: 1 } },
-    { id: 13, name: 'Cornstarch', brand: 'Argo', servingSize: '1 tbsp (8g)', image: null, nutrition: { calories: 30, protein: 0, carbs: 7, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 14, name: 'Cocoa Powder', brand: 'Hershey\'s', servingSize: '1 tbsp (5g)', image: null, nutrition: { calories: 10, protein: 1, carbs: 3, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 1 } },
-    { id: 15, name: 'Bread Mix', brand: 'King Arthur', servingSize: '1/8 package (57g)', image: null, nutrition: { calories: 200, protein: 6, carbs: 40, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 3, fiber: 2 } },
+    { id: 1, name: 'jiffy-corn-muffin-mix', brand: 'Jiffy', servingSize: '1/6 package (33g)', image: jiffyCornMuffin, nutrition: { calories: 130, protein: 2, carbs: 23, totalFat: 3.5, saturatedFat: 1, transFat: 0, sodium: 380, sugar: 7, fiber: 1 } },
+    { id: 2, name: 'einkorn-all-purpose-flour', brand: "Bob's Red Mill", servingSize: '30g', image: einkornAllPurposeFlour, nutrition: { calories: 110, protein: 3, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 1 } },
+    { id: 3, name: 'one-to-one-gluten-free-baking-flour', brand: 'King Arthur', servingSize: '30g', image: oneToOneGlutenFreeFlour, nutrition: { calories: 100, protein: 4, carbs: 21, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 3 } },
+    { id: 4, name: '4c-gluten-free-plain-panko-crumbs', brand: 'Clabber Girl', servingSize: '1 tsp (5g)', image: fourCGlutenFreePlainPankoCrumbs, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 0, fiber: 0 } },
+    { id: 5, name: 'a-taste-of-thai-unsweetened-coconut-milk', brand: 'McCormick', servingSize: '1 tsp (4ml)', image: aTasteOfThaiUnsweetenedCoconutMilk, nutrition: { calories: 12, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 1, sugar: 1, fiber: 0 } },
+    { id: 6, name: 'carnation-evaporated-milk', brand: 'Arm & Hammer', servingSize: '1 tsp (5g)', image: carnationEvaporatedMilk, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 1260, sugar: 0, fiber: 0 } },
+    { id: 7, name: '8oz-gluten-free-panko', brand: 'Domino', servingSize: '1 tsp (4g)', image: eightOzGlutenFreePanko, nutrition: { calories: 15, protein: 0, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 4, fiber: 0 } },
+    { id: 8, name: '4c-seasoned-bread-crumbs', brand: 'C&H', servingSize: '1 tsp (4g)', image: fourCSeasonedBreadCrumbs, nutrition: { calories: 15, protein: 0, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 4, fiber: 0 } },
+    { id: 9, name: '7-spice-cauliflower-breadcrumbs', brand: 'Fleischmann\'s', servingSize: '1 packet (7g)', image: sevenSpiceCauliflowerBreadcrumbs, nutrition: { calories: 20, protein: 3, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 0, fiber: 1 } },
+    { id: 10, name: 'semi-sweet-baking-chips', brand: 'Nestle Toll House', servingSize: '1 tbsp (14g)', image: semiSweetBakingChips, nutrition: { calories: 70, protein: 1, carbs: 9, totalFat: 4, saturatedFat: 2.5, transFat: 0, sodium: 0, sugar: 8, fiber: 1 } },
+    { id: 11, name: 'pure-pumpkin', brand: 'Ghirardelli', servingSize: '1/20 package (39g)', image: purePumpkin, nutrition: { calories: 170, protein: 2, carbs: 27, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 105, sugar: 20, fiber: 2 } },
+    { id: 12, name: 'honey-corn-muffin-mix', brand: 'Bisquick', servingSize: '1/3 cup (40g)', image: honeyCornMuffinMix, nutrition: { calories: 150, protein: 3, carbs: 27, totalFat: 3, saturatedFat: 0.5, transFat: 0, sodium: 490, sugar: 3, fiber: 1 } },
+    { id: 13, name: '4c-japanese-panko-breadcrumbs', brand: '4C', servingSize: '1 tbsp (8g)', image: fourCJapanesePankoBreadcrumbs, nutrition: { calories: 30, protein: 0, carbs: 7, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 14, name: '4ca-japanese-seasoned-panko', brand: '4C', servingSize: '1 tbsp (5g)', image: fourCAJapaneseSeasonedPanko, nutrition: { calories: 10, protein: 1, carbs: 3, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 1 } },
+    { id: 15, name: '4c-plain-bread-crumbs', brand: '4C', servingSize: '1/8 package (57g)', image: fourCPlainBreadCrumbs, nutrition: { calories: 200, protein: 6, carbs: 40, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 3, fiber: 2 } },
   ],
 
   'bread': [
-    { id: 1, name: 'Honey Wheat Bread', brand: "Nature's Own", servingSize: '2 slices (52g)', image: null, nutrition: { calories: 130, protein: 5, carbs: 24, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 240, sugar: 4, fiber: 3 } },
-    { id: 2, name: '21 Whole Grains Bread', brand: "Dave's Killer Bread", servingSize: '1 slice (38g)', image: null, nutrition: { calories: 110, protein: 5, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 5, fiber: 5 } },
-    { id: 3, name: 'Sourdough Bread', brand: 'Boudin', servingSize: '1 slice (45g)', image: null, nutrition: { calories: 120, protein: 4, carbs: 23, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 1, fiber: 1 } },
-    { id: 4, name: 'Italian Bread', brand: 'Pepperidge Farm', servingSize: '1 slice (42g)', image: null, nutrition: { calories: 110, protein: 4, carbs: 21, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 230, sugar: 2, fiber: 1 } },
-    { id: 5, name: 'White Bread', brand: 'Wonder', servingSize: '2 slices (52g)', image: null, nutrition: { calories: 140, protein: 4, carbs: 26, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 4, fiber: 2 } },
-    { id: 6, name: 'Whole Grain Bread', brand: "Nature's Own", servingSize: '2 slices (52g)', image: null, nutrition: { calories: 120, protein: 6, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 4, fiber: 4 } },
-    { id: 7, name: 'Rye Bread', brand: 'Pepperidge Farm', servingSize: '1 slice (32g)', image: null, nutrition: { calories: 80, protein: 3, carbs: 15, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 1, fiber: 2 } },
-    { id: 8, name: 'Multigrain Bread', brand: "Arnold", servingSize: '2 slices (52g)', image: null, nutrition: { calories: 120, protein: 6, carbs: 24, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 240, sugar: 3, fiber: 4 } },
-    { id: 9, name: 'Potato Bread', brand: "Martin's", servingSize: '1 slice (38g)', image: null, nutrition: { calories: 100, protein: 3, carbs: 19, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 3, fiber: 1 } },
-    { id: 10, name: 'Ciabatta Bread', brand: 'La Brea Bakery', servingSize: '2 oz (57g)', image: null, nutrition: { calories: 140, protein: 5, carbs: 27, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 1, fiber: 1 } },
-    { id: 11, name: 'Bagel Plain', brand: "Thomas'", servingSize: '1 bagel (95g)', image: null, nutrition: { calories: 260, protein: 10, carbs: 52, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 430, sugar: 5, fiber: 2 } },
-    { id: 12, name: 'English Muffin', brand: "Thomas'", servingSize: '1 muffin (57g)', image: null, nutrition: { calories: 130, protein: 5, carbs: 26, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 2, fiber: 1 } },
-    { id: 13, name: 'Pita Bread', brand: "Toufayan", servingSize: '1 pita (57g)', image: null, nutrition: { calories: 150, protein: 6, carbs: 30, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 300, sugar: 1, fiber: 2 } },
+    { id: 1, name: '100-rye-bread', brand: "Nature's Own", servingSize: '2 slices (52g)', image: bread100RyeBread, nutrition: { calories: 130, protein: 5, carbs: 24, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 240, sugar: 4, fiber: 3 } },
+    { id: 2, name: '100-pure-maple-syrup', brand: "Dave's Killer Bread", servingSize: '1 slice (38g)', image: bread100PureMapleSyrup, nutrition: { calories: 110, protein: 5, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 5, fiber: 5 } },
+    { id: 3, name: '100-pure-maple-syrup7', brand: 'Boudin', servingSize: '1 slice (45g)', image: bread100PureMapleSyrup7, nutrition: { calories: 120, protein: 4, carbs: 23, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 260, sugar: 1, fiber: 1 } },
+    { id: 4, name: '100-pure-organic-maple', brand: 'Pepperidge Farm', servingSize: '1 slice (42g)', image: bread100PureOrganicMaple, nutrition: { calories: 110, protein: 4, carbs: 21, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 230, sugar: 2, fiber: 1 } },
+    { id: 5, name: '100-whole-wheat-bread', brand: 'Wonder', servingSize: '2 slices (52g)', image: bread100WholeWheatBread, nutrition: { calories: 140, protein: 4, carbs: 26, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 4, fiber: 2 } },
+    { id: 6, name: '100-whole-wheat-stone-baked-pizza-crusts', brand: "Nature's Own", servingSize: '2 slices (52g)', image: bread100WholeWheatStoneBakedPizzaCrusts, nutrition: { calories: 120, protein: 6, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 4, fiber: 4 } },
+    { id: 7, name: '3-cheese-garlic-toast', brand: 'Pepperidge Farm', servingSize: '1 slice (32g)', image: bread3CheeseGarlicToast, nutrition: { calories: 80, protein: 3, carbs: 15, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 1, fiber: 2 } },
+    { id: 8, name: '6-grain-pumpkin-seed-bread', brand: "Arnold", servingSize: '2 slices (52g)', image: bread6GrainPumpkinSeedBread, nutrition: { calories: 120, protein: 6, carbs: 24, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 240, sugar: 3, fiber: 4 } },
+    { id: 9, name: '7-grain-half-deli-loaf', brand: "Martin's", servingSize: '1 slice (38g)', image: bread7GrainHalfDeliLoaf, nutrition: { calories: 100, protein: 3, carbs: 19, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 3, fiber: 1 } },
+    { id: 10, name: '7-nut-seed-bread', brand: 'La Brea Bakery', servingSize: '2 oz (57g)', image: bread7NutSeedBread, nutrition: { calories: 140, protein: 5, carbs: 27, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 1, fiber: 1 } },
+    { id: 11, name: '7-sprouted-grains-cinnamon-raisin-bread', brand: "Thomas'", servingSize: '1 bagel (95g)', image: bread7SproutedGrainsCinnamonRaisinBread, nutrition: { calories: 260, protein: 10, carbs: 52, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 430, sugar: 5, fiber: 2 } },
+    { id: 12, name: '7days-soft-croissant-chocolate-breakfast-pastry', brand: "Thomas'", servingSize: '1 muffin (57g)', image: bread7DaysSoftCroissantChocolateBreakfastPastry, nutrition: { calories: 130, protein: 5, carbs: 26, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 2, fiber: 1 } },
+    { id: 13, name: 'against-the-grain-gluten-free-fresh-rosemary-baguettes', brand: "Toufayan", servingSize: '1 pita (57g)', image: breadAgainstTheGrainGlutenFreeRosemaryBaguettes, nutrition: { calories: 150, protein: 6, carbs: 30, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 300, sugar: 1, fiber: 2 } },
   ],
 
   'breakfast': [
