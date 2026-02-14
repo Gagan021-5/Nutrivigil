@@ -33,6 +33,18 @@ import purePumpkin from '../assets/baking/pure-pumpkin.jpg';
 import semiSweetBakingChips from '../assets/baking/semi-sweet-baking-chips.jpg';
 import bakingHero from '../assets/baking.jpg';
 
+// cake image imports (normalized)
+import organicTraditional2 from '../assets/cake/organic-traditional-2.jpg';
+import fourInVeganVanillaCake from '../assets/cake/4in-vegan-vanilla-cake.jpg';
+import applePie from '../assets/cake/apple-pie.jpg';
+import applePie1 from '../assets/cake/apple-pie-1.jpg';
+import berrySupremePie from '../assets/cake/berry-supreme-pie.jpg';
+import bundtVeganChocolateDippedVanilla from '../assets/cake/bundt-vegan-chocolate-dipped-vanilla.jpg';
+import chocolateSwirlCheesecake from '../assets/cake/chocolate-swirl-cheesecake.jpg';
+import peachPie from '../assets/cake/peach-pie.jpg';
+import raspberrySwirlCheesecake from '../assets/cake/raspberry-swirl-cheesecake.jpg';
+import sugarlessApplePie from '../assets/cake/sugarless-apple-pie.jpg';
+
 // bread image imports (normalized)
 import bread100RyeBread from '../assets/bread/100-rye-bread.jpg';
 import bread100PureMapleSyrup from '../assets/bread/100-pure-maple-syrup.jpg';
@@ -116,16 +128,16 @@ const FOOD_ITEMS = {
   ],
 
   'cakes': [
-    { id: 1, name: 'Yellow Cake Mix', brand: 'Duncan Hines', servingSize: '1/12 package (43g)', image: null, nutrition: { calories: 170, protein: 2, carbs: 35, totalFat: 3.5, saturatedFat: 1.5, transFat: 0, sodium: 320, sugar: 19, fiber: 0 } },
-    { id: 2, name: 'Chocolate Fudge Cake Mix', brand: 'Betty Crocker', servingSize: '1/12 package (43g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 33, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 440, sugar: 19, fiber: 1 } },
-    { id: 3, name: 'Crumb Coffee Cake', brand: "Entenmann's", servingSize: '1/8 cake (57g)', image: null, nutrition: { calories: 250, protein: 3, carbs: 36, totalFat: 11, saturatedFat: 2.5, transFat: 0, sodium: 220, sugar: 19, fiber: 1 } },
-    { id: 4, name: 'Angel Food Cake Mix', brand: 'Pillsbury', servingSize: '1/12 cake', image: null, nutrition: { calories: 140, protein: 3, carbs: 32, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 21, fiber: 0 } },
-    { id: 5, name: 'Pound Cake', brand: 'Sara Lee', servingSize: '1/10 cake (77g)', image: null, nutrition: { calories: 310, protein: 4, carbs: 40, totalFat: 15, saturatedFat: 9, transFat: 0, sodium: 270, sugar: 23, fiber: 1 } },
-    { id: 6, name: 'Carrot Cake', brand: "Entenmann's", servingSize: '1/8 cake (79g)', image: null, nutrition: { calories: 330, protein: 3, carbs: 42, totalFat: 17, saturatedFat: 3.5, transFat: 0, sodium: 250, sugar: 28, fiber: 1 } },
-    { id: 7, name: 'Chocolate Cake', brand: 'Sara Lee', servingSize: '1/8 cake (80g)', image: null, nutrition: { calories: 270, protein: 3, carbs: 38, totalFat: 12, saturatedFat: 3, transFat: 0, sodium: 340, sugar: 24, fiber: 2 } },
-    { id: 8, name: 'Red Velvet Cake Mix', brand: 'Duncan Hines', servingSize: '1/12 package (43g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 34, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 340, sugar: 19, fiber: 0 } },
-    { id: 9, name: 'Lemon Cake Mix', brand: 'Betty Crocker', servingSize: '1/12 package (43g)', image: null, nutrition: { calories: 170, protein: 2, carbs: 35, totalFat: 3.5, saturatedFat: 1.5, transFat: 0, sodium: 300, sugar: 20, fiber: 0 } },
-    { id: 10, name: 'Marble Cake', brand: "Entenmann's", servingSize: '1/8 cake (71g)', image: null, nutrition: { calories: 280, protein: 3, carbs: 38, totalFat: 13, saturatedFat: 3, transFat: 0, sodium: 240, sugar: 22, fiber: 1 } },
+    { id: 1, name: 'organic-traditional-2', brand: 'Duncan Hines', servingSize: '1/12 package (43g)', image: organicTraditional2, nutrition: { calories: 170, protein: 2, carbs: 35, totalFat: 3.5, saturatedFat: 1.5, transFat: 0, sodium: 320, sugar: 19, fiber: 0 } },
+    { id: 2, name: '4in-vegan-vanilla-cake', brand: 'Betty Crocker', servingSize: '1/12 package (43g)', image: fourInVeganVanillaCake, nutrition: { calories: 160, protein: 2, carbs: 33, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 440, sugar: 19, fiber: 1 } },
+    { id: 3, name: 'apple-pie', brand: "Entenmann's", servingSize: '1/8 cake (57g)', image: applePie, nutrition: { calories: 250, protein: 3, carbs: 36, totalFat: 11, saturatedFat: 2.5, transFat: 0, sodium: 220, sugar: 19, fiber: 1 } },
+    { id: 4, name: 'apple-pie-1', brand: 'Pillsbury', servingSize: '1/12 cake', image: applePie1, nutrition: { calories: 140, protein: 3, carbs: 32, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 21, fiber: 0 } },
+    { id: 5, name: 'berry-supreme-pie', brand: 'Sara Lee', servingSize: '1/10 cake (77g)', image: berrySupremePie, nutrition: { calories: 310, protein: 4, carbs: 40, totalFat: 15, saturatedFat: 9, transFat: 0, sodium: 270, sugar: 23, fiber: 1 } },
+    { id: 6, name: 'bundt-vegan-chocolate-dipped-vanilla', brand: "Entenmann's", servingSize: '1/8 cake (79g)', image: bundtVeganChocolateDippedVanilla, nutrition: { calories: 330, protein: 3, carbs: 42, totalFat: 17, saturatedFat: 3.5, transFat: 0, sodium: 250, sugar: 28, fiber: 1 } },
+    { id: 7, name: 'chocolate-swirl-cheesecake', brand: 'Sara Lee', servingSize: '1/8 cake (80g)', image: chocolateSwirlCheesecake, nutrition: { calories: 270, protein: 3, carbs: 38, totalFat: 12, saturatedFat: 3, transFat: 0, sodium: 340, sugar: 24, fiber: 2 } },
+    { id: 8, name: 'peach-pie', brand: 'Duncan Hines', servingSize: '1/12 package (43g)', image: peachPie, nutrition: { calories: 160, protein: 2, carbs: 34, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 340, sugar: 19, fiber: 0 } },
+    { id: 9, name: 'raspberry-swirl-cheesecake', brand: 'Betty Crocker', servingSize: '1/12 package (43g)', image: raspberrySwirlCheesecake, nutrition: { calories: 170, protein: 2, carbs: 35, totalFat: 3.5, saturatedFat: 1.5, transFat: 0, sodium: 300, sugar: 20, fiber: 0 } },
+    { id: 10, name: 'sugarless-apple-pie', brand: "Entenmann's", servingSize: '1/8 cake (71g)', image: sugarlessApplePie, nutrition: { calories: 280, protein: 3, carbs: 38, totalFat: 13, saturatedFat: 3, transFat: 0, sodium: 240, sugar: 22, fiber: 1 } },
   ],
 
   'canned-goods': [
