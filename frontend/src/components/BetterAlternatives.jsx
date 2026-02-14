@@ -103,6 +103,16 @@ const BetterAlternatives = ({ currentFood, allFoods, category, onProductClick })
         id="better-alternatives-carousel"
         className="flex gap-4 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-2"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            scrollCarousel('left');
+          } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            scrollCarousel('right');
+          }
+        }}
       >
         {alternatives.map((alternative, index) => (
           <motion.div
