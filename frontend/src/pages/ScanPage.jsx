@@ -16,7 +16,6 @@ import { useTranslation } from "react-i18next";
 import VoiceQuery from "../components/VoiceQuery";
 import { LANGUAGE_MAP } from "../utils/languageMap";
 
-// Updated to v2 to match the multi-select HealthProfile storage
 const STORAGE_KEY = "nutriguard_v2";
 
 function ScanPage() {
@@ -28,18 +27,16 @@ function ScanPage() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
-  const [conditions, setConditions] = useState([]); // Changed to array for multi-select
+  const [conditions, setConditions] = useState([]); 
   const [followUpQuestion, setFollowUpQuestion] = useState("");
   const [voiceAnswer, setVoiceAnswer] = useState(null);
 
   useEffect(() => {
-    // Load the array of conditions from local storage
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
     setConditions(Array.isArray(saved) ? saved : []);
   }, []);
 
   const getConditionString = () => {
-    // Format the array into a string for the backend AI prompt
     return conditions.map(c => t(`conditions.${c}`)).join(", ");
   };
 
@@ -51,7 +48,7 @@ function ScanPage() {
 
     try {
       const res = await axios.post("https://nutb.onrender.com/analyze", {
-        condition: getConditionString(), // Send concatenated multi-conditions
+        condition: getConditionString(),
         query: followUpQuestion,
         foodName: result.food_name
       });
@@ -100,7 +97,7 @@ function ScanPage() {
 
   const handleScan = async () => {
     if (!selectedFile) return setError(t("errors.noImage"));
-    if (conditions.length === 0) return setError(t("errors.noCondition")); // Validate multi-select
+    if (conditions.length === 0) return setError(t("errors.noCondition")); 
 
     setLoading(true);
     setError(null);
@@ -109,7 +106,7 @@ function ScanPage() {
     try {
       const formData = new FormData();
       formData.append("image", selectedFile);
-      formData.append("condition", getConditionString()); // Send joined string to AI
+      formData.append("condition", getConditionString()); 
       formData.append("language", LANGUAGE_MAP[i18n.language] || "English");
 
       const res = await axios.post("https://nutb.onrender.com/analyze", formData);
@@ -131,16 +128,6 @@ function ScanPage() {
     green: t('safety.safe'),
     yellow: t('safety.moderate'),
     red: t('safety.unsafe'),
-  };
-
-  const speak = (text) => {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    const langMap = { en: 'en-US', hi: 'hi-IN', es: 'es-ES', fr: 'fr-FR' };
-    utterance.lang = langMap[i18n.language] || 'en-US';
-    utterance.pitch = 1.1;
-    utterance.rate = 1.0;
-    window.speechSynthesis.speak(utterance);
   };
 
   return (
@@ -186,7 +173,7 @@ function ScanPage() {
               <motion.div
                 key="warning"
                 className={`inline-block px-5 py-2 rounded-full text-xs backdrop-blur-xl border transition-colors ${
-                  theme === 'dark' ? "bg-yellow-400/10 text-yellow-300 border-yellow-300/20" : "bg-yellow-100 text-yellow-700 border-yellow-300"
+                  theme === 'dark' ? "bg-yellow-400/10 text-yellow-300 border-yellow-300/20" : "bg-yellow-100 text-yellow-700 border-blue-300"
                 }`}
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -238,8 +225,8 @@ function ScanPage() {
                 ) : (
                   <motion.div key="placeholder" className="flex flex-col items-center gap-2" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                     <Upload className={`w-12 h-12 ${theme === 'dark' ? "text-blue-300" : "text-blue-500"}`} />
-                    <p className="text-sm font-medium">{t("scan.uploadHint")}</p>
-                    <p className="text-xs opacity-60">{t("scan.fileTypes")}</p>
+                    <p className="text-sm font-medium">{t("scan.uploadHint")} or an ingredient label</p>
+                    <p className="text-[10px] opacity-60 mt-1">Clear photos of nutrition facts work best for packaged foods.</p>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -263,7 +250,6 @@ function ScanPage() {
           </motion.button>
         </motion.div>
 
-        {/* Results and Follow-up sections remain standard, but utilize the getConditionString() for context */}
         <AnimatePresence>
           {error && (
             <motion.div className={`mt-6 p-4 border rounded-2xl flex items-center gap-3 ${theme === 'dark' ? "bg-red-500/10 border-red-500/20 text-red-300" : "bg-red-50 border-red-200 text-red-700"}`} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>

@@ -40,13 +40,13 @@ const Scanner = () => {
     const [facingMode, setFacingMode] = useState("environment");
     const [condition, setCondition] = useState("");
 
-    // Food classes from COCO-SSD dataset
+    // Expanded food classes to include common packaging
     const FOOD_CLASSES = [
         'apple', 'banana', 'sandwich', 'orange', 'broccoli', 
-        'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'bowl'
+        'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'bowl',
+        'bottle', 'cup', 'box'
     ];
 
-    // Load user condition and TFJS model
     useEffect(() => {
         const savedCondition = localStorage.getItem(STORAGE_KEY);
         setCondition(savedCondition || "");
@@ -65,7 +65,6 @@ const Scanner = () => {
         loadResources();
     }, []);
 
-    // Detection loop
     const detect = useCallback(async () => {
         if (
             !isAnalyzing &&
@@ -76,7 +75,6 @@ const Scanner = () => {
             const video = webcamRef.current.video;
             const predictions = await model.detect(video);
 
-            // Logic: Enable capture only if a food item is detected with > 60% confidence
             const foodMatch = predictions.find(p => 
                 FOOD_CLASSES.includes(p.class) && p.score > 0.60
             );
@@ -130,23 +128,16 @@ const Scanner = () => {
         setError(null);
 
         try {
-            // 1. Capture frame as base64
             const imageSrc = webcamRef.current.getScreenshot();
-            
-            // 2. Convert to WebP Blob for optimization
             const response = await fetch(imageSrc);
             const blob = await response.blob();
             
-            // 3. Prepare FormData
             const formData = new FormData();
             formData.append("image", blob, "capture.webp");
             formData.append("condition", condition);
             formData.append("language", LANGUAGE_MAP[i18n.language] || "English");
 
-            // 4. Send to Analyze Endpoint
             const res = await axios.post("https://nutb.onrender.com/analyze", formData);
-            
-            // Navigate to nutrition results page with the data
             navigate('/nutrition', { state: { result: res.data } });
         } catch (err) {
             setError(err.response?.data?.message || "Analysis failed. Try again.");
@@ -160,7 +151,6 @@ const Scanner = () => {
 
     return (
         <div className={`min-h-screen flex flex-col transition-colors ${theme === 'dark' ? 'bg-black text-white' : 'bg-gray-50 text-gray-900'}`}>
-            {/* Header */}
             <header className="p-4 flex items-center justify-between backdrop-blur-md border-b border-white/10">
                 <Link to="/" className="p-2 hover:bg-white/10 rounded-full">
                     <ArrowLeft size={24} />
@@ -168,11 +158,10 @@ const Scanner = () => {
                 <h1 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
                     AI Scanner
                 </h1>
-                <div className="w-10" /> {/* Spacer */}
+                <div className="w-10" />
             </header>
 
             <main className="flex-1 relative flex flex-col items-center justify-center p-4">
-                {/* Camera Container */}
                 <div className="relative w-full max-w-md aspect-[3/4] rounded-3xl overflow-hidden bg-gray-900 shadow-2xl border-4 border-white/5">
                     {isModelLoading && (
                         <div className="absolute inset-0 flex flex-col items-center justify-center bg-gray-900 z-50">
@@ -197,7 +186,19 @@ const Scanner = () => {
                         height={480}
                     />
 
-                    {/* HUD Overlay */}
+                    {/* Label Alignment Guide Overlay */}
+                    {(detectedObject === 'box' || detectedObject === 'bottle') && (
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            className="absolute inset-0 border-[4px] border-dashed border-purple-400/50 m-12 rounded-xl z-20 flex items-end justify-center pb-4"
+                        >
+                            <p className="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">
+                                Align Ingredient Label Here
+                            </p>
+                        </motion.div>
+                    )}
+
                     <div className="absolute top-4 left-4 z-20">
                         <AnimatePresence>
                             {isFoodDetected ? (
@@ -220,7 +221,6 @@ const Scanner = () => {
                         </AnimatePresence>
                     </div>
 
-                    {/* Error Toast */}
                     <AnimatePresence>
                         {error && (
                             <motion.div 
@@ -236,7 +236,6 @@ const Scanner = () => {
                     </AnimatePresence>
                 </div>
 
-                {/* Controls */}
                 <div className="mt-8 flex items-center gap-8">
                     <button 
                         onClick={toggleCamera}
@@ -259,7 +258,6 @@ const Scanner = () => {
                         ) : (
                             <Camera size={32} className="text-white" />
                         )}
-                        {/* Outer Ring Animation */}
                         {isFoodDetected && !isAnalyzing && (
                             <motion.div 
                                 className="absolute -inset-2 border-2 border-purple-400 rounded-full"
@@ -269,7 +267,7 @@ const Scanner = () => {
                         )}
                     </button>
 
-                    <div className="w-14" /> {/* Alignment Balance */}
+                    <div className="w-14" />
                 </div>
 
                 {!condition && (
@@ -279,7 +277,6 @@ const Scanner = () => {
                 )}
             </main>
 
-            {/* Hint Footer */}
             <footer className="p-6 text-center">
                 <p className={`text-xs opacity-60 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
                     AI pre-validation helps ensure accurate results and reduces API overhead.

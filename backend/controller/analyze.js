@@ -26,7 +26,7 @@ export const analyzeFood = async (req, res) => {
   let imagePath = null;
 
   try {
-    const condition = req.body.condition; // This is now a comma-separated string of conditions
+    const condition = req.body.condition; 
     const query = req.body.query;
     const existingFoodName = req.body.foodName;
 
@@ -42,7 +42,6 @@ export const analyzeFood = async (req, res) => {
         });
       }
 
-      // Updated prompt to handle multi-condition profile
       const followUpPrompt = `
         Context: The user is asking about ${existingFoodName || "this food"}.
         Health Profile (Conditions): ${condition}
@@ -88,7 +87,6 @@ export const analyzeFood = async (req, res) => {
       }
     }
 
-    // Validate image upload
     if (!req.file) {
       return res.status(400).json({
         success: false,
@@ -99,7 +97,6 @@ export const analyzeFood = async (req, res) => {
       });
     }
 
-    // Validate condition
     if (!condition) {
       return res.status(400).json({
         success: false,
@@ -116,7 +113,7 @@ export const analyzeFood = async (req, res) => {
       const base64 = imageToBase64(imagePath);
       const mimeType = getMimeType(imagePath);
 
-      // Step 1: Identify food in image
+      // Step 1: Identify food or product in image
       let foodName;
       try {
         const identify = await generateGeminiContent({
@@ -125,7 +122,7 @@ export const analyzeFood = async (req, res) => {
               role: "user",
               parts: [
                 { inlineData: { data: base64, mimeType } },
-                { text: "Identify the dish. Output ONLY the name." },
+                { text: "Identify the food or product in this image. If it's a packaged food item or an ingredient label, output 'packaged_food'. Otherwise, output the specific dish name. Output ONLY the name." },
               ],
             },
           ],
@@ -144,10 +141,7 @@ export const analyzeFood = async (req, res) => {
         throw error;
       }
 
-      // Create unique cache key (handles the combined condition string)
       const cacheKey = `${foodName.toLowerCase()}_${condition.toLowerCase()}`;
-
-      // Check if data exists in cache
       const cachedResult = foodCache.get(cacheKey);
 
       if (cachedResult) {
@@ -158,41 +152,41 @@ export const analyzeFood = async (req, res) => {
         });
       }
 
-      // Cache MISS - fetch from APIs
-      console.log(`❌ Cache MISS for ${cacheKey}`);
-
-      // Step 2: Get nutrition data
+      // Step 2: Get nutrition data (Only for non-packaged dishes)
       let nutritionData = {};
-      try {
-        nutritionData = await getNutritionData(foodName);
-      } catch (error) {
-        if (error instanceof APIError) {
-          logError(error, "[Analyze] Nutrition data fetch failed");
-          console.warn("Nutrition data unavailable, continuing with analysis...");
-        } else {
-          throw error;
+      if (foodName !== "packaged_food") {
+        try {
+          nutritionData = await getNutritionData(foodName);
+        } catch (error) {
+          if (error instanceof APIError) {
+            logError(error, "[Analyze] Nutrition data fetch failed");
+            console.warn("Nutrition data unavailable, continuing with analysis...");
+          } else {
+            throw error;
+          }
         }
       }
 
-      // Step 3: Analyze food based on multi-condition profile
+      // Step 3: Analyze food or label based on multi-condition profile
       const analysisPrompt = `
-        Here is the nutritional data for ${foodName}: 
-        ${JSON.stringify(nutritionData)}
+        Context: The user has the health profile: "${condition}".
+        Target: ${foodName === "packaged_food" ? "Analyze the ingredient label in the image" : "Analyze the dish: " + foodName}.
+        ${foodName !== "packaged_food" ? "Nutritional Data: " + JSON.stringify(nutritionData) : ""}
 
-        Analyze this food for someone with the following health profile: "${condition}"
-        
         CRITICAL INSTRUCTIONS:
-        1. Check for interactions or risks across ALL listed conditions simultaneously.
-        2. If the food is unsafe or requires caution for ANY of the listed conditions, the traffic light MUST be "red" or "yellow" accordingly.
-        3. Provide a unified reason that explains the impact on the specific conditions listed.
-        4. Suggest 2-3 healthy alternatives that are safe for THIS specific multi-condition profile.
+        1. If an ingredient label is present, extract all ingredients (OCR).
+        2. Identify specific ingredients, additives, or chemicals harmful across ALL listed conditions.
+        3. Check for interactions or risks across ALL listed conditions simultaneously.
+        4. If the food is unsafe or requires caution for ANY listed condition, the traffic light MUST be "red" or "yellow".
+        5. Provide a unified reason that explains the impact on the specific conditions listed.
+        6. Suggest 2-3 healthy alternatives safe for THIS specific multi-condition profile.
 
         Output ONLY JSON in this exact format:
         {
           "traffic_light": "green" | "yellow" | "red",
           "verdict_title": "Analysis Result",
-          "reason": "Detailed explanation regarding the safety for all listed conditions.",
-          "suggestion": "Specific guidance for the user's health profile.",
+          "reason": "Identify specific harmful ingredients or nutritional risks found.",
+          "suggestion": "What the user should look for or avoid specifically for their condition.",
           "alternatives": [
             { "name": "Alternative Name", "why": "Why it is safe for all the listed conditions" }
           ]
@@ -219,15 +213,13 @@ export const analyzeFood = async (req, res) => {
 
         const result = {
           success: true,
-          food_name: foodName,
+          food_name: foodName === "packaged_food" ? "Packaged Product" : foodName,
           nutrition: nutritionData,
           ...cleanJson,
         };
 
-        // Store in cache for 24 hours
         if (result && !result.error) {
           foodCache.set(cacheKey, result);
-          console.log(`💾 Cached result for ${cacheKey}`);
         }
 
         res.json({
