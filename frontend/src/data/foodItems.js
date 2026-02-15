@@ -121,6 +121,21 @@ import belvitaProteinOatsHoneyAndChocolateBreakfast from '../assets/breakfast/be
 import bettyCrockerBisquickPancake from '../assets/breakfast/betty-crocker-bisquick-pancake.jpg';
 import bettyCrockerBisquickShake from '../assets/breakfast/betty-crocker-bisquick-shake.jpg';
 
+// cookies-biscuits image imports (normalized)
+import abcMultiGrainCookies from '../assets/cokies-biscuit/abc-multi-grain-cookies.jpg';
+import absolutelyGlutenFreeChocolateMacaroonCookie from '../assets/cokies-biscuit/absolutely-gluten-free-chocolate-macaroon-cookie.jpg';
+import absolutelyGlutenFreeCoconutMacaroonCookies from '../assets/cokies-biscuit/absolutely-gluten-free-coconut-macaroon-cookies.jpg';
+import alfajores from '../assets/cokies-biscuit/alfajores.jpg';
+import almondCrescentCookies from '../assets/cokies-biscuit/almond-crescent-cookies.jpg';
+import almondMacaroon from '../assets/cokies-biscuit/almond-macaroon.jpg';
+import almondMiniBiscotti from '../assets/cokies-biscuit/almond-mini-biscotti.jpg';
+import almondScones from '../assets/cokies-biscuit/almond-scones.jpg';
+import animalCrackers from '../assets/cokies-biscuit/animal-crackers.jpg';
+import anisetteCookies from '../assets/cokies-biscuit/anisette-cookies.jpg';
+import annsBiscuitsCheddarChiveGarlicBiscuits from '../assets/cokies-biscuit/anns-biscuits-cheddar-chive-garlic-biscuits.jpg';
+import anniesGlutenFreeCocoa from '../assets/cokies-biscuit/annies-gluten-free-cocoa.jpg';
+import anniesHomegrownOrganicHoneyGrahamCrackers from '../assets/cokies-biscuit/annies-homegrown-organic-honey-graham-crackers.jpg';
+
 // coffee image imports (normalized)
 import arabicaBeansCoffee from '../assets/coffee/arabica-beans-coffee.jpg';
 import bigBangGroundBeans from '../assets/coffee/big-bang-ground-beans.jpg';
@@ -276,19 +291,19 @@ const FOOD_ITEMS = {
   ],
 
   'cookies-biscuits': [
-    { id: 1, name: 'Oreo Chocolate Sandwich Cookies', brand: 'Nabisco', servingSize: '3 cookies (34g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 25, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 135, sugar: 14, fiber: 1 } },
-    { id: 2, name: 'Chips Ahoy! Original', brand: 'Nabisco', servingSize: '3 cookies (33g)', image: null, nutrition: { calories: 160, protein: 2, carbs: 22, totalFat: 8, saturatedFat: 2.5, transFat: 0, sodium: 105, sugar: 11, fiber: 1 } },
-    { id: 3, name: 'Milano Cookies', brand: 'Pepperidge Farm', servingSize: '3 cookies (34g)', image: null, nutrition: { calories: 180, protein: 2, carbs: 21, totalFat: 10, saturatedFat: 5, transFat: 0, sodium: 60, sugar: 10, fiber: 1 } },
-    { id: 4, name: 'Fig Newtons', brand: 'Nabisco', servingSize: '2 cookies (29g)', image: null, nutrition: { calories: 110, protein: 1, carbs: 22, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 100, sugar: 12, fiber: 1 } },
-    { id: 5, name: 'Nilla Wafers', brand: 'Nabisco', servingSize: '8 wafers (31g)', image: null, nutrition: { calories: 140, protein: 1, carbs: 24, totalFat: 4.5, saturatedFat: 1.5, transFat: 0, sodium: 110, sugar: 11, fiber: 0 } },
-    { id: 6, name: 'Nutter Butter', brand: 'Nabisco', servingSize: '2 cookies (25g)', image: null, nutrition: { calories: 120, protein: 2, carbs: 16, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 90, sugar: 7, fiber: 1 } },
-    { id: 7, name: 'Ritz Crackers', brand: 'Nabisco', servingSize: '5 crackers (16g)', image: null, nutrition: { calories: 80, protein: 1, carbs: 10, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 130, sugar: 1, fiber: 0 } },
-    { id: 8, name: 'Wheat Thins', brand: 'Nabisco', servingSize: '16 crackers (31g)', image: null, nutrition: { calories: 140, protein: 2, carbs: 22, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 230, sugar: 4, fiber: 3 } },
-    { id: 9, name: 'Triscuit Original', brand: 'Nabisco', servingSize: '6 crackers (28g)', image: null, nutrition: { calories: 120, protein: 3, carbs: 19, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 0, fiber: 3 } },
-    { id: 10, name: 'Vanilla Wafers', brand: 'Keebler', servingSize: '8 wafers (30g)', image: null, nutrition: { calories: 140, protein: 1, carbs: 22, totalFat: 5, saturatedFat: 1.5, transFat: 0, sodium: 115, sugar: 10, fiber: 0 } },
-    { id: 11, name: 'Ginger Snaps', brand: 'Nabisco', servingSize: '4 cookies (28g)', image: null, nutrition: { calories: 120, protein: 2, carbs: 22, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 11, fiber: 0 } },
-    { id: 12, name: 'Chessmen Cookies', brand: 'Pepperidge Farm', servingSize: '3 cookies (28g)', image: null, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 2, transFat: 0, sodium: 95, sugar: 7, fiber: 0 } },
-    { id: 13, name: 'Graham Crackers Honey', brand: 'Honey Maid', servingSize: '2 full sheets (28g)', image: null, nutrition: { calories: 130, protein: 2, carbs: 24, totalFat: 3, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 8, fiber: 1 } },
+    { id: 1, name: 'abc-multi-grain-cookies', brand: 'Nabisco', servingSize: '3 cookies (34g)', image: abcMultiGrainCookies, nutrition: { calories: 160, protein: 2, carbs: 25, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 135, sugar: 14, fiber: 1 } },
+    { id: 2, name: 'absolutely-gluten-free-chocolate-macaroon-cookie', brand: 'Nabisco', servingSize: '3 cookies (33g)', image: absolutelyGlutenFreeChocolateMacaroonCookie, nutrition: { calories: 160, protein: 2, carbs: 22, totalFat: 8, saturatedFat: 2.5, transFat: 0, sodium: 105, sugar: 11, fiber: 1 } },
+    { id: 3, name: 'absolutely-gluten-free-coconut-macaroon-cookies', brand: 'Pepperidge Farm', servingSize: '3 cookies (34g)', image: absolutelyGlutenFreeCoconutMacaroonCookies, nutrition: { calories: 180, protein: 2, carbs: 21, totalFat: 10, saturatedFat: 5, transFat: 0, sodium: 60, sugar: 10, fiber: 1 } },
+    { id: 4, name: 'alfajores', brand: 'Nabisco', servingSize: '2 cookies (29g)', image: alfajores, nutrition: { calories: 110, protein: 1, carbs: 22, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 100, sugar: 12, fiber: 1 } },
+    { id: 5, name: 'almond-crescent-cookies', brand: 'Nabisco', servingSize: '8 wafers (31g)', image: almondCrescentCookies, nutrition: { calories: 140, protein: 1, carbs: 24, totalFat: 4.5, saturatedFat: 1.5, transFat: 0, sodium: 110, sugar: 11, fiber: 0 } },
+    { id: 6, name: 'almond-macaroon', brand: 'Nabisco', servingSize: '2 cookies (25g)', image: almondMacaroon, nutrition: { calories: 120, protein: 2, carbs: 16, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 90, sugar: 7, fiber: 1 } },
+    { id: 7, name: 'almond-mini-biscotti', brand: 'Nabisco', servingSize: '5 crackers (16g)', image: almondMiniBiscotti, nutrition: { calories: 80, protein: 1, carbs: 10, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 130, sugar: 1, fiber: 0 } },
+    { id: 8, name: 'almond-scones', brand: 'Nabisco', servingSize: '16 crackers (31g)', image: almondScones, nutrition: { calories: 140, protein: 2, carbs: 22, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 230, sugar: 4, fiber: 3 } },
+    { id: 9, name: 'animal-crackers', brand: 'Nabisco', servingSize: '6 crackers (28g)', image: animalCrackers, nutrition: { calories: 120, protein: 3, carbs: 19, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 0, fiber: 3 } },
+    { id: 10, name: 'anisette-cookies', brand: 'Keebler', servingSize: '8 wafers (30g)', image: anisetteCookies, nutrition: { calories: 140, protein: 1, carbs: 22, totalFat: 5, saturatedFat: 1.5, transFat: 0, sodium: 115, sugar: 10, fiber: 0 } },
+    { id: 11, name: 'anns-biscuits-cheddar-chive-garlic-biscuits', brand: 'Nabisco', servingSize: '4 cookies (28g)', image: annsBiscuitsCheddarChiveGarlicBiscuits, nutrition: { calories: 120, protein: 2, carbs: 22, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 11, fiber: 0 } },
+    { id: 12, name: 'annies-gluten-free-cocoa', brand: 'Pepperidge Farm', servingSize: '3 cookies (28g)', image: anniesGlutenFreeCocoa, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 2, transFat: 0, sodium: 95, sugar: 7, fiber: 0 } },
+    { id: 13, name: 'annies-homegrown-organic-honey-graham-crackers', brand: 'Honey Maid', servingSize: '2 full sheets (28g)', image: anniesHomegrownOrganicHoneyGrahamCrackers, nutrition: { calories: 130, protein: 2, carbs: 24, totalFat: 3, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 8, fiber: 1 } },
   ],
 
   'beverages': [
