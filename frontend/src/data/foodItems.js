@@ -45,6 +45,22 @@ import peachPie from '../assets/cake/peach-pie.jpg';
 import raspberrySwirlCheesecake from '../assets/cake/raspberry-swirl-cheesecake.jpg';
 import sugarlessApplePie from '../assets/cake/sugarless-apple-pie.jpg';
 
+// cereal image imports (normalized)
+import activationEnergyCoffee from '../assets/cereal/activation-energy-coffee.jpg';
+import allBranBreakfastCereal from '../assets/cereal/all-bran-breakfast-cereal.jpg';
+import almondButterWholeGrainsClusters from '../assets/cereal/almond-butter-whole-grains-clusters.jpg';
+import almondButter from '../assets/cereal/almond-butter.jpg';
+import almondPecanCashew from '../assets/cereal/almond-pecan-cashew.jpg';
+import almondPecanGranola from '../assets/cereal/almond-pecan-granola.jpg';
+import anniesOrganicCocoaBunniesCereal from '../assets/cereal/annies-organic-cocoa-bunnies-cereal.jpg';
+import appleCerealBar from '../assets/cereal/apple-cereal-bar.jpg';
+import appleCinnamonBag from '../assets/cereal/apple-cinnamon-bag.jpg';
+import appleCinnamonCereal from '../assets/cereal/apple-cinnamon-cereal.jpg';
+import appleCinnamonGranola from '../assets/cereal/apple-cinnamon-granola.jpg';
+import appleCinnamonInstantOatmeal from '../assets/cereal/apple-cinnamon-instant-oatmeal.jpg';
+import appleJacksBreakfastCereal from '../assets/cereal/apple-jacks-breakfast-cereal.jpg';
+import appleJacksGiantCereal from '../assets/cereal/apple-jacks-giant-cereal.jpg';
+
 // canned-goods image imports (normalized)
 import bMOriginalBakedBeans from '../assets/canned-goods/b-m-original-baked-beans.jpg';
 import babyArtichokeHeartsInOil from '../assets/canned-goods/baby-artichoke-hearts-in-oil.jpg';
@@ -189,20 +205,20 @@ const FOOD_ITEMS = {
   ],
 
   'cereal': [
-    { id: 1, name: 'Honey Nut Cheerios', brand: 'General Mills', servingSize: '3/4 cup (28g)', image: null, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 9, fiber: 2 } },
-    { id: 2, name: 'Special K Original', brand: "Kellogg's", servingSize: '3/4 cup (31g)', image: null, nutrition: { calories: 120, protein: 7, carbs: 23, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 3 } },
-    { id: 3, name: 'Organic Berry Cereal', brand: 'Kashi', servingSize: '1 cup (55g)', image: null, nutrition: { calories: 200, protein: 8, carbs: 43, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 125, sugar: 10, fiber: 11 } },
-    { id: 4, name: 'Frosted Flakes', brand: "Kellogg's", servingSize: '3/4 cup (29g)', image: null, nutrition: { calories: 110, protein: 1, carbs: 27, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 12, fiber: 1 } },
-    { id: 5, name: 'Raisin Bran', brand: 'Post', servingSize: '1 cup (59g)', image: null, nutrition: { calories: 190, protein: 5, carbs: 46, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 18, fiber: 7 } },
-    { id: 6, name: 'Corn Flakes', brand: "Kellogg's", servingSize: '1 cup (29g)', image: null, nutrition: { calories: 100, protein: 2, carbs: 24, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 3, fiber: 1 } },
-    { id: 7, name: 'Honey Bunches of Oats', brand: 'Post', servingSize: '3/4 cup (30g)', image: null, nutrition: { calories: 120, protein: 2, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 6, fiber: 2 } },
-    { id: 8, name: 'Life Original', brand: 'Quaker', servingSize: '3/4 cup (32g)', image: null, nutrition: { calories: 120, protein: 3, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 6, fiber: 3 } },
-    { id: 9, name: 'Lucky Charms', brand: 'General Mills', servingSize: '3/4 cup (27g)', image: null, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 10, fiber: 2 } },
-    { id: 10, name: 'Cheerios Original', brand: 'General Mills', servingSize: '1 cup (28g)', image: null, nutrition: { calories: 100, protein: 3, carbs: 20, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 140, sugar: 1, fiber: 3 } },
-    { id: 11, name: 'Cinnamon Toast Crunch', brand: 'General Mills', servingSize: '3/4 cup (31g)', image: null, nutrition: { calories: 130, protein: 1, carbs: 25, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 200, sugar: 12, fiber: 2 } },
-    { id: 12, name: 'Grape-Nuts', brand: 'Post', servingSize: '1/2 cup (58g)', image: null, nutrition: { calories: 200, protein: 6, carbs: 47, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 5, fiber: 7 } },
-    { id: 13, name: 'Rice Krispies', brand: "Kellogg's", servingSize: '1 1/4 cup (33g)', image: null, nutrition: { calories: 130, protein: 2, carbs: 29, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 4, fiber: 0 } },
-    { id: 14, name: 'Granola Oats & Honey', brand: 'Nature Valley', servingSize: '2/3 cup (49g)', image: null, nutrition: { calories: 210, protein: 5, carbs: 38, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 90, sugar: 14, fiber: 3 } },
+    { id: 1, name: 'activation-energy-coffee', brand: 'General Mills', servingSize: '3/4 cup (28g)', image: activationEnergyCoffee, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 9, fiber: 2 } },
+    { id: 2, name: 'all-bran-breakfast-cereal', brand: "Kellogg's", servingSize: '3/4 cup (31g)', image: allBranBreakfastCereal, nutrition: { calories: 120, protein: 7, carbs: 23, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 3 } },
+    { id: 3, name: 'almond-butter-whole-grains-clusters', brand: 'Kashi', servingSize: '1 cup (55g)', image: almondButterWholeGrainsClusters, nutrition: { calories: 200, protein: 8, carbs: 43, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 125, sugar: 10, fiber: 11 } },
+    { id: 4, name: 'almond-butter', brand: "Kellogg's", servingSize: '3/4 cup (29g)', image: almondButter, nutrition: { calories: 110, protein: 1, carbs: 27, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 12, fiber: 1 } },
+    { id: 5, name: 'almond-pecan-cashew', brand: 'Post', servingSize: '1 cup (59g)', image: almondPecanCashew, nutrition: { calories: 190, protein: 5, carbs: 46, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 250, sugar: 18, fiber: 7 } },
+    { id: 6, name: 'almond-pecan-granola', brand: "Kellogg's", servingSize: '1 cup (29g)', image: almondPecanGranola, nutrition: { calories: 100, protein: 2, carbs: 24, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 3, fiber: 1 } },
+    { id: 7, name: 'annies-organic-cocoa-bunnies-cereal', brand: 'Post', servingSize: '3/4 cup (30g)', image: anniesOrganicCocoaBunniesCereal, nutrition: { calories: 120, protein: 2, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 6, fiber: 2 } },
+    { id: 8, name: 'apple-cereal-bar', brand: 'Quaker', servingSize: '3/4 cup (32g)', image: appleCerealBar, nutrition: { calories: 120, protein: 3, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 6, fiber: 3 } },
+    { id: 9, name: 'apple-cinnamon-bag', brand: 'General Mills', servingSize: '3/4 cup (27g)', image: appleCinnamonBag, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 10, fiber: 2 } },
+    { id: 10, name: 'apple-jacks-giant-cereal', brand: 'General Mills', servingSize: '1 cup (28g)', image: appleJacksGiantCereal, nutrition: { calories: 100, protein: 3, carbs: 20, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 140, sugar: 1, fiber: 3 } },
+    { id: 11, name: 'apple-cinnamon-cereal', brand: 'General Mills', servingSize: '3/4 cup (31g)', image: appleCinnamonCereal, nutrition: { calories: 130, protein: 1, carbs: 25, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 200, sugar: 12, fiber: 2 } },
+    { id: 12, name: 'apple-cinnamon-instant-oatmeal', brand: 'Post', servingSize: '1/2 cup (58g)', image: appleCinnamonInstantOatmeal, nutrition: { calories: 200, protein: 6, carbs: 47, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 5, fiber: 7 } },
+    { id: 13, name: 'apple-jacks-breakfast-cereal', brand: "Kellogg's", servingSize: '1 1/4 cup (33g)', image: appleJacksBreakfastCereal, nutrition: { calories: 130, protein: 2, carbs: 29, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 4, fiber: 0 } },
+    { id: 14, name: 'apple-cinnamon-granola', brand: 'Nature Valley', servingSize: '2/3 cup (49g)', image: appleCinnamonGranola, nutrition: { calories: 210, protein: 5, carbs: 38, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 90, sugar: 14, fiber: 3 } },
   ],
 
   'cheese': [
