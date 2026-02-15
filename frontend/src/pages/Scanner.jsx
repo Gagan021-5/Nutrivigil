@@ -18,7 +18,8 @@ import { useTheme } from "../contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
 import { LANGUAGE_MAP } from "../utils/languageMap";
 
-const STORAGE_KEY = "nutriguard";
+// Updated storage key to support multi-condition arrays
+const STORAGE_KEY = "nutriguard_v2";
 
 const Scanner = () => {
     const { theme } = useTheme();
@@ -38,7 +39,7 @@ const Scanner = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [error, setError] = useState(null);
     const [facingMode, setFacingMode] = useState("environment");
-    const [condition, setCondition] = useState("");
+    const [conditions, setConditions] = useState([]); // Changed to array for multi-select
 
     // Expanded food classes to include common packaging
     const FOOD_CLASSES = [
@@ -48,8 +49,9 @@ const Scanner = () => {
     ];
 
     useEffect(() => {
-        const savedCondition = localStorage.getItem(STORAGE_KEY);
-        setCondition(savedCondition || "");
+        // Load the conditions array from local storage
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+        setConditions(Array.isArray(saved) ? saved : []);
 
         const loadResources = async () => {
             try {
@@ -64,6 +66,11 @@ const Scanner = () => {
         };
         loadResources();
     }, []);
+
+    // Helper to join multiple conditions into a single string for the AI prompt
+    const getConditionString = () => {
+        return conditions.map(c => t(`conditions.${c}`)).join(", ");
+    };
 
     const detect = useCallback(async () => {
         if (
@@ -122,7 +129,7 @@ const Scanner = () => {
     };
 
     const handleCapture = async () => {
-        if (!isFoodDetected || !condition) return;
+        if (!isFoodDetected || conditions.length === 0) return;
 
         setIsAnalyzing(true);
         setError(null);
@@ -134,7 +141,8 @@ const Scanner = () => {
             
             const formData = new FormData();
             formData.append("image", blob, "capture.webp");
-            formData.append("condition", condition);
+            // Pass the formatted multi-condition string to the backend
+            formData.append("condition", getConditionString());
             formData.append("language", LANGUAGE_MAP[i18n.language] || "English");
 
             const res = await axios.post("https://nutb.onrender.com/analyze", formData);
@@ -186,7 +194,6 @@ const Scanner = () => {
                         height={480}
                     />
 
-                    {/* Label Alignment Guide Overlay */}
                     {(detectedObject === 'box' || detectedObject === 'bottle') && (
                         <motion.div 
                             initial={{ opacity: 0 }}
@@ -246,7 +253,7 @@ const Scanner = () => {
 
                     <button 
                         onClick={handleCapture}
-                        disabled={!isFoodDetected || isAnalyzing || !condition}
+                        disabled={!isFoodDetected || isAnalyzing || conditions.length === 0}
                         className={`relative p-8 rounded-full transition-all transform active:scale-95 ${
                             isFoodDetected 
                             ? 'bg-gradient-to-tr from-purple-600 to-blue-500 shadow-[0_0_30px_rgba(124,58,237,0.5)]' 
@@ -270,9 +277,9 @@ const Scanner = () => {
                     <div className="w-14" />
                 </div>
 
-                {!condition && (
-                    <p className="mt-4 text-sm text-yellow-500 font-medium">
-                        Please set your <Link to="/profile" className="underline">health condition</Link> first.
+                {conditions.length === 0 && (
+                    <p className="mt-4 text-sm text-yellow-500 font-medium text-center px-6">
+                        Please set your <Link to="/profile" className="underline">health profile</Link> first to enable AI analysis.
                     </p>
                 )}
             </main>
