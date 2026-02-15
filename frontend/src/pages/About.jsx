@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Target, Heart, Zap, Shield, Users, TrendingUp, Linkedin } from 'lucide-react';
+import { ArrowLeft, Target, Heart, Zap, Shield, Users, TrendingUp, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
 
 const About = () => {
   const { theme } = useTheme();
+  const [allContributors, setAllContributors] = useState([]);
+
+  useEffect(() => {
+    // Fetching contributors from the repository
+    fetch('https://api.github.com/repos/gagan021-5/nutrivigil/contributors')
+      .then(res => res.json())
+      .then(data => {
+        if (Array.isArray(data)) {
+          setAllContributors(data);
+        }
+      })
+      .catch(err => console.error("Error fetching contributors:", err));
+  }, []);
+
   const missionCards = [
     {
       icon: <Target className="w-8 h-8" />,
@@ -24,43 +38,6 @@ const About = () => {
     }
   ];
 
-  const features = [
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Safety Signals",
-      description: "Color-coded traffic light system (Green/Yellow/Red) for quick health safety assessment."
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: "Multi-Condition Support",
-      description: "Supports diabetes, hypertension, kidney disease, heart conditions, and many more health concerns."
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Real-Time Analysis",
-      description: "Analyze food through images or text with our advanced AI-powered scanner technology."
-    }
-  ];
-
-  // Team (placeholder)
-  const team = [
-    {
-      name: 'Dr. Priya Sharma',
-      role: 'Nutrition Scientist',
-      bio: 'PhD in Nutritional Sciences. Focused on dietary safety for chronic conditions.'
-    },
-    {
-      name: 'Carlos Mendes',
-      role: 'Lead ML Engineer',
-      bio: 'Builds the food analysis models and optimizes inference for low-latency.'
-    },
-    {
-      name: 'Aisha Khan',
-      role: 'Product Designer',
-      bio: 'Designs intuitive experiences that help users make healthier choices.'
-    }
-  ];
-
   return (
     <div className={`min-h-screen transition-colors duration-300 ${
       theme === 'dark' ? 'bg-[#0a0e1a] text-white' : 'bg-white text-gray-900'
@@ -70,7 +47,6 @@ const About = () => {
         theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
       }`}>
         <div className="max-w-7xl mx-auto">
-          {/* Back Button */}
           <Link 
             to="/" 
             className={`inline-flex items-center gap-2 transition-colors mb-8 ${
@@ -81,203 +57,96 @@ const About = () => {
             Back to Home
           </Link>
 
-          {/* Hero Content */}
           <div className="text-center">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               About NutriVigil
             </h1>
-            <p className={`text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed ${
+            <p className={`text-xl max-w-3xl mx-auto leading-relaxed ${
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}>
-              Your Personal AI Health Scanner. Instantly analyze meals with cutting-edge Gemini v2.5 AI 
-              to keep your nutrition perfectly aligned with your health goals.
+              Your Personal AI Health Scanner. Instantly analyze meals to keep your nutrition perfectly aligned with your health goals.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Hall of Contributions Section */}
+      <section className={`py-16 px-4 sm:px-6 lg:px-8 ${theme === 'dark' ? 'bg-[#0a0e1a]' : 'bg-white'}`}>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">Hall of Contributions</h2>
+          <p className={`text-center mb-12 max-w-2xl mx-auto ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+            Recognizing the individuals who actively contribute to the growth and transparency of NutriVigil.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            {allContributors.map((contributor) => (
+              <motion.div
+                key={contributor.id}
+                whileHover={{ y: -2 }}
+                className={`p-4 rounded-lg border flex items-center gap-4 transition-all duration-300 ${
+                  theme === 'dark' 
+                    ? 'bg-[#1a1f2e] border-gray-800 hover:border-purple-500/50' 
+                    : 'bg-gray-50 border-gray-200 hover:border-purple-400/50'
+                }`}
+              >
+                <img 
+                  src={contributor.avatar_url} 
+                  alt={contributor.login} 
+                  className="w-12 h-12 rounded-full border border-purple-500/20 shrink-0" 
+                />
+                
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="font-bold truncate text-sm">{contributor.login}</span>
+                    <a 
+                      href={contributor.html_url} 
+                      target="_blank" 
+                      rel="noreferrer" 
+                      className="text-gray-400 hover:text-purple-400 transition-colors shrink-0"
+                    >
+                      <Github className="w-4 h-4" />
+                    </a>
+                  </div>
+                  <div className={`text-[10px] font-bold uppercase tracking-widest mt-0.5 ${
+                    contributor.login.toLowerCase() === 'gagan021-5' ? 'text-purple-400' : 'text-gray-500'
+                  }`}>
+                    {contributor.login.toLowerCase() === 'gagan021-5' ? 'Project Admin' : 'Contributor'}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            Our Mission
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {missionCards.map((card, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.12 }}
-                className={`p-8 rounded-xl border transition-all duration-300 transform-gpu hover:scale-105 ${
-                  theme === 'dark' 
-                    ? 'bg-[#1a1f2e] border-gray-800 hover:border-purple-500' 
-                    : 'bg-gray-50 border-gray-200 hover:border-purple-400'
-                }`}
-              >
-                <div className="text-purple-400 mb-4">
-                  {card.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-3">{card.title}</h3>
-                <p className={`leading-relaxed ${
-                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                }`}>{card.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
       <section className={`py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
         theme === 'dark' ? 'bg-[#1a1f2e]' : 'bg-gray-50'
       }`}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-            Key Features
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
-                className={`flex items-start gap-4 p-6 rounded-lg border transition-all ${
-                  theme === 'dark'
-                    ? 'bg-[#0a0e1a] border-gray-800 hover:border-purple-500/50'
-                    : 'bg-white border-gray-200 hover:border-purple-400/50'
-                }`}
-              >
-                <div className="text-purple-400 mt-1">
-                  {feature.icon}
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-2">{feature.title}</h3>
-                  <p className={`text-sm ${
-                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                  }`}>{feature.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className={`rounded-2xl p-8 sm:p-12 border transition-colors duration-300 ${
-            theme === 'dark'
-              ? 'bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500/20'
-              : 'bg-gradient-to-r from-purple-100 to-pink-100 border-purple-300'
-          }`}>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
-              Powered by Advanced AI
-            </h2>
-            <p className={`text-lg text-center max-w-3xl mx-auto leading-relaxed mb-8 ${
-              theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-            }`}>
-              NutriVigil leverages <span className="text-purple-400 font-semibold">Google's Gemini 2.5 AI</span>, 
-              one of the most advanced multimodal AI systems, to provide accurate nutritional analysis. 
-              Our platform is HIPAA compliant, SOC 2 Type II certified, and uses end-to-end encryption 
-              to ensure your health data remains private and secure.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <span className={`px-4 py-2 rounded-full border ${
-                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-700 text-gray-400' : 'bg-white border-gray-300 text-gray-700'
-              }`}>
-                HIPAA Compliant
-              </span>
-              <span className={`px-4 py-2 rounded-full border ${
-                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-700 text-gray-400' : 'bg-white border-gray-300 text-gray-700'
-              }`}>
-                SOC 2 Certified
-              </span>
-              <span className={`px-4 py-2 rounded-full border ${
-                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-700 text-gray-400' : 'bg-white border-gray-300 text-gray-700'
-              }`}>
-                500K+ Food Database
-              </span>
-              <span className={`px-4 py-2 rounded-full border ${
-                theme === 'dark' ? 'bg-[#1a1f2e] border-gray-700 text-gray-400' : 'bg-white border-gray-300 text-gray-700'
-              }`}>
-                99.2% Accuracy
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className={`py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
-        theme === 'dark' ? 'bg-[#0a0e1a]' : 'bg-white'
-      }`}>
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8">Meet the Team</h2>
-
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {team.map((member, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: idx * 0.08 }}
-                className={`p-6 rounded-xl border ${
-                  theme === 'dark' ? 'bg-[#1a1f2e] border-gray-800' : 'bg-gray-50 border-gray-200'
-                }`}
-              >
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-semibold">
-                    {member.name.split(' ').map(n => n[0]).slice(0,2).join('')}
-                  </div>
-                  <div>
-                    <div className="font-semibold">{member.name}</div>
-                    <div className={`text-sm ${
-                      theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                    }`}>{member.role}</div>
-                  </div>
-                </div>
-                <p className={`mt-4 text-sm ${
-                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                }`}>{member.bio}</p>
-                <div className="mt-4">
-                  <a href="#" className={`inline-flex items-center gap-2 text-sm hover:underline ${
-                    theme === 'dark' ? 'text-purple-300' : 'text-purple-600'
-                  }`}>
-                    <Linkedin className="w-4 h-4" /> View profile
-                  </a>
-                </div>
-              </motion.div>
+          <h2 className="text-3xl font-bold text-center mb-12 text-purple-400">Our Mission</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {missionCards.map((card, index) => (
+              <div key={index} className="text-center p-6">
+                <div className="text-purple-400 mb-4 flex justify-center">{card.icon}</div>
+                <h3 className="text-xl font-bold mb-3">{card.title}</h3>
+                <p className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>{card.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className={`py-16 px-4 sm:px-6 lg:px-8 transition-colors duration-300 ${
-        theme === 'dark' ? 'bg-[#1a1f2e]' : 'bg-gray-50'
-      }`}>
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-            Ready to Start Your Health Journey?
-          </h2>
-          <p className={`text-xl mb-8 max-w-2xl mx-auto ${
-            theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-          }`}>
-            Join 50,000+ health enthusiasts who trust NutriVigil for their nutrition analysis.
-          </p>
-          <Link 
-            to="/scanner" 
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
-          >
-            <Zap className="w-5 h-5" />
-            Try Scanner Now
-          </Link>
-        </div>
+      <section className="py-20 px-4 text-center">
+        <h2 className="text-3xl font-bold mb-8">Ready to Start Your Health Journey?</h2>
+        <Link 
+          to="/scanner" 
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
+        >
+          <Zap className="w-5 h-5" />
+          Try Scanner Now
+        </Link>
       </section>
     </div>
   );
