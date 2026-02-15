@@ -45,6 +45,20 @@ import peachPie from '../assets/cake/peach-pie.jpg';
 import raspberrySwirlCheesecake from '../assets/cake/raspberry-swirl-cheesecake.jpg';
 import sugarlessApplePie from '../assets/cake/sugarless-apple-pie.jpg';
 
+// cheese image imports (normalized)
+import oneYearSharpCheddar from '../assets/cheese/1-year-sharp-cheddar.jpg';
+import tenYearCheddar from '../assets/cheese/10-year-cheddar.jpg';
+import gruyere from '../assets/cheese/gruyere.jpg';
+import milkfatCottageCheese from '../assets/cheese/milkfat-cottage-cheese.jpg';
+import milkfatSmallCurd from '../assets/cheese/milkfat-small-curd.jpg';
+import monthAgedGouda from '../assets/cheese/month-aged-gouda.jpg';
+import monthOldManchego from '../assets/cheese/month-old-manchego.jpg';
+import parmesanRomanoCheese from '../assets/cheese/parmesan-romano-cheese.jpg';
+import vintageCheddar from '../assets/cheese/vintage-cheddar.jpg';
+import yearGouda from '../assets/cheese/year-gouda.jpg';
+import yearVintageWhiteCheddar from '../assets/cheese/year-vintage-white-cheddar.jpg';
+import yearWhiteCheddar from '../assets/cheese/year-white-cheddar.jpg';
+
 // cereal image imports (normalized)
 import activationEnergyCoffee from '../assets/cereal/activation-energy-coffee.jpg';
 import allBranBreakfastCereal from '../assets/cereal/all-bran-breakfast-cereal.jpg';
@@ -222,18 +236,18 @@ const FOOD_ITEMS = {
   ],
 
   'cheese': [
-    { id: 1, name: 'Sharp Cheddar Cheese', brand: 'Kraft', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 0, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 2, name: 'Colby Jack Slices', brand: 'Sargento', servingSize: '1 slice (21g)', image: null, nutrition: { calories: 80, protein: 5, carbs: 0, totalFat: 7, saturatedFat: 4, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
-    { id: 3, name: 'Medium Cheddar Block', brand: 'Tillamook', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 4, name: 'Mozzarella String Cheese', brand: 'Kraft', servingSize: '1 stick (28g)', image: null, nutrition: { calories: 80, protein: 6, carbs: 1, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 200, sugar: 0, fiber: 0 } },
-    { id: 5, name: 'Swiss Cheese Slices', brand: 'Sargento', servingSize: '1 slice (21g)', image: null, nutrition: { calories: 80, protein: 6, carbs: 0, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
-    { id: 6, name: 'Pepper Jack Cheese', brand: 'Tillamook', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 100, protein: 7, carbs: 0, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 7, name: 'Cream Cheese', brand: 'Philadelphia', servingSize: '1 oz (28g)', image: null, nutrition: { calories: 100, protein: 2, carbs: 2, totalFat: 10, saturatedFat: 6, transFat: 0, sodium: 100, sugar: 1, fiber: 0 } },
-    { id: 8, name: 'Parmesan Grated', brand: 'Kraft', servingSize: '2 tbsp (10g)', image: null, nutrition: { calories: 40, protein: 4, carbs: 0, totalFat: 2.5, saturatedFat: 1.5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 9, name: 'Mexican Cheese Blend', brand: 'Sargento', servingSize: '1/4 cup (28g)', image: null, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 10, name: 'Feta Cheese Crumbled', brand: 'Athenos', servingSize: '1/4 cup (28g)', image: null, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } },
-    { id: 11, name: 'Provolone Slices', brand: 'Sargento', servingSize: '1 slice (20g)', image: null, nutrition: { calories: 70, protein: 5, carbs: 0, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
-    { id: 12, name: 'Blue Cheese Crumbles', brand: 'Treasure Cave', servingSize: '1/4 cup (28g)', image: null, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 380, sugar: 0, fiber: 0 } },
+    { id: 1, name: '1-year-sharp-cheddar', brand: 'Kraft', servingSize: '1 oz (28g)', image: oneYearSharpCheddar, nutrition: { calories: 110, protein: 7, carbs: 0, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 2, name: '10-year-cheddar', brand: 'Sargento', servingSize: '1 slice (21g)', image: tenYearCheddar, nutrition: { calories: 80, protein: 5, carbs: 0, totalFat: 7, saturatedFat: 4, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
+    { id: 3, name: 'gruyere', brand: 'Tillamook', servingSize: '1 oz (28g)', image: gruyere, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 4, name: 'milkfat-small-curd', brand: 'Kraft', servingSize: '1 stick (28g)', image: milkfatSmallCurd, nutrition: { calories: 80, protein: 6, carbs: 1, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 200, sugar: 0, fiber: 0 } },
+    { id: 5, name: 'milkfat-cottage-cheese', brand: 'Sargento', servingSize: '1 slice (21g)', image: milkfatCottageCheese, nutrition: { calories: 80, protein: 6, carbs: 0, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
+    { id: 6, name: 'month-aged-gouda', brand: 'Tillamook', servingSize: '1 oz (28g)', image: monthAgedGouda, nutrition: { calories: 100, protein: 7, carbs: 0, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 7, name: 'month-old-manchego', brand: 'Philadelphia', servingSize: '1 oz (28g)', image: monthOldManchego, nutrition: { calories: 100, protein: 2, carbs: 2, totalFat: 10, saturatedFat: 6, transFat: 0, sodium: 100, sugar: 1, fiber: 0 } },
+    { id: 8, name: 'parmesan-romano-cheese', brand: 'Kraft', servingSize: '2 tbsp (10g)', image: parmesanRomanoCheese, nutrition: { calories: 40, protein: 4, carbs: 0, totalFat: 2.5, saturatedFat: 1.5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 9, name: 'vintage-cheddar', brand: 'Sargento', servingSize: '1/4 cup (28g)', image: vintageCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 10, name: 'year-gouda', brand: 'Athenos', servingSize: '1/4 cup (28g)', image: yearGouda, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } },
+    { id: 11, name: 'year-vintage-white-cheddar', brand: 'Sargento', servingSize: '1 slice (20g)', image: yearVintageWhiteCheddar, nutrition: { calories: 70, protein: 5, carbs: 0, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
+    { id: 12, name: 'year-white-cheddar', brand: 'Treasure Cave', servingSize: '1/4 cup (28g)', image: yearWhiteCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 380, sugar: 0, fiber: 0 } },
   ],
 
   'coffee': [
