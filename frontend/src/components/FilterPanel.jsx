@@ -230,8 +230,8 @@ const FilterPanel = ({ filters, onFilterChange, isOpen, onClose, isMobile }) => 
 
               {/* Drawer Content */}
               <div className="overflow-y-auto max-h-[calc(80vh-73px)]">
-                {Object.entries(FILTER_OPTIONS).map(([key, data]) =>
-                  renderFilterSection(key, data)
+                {Object.keys(FILTER_DEFINITIONS).map((key) =>
+                  renderFilterSection(key, getFilterCategoryData(key))
                 )}
               </div>
             </motion.div>
@@ -266,8 +266,8 @@ const FilterPanel = ({ filters, onFilterChange, isOpen, onClose, isMobile }) => 
 
       {/* Panel Content */}
       <div className="max-h-[calc(100vh-12rem)] overflow-y-auto">
-        {Object.entries(FILTER_OPTIONS).map(([key, data]) =>
-          renderFilterSection(key, data)
+        {Object.keys(FILTER_DEFINITIONS).map((key) =>
+          renderFilterSection(key, getFilterCategoryData(key))
         )}
       </div>
     </div>
