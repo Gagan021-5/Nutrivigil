@@ -229,10 +229,10 @@ const FOOD_ITEMS = {
     { id: 8, name: 'apple-cereal-bar', brand: 'Quaker', servingSize: '3/4 cup (32g)', image: appleCerealBar, nutrition: { calories: 120, protein: 3, carbs: 25, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 6, fiber: 3 } },
     { id: 9, name: 'apple-cinnamon-bag', brand: 'General Mills', servingSize: '3/4 cup (27g)', image: appleCinnamonBag, nutrition: { calories: 110, protein: 2, carbs: 22, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 10, fiber: 2 } },
     { id: 10, name: 'apple-jacks-giant-cereal', brand: 'General Mills', servingSize: '1 cup (28g)', image: appleJacksGiantCereal, nutrition: { calories: 100, protein: 3, carbs: 20, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 140, sugar: 1, fiber: 3 } },
-    { id: 11, name: 'apple-cinnamon-cereal', brand: 'General Mills', servingSize: '3/4 cup (31g)', image: appleCinnamonCereal, nutrition: { calories: 130, protein: 1, carbs: 25, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 200, sugar: 12, fiber: 2 } },
-    { id: 12, name: 'apple-cinnamon-instant-oatmeal', brand: 'Post', servingSize: '1/2 cup (58g)', image: appleCinnamonInstantOatmeal, nutrition: { calories: 200, protein: 6, carbs: 47, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 5, fiber: 7 } },
-    { id: 13, name: 'apple-jacks-breakfast-cereal', brand: "Kellogg's", servingSize: '1 1/4 cup (33g)', image: appleJacksBreakfastCereal, nutrition: { calories: 130, protein: 2, carbs: 29, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 4, fiber: 0 } },
-    { id: 14, name: 'apple-cinnamon-granola', brand: 'Nature Valley', servingSize: '2/3 cup (49g)', image: appleCinnamonGranola, nutrition: { calories: 210, protein: 5, carbs: 38, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 90, sugar: 14, fiber: 3 } },
+    { id: 11, name: 'apple-cinnamon-cereal', brand: 'Sample Brand', servingSize: '3/4 cup (31g)', image: appleCinnamonCereal, nutrition: { calories: 130, protein: 1, carbs: 25, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 200, sugar: 12, fiber: 2 } },
+    { id: 12, name: 'apple-cinnamon-instant-oatmeal', brand: 'Sample Brand', servingSize: '1/2 cup (58g)', image: appleCinnamonInstantOatmeal, nutrition: { calories: 200, protein: 6, carbs: 47, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 290, sugar: 5, fiber: 7 } },
+    { id: 13, name: 'apple-jacks-breakfast-cereal', brand: 'Sample Brand', servingSize: '1 1/4 cup (33g)', image: appleJacksBreakfastCereal, nutrition: { calories: 130, protein: 2, carbs: 29, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 4, fiber: 0 } },
+    { id: 14, name: 'apple-cinnamon-granola', brand: 'Sample Brand', servingSize: '2/3 cup (49g)', image: appleCinnamonGranola, nutrition: { calories: 210, protein: 5, carbs: 38, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 90, sugar: 14, fiber: 3 } },
   ],
 
   'cheese': [
