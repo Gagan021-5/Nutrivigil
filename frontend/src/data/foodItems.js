@@ -244,10 +244,10 @@ const FOOD_ITEMS = {
     { id: 6, name: 'month-aged-gouda', brand: 'Tillamook', servingSize: '1 oz (28g)', image: monthAgedGouda, nutrition: { calories: 100, protein: 7, carbs: 0, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
     { id: 7, name: 'month-old-manchego', brand: 'Philadelphia', servingSize: '1 oz (28g)', image: monthOldManchego, nutrition: { calories: 100, protein: 2, carbs: 2, totalFat: 10, saturatedFat: 6, transFat: 0, sodium: 100, sugar: 1, fiber: 0 } },
     { id: 8, name: 'parmesan-romano-cheese', brand: 'Kraft', servingSize: '2 tbsp (10g)', image: parmesanRomanoCheese, nutrition: { calories: 40, protein: 4, carbs: 0, totalFat: 2.5, saturatedFat: 1.5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 9, name: 'vintage-cheddar', brand: 'Sargento', servingSize: '1/4 cup (28g)', image: vintageCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 10, name: 'year-gouda', brand: 'Athenos', servingSize: '1/4 cup (28g)', image: yearGouda, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } },
-    { id: 11, name: 'year-vintage-white-cheddar', brand: 'Sargento', servingSize: '1 slice (20g)', image: yearVintageWhiteCheddar, nutrition: { calories: 70, protein: 5, carbs: 0, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
-    { id: 12, name: 'year-white-cheddar', brand: 'Treasure Cave', servingSize: '1/4 cup (28g)', image: yearWhiteCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 380, sugar: 0, fiber: 0 } },
+    { id: 9, name: 'Sargento Cheddar Cheese', brand: 'Sargento', servingSize: '1/4 cup (28g)', image: vintageCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 10, name: 'Athenos Gouda Cheese', brand: 'Athenos', servingSize: '1/4 cup (28g)', image: yearGouda, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } },
+    { id: 11, name: 'Sargento White Cheddar Slice', brand: 'Sargento', servingSize: '1 slice (20g)', image: yearVintageWhiteCheddar, nutrition: { calories: 70, protein: 5, carbs: 0, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 140, sugar: 0, fiber: 0 } },
+    { id: 12, name: 'Treasure Cave White Cheddar Cheese', brand: 'Treasure Cave', servingSize: '1/4 cup (28g)', image: yearWhiteCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 380, sugar: 0, fiber: 0 } },
   ],
 
   'coffee': [
