@@ -101,7 +101,10 @@
       "pregnancy": "Prenatal nutrition",
       "elderly": "Bone & cognitive health",
       "surgery": "Healing & protein support",
-      "none": "General wellness"
+      "none": "General wellness",
+      "cervical": "Neck and upper back pain management",
+      "migraine": "Headache and light sensitivity tracking",
+      "anxiety": "Mental wellness and stress support"
     },
 
     "benefits": {
@@ -144,6 +147,21 @@
         "balancedNutrition": "Balanced nutrition",
         "macroTracking": "Macro tracking",
         "healthyLifestyleTips": "Healthy lifestyle tips"
+      },
+      "cervical": {
+        "antiInflammatory": "Anti-inflammatory food suggestions",
+        "calciumRich": "Bone health & calcium tracking",
+        "magnesiumSupport": "Nerve function support"
+      },
+      "migraine": {
+        "hydrationTracking": "Advanced hydration reminders",
+        "triggerIdentification": "Identify dietary headache triggers",
+        "magnesiumIntake": "Rich magnesium source alerts"
+      },
+      "anxiety": {
+        "caffeineAlerts": "Caffeine & stimulant monitoring",
+        "moodBoostingFoods": "Omega-3 & Vitamin D focus",
+        "bloodSugarStability": "Steady-energy meal planning"
       }
     }
   },
@@ -168,7 +186,10 @@
     "pregnancy": "Pregnancy",
     "elderly": "Elderly Care",
     "surgery": "Post-Surgery Recovery",
-    "none": "None (General Wellness)"
+    "none": "None (General Wellness)",
+    "cervical": "Cervical Spondylosis",
+    "migraine": "Migraine",
+    "anxiety": "Anxiety"
   },
 
   "scan": {

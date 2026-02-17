@@ -116,6 +116,48 @@ const HEALTH_CONDITIONS = [
       "health.benefits.none.macroTracking",
       "health.benefits.none.healthyLifestyleTips"
     ]
+  },
+ {
+    id: "cervical",
+    icon: "🦴",
+    gradient: {
+      dark: "from-slate-400 via-gray-400 to-slate-500",
+      light: "from-slate-500 via-gray-500 to-slate-600"
+    },
+    descKey: "health.desc.cervical",
+    benefitKeys: [
+      "health.benefits.cervical.antiInflammatory",
+      "health.benefits.cervical.calciumRich",
+      "health.benefits.cervical.magnesiumSupport"
+    ]
+  },
+  {
+    id: "migraine",
+    icon: "🧠",
+    gradient: {
+      dark: "from-orange-400 via-amber-400 to-yellow-500",
+      light: "from-orange-500 via-amber-500 to-yellow-600"
+    },
+    descKey: "health.desc.migraine",
+    benefitKeys: [
+      "health.benefits.migraine.hydrationTracking",
+      "health.benefits.migraine.triggerIdentification",
+      "health.benefits.migraine.magnesiumIntake"
+    ]
+  },
+  {
+    id: "anxiety",
+    icon: "🧘",
+    gradient: {
+      dark: "from-teal-400 via-emerald-400 to-cyan-500",
+      light: "from-teal-500 via-emerald-500 to-cyan-600"
+    },
+    descKey: "health.desc.anxiety",
+    benefitKeys: [
+      "health.benefits.anxiety.caffeineAlerts",
+      "health.benefits.anxiety.moodBoostingFoods",
+      "health.benefits.anxiety.bloodSugarStability"
+    ]
   }
 ];
 
@@ -631,3 +673,22 @@ function Profile() {
 }
 
 export default Profile;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
