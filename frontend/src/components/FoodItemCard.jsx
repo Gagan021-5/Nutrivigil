@@ -108,6 +108,23 @@ const FoodItemCard = ({ item, index = 0, onViewDetails }) => {
           </button>
         </div>
 
+        {/* Dietary Indicator Icon - Only shows if property exists */}
+      {item.isVegetarian !== undefined && item.isVegetarian !== null && (
+      <div className="absolute bottom-3 right-3 z-10">
+            <div 
+            className={`flex items-center justify-center w-6 h-6 border-2 rounded-md bg-white/90 dark:bg-white-900/90 backdrop-blur-sm shadow-sm ${
+        item.isVegetarian ? 'border-green-600' : 'border-red-600'
+              }`}
+        title={item.isVegetarian ? 'Vegetarian' : 'Non-Vegetarian'}
+          >
+          <div className={`w-2.5 h-2.5 rounded-full ${
+        item.isVegetarian ? 'bg-green-600' : 'bg-red-600'
+               }`} />
+           </div>
+        </div>
+        )}
+
+
         {/* Nutrition Score Badge - Top Right */}
         {scoreInfo && (
           <div className="absolute top-3 right-3">
