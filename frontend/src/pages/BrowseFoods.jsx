@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
-import { Search } from 'lucide-react';
+import { Search, X } from 'lucide-react';
+import FOOD_ITEMS from '../data/foodItems';
 
 // Import images
 import babyFoodImg from '../assets/baby-food.jpg';
@@ -25,6 +26,17 @@ import frozenFoodsImg from '../assets/frozen-foods.jpg';
 const BrowseFoods = () => {
   const { theme } = useTheme();
   const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
+
+  // Debounce search query (300ms)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearchQuery(searchQuery);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
 
   const categories = [
     {
@@ -157,6 +169,47 @@ const BrowseFoods = () => {
     }
   ];
 
+  // Filter categories based on search query
+  const filteredCategories = useMemo(() => {
+    if (!debouncedSearchQuery.trim()) {
+      return categories;
+    }
+
+    const query = debouncedSearchQuery.toLowerCase();
+    const filtered = [];
+
+    categories.forEach(category => {
+      // Check if category name matches
+      const categoryNameMatches = category.name.toLowerCase().includes(query);
+
+      // Get items for this category
+      const categorySlug = category.slug;
+      const categoryItems = FOOD_ITEMS[categorySlug] || [];
+
+      // Filter items by name or brand
+      const matchingItems = categoryItems.filter(item =>
+        item.name.toLowerCase().includes(query) ||
+        item.brand.toLowerCase().includes(query)
+      );
+
+      // Include category if name matches OR it has matching items
+      if (categoryNameMatches || matchingItems.length > 0) {
+        filtered.push({
+          ...category,
+          count: matchingItems.length || categoryItems.length,
+          hasMatchingItems: matchingItems.length > 0
+        });
+      }
+    });
+
+    return filtered;
+  }, [debouncedSearchQuery, categories]);
+
+  // Calculate total matching items
+  const totalMatchingItems = useMemo(() => {
+    return filteredCategories.reduce((sum, cat) => sum + cat.count, 0);
+  }, [filteredCategories]);
+
   const handleCategoryClick = (slug) => {
     // Navigate to category detail page
     navigate(`/browse/${slug}`);
@@ -184,7 +237,7 @@ const BrowseFoods = () => {
             Explore nutrition across thousands of foods
           </p>
 
-          {/* Search Bar (placeholder for future enhancement) */}
+          {/* Search Bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -199,21 +252,58 @@ const BrowseFoods = () => {
               <div className="flex items-center gap-3">
                 <Search className={`w-5 h-5 ${
                   theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
-                }`} />
+                } ${searchQuery ? 'animate-pulse' : ''}`} />
                 <input
                   type="text"
-                  placeholder="Search for foods... (Coming Soon)"
-                  disabled
+                  placeholder="Search for foods..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className={`flex-1 bg-transparent outline-none text-lg ${
-                    theme === 'dark' 
-                      ? 'placeholder-gray-500 text-white' 
+                    theme === 'dark'
+                      ? 'placeholder-gray-500 text-white'
                       : 'placeholder-gray-400 text-gray-900'
-                  } cursor-not-allowed`}
+                  }`}
                 />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className={`p-1 rounded-full transition-colors ${
+                      theme === 'dark'
+                        ? 'hover:bg-white/10 text-gray-400 hover:text-white'
+                        : 'hover:bg-gray-100 text-gray-500 hover:text-gray-900'
+                    }`}
+                    aria-label="Clear search"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                )}
               </div>
             </div>
           </motion.div>
         </motion.div>
+
+        {/* Search Results Summary */}
+        {debouncedSearchQuery && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className={`max-w-7xl mx-auto mb-8 text-center ${
+              theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+            }`}
+          >
+            {filteredCategories.length > 0 ? (
+              <p className="text-lg">
+                Showing <span className="font-semibold text-indigo-500">{filteredCategories.length}</span> {filteredCategories.length === 1 ? 'category' : 'categories'} with{' '}
+                <span className="font-semibold text-indigo-500">{totalMatchingItems}</span> total items matching '{debouncedSearchQuery}'
+              </p>
+            ) : (
+              <p className="text-lg">
+                No results found
+              </p>
+            )}
+          </motion.div>
+        )}
 
         {/* Category Grid */}
         <motion.div
@@ -221,64 +311,109 @@ const BrowseFoods = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category, index) => (
-              <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.98 }}
-                onClick={() => handleCategoryClick(category.slug)}
-                className={`group relative rounded-2xl border backdrop-blur-xl overflow-hidden cursor-pointer transition-all duration-300 ${
-                  theme === 'dark'
-                    ? 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
-                    : 'bg-white border-gray-200 hover:border-indigo-300 shadow-lg hover:shadow-xl'
-                }`}
-              >
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={category.image} 
-                    alt={category.name}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  {/* Gradient Overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-t ${category.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
-                </div>
-
-                {/* Content */}
-                <div className="relative p-5">
-                  <h3 className={`text-lg font-bold mb-1 ${
-                    theme === 'dark' ? 'text-white' : 'text-gray-900'
-                  }`}>
-                    {category.name}
-                  </h3>
-                  <p className={`text-sm ${
-                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                  }`}>
-                    {category.count} items
-                  </p>
-                </div>
-
-                {/* Hover Arrow */}
+          {filteredCategories.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {filteredCategories.map((category, index) => (
                 <motion.div
-                  className={`absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-                  initial={{ x: -10 }}
-                  whileHover={{ x: 0 }}
+                  key={category.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  whileTap={{ scale: 0.98 }}
+                  onClick={() => handleCategoryClick(category.slug)}
+                  className={`group relative rounded-2xl border backdrop-blur-xl overflow-hidden cursor-pointer transition-all duration-300 ${
+                    theme === 'dark'
+                      ? 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
+                      : 'bg-white border-gray-200 hover:border-indigo-300 shadow-lg hover:shadow-xl'
+                  }`}
                 >
-                  <div className={`w-8 h-8 rounded-full backdrop-blur-md flex items-center justify-center ${
-                    theme === 'dark' ? 'bg-white/20' : 'bg-white/80'
-                  }`}>
-                    <span className="text-lg">→</span>
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={category.image}
+                      alt={category.name}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    {/* Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-t ${category.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
                   </div>
+
+                  {/* Content */}
+                  <div className="relative p-5">
+                    <h3 className={`text-lg font-bold mb-1 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}>
+                      {category.name}
+                    </h3>
+                    <p className={`text-sm ${
+                      theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                    }`}>
+                      {category.count} items
+                    </p>
+                  </div>
+
+                  {/* Hover Arrow */}
+                  <motion.div
+                    className={`absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                    initial={{ x: -10 }}
+                    whileHover={{ x: 0 }}
+                  >
+                    <div className={`w-8 h-8 rounded-full backdrop-blur-md flex items-center justify-center ${
+                      theme === 'dark' ? 'bg-white/20' : 'bg-white/80'
+                    }`}>
+                      <span className="text-lg">→</span>
+                    </div>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : debouncedSearchQuery ? (
+            // No Results State
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.4 }}
+              className={`text-center py-20 rounded-2xl border backdrop-blur-xl ${
+                theme === 'dark'
+                  ? 'bg-white/5 border-white/10'
+                  : 'bg-white border-gray-200 shadow-lg'
+              }`}
+            >
+              <div className="mb-6">
+                <Search className={`w-16 h-16 mx-auto ${
+                  theme === 'dark' ? 'text-gray-600' : 'text-gray-400'
+                }`} />
+              </div>
+              <h3 className={`text-2xl font-bold mb-3 ${
+                theme === 'dark' ? 'text-white' : 'text-gray-900'
+              }`}>
+                No results found for "{debouncedSearchQuery}"
+              </h3>
+              <p className={`text-lg mb-6 ${
+                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+              }`}>
+                Try searching for:
+              </p>
+              <div className="flex flex-wrap gap-3 justify-center max-w-2xl mx-auto">
+                {['Organic Bananas', 'Gerber', 'Coffee', 'Cheese', 'Ice Cream', 'Pasta'].map((suggestion) => (
+                  <button
+                    key={suggestion}
+                    onClick={() => setSearchQuery(suggestion)}
+                    className={`px-4 py-2 rounded-lg transition-all ${
+                      theme === 'dark'
+                        ? 'bg-white/10 hover:bg-white/20 text-gray-300'
+                        : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+                    }`}
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+            </motion.div>
+          ) : null}
         </motion.div>
 
         {/* Bottom Info Section */}

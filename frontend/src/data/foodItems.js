@@ -195,6 +195,20 @@ import organicCoconutFlakes from '../assets/produce/organic-coconut-flakes.jpg';
 import pureVermontMapleSyrup from '../assets/produce/pure-vermont-maple-syrup.jpg';
 import produceGeneric from '../assets/produce.jpg';
 
+// ice-cream image imports (normalized)
+import benAndJerrysCherryGarciaIceCream from '../assets/icecream/ben-and-jerrys-cherry-garcia-ice-cream.jpg';
+import bananasFosterIceCream from '../assets/icecream/bananas-foster-ice-cream.jpg';
+import anniesCookiesAndCreamIceCreamSandwiches from '../assets/icecream/annies-cookies-and-cream-ice-cream-sandwiches.jpg';
+import albaneseFatFreeGlutenFreeAssortedFlavors from '../assets/icecream/albanese-fat-free-gluten-free-assorted-flavors.jpg';
+import acaiPerformanceProtein from '../assets/icecream/acai-performance-protein.jpg';
+import bakersSmoresCookieBalls from '../assets/icecream/bakers-smores-cookie-balls.jpg';
+import acaiSmoothiePopsStrawberryBanana from '../assets/icecream/acai-smoothie-pops-strawberry-banana.jpg';
+import benAndJerrysBrownieBatterCoreIceCream from '../assets/icecream/ben-and-jerrys-brownie-batter-core-ice-cream.jpg';
+import bananasFosterIceCreamYellow from '../assets/icecream/bananas-foster-ice-cream-yellow.jpg';
+import balsamicGlazeFigMascarponeicecream from '../assets/icecream/balsamic-glaze-fig-mascarpone-ice-cream.jpg';
+import juicepopscheerfulcherry from '../assets/icecream/juice-pops-cheerful-cherry.jpg';
+import amarettocherryicecream from '../assets/icecream/amaretto-cherry-ice-cream.jpg';
+
 const FOOD_ITEMS = {
   'baby-food': [
     { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
@@ -427,11 +441,11 @@ const FOOD_ITEMS = {
     { id: 5, name: 'Chocolate Ice Cream', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: acaiPerformanceProtein, nutrition: { calories: 270, protein: 5, carbs: 26, totalFat: 17, saturatedFat: 10, transFat: 0, sodium: 60, sugar: 22, fiber: 1 } },
     { id: 6, name: 'Phish Food', brand: "Ben & Jerry's", servingSize: '1/2 cup (104g)', image: bakersSmoresCookieBalls, nutrition: { calories: 280, protein: 4, carbs: 37, totalFat: 13, saturatedFat: 8, transFat: 0, sodium: 60, sugar: 31, fiber: 1 } },
     { id: 7, name: 'Strawberry Ice Cream', brand: 'Breyers', servingSize: '2/3 cup (66g)', image: acaiSmoothiePopsStrawberryBanana, nutrition: { calories: 130, protein: 2, carbs: 17, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 35, sugar: 14, fiber: 0 } },
-    { id: 8, name: 'Half Baked', brand: "Ben & Jerry's", servingSize: '1/2 cup (104g)', image: benAndJerrysBrownieBatterCoreIceCream, nutrition: { calories: 280, protein: 4, carbs: 36, totalFat: 14, saturatedFat: 8, transFat: 0, sodium: 80, sugar: 26, fiber: 2 } },
-    { id: 9, name: 'Rocky Road', brand: 'Turkey Hill', servingSize: '1/2 cup (66g)', image: appleGrape, nutrition: { calories: 170, protein: 3, carbs: 21, totalFat: 9, saturatedFat: 5, transFat: 0, sodium: 50, sugar: 17, fiber: 1 } },
-    { id: 10, name: 'Butter Pecan', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: bananasFosterIceCreamYellow, nutrition: { calories: 300, protein: 5, carbs: 24, totalFat: 21, saturatedFat: 11, transFat: 0, sodium: 140, sugar: 20, fiber: 0 } },
-    { id: 11, name: 'Neapolitan', brand: 'Breyers', servingSize: '2/3 cup (66g)', image: null, nutrition: { calories: 130, protein: 2, carbs: 17, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 35, sugar: 14, fiber: 0 } },
-    { id: 12, name: 'Coffee Ice Cream', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: null, nutrition: { calories: 270, protein: 5, carbs: 25, totalFat: 17, saturatedFat: 10, transFat: 0, sodium: 70, sugar: 22, fiber: 0 } },
+    { id: 8, name: 'Brownie Batter Core Ice Cream', brand: "Ben & Jerry's", servingSize: '1/2 cup (104g)', image: benAndJerrysBrownieBatterCoreIceCream, nutrition: { calories: 280, protein: 4, carbs: 36, totalFat: 14, saturatedFat: 8, transFat: 0, sodium: 80, sugar: 26, fiber: 2 } },
+    { id: 9, name: 'Cheerful Cherry Ice Cream', brand: 'Turkey Hill', servingSize: '1/2 cup (66g)', image: juicepopscheerfulcherry, nutrition: { calories: 170, protein: 3, carbs: 21, totalFat: 9, saturatedFat: 5, transFat: 0, sodium: 50, sugar: 17, fiber: 1 } },
+    { id: 10, name: 'Banana Foster', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: bananasFosterIceCreamYellow, nutrition: { calories: 300, protein: 5, carbs: 24, totalFat: 21, saturatedFat: 11, transFat: 0, sodium: 140, sugar: 20, fiber: 0 } },
+    { id: 11, name: 'Balsamic Glaze Fig Mascarpone Ice Cream', brand: 'Breyers', servingSize: '2/3 cup (66g)', image: balsamicGlazeFigMascarponeicecream, nutrition: { calories: 130, protein: 2, carbs: 17, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 35, sugar: 14, fiber: 0 } },
+    { id: 12, name: 'Amaretto Cherry Ice Cream', brand: 'Häagen-Dazs', servingSize: '1/2 cup (106g)', image: amarettocherryicecream, nutrition: { calories: 270, protein: 5, carbs: 25, totalFat: 17, saturatedFat: 10, transFat: 0, sodium: 70, sugar: 22, fiber: 0 } },
   ],
 
   'frozen-foods': [
