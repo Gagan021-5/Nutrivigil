@@ -197,18 +197,18 @@ import produceGeneric from '../assets/produce.jpg';
 
 const FOOD_ITEMS = {
   'baby-food': [
-    { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
-    { id: 2, name: 'Banana Oat Puree', brand: "Earth's Best", servingSize: '15g', image: bananaOatPuree, nutrition: { calories: 60, protein: 2, carbs: 11, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 2, fiber: 2 } },
-    { id: 3, name: 'Sweet Potato & Corn Puree', brand: 'Beech-Nut', servingSize: '113g', image: appleSweetPotatoCorn, nutrition: { calories: 60, protein: 1, carbs: 14, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 5, fiber: 2 } },
-    { id: 4, name: 'Apple, Pea & Spinach', brand: 'Gerber', servingSize: '170g', image: applePeaSpinach, nutrition: { calories: 70, protein: 2, carbs: 13, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 15, sugar: 3, fiber: 3 } },
-    { id: 5, name: 'Apple & Grape', brand: "Earth's Best", servingSize: '113g', image: appleGrape, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 10, fiber: 2 } },
-    { id: 6, name: 'Chicken & Broth', brand: 'Gerber', servingSize: '170g', image: chickenBroth, nutrition: { calories: 80, protein: 3, carbs: 12, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 25, sugar: 2, fiber: 1 } },
-    { id: 7, name: 'Apple, Carrot & Pumpkin', brand: 'Beech-Nut', servingSize: '113g', image: appleCarrotPumpkin, nutrition: { calories: 30, protein: 1, carbs: 7, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 4, fiber: 2 } },
-    { id: 8, name: 'Apple, Carrot & Squash', brand: "Earth's Best", servingSize: '15g', image: appleCarrotSquash, nutrition: { calories: 60, protein: 2, carbs: 12, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 0, fiber: 1 } },
-    { id: 9, name: 'Apple & Peach', brand: 'Gerber', servingSize: '113g', image: applePeach, nutrition: { calories: 60, protein: 0, carbs: 14, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 1 } },
-    { id: 10, name: 'Turkey & Broth', brand: 'Beech-Nut', servingSize: '170g', image: turkeyBroth, nutrition: { calories: 90, protein: 4, carbs: 11, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 30, sugar: 2, fiber: 2 } },
-    { id: 11, name: 'Beef & Broth', brand: "Earth's Best", servingSize: '113g', image: beefBroth, nutrition: { calories: 70, protein: 7, carbs: 3, totalFat: 3, saturatedFat: 1, transFat: 0, sodium: 35, sugar: 0, fiber: 0 } },
-    { id: 12, name: 'Banana Puree (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Bananas, nutrition: { calories: 80, protein: 1, carbs: 21, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 14, fiber: 2 } },
+    { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
+    { id: 2, name: 'Banana Blueberry Oat Puree', brand: "Earth's Best", isVegetarian: true, servingSize: '99g', image: bananaOatPuree, nutrition: { calories: 70, protein: 1, carbs: 16, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 8, fiber: 1 } },
+    { id: 3, name: 'Sweet Potato Puree (Stage 1)', brand: 'Beech-Nut', isVegetarian: true, servingSize: '113g', image: appleSweetPotatoCorn, nutrition: { calories: 80, protein: 1, carbs: 18, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 3 } },
+    { id: 4, name: 'Apple, Zucchini & Spinach', brand: 'Gerber', isVegetarian: true, servingSize: '99g', image: applePeaSpinach, nutrition: { calories: 50, protein: 1, carbs: 11, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 10, fiber: 1 } },
+    { id: 5, name: 'Apple & Grape', brand: "Earth's Best", isVegetarian: true, servingSize: '113g', image: appleGrape, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 12, fiber: 1 } },
+    { id: 6, name: 'Chicken & Chicken Gravy', brand: 'Gerber', isVegetarian: false, servingSize: '71g', image: chickenBroth, nutrition: { calories: 90, protein: 7, carbs: 2, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
+    { id: 7, name: 'Pumpkin, Zucchini & Apple', brand: 'Beech-Nut', isVegetarian: true, servingSize: '99g', image: appleCarrotPumpkin, nutrition: { calories: 45, protein: 1, carbs: 10, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 7, fiber: 1 } },
+    { id: 8, name: 'Apple, Carrot & Squash', brand: "Earth's Best", isVegetarian: true, servingSize: '99g', image: appleCarrotSquash, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 12, fiber: 1 } },
+    { id: 9, name: 'Apple & Peach', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: applePeach, nutrition: { calories: 60, protein: 1, carbs: 12, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 11, fiber: 1 } },
+    { id: 10, name: 'Turkey & Turkey Broth', brand: 'Beech-Nut', isVegetarian: false, servingSize: '71g', image: turkeyBroth, nutrition: { calories: 50, protein: 8, carbs: 0, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 20, sugar: 0, fiber: 0 } },
+    { id: 11, name: 'Beef & Beef Broth', brand: "Earth's Best", isVegetarian: false, servingSize: '71g', image: beefBroth, nutrition: { calories: 60, protein: 9, carbs: 0, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
+    { id: 12, name: 'Banana Puree (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: stage2Bananas, nutrition: { calories: 100, protein: 1, carbs: 25, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 20, fiber: 1 } },
   ],
 
   'baking': [

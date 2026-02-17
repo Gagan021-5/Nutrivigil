@@ -180,22 +180,43 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
             )}
 
             {/* Product Info */}
-            <div className="food-modal-info">
-              <h2
-                id="modal-title"
-                className={`text-3xl font-bold mb-2 ${
-                  theme === 'dark' ? 'text-white' : 'text-gray-900'
-                }`}
-              >
-                {food.name}
-              </h2>
-              {food.brand && (
-                <p className={`text-lg mb-3 ${
-                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                }`}>
-                  {food.brand}
-                </p>
-              )}
+<div className="food-modal-info">
+  <h2
+    id="modal-title"
+    className={`text-3xl font-bold mb-1 ${
+      theme === 'dark' ? 'text-white' : 'text-gray-900'
+    }`}
+  >
+    {food.name}
+  </h2>
+
+  {/* Dietary Icon + Text stacked below the Name */}
+  {food.isVegetarian !== undefined && food.isVegetarian !== null && (
+    <div className="flex items-center gap-2 mb-2">
+      <div 
+        className={`flex items-center justify-center w-5 h-5 border-2 rounded-sm bg-white ${
+          food.isVegetarian ? 'border-green-600' : 'border-red-600'
+        }`}
+      >
+        <div className={`w-2.5 h-2.5 rounded-full ${
+          food.isVegetarian ? 'bg-green-600' : 'bg-red-600'
+        }`} />
+      </div>
+      <span className={`text-xs font-bold tracking-wide ${
+        food.isVegetarian ? 'text-green-600' : 'text-red-600'
+      }`}>
+        {food.isVegetarian ? 'VEGETARIAN' : 'NON-VEGETARIAN'}
+      </span>
+    </div>
+  )}
+
+  {food.brand && (
+    <p className={`text-lg mb-3 ${
+      theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+    }`}>
+      {food.brand}
+    </p>
+  )}
 
               {/* Nutrition Score Badge */}
               <div className="flex items-center gap-3">
