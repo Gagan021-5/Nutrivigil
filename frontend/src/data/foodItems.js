@@ -178,6 +178,23 @@ import bakedSeaSaltPitaChips from '../assets/snacks/baked-sea-salt-pita-chips.jp
 import doubleChocolateSnack from '../assets/snacks/double-chocolate.jpg';
 import roastedSeaweedSnacks from '../assets/snacks/roasted-seaweed-snacks.jpg';
 
+// produce images (normalized)
+import aDozenCousinsClassicRefriedPintoBeans from '../assets/produce/a-dozen-cousins-classic-refried-pinto-beans.jpg';
+import aTasteOfThaiSweetenedCondensedCoconut from '../assets/produce/a-taste-of-thai-sweetened-condensed-coconut.jpg';
+import beanSoupStarter from '../assets/produce/bean-soup-starter.jpg';
+import delMonteFruitCupsMandarinOranges from '../assets/produce/del-monte-fruit-cups-mandarin-oranges.jpg';
+import delMonteNoSugarAddedVarietyPack from '../assets/produce/del-monte-no-sugar-added-variety-pack.jpg';
+import doleCherryMixedFruitIn100PercentFruitJuice from '../assets/produce/dole-cherry-mixed-fruit-in-100-percent-fruit-juice.jpg';
+import fruitCupFruitRefreshersGrapefruit from '../assets/produce/fruit-cup-fruit-refreshers-grapefruit.jpg';
+import fruitCupsFruitAndChiaMango from '../assets/produce/fruit-cups-fruit-and-chia-mango.jpg';
+import fruitCupsFruitAndOatsApple from '../assets/produce/fruit-cups-fruit-and-oats-apple.jpg';
+import mixedFruitProduce from '../assets/produce/mixed-fruit.jpg';
+import orangeGel from '../assets/produce/orange-gel.jpg';
+import orangesIn100PercentFruitJuice from '../assets/produce/oranges-in-100-percent-fruit-juice.jpg';
+import organicCoconutFlakes from '../assets/produce/organic-coconut-flakes.jpg';
+import pureVermontMapleSyrup from '../assets/produce/pure-vermont-maple-syrup.jpg';
+import produceGeneric from '../assets/produce.jpg';
+
 const FOOD_ITEMS = {
   'baby-food': [
     { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
@@ -386,20 +403,20 @@ const FOOD_ITEMS = {
   ],
 
   'produce': [
-    { id: 1, name: 'Organic Bananas', brand: 'Fresh', servingSize: '1 medium (118g)', image: null, nutrition: { calories: 105, protein: 1, carbs: 27, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 1, sugar: 14, fiber: 3 } },
-    { id: 2, name: 'Gala Apples', brand: 'Fresh', servingSize: '1 medium (182g)', image: null, nutrition: { calories: 95, protein: 0, carbs: 25, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 2, sugar: 19, fiber: 4 } },
-    { id: 3, name: 'Baby Carrots', brand: 'Bolthouse Farms', servingSize: '3 oz (85g)', image: null, nutrition: { calories: 35, protein: 1, carbs: 8, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 75, sugar: 5, fiber: 2 } },
-    { id: 4, name: 'Broccoli Florets', brand: 'Fresh', servingSize: '1 cup (91g)', image: null, nutrition: { calories: 31, protein: 3, carbs: 6, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 30, sugar: 1, fiber: 2 } },
-    { id: 5, name: 'Strawberries', brand: 'Driscoll\'s', servingSize: '8 strawberries (147g)', image: null, nutrition: { calories: 50, protein: 1, carbs: 12, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 7, fiber: 3 } },
-    { id: 6, name: 'Blueberries', brand: 'Driscoll\'s', servingSize: '1 cup (148g)', image: null, nutrition: { calories: 85, protein: 1, carbs: 21, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 1, sugar: 15, fiber: 4 } },
-    { id: 7, name: 'Spinach', brand: 'Fresh', servingSize: '2 cups (60g)', image: null, nutrition: { calories: 14, protein: 2, carbs: 2, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 47, sugar: 0, fiber: 1 } },
-    { id: 8, name: 'Cherry Tomatoes', brand: 'Fresh', servingSize: '1 cup (149g)', image: null, nutrition: { calories: 27, protein: 1, carbs: 6, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 7, sugar: 4, fiber: 2 } },
-    { id: 9, name: 'Avocado', brand: 'Fresh', servingSize: '1/2 avocado (68g)', image: null, nutrition: { calories: 114, protein: 1, carbs: 6, totalFat: 11, saturatedFat: 1.5, transFat: 0, sodium: 5, sugar: 0, fiber: 5 } },
-    { id: 10, name: 'Red Bell Pepper', brand: 'Fresh', servingSize: '1 medium (119g)', image: null, nutrition: { calories: 37, protein: 1, carbs: 7, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 4, sugar: 5, fiber: 2 } },
-    { id: 11, name: 'Grapes Red Seedless', brand: 'Fresh', servingSize: '3/4 cup (126g)', image: null, nutrition: { calories: 90, protein: 1, carbs: 24, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 3, sugar: 20, fiber: 1 } },
-    { id: 12, name: 'Romaine Lettuce', brand: 'Fresh', servingSize: '2 cups shredded (85g)', image: null, nutrition: { calories: 15, protein: 1, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 4, sugar: 1, fiber: 2 } },
-    { id: 13, name: 'Oranges Navel', brand: 'Fresh', servingSize: '1 medium (140g)', image: null, nutrition: { calories: 69, protein: 1, carbs: 18, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 3 } },
-    { id: 14, name: 'Sweet Potato', brand: 'Fresh', servingSize: '1 medium (130g)', image: null, nutrition: { calories: 112, protein: 2, carbs: 26, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 72, sugar: 5, fiber: 4 } },
+    { id: 1, name: 'a-dozen-cousins-classic-refried-pinto-beans', brand: 'A Dozen Cousins', servingSize: '1 can (411g)', image: aDozenCousinsClassicRefriedPintoBeans, nutrition: { calories: 200, protein: 7, carbs: 30, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 420, sugar: 2, fiber: 5 } },
+    { id: 2, name: 'a-taste-of-thai-sweetened-condensed-coconut', brand: 'A Taste Of Thai', servingSize: '1 tbsp (15g)', image: aTasteOfThaiSweetenedCondensedCoconut, nutrition: { calories: 60, protein: 0, carbs: 10, totalFat: 2, saturatedFat: 1.5, transFat: 0, sodium: 10, sugar: 9, fiber: 0 } },
+    { id: 3, name: 'bean-soup-starter', brand: 'Beans Co.', servingSize: '1 packet (25g)', image: beanSoupStarter, nutrition: { calories: 90, protein: 3, carbs: 18, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 320, sugar: 1, fiber: 3 } },
+    { id: 4, name: 'del-monte-fruit-cups-mandarin-oranges', brand: 'Del Monte', servingSize: '1 cup (100g)', image: delMonteFruitCupsMandarinOranges, nutrition: { calories: 70, protein: 0, carbs: 18, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 14, fiber: 1 } },
+    { id: 5, name: 'del-monte-no-sugar-added-variety-pack', brand: 'Del Monte', servingSize: '1 cup (100g)', image: delMonteNoSugarAddedVarietyPack, nutrition: { calories: 50, protein: 0, carbs: 12, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 9, fiber: 1 } },
+    { id: 6, name: 'dole-cherry-mixed-fruit-in-100-percent-fruit-juice', brand: 'Dole', servingSize: '1 cup (120g)', image: doleCherryMixedFruitIn100PercentFruitJuice, nutrition: { calories: 80, protein: 0, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 16, fiber: 1 } },
+    { id: 7, name: 'fruit-cup-fruit-refreshers-grapefruit', brand: 'Fruit Cup', servingSize: '1 cup (100g)', image: fruitCupFruitRefreshersGrapefruit, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 1 } },
+    { id: 8, name: 'fruit-cups-fruit-and-chia-mango', brand: 'Fruit Cups', servingSize: '1 cup (100g)', image: fruitCupsFruitAndChiaMango, nutrition: { calories: 90, protein: 1, carbs: 22, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 16, fiber: 2 } },
+    { id: 9, name: 'fruit-cups-fruit-and-oats-apple', brand: 'Fruit Cups', servingSize: '1 cup (100g)', image: fruitCupsFruitAndOatsApple, nutrition: { calories: 100, protein: 2, carbs: 24, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 18, fiber: 3 } },
+    { id: 10, name: 'mixed-fruit', brand: 'Generic', servingSize: '1 cup (120g)', image: mixedFruitProduce, nutrition: { calories: 80, protein: 1, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 16, fiber: 2 } },
+    { id: 11, name: 'orange-gel', brand: 'Generic', servingSize: '1 cup (120g)', image: orangeGel, nutrition: { calories: 90, protein: 0, carbs: 23, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 20, fiber: 0 } },
+    { id: 12, name: 'oranges-in-100-percent-fruit-juice', brand: 'Generic', servingSize: '1 cup (120g)', image: orangesIn100PercentFruitJuice, nutrition: { calories: 80, protein: 1, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 16, fiber: 2 } },
+    { id: 13, name: 'organic-coconut-flakes', brand: 'Organic', servingSize: '1/4 cup (15g)', image: organicCoconutFlakes, nutrition: { calories: 100, protein: 1, carbs: 4, totalFat: 9, saturatedFat: 8, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 14, name: 'pure-vermont-maple-syrup', brand: 'Pure Vermont', servingSize: '1 tbsp (20g)', image: pureVermontMapleSyrup, nutrition: { calories: 52, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 2, sugar: 12, fiber: 0 } },
   ],
 
   'ice-cream': [
