@@ -3,6 +3,24 @@ import { useTheme } from "../contexts/ThemeContext";
 import "./LanguageModal.css";
 import { useTranslation } from "react-i18next";
 
+// Import flag icons
+import flagUS from "../assets/flags/us.svg";
+import flagGB from "../assets/flags/gb.svg";
+import flagIN from "../assets/flags/in.svg";
+import flagPK from "../assets/flags/pk.svg";
+import flagID from "../assets/flags/id.svg";
+import flagCN from "../assets/flags/cn.svg";
+import flagES from "../assets/flags/es.svg";
+import flagFR from "../assets/flags/fr.svg";
+import flagNL from "../assets/flags/nl.svg";
+import flagDE from "../assets/flags/de.svg";
+import flagPT from "../assets/flags/pt.svg";
+import flagBR from "../assets/flags/br.svg";
+import flagSA from "../assets/flags/sa.svg";
+import flagRU from "../assets/flags/ru.svg";
+import flagJP from "../assets/flags/jp.svg";
+import flagKR from "../assets/flags/kr.svg";
+
 
 const languageRegions = [
   {
@@ -10,13 +28,13 @@ const languageRegions = [
     items: [
       {
         code: "en",
-        flag: "/src/assets/flags/us.svg",
+        flag: flagUS,
         native: "English",
         english: "English (US)"
       },
       {
         code: "en",
-        flag: "/src/assets/flags/gb.svg",
+        flag: flagGB,
         native: "English",
         english: "English (UK)"
       }
@@ -26,36 +44,36 @@ const languageRegions = [
   {
     region: "India",
     items: [
-      { code: "hi", flag: "/src/assets/flags/in.svg", native: "हिन्दी", english: "Hindi" },
-      { code: "bn", flag: "/src/assets/flags/in.svg", native: "বাংলা", english: "Bengali" },
-      { code: "ta", flag: "/src/assets/flags/in.svg", native: "தமிழ்", english: "Tamil" },
-      { code: "te", flag: "/src/assets/flags/in.svg", native: "తెలుగు", english: "Telugu" },
-      { code: "kn", flag: "/src/assets/flags/in.svg", native: "ಕನ್ನಡ", english: "Kannada" },
-      { code: "mr", flag: "/src/assets/flags/in.svg", native: "मराठी", english: "Marathi" },
-      { code: "gu", flag: "/src/assets/flags/in.svg", native: "ગુજરાતી", english: "Gujarati" },
-      { code: "pa", flag: "/src/assets/flags/in.svg", native: "ਪੰਜਾਬੀ", english: "Punjabi" },
-      { code: "or", flag: "/src/assets/flags/in.svg", native: "ଓଡ଼ିଆ", english: "Odia" },
-      { code: "as", flag: "/src/assets/flags/in.svg", native: "অসমীয়া", english: "Assamese" },
-      { code: "ml", flag: "/src/assets/flags/in.svg", native: "മലയാളം", english: "Malayalam" }
+      { code: "hi", flag: flagIN, native: "हिन्दी", english: "Hindi" },
+      { code: "bn", flag: flagIN, native: "বাংলা", english: "Bengali" },
+      { code: "ta", flag: flagIN, native: "தமிழ்", english: "Tamil" },
+      { code: "te", flag: flagIN, native: "తెలుగు", english: "Telugu" },
+      { code: "kn", flag: flagIN, native: "ಕನ್ನಡ", english: "Kannada" },
+      { code: "mr", flag: flagIN, native: "मराठी", english: "Marathi" },
+      { code: "gu", flag: flagIN, native: "ગુજરાતી", english: "Gujarati" },
+      { code: "pa", flag: flagIN, native: "ਪੰਜਾਬੀ", english: "Punjabi" },
+      { code: "or", flag: flagIN, native: "ଓଡ଼ିଆ", english: "Odia" },
+      { code: "as", flag: flagIN, native: "অসমীয়া", english: "Assamese" },
+      { code: "ml", flag: flagIN, native: "മലയാളം", english: "Malayalam" }
     ]
   },
 
   {
     region: "Global",
     items: [
-      { code: "ur", locale: "ur-PK", flag: "/src/assets/flags/pk.svg", native: "اردو", english: "Urdu (Pakistan)" },
-      { code: "id",  locale: "id-ID", flag: "/src/assets/flags/id.svg", native: "Bahasa Indonesia", english: "Indonesian (Indonesia)" },
-      { code: "zh", locale: "zh-CN", flag: "src/assets/flags/cn.svg", native: "中文", english: "Chinese (China)" },
-      { code: "es", locale: "es-ES", flag: "src/assets/flags/es.svg", native: "Español", english: "Spanish (Spain)" },
-      { code: "fr", locale: "fr-FR", flag: "src/assets/flags/fr.svg", native: "Français", english: "French (France)" },
-      { code: "nl", locale: "nl-NL", flag: "src/assets/flags/nl.svg", native: "Nederlands", english: "Dutch (Netherlands)" },
-      { code: "de", locale: "de-DE", flag: "src/assets/flags/de.svg", native: "Deutsch", english: "German (Germany)" },
-      { code: "pt", locale: "pt-PT", flag: "src/assets/flags/pt.svg", native: "Português", english: "Portuguese (Portugal)" },
-      { code: "pt", locale: "pt-BR", flag: "src/assets/flags/br.svg", native: "Português", english: "Portuguese (Brazil)" },
-      { code: "ar", locale: "ar-SA", flag: "src/assets/flags/sa.svg", native: "العربية", english: "Arabic (Saudi Arabia)" },
-      { code: "ru", locale: "ru-RU", flag: "src/assets/flags/ru.svg", native: "Русский", english: "Russian (Russia)" },
-      { code: "ja", locale: "ja-JP", flag: "src/assets/flags/jp.svg", native: "日本語", english: "Japanese (Japan)" },
-      { code: "ko", locale: "ko-KR", flag: "src/assets/flags/kr.svg", native: "한국어", english: "Korean (SouthKorea)" }
+      { code: "ur", locale: "ur-PK", flag: flagPK, native: "اردو", english: "Urdu (Pakistan)" },
+      { code: "id",  locale: "id-ID", flag: flagID, native: "Bahasa Indonesia", english: "Indonesian (Indonesia)" },
+      { code: "zh", locale: "zh-CN", flag: flagCN, native: "中文", english: "Chinese (China)" },
+      { code: "es", locale: "es-ES", flag: flagES, native: "Español", english: "Spanish (Spain)" },
+      { code: "fr", locale: "fr-FR", flag: flagFR, native: "Français", english: "French (France)" },
+      { code: "nl", locale: "nl-NL", flag: flagNL, native: "Nederlands", english: "Dutch (Netherlands)" },
+      { code: "de", locale: "de-DE", flag: flagDE, native: "Deutsch", english: "German (Germany)" },
+      { code: "pt", locale: "pt-PT", flag: flagPT, native: "Português", english: "Portuguese (Portugal)" },
+      { code: "pt", locale: "pt-BR", flag: flagBR, native: "Português", english: "Portuguese (Brazil)" },
+      { code: "ar", locale: "ar-SA", flag: flagSA, native: "العربية", english: "Arabic (Saudi Arabia)" },
+      { code: "ru", locale: "ru-RU", flag: flagRU, native: "Русский", english: "Russian (Russia)" },
+      { code: "ja", locale: "ja-JP", flag: flagJP, native: "日本語", english: "Japanese (Japan)" },
+      { code: "ko", locale: "ko-KR", flag: flagKR, native: "한국어", english: "Korean (SouthKorea)" }
     ]
   }
 ];

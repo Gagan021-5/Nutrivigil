@@ -4,6 +4,24 @@ import { Search, ChevronDown, Check } from "lucide-react";
 import { useTheme } from "../contexts/ThemeContext";
 import { useTranslation } from "react-i18next";
 
+// Import flag icons
+import flagUS from "../assets/flags/us.svg";
+import flagGB from "../assets/flags/gb.svg";
+import flagIN from "../assets/flags/in.svg";
+import flagPK from "../assets/flags/pk.svg";
+import flagID from "../assets/flags/id.svg";
+import flagCN from "../assets/flags/cn.svg";
+import flagES from "../assets/flags/es.svg";
+import flagFR from "../assets/flags/fr.svg";
+import flagNL from "../assets/flags/nl.svg";
+import flagDE from "../assets/flags/de.svg";
+import flagPT from "../assets/flags/pt.svg";
+import flagBR from "../assets/flags/br.svg";
+import flagSA from "../assets/flags/sa.svg";
+import flagRU from "../assets/flags/ru.svg";
+import flagJP from "../assets/flags/jp.svg";
+import flagKR from "../assets/flags/kr.svg";
+
 const REGION_STORAGE_KEY = "languagePickerRegions";
 
 const regions = [
@@ -15,13 +33,13 @@ const regions = [
         code: "en",
         name: "English (US)",
         nativeName: "English",
-        flag: "src/assets/flags/us.svg"
+        flag: flagUS
       },
       {
         code: "en",
         name: "English (UK)",
         nativeName: "English",
-        flag: "src/assets/flags/gb.svg"
+        flag: flagGB
       }
     ]
   },
@@ -30,17 +48,17 @@ const regions = [
     id: "india",
     title: "Indian Languages",
     languages: [
-      { code: "hi",   name: "Hindi", nativeName: "हिन्दी (भारत)", flag: "src/assets/flags/in.svg" },
-      { code: "bn",   name: "Bengali", nativeName: "বাংলা (ভারত)", flag: "src/assets/flags/in.svg" },
-      { code: "ta",   name: "Tamil", nativeName: "தமிழ் (இந்தியா)", flag: "src/assets/flags/in.svg" },
-      { code: "te",   name: "Telugu", nativeName: "తెలుగు (భారతదేశం)", flag: "src/assets/flags/in.svg" },
-      { code: "kn",   name: "Kannada", nativeName: "ಕನ್ನಡ (ಭಾರತ)", flag: "src/assets/flags/in.svg" },
-      { code: "mr",   name: "Marathi", nativeName: "मराठी (भारत)", flag: "src/assets/flags/in.svg" },
-      { code: "gu",   name: "Gujarati", nativeName: "ગુજરાતી (ભારત)", flag: "src/assets/flags/in.svg" },
-      { code: "pa",   name: "Punjabi", nativeName: "ਪੰਜਾਬੀ (ਭਾਰਤ)", flag: "src/assets/flags/in.svg" },
-      { code: "or",   name: "Odia", nativeName: "ଓଡ଼ିଆ (ଭାରତ)", flag: "src/assets/flags/in.svg" },
-      { code: "as",   name: "Assamese", nativeName: "অসমীয়া (ভাৰত)", flag: "src/assets/flags/in.svg" },
-      { code: "ml",   name: "Malayalam", nativeName: "മലയാളം (ഇന്ത്യ)", flag: "src/assets/flags/in.svg" }
+      { code: "hi",   name: "Hindi", nativeName: "हिन्दी (भारत)", flag: flagIN },
+      { code: "bn",   name: "Bengali", nativeName: "বাংলা (ভারত)", flag: flagIN },
+      { code: "ta",   name: "Tamil", nativeName: "தமிழ் (இந்தியா)", flag: flagIN },
+      { code: "te",   name: "Telugu", nativeName: "తెలుగు (భారతదేశం)", flag: flagIN },
+      { code: "kn",   name: "Kannada", nativeName: "ಕನ್ನಡ (ಭಾರತ)", flag: flagIN },
+      { code: "mr",   name: "Marathi", nativeName: "मराठी (भारत)", flag: flagIN },
+      { code: "gu",   name: "Gujarati", nativeName: "ગુજરાતી (ભારત)", flag: flagIN },
+      { code: "pa",   name: "Punjabi", nativeName: "ਪੰਜਾਬੀ (ਭਾਰਤ)", flag: flagIN },
+      { code: "or",   name: "Odia", nativeName: "ଓଡ଼ିଆ (ଭାରତ)", flag: flagIN },
+      { code: "as",   name: "Assamese", nativeName: "অসমীয়া (ভাৰত)", flag: flagIN },
+      { code: "ml",   name: "Malayalam", nativeName: "മലയാളം (ഇന്ത്യ)", flag: flagIN }
     ]
   },
 
@@ -48,19 +66,19 @@ const regions = [
     id: "global",
     title: "Global Languages",
     languages: [
-      { code: "ur", flag: "src/assets/flags/pk.svg", name: "Urdu", nativeName: "اردو"},
-      { code: "id", flag: "/src/assets/flags/id.svg", name: "Indonesian" ,nativeName: "Bahasa Indonesia", },
-      { code: "zh", flag: "src/assets/flags/cn.svg", name: "Chinese", nativeName: "中文" },
-      { code: "es", flag: "src/assets/flags/es.svg", name: "Spanish", nativeName: "Español" },
-      { code: "fr", flag: "src/assets/flags/fr.svg", name: "French", nativeName: "Français" },
-      { code: "nl", flag: "src/assets/flags/nl.svg", name: "Dutch", nativeName: "Nederlands" },
-      { code: "de", flag: "src/assets/flags/de.svg", name: "German", nativeName: "Deutsch" },
-      { code: "pt", flag: "src/assets/flags/pt.svg", name: "Portuguese", nativeName: "Português" },
-      { code: "pt-BR", flag: "src/assets/flags/br.svg", name: "Portuguese (Brazil)", nativeName: "Português" },
-      { code: "ar", flag: "src/assets/flags/sa.svg", name: "Arabic", nativeName: "العربية" },
-      { code: "ru", flag: "src/assets/flags/ru.svg", name: "Russian", nativeName: "Русский" },
-      { code: "ja", flag: "src/assets/flags/jp.svg", name: "Japanese", nativeName: "日本語" },
-      { code: "ko", flag: "src/assets/flags/kr.svg", name: "Korean", nativeName: "한국어" }
+      { code: "ur", flag: flagPK, name: "Urdu", nativeName: "اردو"},
+      { code: "id", flag: flagID, name: "Indonesian" ,nativeName: "Bahasa Indonesia", },
+      { code: "zh", flag: flagCN, name: "Chinese", nativeName: "中文" },
+      { code: "es", flag: flagES, name: "Spanish", nativeName: "Español" },
+      { code: "fr", flag: flagFR, name: "French", nativeName: "Français" },
+      { code: "nl", flag: flagNL, name: "Dutch", nativeName: "Nederlands" },
+      { code: "de", flag: flagDE, name: "German", nativeName: "Deutsch" },
+      { code: "pt", flag: flagPT, name: "Portuguese", nativeName: "Português" },
+      { code: "pt-BR", flag: flagBR, name: "Portuguese (Brazil)", nativeName: "Português" },
+      { code: "ar", flag: flagSA, name: "Arabic", nativeName: "العربية" },
+      { code: "ru", flag: flagRU, name: "Russian", nativeName: "Русский" },
+      { code: "ja", flag: flagJP, name: "Japanese", nativeName: "日本語" },
+      { code: "ko", flag: flagKR, name: "Korean", nativeName: "한국어" }
     ]
   }
 ];
