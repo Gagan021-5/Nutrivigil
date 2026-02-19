@@ -497,7 +497,7 @@ const CategoryDetail = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className={`rounded-2xl border backdrop-blur-xl p-8 mb-8 ${
+          className={`relative rounded-2xl border backdrop-blur-xl overflow-hidden p-8 mb-8 ${
             theme === 'dark'
               ? 'bg-white/5 border-white/10'
               : 'bg-white border-gray-200 shadow-lg'
@@ -505,6 +505,9 @@ const CategoryDetail = () => {
           role="region"
           aria-label="Category information"
         >
+          {/* Gradient accent strip at the very top of the card */}
+          <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${category.gradient}`} />
+
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
             {/* Category Icon/Image */}
             <div className="relative">
@@ -517,15 +520,13 @@ const CategoryDetail = () => {
                   className="w-full h-full object-cover"
                 />
                 {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-20`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-30`} />
               </div>
             </div>
 
             {/* Category Info */}
             <div className="flex-1 text-center md:text-left">
-              <h1 className={`text-4xl md:text-5xl font-extrabold mb-4 ${
-                theme === 'dark' ? 'text-white' : 'text-gray-900'
-              }`}>
+              <h1 className={`text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}>
                 {category.name}
               </h1>
               <p className={`text-lg md:text-xl mb-4 ${
@@ -533,13 +534,9 @@ const CategoryDetail = () => {
               }`}>
                 {category.description}
               </p>
-              <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${
-                theme === 'dark'
-                  ? 'bg-white/10 text-gray-300'
-                  : 'bg-gray-100 text-gray-700'
-              }`}>
+              <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r ${category.gradient} shadow-md`}>
                 <Package className="w-4 h-4" />
-                <span className="font-semibold">{category.count} items</span>
+                <span>{category.count} items</span>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
-import { Search, X } from 'lucide-react';
+import { Search, X, ChevronRight } from 'lucide-react';
 import FOOD_ITEMS from '../data/foodItems';
 
 // Import images
@@ -324,8 +324,8 @@ const BrowseFoods = () => {
                   onClick={() => handleCategoryClick(category.slug)}
                   className={`group relative rounded-2xl border backdrop-blur-xl overflow-hidden cursor-pointer transition-all duration-300 ${
                     theme === 'dark'
-                      ? 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20'
-                      : 'bg-white border-gray-200 hover:border-indigo-300 shadow-lg hover:shadow-xl'
+                      ? 'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/30 hover:shadow-2xl'
+                      : 'bg-white border-gray-200 hover:border-transparent shadow-md hover:shadow-2xl'
                   }`}
                 >
                   {/* Image */}
@@ -335,38 +335,46 @@ const BrowseFoods = () => {
                       alt={category.name}
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    {/* Gradient Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-t ${category.gradient} opacity-20 group-hover:opacity-30 transition-opacity duration-300`} />
+                    {/* Gradient Overlay — deepens on hover */}
+                    <div className={`absolute inset-0 bg-gradient-to-t ${category.gradient} opacity-25 group-hover:opacity-50 transition-opacity duration-300`} />
+
+                    {/* Count Badge — top-left, uses category gradient */}
+                    <div className={`absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${category.gradient} shadow-lg`}>
+                      {category.count} items
+                    </div>
+
+                    {/* Arrow chip — top-right, slides in on hover */}
+                    <motion.div
+                      className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      initial={{ x: 10, opacity: 0 }}
+                      whileHover={{ x: 0, opacity: 1 }}
+                    >
+                      <div className={`w-8 h-8 rounded-full backdrop-blur-md flex items-center justify-center ${
+                        theme === 'dark' ? 'bg-white/20 text-white' : 'bg-white/90 text-gray-800'
+                      } shadow-md`}>
+                        <ChevronRight className="w-4 h-4" />
+                      </div>
+                    </motion.div>
                   </div>
 
                   {/* Content */}
-                  <div className="relative p-5">
-                    <h3 className={`text-lg font-bold mb-1 ${
+                  <div className="relative p-5 pb-6">
+                    <h3 className={`text-lg font-bold mb-0.5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:${category.gradient} transition-all duration-300 ${
                       theme === 'dark' ? 'text-white' : 'text-gray-900'
                     }`}>
                       {category.name}
                     </h3>
-                    <p className={`text-sm ${
-                      theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                    <p className={`text-xs font-medium ${
+                      theme === 'dark' ? 'text-gray-500' : 'text-gray-400'
                     }`}>
-                      {category.count} items
+                      Tap to explore
                     </p>
                   </div>
 
-                  {/* Hover Arrow */}
-                  <motion.div
-                    className={`absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
-                    initial={{ x: -10 }}
-                    whileHover={{ x: 0 }}
-                  >
-                    <div className={`w-8 h-8 rounded-full backdrop-blur-md flex items-center justify-center ${
-                      theme === 'dark' ? 'bg-white/20' : 'bg-white/80'
-                    }`}>
-                      <span className="text-lg">→</span>
-                    </div>
-                  </motion.div>
+                  {/* Gradient accent bar — bottom */}
+                  <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${category.gradient} scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-b-2xl`} />
                 </motion.div>
               ))}
             </div>
