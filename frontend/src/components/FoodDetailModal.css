@@ -8,7 +8,7 @@
   justify-content: center;
   z-index: 50;
   animation: backdropFadeIn 0.25s ease-out forwards;
-  padding: 1rem;
+  padding: 0.75rem;
   overflow-y: auto;
 }
 
@@ -16,29 +16,34 @@
 .food-modal {
   position: relative;
   width: 100%;
-  max-width: 800px;
-  max-height: 90vh;
+  max-width: 760px;
+  /* Constrain height so header/nav stay visible; internal scroll handles overflow */
+  max-height: 88vh;
   background: linear-gradient(180deg, #1c1c2b, #161625);
-  border-radius: 20px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.8);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Ensure flex children can shrink properly */
+  min-height: 0;
 }
 
 /* Light theme modal */
 .food-modal.light {
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.13);
 }
 
 /* Close Button */
 .food-modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.875rem;
+  right: 0.875rem;
   z-index: 10;
-  padding: 0.5rem;
+  padding: 0.4rem;
   border-radius: 50%;
   transition: background-color 0.2s ease;
   cursor: pointer;
@@ -51,58 +56,61 @@
   outline-offset: 2px;
 }
 
-/* Scrollable Content */
+/* Scrollable Content — takes remaining height inside the flex modal */
 .food-modal-scroll {
-  padding: 2rem;
+  padding: 1.25rem 1.5rem;
   overflow-y: auto;
-  max-height: 90vh;
+  flex: 1 1 auto;
+  min-height: 0;
+  /* Smooth scroll on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Scrollbar styling */
 .food-modal-scroll::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 .food-modal-scroll::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 10px;
 }
 
 .food-modal-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
 }
 
 .food-modal-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .food-modal.light .food-modal-scroll::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.04);
 }
 
 .food-modal.light .food-modal-scroll::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.15);
 }
 
 .food-modal.light .food-modal-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.28);
 }
 
-/* Header Section */
+/* Header Section — horizontal on wider screens */
 .food-modal-header {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 /* Product Image Container */
 .food-modal-image-container {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-  aspect-ratio: 1;
-  border-radius: 16px;
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 14px;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.03);
@@ -120,25 +128,32 @@
   object-fit: cover;
 }
 
-/* Product Info */
+/* Product Info — fills remaining space beside image */
 .food-modal-info {
-  text-align: center;
+  flex: 1 1 0;
+  text-align: left;
 }
 
 /* Nutrition Section */
 .food-modal-nutrition {
-  margin-top: 1rem;
+  margin-top: 0;
+}
+
+/* Section dividers — tighter than before */
+.food-modal-divider {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Modal Animation */
 .food-modal-animate {
-  animation: modalSlideIn 0.35s ease-out forwards;
+  animation: modalSlideIn 0.3s ease-out forwards;
 }
 
 @keyframes modalSlideIn {
   from {
     opacity: 0;
-    transform: scale(0.95) translateY(20px);
+    transform: scale(0.96) translateY(16px);
   }
   to {
     opacity: 1;
@@ -160,19 +175,30 @@ body.light-theme .food-modal-backdrop {
   background: rgba(0, 0, 0, 0.4);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Tablet and below — stack header vertically, smaller image */
+@media (max-width: 640px) {
   .food-modal {
-    max-width: 95%;
-    max-height: 95vh;
+    max-width: 98%;
+    max-height: 93vh;
+    border-radius: 14px;
   }
 
   .food-modal-scroll {
-    padding: 1.5rem;
+    padding: 1rem 1.1rem;
+  }
+
+  .food-modal-header {
+    flex-direction: column;
+    align-items: center;
   }
 
   .food-modal-image-container {
-    max-width: 250px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .food-modal-info {
+    text-align: center;
   }
 
   .food-modal-close {
@@ -181,12 +207,13 @@ body.light-theme .food-modal-backdrop {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .food-modal-scroll {
-    padding: 1rem;
+    padding: 0.875rem 1rem;
   }
 
   .food-modal-image-container {
-    max-width: 200px;
+    width: 90px;
+    height: 90px;
   }
 }

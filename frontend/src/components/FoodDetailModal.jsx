@@ -29,7 +29,6 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
     };
 
     document.addEventListener('keydown', handleKeyDown);
-    // Prevent body scroll when modal is open
     document.body.style.overflow = 'hidden';
 
     return () => {
@@ -42,7 +41,6 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
 
   const nutritionScore = food.nutrition ? calculateNutritionScore(food.nutrition) : 0;
 
-  // Get score color based on value
   const getScoreColor = (score) => {
     if (score >= 80) return 'text-green-500';
     if (score >= 60) return 'text-yellow-500';
@@ -50,14 +48,12 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
     return 'text-red-500';
   };
 
-  // Handle backdrop click
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
     }
   };
 
-  // Handle share
   const handleShare = async () => {
     const shareData = {
       title: food.name,
@@ -69,7 +65,6 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
       try {
         await navigator.share(shareData);
       } catch (err) {
-        // User cancelled or error occurred
         if (err.name !== 'AbortError') {
           navigator.clipboard.writeText(window.location.href);
           alert('Link copied to clipboard!');
@@ -81,36 +76,35 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
     }
   };
 
-  // Handle compare
   const handleCompare = () => {
     alert('Compare feature coming soon! This will allow you to compare this product with similar items.');
   };
 
-  // Handle view alternatives
   const handleViewAlternatives = () => {
-    // Scroll to the Better Alternatives section
     const alternativesSection = document.getElementById('better-alternatives-section');
     if (alternativesSection) {
       alternativesSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   };
 
-  // Handle report
   const handleReport = () => {
     alert('Report feature coming soon! You can report incorrect nutrition information here.');
   };
 
-  // Handle similar product click
   const handleSimilarProductClick = (product) => {
-    // If onProductSelect callback is provided, use it to directly set the product
     if (onProductSelect) {
       onProductSelect(product);
-    } else {
-      // Fallback navigation via repeated timeouts has been removed to avoid
-      // inefficient and unreliable behavior. If needed, provide an onProductSelect
-      // callback to handle direct product selection.
     }
   };
+
+  // Reusable divider with tighter margins
+  const Divider = () => (
+    <div
+      className={`food-modal-divider border-t ${
+        theme === 'dark' ? 'border-white/10' : 'border-gray-200'
+      }`}
+    />
+  );
 
   return (
     <div
@@ -127,7 +121,7 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
         {hasPrevious && onNavigate && (
           <button
             onClick={() => onNavigate('previous')}
-            className={`absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full transition-all duration-200 ${
+            className={`absolute left-3 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full transition-all duration-200 ${
               theme === 'dark'
                 ? 'bg-gray-800/90 hover:bg-gray-700 text-white'
                 : 'bg-white/90 hover:bg-gray-100 text-gray-900'
@@ -135,7 +129,7 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
             aria-label="Previous food item"
             title="Previous (← key)"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5" />
           </button>
         )}
 
@@ -143,7 +137,7 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
         {hasNext && onNavigate && (
           <button
             onClick={() => onNavigate('next')}
-            className={`absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 rounded-full transition-all duration-200 ${
+            className={`absolute right-3 top-1/2 -translate-y-1/2 z-10 p-2.5 rounded-full transition-all duration-200 ${
               theme === 'dark'
                 ? 'bg-gray-800/90 hover:bg-gray-700 text-white'
                 : 'bg-white/90 hover:bg-gray-100 text-gray-900'
@@ -151,7 +145,7 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
             aria-label="Next food item"
             title="Next (→ key)"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5" />
           </button>
         )}
 
@@ -166,9 +160,9 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
 
         {/* Modal Content */}
         <div className="food-modal-scroll">
-          {/* Header Section */}
+
+          {/* Header — image + info side-by-side */}
           <div className="food-modal-header">
-            {/* Product Image */}
             {food.image && (
               <div className="food-modal-image-container">
                 <img
@@ -179,67 +173,60 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
               </div>
             )}
 
-            {/* Product Info */}
-<div className="food-modal-info">
-  <h2
-    id="modal-title"
-    className={`text-3xl font-bold mb-1 ${
-      theme === 'dark' ? 'text-white' : 'text-gray-900'
-    }`}
-  >
-    {food.name}
-  </h2>
+            <div className="food-modal-info">
+              <h2
+                id="modal-title"
+                className={`text-xl font-bold mb-1 leading-snug ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}
+              >
+                {food.name}
+              </h2>
 
-  {/* Dietary Icon + Text stacked below the Name */}
-  {food.isVegetarian !== undefined && food.isVegetarian !== null && (
-    <div className="flex items-center gap-2 mb-2">
-      <div 
-        className={`flex items-center justify-center w-5 h-5 border-2 rounded-sm bg-white ${
-          food.isVegetarian ? 'border-green-600' : 'border-red-600'
-        }`}
-      >
-        <div className={`w-2.5 h-2.5 rounded-full ${
-          food.isVegetarian ? 'bg-green-600' : 'bg-red-600'
-        }`} />
-      </div>
-      <span className={`text-xs font-bold tracking-wide ${
-        food.isVegetarian ? 'text-green-600' : 'text-red-600'
-      }`}>
-        {food.isVegetarian ? 'VEGETARIAN' : 'NON-VEGETARIAN'}
-      </span>
-    </div>
-  )}
-
-  {food.brand && (
-    <p className={`text-lg mb-3 ${
-      theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-    }`}>
-      {food.brand}
-    </p>
-  )}
-
-              {/* Nutrition Score Badge */}
-              <div className="flex items-center gap-3">
-                <div
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-semibold ${
-                    theme === 'dark'
-                      ? 'bg-white/10 text-gray-300'
-                      : 'bg-gray-100 text-gray-700'
-                  }`}
-                >
-                  <span>Nutrition Score:</span>
-                  <span className={getScoreColor(nutritionScore)}>
-                    {nutritionScore}/100
+              {food.isVegetarian !== undefined && food.isVegetarian !== null && (
+                <div className="flex items-center gap-2 mb-1">
+                  <div
+                    className={`flex items-center justify-center w-4 h-4 border-2 rounded-sm bg-white ${
+                      food.isVegetarian ? 'border-green-600' : 'border-red-600'
+                    }`}
+                  >
+                    <div className={`w-2 h-2 rounded-full ${
+                      food.isVegetarian ? 'bg-green-600' : 'bg-red-600'
+                    }`} />
+                  </div>
+                  <span className={`text-xs font-bold tracking-wide ${
+                    food.isVegetarian ? 'text-green-600' : 'text-red-600'
+                  }`}>
+                    {food.isVegetarian ? 'VEGETARIAN' : 'NON-VEGETARIAN'}
                   </span>
                 </div>
+              )}
+
+              {food.brand && (
+                <p className={`text-sm mb-2 ${
+                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                }`}>
+                  {food.brand}
+                </p>
+              )}
+
+              {/* Nutrition Score Badge */}
+              <div
+                className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-semibold ${
+                  theme === 'dark'
+                    ? 'bg-white/10 text-gray-300'
+                    : 'bg-gray-100 text-gray-700'
+                }`}
+              >
+                <span>Nutrition Score:</span>
+                <span className={getScoreColor(nutritionScore)}>
+                  {nutritionScore}/100
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Divider */}
-          <div className={`my-6 border-t ${
-            theme === 'dark' ? 'border-white/10' : 'border-gray-200'
-          }`} />
+          <Divider />
 
           {/* Nutrition Facts Table */}
           <div className="food-modal-nutrition">
@@ -249,14 +236,11 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
             />
           </div>
 
-          {/* Divider */}
-          <div className={`my-6 border-t ${
-            theme === 'dark' ? 'border-white/10' : 'border-gray-200'
-          }`} />
+          <Divider />
 
           {/* Health Insights */}
-          <div className="mb-6">
-            <h3 className={`text-2xl font-bold mb-4 ${
+          <div className="mb-3">
+            <h3 className={`text-lg font-bold mb-2 ${
               theme === 'dark' ? 'text-white' : 'text-gray-900'
             }`}>
               Health Insights
@@ -267,38 +251,28 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
             />
           </div>
 
-          {/* Divider */}
-          <div className={`my-6 border-t ${
-            theme === 'dark' ? 'border-white/10' : 'border-gray-200'
-          }`} />
+          <Divider />
 
           {/* Dietary Badges */}
-          <div className="mb-6">
+          <div className="mb-3">
             <DietaryBadges dietary={food.dietary} />
           </div>
 
-          {/* Divider */}
-          <div className={`my-6 border-t ${
-            theme === 'dark' ? 'border-white/10' : 'border-gray-200'
-          }`} />
+          <Divider />
 
           {/* Ingredients List */}
-          <div className="mb-6">
+          <div className="mb-3">
             <IngredientsList
               ingredients={food.ingredients}
               allergens={food.allergens}
             />
           </div>
 
-          {/* Divider */}
-          <div className={`my-6 border-t ${
-            theme === 'dark' ? 'border-white/10' : 'border-gray-200'
-          }`} />
-
-          {/* Similar Products */}
+          {/* Similar Products + Better Alternatives */}
           {category && allFoods.length > 1 && (
             <>
-              <div className="mb-6">
+              <Divider />
+              <div className="mb-3">
                 <SimilarProducts
                   currentFood={food}
                   allFoods={allFoods}
@@ -307,13 +281,9 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
                 />
               </div>
 
-              {/* Divider */}
-              <div className={`my-6 border-t ${
-                theme === 'dark' ? 'border-white/10' : 'border-gray-200'
-              }`} />
+              <Divider />
 
-              {/* Better Alternatives */}
-              <div id="better-alternatives-section" className="mb-6">
+              <div id="better-alternatives-section" className="mb-3">
                 <BetterAlternatives
                   currentFood={food}
                   allFoods={allFoods}
@@ -321,66 +291,59 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
                   onProductClick={handleSimilarProductClick}
                 />
               </div>
-
-              {/* Divider */}
-              <div className={`my-6 border-t ${
-                theme === 'dark' ? 'border-white/10' : 'border-gray-200'
-              }`} />
             </>
           )}
 
+          <Divider />
+
           {/* Action Buttons */}
-          <div className="mb-6">
-            <h3 className={`text-xl font-bold mb-4 ${
+          <div className="mb-3">
+            <h3 className={`text-base font-bold mb-2 ${
               theme === 'dark' ? 'text-white' : 'text-gray-900'
             }`}>
               Actions
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              {/* Share Button */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5">
               <button
                 onClick={handleShare}
-                className={`flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
+                className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 ${
                   theme === 'dark'
                     ? 'bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 border border-blue-500/50'
                     : 'bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200'
                 } focus:outline-none focus:ring-2 focus:ring-blue-500`}
               >
-                <Share2 className="w-5 h-5" />
+                <Share2 className="w-4 h-4" />
                 Share
               </button>
 
-              {/* Compare Button */}
               <button
                 onClick={handleCompare}
-                className={`flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
+                className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 ${
                   theme === 'dark'
                     ? 'bg-purple-500/20 text-purple-400 hover:bg-purple-500/30 border border-purple-500/50'
                     : 'bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-200'
                 } focus:outline-none focus:ring-2 focus:ring-purple-500`}
               >
-                <Scale className="w-5 h-5" />
+                <Scale className="w-4 h-4" />
                 Compare
               </button>
 
-              {/* Report Button */}
               <button
                 onClick={handleReport}
-                className={`flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
+                className={`flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 ${
                   theme === 'dark'
                     ? 'bg-orange-500/20 text-orange-400 hover:bg-orange-500/30 border border-orange-500/50'
                     : 'bg-orange-50 text-orange-700 hover:bg-orange-100 border border-orange-200'
                 } focus:outline-none focus:ring-2 focus:ring-orange-500`}
               >
-                <Flag className="w-5 h-5" />
+                <Flag className="w-4 h-4" />
                 Report
               </button>
             </div>
 
-            {/* View Healthier Alternatives Button - Full Width */}
             <button
               onClick={handleViewAlternatives}
-              className={`mt-3 w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold transition-all duration-200 ${
+              className={`mt-2.5 w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 ${
                 theme === 'dark'
                   ? 'bg-green-500/20 text-green-400 hover:bg-green-500/30 border border-green-500/50'
                   : 'bg-green-50 text-green-700 hover:bg-green-100 border border-green-200'
@@ -389,6 +352,7 @@ const FoodDetailModal = ({ food, onClose, allFoods = [], currentIndex = -1, onNa
               View Healthier Alternatives
             </button>
           </div>
+
         </div>
       </div>
     </div>
