@@ -1,22 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
-/* Global smooth transitions for theme changes */
-* {
-  transition-property: background-color, border-color, color, fill, stroke;
+/* ─── Global smooth transitions for theme changes ─────────────────────────── */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
 
+/* Exclude elements that should never flash a transition (images, videos, etc.) */
+img,
+video,
+canvas,
+svg {
+  transition: none;
+}
+
+/* Honour user preference — disable all motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* ─── Body ─────────────────────────────────────────────────────────────────── */
 body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
-  transition: background 0.5s ease, color 0.3s ease;
+  transition: background 0.4s ease, color 0.3s ease;
 }
 
-/* Dark Theme (Default) */
+/* ─── Dark Theme (Default) ─────────────────────────────────────────────────── */
 [data-theme="dark"] body,
 body.dark-theme {
   background: radial-gradient(circle at 20% 20%, #1b1c1f, #010102 70%) fixed;
@@ -29,15 +51,15 @@ body.dark-theme::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background: 
-      radial-gradient(600px at 50% 10%, rgba(77, 91, 255, 0.35), transparent 70%),
-      radial-gradient(500px at 10% 90%, rgba(255, 91, 91, 0.15), transparent 70%);
+  background:
+    radial-gradient(600px at 50% 10%, rgba(77, 91, 255, 0.35), transparent 70%),
+    radial-gradient(500px at 10% 90%, rgba(255, 91, 91, 0.15), transparent 70%);
   z-index: -1;
   filter: blur(40px);
   transition: opacity 0.5s ease;
 }
 
-/* Light Theme */
+/* ─── Light Theme ──────────────────────────────────────────────────────────── */
 [data-theme="light"] body,
 body.light-theme {
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) fixed;
@@ -50,14 +72,15 @@ body.light-theme::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background: 
-      radial-gradient(600px at 50% 10%, rgba(102, 126, 234, 0.2), transparent 70%),
-      radial-gradient(500px at 10% 90%, rgba(118, 75, 162, 0.15), transparent 70%);
+  background:
+    radial-gradient(600px at 50% 10%, rgba(102, 126, 234, 0.18), transparent 70%),
+    radial-gradient(500px at 10% 90%, rgba(118, 75, 162, 0.12), transparent 70%);
   z-index: -1;
   filter: blur(40px);
   transition: opacity 0.5s ease;
 }
 
+/* ─── Grain overlay ────────────────────────────────────────────────────────── */
 body::after {
   content: "";
   position: fixed;
@@ -70,16 +93,66 @@ body::after {
 }
 
 @keyframes grain {
-  0% { transform: translate(0,0); }
-  20% { transform: translate(-10px, 5px); }
-  40% { transform: translate(5px, -10px); }
-  60% { transform: translate(-5px, 10px); }
-  80% { transform: translate(10px, -5px); }
-  100% { transform: translate(0,0); }
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-10px, 5px); }
+  40%  { transform: translate(5px, -10px); }
+  60%  { transform: translate(-5px, 10px); }
+  80%  { transform: translate(10px, -5px); }
+  100% { transform: translate(0, 0); }
 }
 
+/* ─── Theme-aware text selection highlight ────────────────────────────────── */
+[data-theme="dark"] ::selection,
+body.dark-theme ::selection {
+  background: rgba(99, 102, 241, 0.45);
+  color: #ffffff;
+}
 
+[data-theme="light"] ::selection,
+body.light-theme ::selection {
+  background: rgba(99, 102, 241, 0.25);
+  color: #1a1a1a;
+}
 
+/* ─── Global scrollbar styling ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb,
+body.dark-theme ::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.35);
+  border-radius: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover,
+body.dark-theme ::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb,
+body.light-theme ::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.25);
+  border-radius: 8px;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover,
+body.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.45);
+}
+
+/* ─── Focus visible — WCAG AA keyboard navigation ring ───────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(99, 102, 241, 0.7);
+  outline-offset: 2px;
+}
+
+/* ─── Liquid ribbon cursor glow ───────────────────────────────────────────── */
 #liquid-ribbon {
   position: fixed;
   top: 0;
@@ -88,24 +161,44 @@ body::after {
   height: 220px;
   pointer-events: none;
   z-index: 50;
-  mix-blend-mode: lighten;
-  filter: blur(60px);
-  opacity: 0.9;
   border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    #0d1b2a, 
-    #1b263b,  
-    #415a77,  
-    #000000  
-  );
   transform: translate(-50%, -50%);
   transition: transform 0.15s ease-out;
   animation: ribbonPulse 6s ease-in-out infinite;
 }
-@keyframes ribbonPulse {
-  0% { transform: translate(-50%, -50%) scale(1); }
-  50% { transform: translate(-50%, -50%) scale(1.18); }
-  100% { transform: translate(-50%, -50%) scale(1); }
+
+/* Dark mode — cyan/indigo conic glow with lighten blend */
+[data-theme="dark"] #liquid-ribbon,
+body.dark-theme #liquid-ribbon {
+  mix-blend-mode: lighten;
+  filter: blur(60px);
+  opacity: 0.9;
+  background: conic-gradient(
+    from 0deg,
+    #0d1b2a,
+    #1b263b,
+    #415a77,
+    #000000
+  );
 }
 
+/* Light mode — soft purple glow with multiply blend so it tints rather than bleaches */
+[data-theme="light"] #liquid-ribbon,
+body.light-theme #liquid-ribbon {
+  mix-blend-mode: multiply;
+  filter: blur(70px);
+  opacity: 0.35;
+  background: conic-gradient(
+    from 0deg,
+    #c7d2fe,
+    #a5b4fc,
+    #818cf8,
+    #e0e7ff
+  );
+}
+
+@keyframes ribbonPulse {
+  0%   { transform: translate(-50%, -50%) scale(1); }
+  50%  { transform: translate(-50%, -50%) scale(1.18); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
