@@ -8,23 +8,55 @@
   justify-content: center;
   z-index: 50;
   animation: backdropFade 0.25s ease-out forwards;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+}
+
+/* Softer backdrop for light theme — fixed selector */
+[data-theme="light"] .lang-backdrop,
+body.light-theme .lang-backdrop {
+  background: rgba(0, 0, 0, 0.35);
 }
 
 /* Modal container */
 .lang-modal {
   width: 360px;
   background: linear-gradient(180deg, #1c1c2b, #161625);
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(99, 102, 241, 0.12);
   padding: 14px;
+  position: relative;
+  overflow: hidden;
+  /* Smooth theme transitions */
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Indigo gradient accent line at the very top — matches FoodDetailModal */
+.lang-modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #06b6d4);
+  border-radius: 16px 16px 0 0;
 }
 
 /* Light theme modal */
 .lang-modal.light {
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(99, 102, 241, 0.06);
 }
 
 /* Title */
@@ -34,6 +66,7 @@
   color: white;
   text-align: center;
   margin-bottom: 10px;
+  margin-top: 6px;
 }
 
 .lang-modal.light .lang-title {
@@ -45,11 +78,17 @@
   width: 100%;
   padding: 10px 12px;
   border-radius: 10px;
-  background: #23233a;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
   outline: none;
   font-size: 14px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.lang-search input:focus {
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(255, 255, 255, 0.09);
 }
 
 .lang-search input::placeholder {
@@ -61,6 +100,11 @@
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   color: #111827;
+}
+
+.lang-modal.light .lang-search input:focus {
+  border-color: rgba(99, 102, 241, 0.4);
+  background: #f3f4ff;
 }
 
 .lang-modal.light .lang-search input::placeholder {
@@ -75,22 +119,30 @@
   padding-right: 4px;
 }
 
-/* Scrollbar */
+/* Scrollbar — indigo accent to match rest of app */
 .lang-list::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
+}
+
+.lang-list::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .lang-list::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(99, 102, 241, 0.4);
   border-radius: 10px;
 }
 
 .lang-list::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(99, 102, 241, 0.65);
 }
 
 .lang-modal.light .lang-list::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(99, 102, 241, 0.3);
+}
+
+.lang-modal.light .lang-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.5);
 }
 
 /* Language item */
@@ -98,15 +150,16 @@
   padding: 10px 12px;
   border-radius: 10px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.15s ease, transform 0.15s ease;
 }
 
 .lang-item:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(99, 102, 241, 0.12);
+  transform: translateX(2px);
 }
 
 .lang-modal.light .lang-item:hover {
-  background: #f3f4f6;
+  background: #eef2ff;
 }
 
 /* Text */
@@ -114,8 +167,6 @@
   font-size: 15px;
   font-weight: 500;
   color: white;
-
-  /* ✅ needed for emoji flags */
   display: flex;
   align-items: center;
   gap: 8px;
@@ -134,15 +185,59 @@
   color: #6b7280;
 }
 
+/* Region group header */
+.lang-region {
+  margin-top: 14px;
+}
+
+.lang-region-title {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.5;
+  padding: 8px 10px 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lang-modal.light .lang-region-title {
+  opacity: 0.7;
+}
+
+/* Flag image */
+.lang-flag-img {
+  width: 26px;
+  height: 26px;
+  border-radius: 999px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.lang-item:hover .lang-flag-img {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.lang-modal.light .lang-flag-img {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
 /* Animation */
 .lang-animate {
-  animation: modalIn 0.35s ease-out forwards;
+  animation: modalIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 @keyframes modalIn {
   from {
     opacity: 0;
-    transform: scale(0.92) translateY(10px);
+    transform: scale(0.88) translateY(16px);
   }
   to {
     opacity: 1;
@@ -152,43 +247,9 @@
 
 @keyframes backdropFade {
   from {
-    background: rgba(0, 0, 0, 0);
+    opacity: 0;
   }
   to {
-    background: rgba(0, 0, 0, 0.6);
+    opacity: 1;
   }
-}
-
-/* Softer backdrop for light theme */
-body.light .lang-backdrop {
-  background: rgba(0, 0, 0, 0.35);
-}
-
-.lang-region {
-  margin-top: 14px;
-}
-
-.lang-region-title {
-  font-size: 13px;
-  font-weight: 700;
-  opacity: 0.75;
-  padding: 8px 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-}
-
-.lang-flag-img {
-  width: 26px;
-  height: 26px;
-  border-radius: 999px; /* ✅ makes it perfectly circular */
-  object-fit: cover;
-  flex-shrink: 0;
-
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
-}
-
-.lang-modal.light .lang-flag-img {
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }

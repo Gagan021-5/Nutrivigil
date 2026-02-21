@@ -6,7 +6,11 @@ import "./i18n";
 import './index.css'
 
 
-const savedTheme = localStorage.getItem('nutriguard-theme') || 'dark'
+const savedTheme =
+  localStorage.getItem('nutriguard-theme') ||
+  (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
+    ? 'light'
+    : 'dark')
 document.documentElement.setAttribute('data-theme', savedTheme)
 
 ReactDOM.createRoot(document.getElementById('root')).render(

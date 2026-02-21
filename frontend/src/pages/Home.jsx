@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import {
   Zap,
   ArrowRight,
@@ -9,9 +9,10 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "../contexts/ThemeContext";
 
 
 const HowItWorks = ({ isLight }) => {
@@ -88,27 +89,11 @@ const HowItWorks = ({ isLight }) => {
 
 const Home = () => {
    const { t } = useTranslation();
-  const [currentTheme, setCurrentTheme] = useState("dark");
+  const { theme } = useTheme();
 
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const updateTheme = () => {
-      const isDark =
-        document.documentElement.classList.contains("dark") ||
-        document.documentElement.getAttribute("data-theme") === "dark";
-      setCurrentTheme(isDark ? "dark" : "light");
-    };
-    updateTheme();
-    const observer = new MutationObserver(updateTheme);
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class", "data-theme"],
-    });
-    return () => observer.disconnect();
-  }, []);
-
-  const isLight = currentTheme === "light";
+  const isLight = theme === "light";
 
   return (
     <div

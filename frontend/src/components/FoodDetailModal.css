@@ -10,6 +10,15 @@
   animation: backdropFadeIn 0.25s ease-out forwards;
   padding: 0.75rem;
   overflow-y: auto;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.3s ease;
+}
+
+/* Softer backdrop for light theme */
+[data-theme="light"] .food-modal-backdrop,
+body.light-theme .food-modal-backdrop {
+  background: rgba(0, 0, 0, 0.4);
 }
 
 /* Modal container */
@@ -22,19 +31,36 @@
   background: linear-gradient(180deg, #1c1c2b, #161625);
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.8);
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(99, 102, 241, 0.15);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  /* Ensure flex children can shrink properly */
-  min-height: 0;
+  /* Smooth theme transitions */
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Indigo gradient accent line at the very top of the modal */
+.food-modal::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #06b6d4);
+  z-index: 1;
 }
 
 /* Light theme modal */
 .food-modal.light {
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.13);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(99, 102, 241, 0.08);
 }
 
 /* Close Button */
@@ -45,10 +71,14 @@
   z-index: 10;
   padding: 0.4rem;
   border-radius: 50%;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
   border: none;
   background: transparent;
+}
+
+.food-modal-close:hover {
+  transform: scale(1.1);
 }
 
 .food-modal-close:focus {
@@ -72,29 +102,29 @@
 }
 
 .food-modal-scroll::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 10px;
 }
 
 .food-modal-scroll::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(99, 102, 241, 0.4);
   border-radius: 10px;
 }
 
 .food-modal-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(99, 102, 241, 0.6);
 }
 
 .food-modal.light .food-modal-scroll::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.04);
+  background: rgba(0, 0, 0, 0.03);
 }
 
 .food-modal.light .food-modal-scroll::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(99, 102, 241, 0.3);
 }
 
 .food-modal.light .food-modal-scroll::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.28);
+  background: rgba(99, 102, 241, 0.5);
 }
 
 /* Header Section — horizontal on wider screens */
@@ -114,6 +144,7 @@
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.3s ease;
 }
 
 .food-modal.light .food-modal-image-container {
@@ -147,13 +178,13 @@
 
 /* Modal Animation */
 .food-modal-animate {
-  animation: modalSlideIn 0.3s ease-out forwards;
+  animation: modalSlideIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 @keyframes modalSlideIn {
   from {
     opacity: 0;
-    transform: scale(0.96) translateY(16px);
+    transform: scale(0.92) translateY(24px);
   }
   to {
     opacity: 1;
@@ -163,20 +194,15 @@
 
 @keyframes backdropFadeIn {
   from {
-    background: rgba(0, 0, 0, 0);
+    opacity: 0;
   }
   to {
-    background: rgba(0, 0, 0, 0.7);
+    opacity: 1;
   }
 }
 
-/* Softer backdrop for light theme */
-body.light-theme .food-modal-backdrop {
-  background: rgba(0, 0, 0, 0.4);
-}
-
-/* Tablet and below — stack header vertically, smaller image */
-@media (max-width: 640px) {
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .food-modal {
     max-width: 98%;
     max-height: 93vh;

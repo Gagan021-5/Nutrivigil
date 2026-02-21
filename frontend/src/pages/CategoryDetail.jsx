@@ -179,6 +179,102 @@ const CATEGORIES_DATA = [
   }
 ];
 
+// Derive dietary tags (vegan, vegetarian, low-carb, high-protein, organic)
+const deriveDietaryTags = (item) => {
+  const tags = new Set();
+
+  // Basic vegetarian flag from data model
+  if (item.isVegetarian) {
+    tags.add('vegetarian');
+  }
+
+  const nutrition = item.nutrition || {};
+  const calories = nutrition.calories || 0;
+  const carbs = nutrition.carbs ?? 0;
+  const protein = nutrition.protein ?? 0;
+
+  if (calories > 0) {
+    const carbsPer100 = (carbs * 100) / calories;
+    const proteinPer100 = (protein * 100) / calories;
+
+    // Heuristic thresholds for nutrition-based tags
+    if (carbsPer100 <= 20) {
+      tags.add('low-carb');
+    }
+    if (proteinPer100 >= 10) {
+      tags.add('high-protein');
+    }
+  }
+
+  // Simple organic detection based on name/brand text
+  const text = `${item.name || ''} ${item.brand || ''}`.toLowerCase();
+  if (text.includes('organic')) {
+    tags.add('organic');
+  }
+
+  return Array.from(tags);
+};
+
+// Derive allergen tags (nuts, dairy, gluten, soy, eggs) from name/brand heuristics
+const deriveAllergenTags = (item) => {
+  const allergens = new Set();
+  const text = `${item.name || ''} ${item.brand || ''}`.toLowerCase();
+
+  if (
+    text.includes('milk') ||
+    text.includes('cheese') ||
+    text.includes('cream') ||
+    text.includes('yogurt')
+  ) {
+    allergens.add('dairy');
+  }
+
+  if (
+    text.includes('almond') ||
+    text.includes('peanut') ||
+    text.includes('cashew') ||
+    text.includes('walnut') ||
+    text.includes('hazelnut') ||
+    text.includes('pecan') ||
+    text.includes('nut ')
+  ) {
+    allergens.add('nuts');
+  }
+
+  if (text.includes('egg')) {
+    allergens.add('eggs');
+  }
+
+  if (text.includes('soy')) {
+    allergens.add('soy');
+  }
+
+  // Very rough gluten heuristic based on grain/flour terms
+  if (
+    text.includes('bread') ||
+    text.includes('cracker') ||
+    text.includes('biscuit') ||
+    text.includes('pasta') ||
+    text.includes('noodle') ||
+    text.includes('flour') ||
+    text.includes('wheat') ||
+    text.includes('barley')
+  ) {
+    allergens.add('gluten');
+  }
+
+  return Array.from(allergens);
+};
+
+// Ensure each food item has dietary and allergens arrays so filters work consistently
+const enrichFoodItemWithDietaryAndAllergens = (item) => {
+  return {
+    ...item,
+    dietary: Array.isArray(item.dietary) ? item.dietary : deriveDietaryTags(item),
+    allergens: Array.isArray(item.allergens) ? item.allergens : deriveAllergenTags(item),
+  };
+};
+
 const CategoryDetail = () => {
   const { categorySlug } = useParams();
   const navigate = useNavigate();
@@ -281,17 +377,24 @@ const CategoryDetail = () => {
         if (!matchesCalories) return false;
       }
 
-      // Dietary and allergen filters
-      // Note: Mock data doesn't currently include dietary/allergen properties.
-      // These filters are displayed in the UI but won't filter items until
-      // the data model is extended to include fields like:
-      // - item.dietary: ['vegan', 'gluten-free', ...]
-      // - item.allergens: ['nuts', 'dairy', ...]
-      // When implementing, add checks like:
-      // if (filters.dietary.length > 0) {
-      //   const matchesDietary = filters.dietary.some(diet => item.dietary?.includes(diet));
-      //   if (!matchesDietary) return false;
-      // }
+      // Dietary filters (inclusive OR: match any selected dietary tag)
+      if (filters.dietary && filters.dietary.length > 0) {
+        const itemDietary = Array.isArray(item.dietary) ? item.dietary : [];
+        const matchesDietary = filters.dietary.some((diet) =>
+          itemDietary.includes(diet)
+        );
+        if (!matchesDietary) return false;
+      }
+
+      // Allergen filters work as "Allergen-Free" selections:
+      // if user selects "nuts" and "dairy", exclude any item that contains either.
+      if (filters.allergens && filters.allergens.length > 0) {
+        const itemAllergens = Array.isArray(item.allergens) ? item.allergens : [];
+        const hasBlockedAllergen = filters.allergens.some((allergen) =>
+          itemAllergens.includes(allergen)
+        );
+        if (hasBlockedAllergen) return false;
+      }
 
       return true;
     });
@@ -352,7 +455,9 @@ const CategoryDetail = () => {
               'EmptyState will be shown. Ensure FOOD_ITEMS contains data for this category.'
           );
         }
-        setFoodItems(items || []);
+        // Enrich items with derived dietary and allergen information for filtering
+        const enrichedItems = (items || []).map(enrichFoodItemWithDietaryAndAllergens);
+        setFoodItems(enrichedItems);
         setIsLoading(false);
       }, 500);
     } else {
@@ -497,7 +602,7 @@ const CategoryDetail = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className={`rounded-2xl border backdrop-blur-xl p-8 mb-8 ${
+          className={`relative rounded-2xl border backdrop-blur-xl overflow-hidden p-8 mb-8 ${
             theme === 'dark'
               ? 'bg-white/5 border-white/10'
               : 'bg-white border-gray-200 shadow-lg'
@@ -505,6 +610,9 @@ const CategoryDetail = () => {
           role="region"
           aria-label="Category information"
         >
+          {/* Gradient accent strip at the very top of the card */}
+          <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${category.gradient}`} />
+
           <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
             {/* Category Icon/Image */}
             <div className="relative">
@@ -517,15 +625,13 @@ const CategoryDetail = () => {
                   className="w-full h-full object-cover"
                 />
                 {/* Gradient Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-20`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-30`} />
               </div>
             </div>
 
             {/* Category Info */}
             <div className="flex-1 text-center md:text-left">
-              <h1 className={`text-4xl md:text-5xl font-extrabold mb-4 ${
-                theme === 'dark' ? 'text-white' : 'text-gray-900'
-              }`}>
+              <h1 className={`text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r ${category.gradient} bg-clip-text text-transparent`}>
                 {category.name}
               </h1>
               <p className={`text-lg md:text-xl mb-4 ${
@@ -533,19 +639,15 @@ const CategoryDetail = () => {
               }`}>
                 {category.description}
               </p>
-              <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full ${
-                theme === 'dark'
-                  ? 'bg-white/10 text-gray-300'
-                  : 'bg-gray-100 text-gray-700'
-              }`}>
+              <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold text-white bg-gradient-to-r ${category.gradient} shadow-md`}>
                 <Package className="w-4 h-4" />
-                <span className="font-semibold">{category.count} items</span>
+                <span>{category.count} items</span>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Search and View Controls */}
+        {/* Search, Filters summary, and View Controls */}
         {foodItems.length > 0 && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -560,88 +662,145 @@ const CategoryDetail = () => {
               placeholder="Search by product name or brand..."
             />
 
-            {/* View Toggle and Results Counter */}
+            {/* View Toggle, Results Counter, and Mobile Filters button */}
             <div className="flex items-center justify-between flex-wrap gap-4">
               {/* Results Counter */}
-              <div className={`text-sm font-medium ${
-                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-              }`}>
-                Showing {searchedFoodItems.length} of {foodItems.length} item{foodItems.length !== 1 ? 's' : ''}
+              <div
+                className={`text-sm font-medium ${
+                  theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                }`}
+              >
+                Showing {searchedFoodItems.length} of {foodItems.length} item
+                {foodItems.length !== 1 ? 's' : ''}
               </div>
 
-              {/* View Toggle */}
-              <ViewToggle currentView={viewMode} onViewChange={handleViewModeChange} />
+              <div className="flex items-center gap-3">
+                {/* Mobile Filters Toggle */}
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  type="button"
+                  onClick={() => setIsMobileFilterOpen(true)}
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-lg border md:hidden text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+                    bg-gradient-to-r from-indigo-500/10 to-purple-500/10
+                    border-indigo-500/30 text-indigo-600
+                    dark:bg-white/5 dark:border-white/20 dark:text-indigo-300"
+                  aria-label="Open filters panel"
+                >
+                  <SlidersHorizontal className="w-4 h-4" />
+                  <span>Filters</span>
+                </motion.button>
+
+                {/* View Toggle */}
+                <ViewToggle
+                  currentView={viewMode}
+                  onViewChange={handleViewModeChange}
+                />
+              </div>
             </div>
+
+            {/* Active Filters Chips */}
+            <ActiveFilters
+              filters={filters}
+              onRemoveFilter={handleRemoveFilter}
+              onClearAll={handleClearAllFilters}
+            />
           </motion.div>
         )}
 
-        {/* Food Items Grid - Phase 2 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          role="region"
-          aria-label="Food products list"
-        >
-          {searchedFoodItems.length > 0 ? (
-            <div
-              className={`
-                ${viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : ''}
-                ${viewMode === 'list' ? 'grid grid-cols-1 gap-6' : ''}
-                ${viewMode === 'compact' ? 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4' : ''}
-              `}
-              role="list"
-            >
-              {searchedFoodItems.map((item, index) => (
-                <div key={`${category.name}-${item.id}`} role="listitem">
-                  <FoodItemCard
-                    item={item}
-                    index={index}
-                    onViewDetails={handleViewDetails}
-                  />
-                </div>
-              ))}
-            </div>
-          ) : searchQuery.trim() ? (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className={`text-center py-16 rounded-2xl border ${
-                theme === 'dark'
-                  ? 'bg-white/5 border-white/10'
-                  : 'bg-white border-gray-200 shadow-lg'
-              }`}
-            >
-              <Package
-                className={`w-20 h-20 mx-auto mb-6 ${
-                  theme === 'dark' ? 'text-gray-600' : 'text-gray-300'
-                }`}
+        {/* Filters + Food Items Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-[280px,minmax(0,1fr)] gap-6">
+          {/* Desktop / large-screen filters side panel */}
+          {foodItems.length > 0 && (
+            <div className="hidden lg:block">
+              <FilterPanel
+                filters={filters}
+                onFilterChange={handleFilterChange}
               />
-              <h3 className={`text-2xl font-bold mb-3 ${
-                theme === 'dark' ? 'text-white' : 'text-gray-900'
-              }`}>
-                No Products Found
-              </h3>
-              <p className={`text-lg mb-6 ${
-                theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-              }`}>
-                No products match your search for "{searchQuery}"
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setSearchQuery('')}
-                className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-              >
-                Clear Search
-              </motion.button>
-            </motion.div>
-          ) : (
-            <EmptyState />
+            </div>
           )}
-        </motion.div>
+
+          {/* Food Items Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            role="region"
+            aria-label="Food products list"
+          >
+            {searchedFoodItems.length > 0 ? (
+              <div
+                className={`
+                  ${viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6' : ''}
+                  ${viewMode === 'list' ? 'grid grid-cols-1 gap-6' : ''}
+                  ${viewMode === 'compact' ? 'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-4' : ''}
+                `}
+                role="list"
+              >
+                {searchedFoodItems.map((item, index) => (
+                  <div key={`${category.name}-${item.id}`} role="listitem">
+                    <FoodItemCard
+                      item={item}
+                      index={index}
+                      onViewDetails={handleViewDetails}
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : searchQuery.trim() ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className={`text-center py-16 rounded-2xl border ${
+                  theme === 'dark'
+                    ? 'bg-white/5 border-white/10'
+                    : 'bg-white border-gray-200 shadow-lg'
+                }`}
+              >
+                <Package
+                  className={`w-20 h-20 mx-auto mb-6 ${
+                    theme === 'dark' ? 'text-gray-600' : 'text-gray-300'
+                  }`}
+                />
+                <h3
+                  className={`text-2xl font-bold mb-3 ${
+                    theme === 'dark' ? 'text-white' : 'text-gray-900'
+                  }`}
+                >
+                  No Products Found
+                </h3>
+                <p
+                  className={`text-lg mb-6 ${
+                    theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
+                  }`}
+                >
+                  No products match your search for "{searchQuery}"
+                </p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSearchQuery('')}
+                  className="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                >
+                  Clear Search
+                </motion.button>
+              </motion.div>
+            ) : (
+              <EmptyState />
+            )}
+          </motion.div>
+        </div>
       </div>
+
+      {/* Mobile Filters Drawer */}
+      <FilterPanel
+        filters={filters}
+        onFilterChange={handleFilterChange}
+        isOpen={isMobileFilterOpen}
+        onClose={() => setIsMobileFilterOpen(false)}
+        isMobile
+      />
 
       {/* Food Detail Modal */}
       {selectedFood && (

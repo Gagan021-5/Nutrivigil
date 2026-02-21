@@ -127,22 +127,34 @@ const ComparisonModal = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+        className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm transition-colors duration-300"
+        style={{ background: isDark ? 'rgba(0,0,0,0.75)' : 'rgba(0,0,0,0.45)' }}
         onClick={closeComparisonModal}
       >
         <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
+          initial={{ scale: 0.9, opacity: 0, y: 20 }}
+          animate={{ scale: 1, opacity: 1, y: 0 }}
+          exit={{ scale: 0.9, opacity: 0, y: 20 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           onClick={(e) => e.stopPropagation()}
-          className={`w-full max-w-7xl max-h-[90vh] overflow-auto rounded-2xl shadow-2xl ${
-            isDark ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
+          className={`relative w-full max-w-7xl max-h-[90vh] overflow-auto rounded-2xl shadow-2xl transition-colors duration-300 ${
+            isDark
+              ? 'bg-gray-900 text-white ring-1 ring-white/10'
+              : 'bg-white text-gray-900 ring-1 ring-gray-200'
           }`}
         >
+          {/* Gradient accent line at top — consistent with other modals */}
+          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 rounded-t-2xl z-20" />
           {/* Header */}
-          <div className={`sticky top-0 z-10 ${isDark ? 'bg-gray-900 border-gray-800' : 'bg-white border-gray-200'} border-b p-6`}>
+          <div className={`sticky top-0 z-10 backdrop-blur-xl border-b p-6 transition-colors duration-300 ${
+            isDark
+              ? 'bg-gray-900/95 border-gray-800'
+              : 'bg-white/95 border-gray-200'
+          }`}>
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-2xl font-bold">Product Comparison</h2>
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+                Product Comparison
+              </h2>
               <button
                 onClick={closeComparisonModal}
                 className={`p-2 rounded-lg transition-colors ${
@@ -210,8 +222,8 @@ const ComparisonModal = () => {
               <table className="w-full border-collapse">
                 <thead>
                   <tr>
-                    <th className={`sticky left-0 z-10 p-4 text-left font-bold ${
-                      isDark ? 'bg-gray-900' : 'bg-white'
+                    <th className={`sticky left-0 z-10 p-4 text-left font-bold transition-colors duration-300 ${
+                      isDark ? 'bg-gray-900/95 backdrop-blur-sm' : 'bg-white/95 backdrop-blur-sm'
                     }`}>
                       Attribute
                     </th>
@@ -265,8 +277,12 @@ const ComparisonModal = () => {
 
                 <tbody>
                   {/* Serving Size */}
-                  <tr className={isDark ? 'border-t border-gray-800' : 'border-t border-gray-200'}>
-                    <td className={`sticky left-0 p-4 font-semibold ${
+                  <tr className={`transition-colors duration-150 ${
+                    isDark
+                      ? 'border-t border-gray-800 hover:bg-white/[0.03]'
+                      : 'border-t border-gray-100 hover:bg-indigo-50/50'
+                  }`}>
+                    <td className={`sticky left-0 p-4 font-semibold transition-colors duration-300 ${
                       isDark ? 'bg-gray-900' : 'bg-white'
                     }`}>
                       Serving Size
@@ -280,8 +296,12 @@ const ComparisonModal = () => {
 
                   {/* Nutrition Attributes */}
                   {nutritionAttributes.map((attr) => (
-                    <tr key={attr.key} className={isDark ? 'border-t border-gray-800' : 'border-t border-gray-200'}>
-                      <td className={`sticky left-0 p-4 font-semibold ${
+                    <tr key={attr.key} className={`transition-colors duration-150 ${
+                      isDark
+                        ? 'border-t border-gray-800 hover:bg-white/[0.03]'
+                        : 'border-t border-gray-100 hover:bg-indigo-50/50'
+                    }`}>
+                      <td className={`sticky left-0 p-4 font-semibold transition-colors duration-300 ${
                         isDark ? 'bg-gray-900' : 'bg-white'
                       }`}>
                         <div className="flex items-center gap-2">
