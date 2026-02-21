@@ -338,17 +338,17 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Treasure Cave White Cheddar Cheese', brand: 'Treasure Cave', servingSize: '1/4 cup (28g)', image: yearWhiteCheddar, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 380, sugar: 0, fiber: 0 } },
   ],
 
-  'coffee': [
-    { id: 1, name: 'arabica-beans-coffee', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: arabicaBeansCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 2, name: 'big-bang-ground-beans', brand: "Dunkin'", servingSize: '1 tbsp (5g)', image: bigBangGroundBeans, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 3, name: 'birds-blend-coffee', brand: 'Folgers', servingSize: '1 tsp (2g)', image: birdsBlendCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 4, name: 'black-cat-classic-espresso', brand: 'Peet\'s Coffee', servingSize: '1 tbsp (5g)', image: blackCatClassicEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 5, name: 'black-magic-cold-brewed', brand: 'Starbucks', servingSize: '1 tbsp (5g)', image: blackMagicColdBrewed, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 6, name: 'blue-nile-blend-whole-been', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: blueNileBlendWholeBeen, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 7, name: 'bright-lights-new-england', brand: 'Lavazza', servingSize: '1 tbsp (7g)', image: brightLightsNewEngland, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 8, name: 'bustelo-cafe-espresso', brand: 'Dunkin\'', servingSize: '1 tbsp (5g)', image: busteloCafeEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 9, name: 'espresso-whole-bean-coffee', brand: 'Folgers', servingSize: '1 tbsp (5g)', image: espressoWholeBeanCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-    { id: 10, name: 'everyday-value', brand: 'Starbucks', servingSize: '1/2 cup (120ml)', image: everydayValue, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
+'coffee': [
+    { id: 1, name: 'Pike Place Roast Arabica Beans', brand: 'Starbucks', isVegetarian: true, servingSize: '1 tbsp (5g)', image: arabicaBeansCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 2, name: 'Big Bang Medium Roast Grounds', brand: "Peet's Coffee", isVegetarian: true, servingSize: '1 tbsp (5g)', image: bigBangGroundBeans, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 3, name: 'Birds Blend Coffee', brand: 'Birds & Beans', isVegetarian: true, servingSize: '1 tbsp (5g)', image: birdsBlendCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 4, name: 'Black Cat Classic Espresso', brand: 'Intelligentsia', isVegetarian: true, servingSize: '1 tbsp (5g)', image: blackCatClassicEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 5, name: 'Black Magic Cold Brew', brand: 'Starbucks', isVegetarian: true, servingSize: '12 fl oz (355ml)', image: blackMagicColdBrewed, nutrition: { calories: 5, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
+    { id: 6, name: 'Blue Nile Blend Whole Bean', brand: "Peet's Coffee", isVegetarian: true, servingSize: '1 tbsp (5g)', image: blueNileBlendWholeBeen, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 7, name: 'Bright Lights New England Roast', brand: 'New England Coffee', isVegetarian: true, servingSize: '1 tbsp (7g)', image: brightLightsNewEngland, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 8, name: 'Café Bustelo Espresso Style', brand: 'Café Bustelo', isVegetarian: true, servingSize: '1 tbsp (5g)', image: busteloCafeEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 9, name: 'Classic Roast Whole Bean', brand: 'Folgers', isVegetarian: true, servingSize: '1 tbsp (5g)', image: espressoWholeBeanCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 10, name: 'Everyday Value Medium Roast', brand: '365 Whole Foods', isVegetarian: true, servingSize: '1 cup (240ml)', image: everydayValue, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
   ],
 
   'cookies-biscuits': [
