@@ -8,7 +8,7 @@
   justify-content: center;
   z-index: 50;
   animation: backdropFadeIn 0.25s ease-out forwards;
-  padding: 1rem;
+  padding: 0.75rem;
   overflow-y: auto;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -25,10 +25,11 @@ body.light-theme .food-modal-backdrop {
 .food-modal {
   position: relative;
   width: 100%;
-  max-width: 800px;
-  max-height: 90vh;
+  max-width: 760px;
+  /* Constrain height so header/nav stay visible; internal scroll handles overflow */
+  max-height: 88vh;
   background: linear-gradient(180deg, #1c1c2b, #161625);
-  border-radius: 20px;
+  border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
     0 25px 80px rgba(0, 0, 0, 0.8),
@@ -65,10 +66,10 @@ body.light-theme .food-modal-backdrop {
 /* Close Button */
 .food-modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 0.875rem;
+  right: 0.875rem;
   z-index: 10;
-  padding: 0.5rem;
+  padding: 0.4rem;
   border-radius: 50%;
   transition: background-color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
@@ -85,11 +86,14 @@ body.light-theme .food-modal-backdrop {
   outline-offset: 2px;
 }
 
-/* Scrollable Content */
+/* Scrollable Content — takes remaining height inside the flex modal */
 .food-modal-scroll {
-  padding: 2rem;
+  padding: 1.25rem 1.5rem;
   overflow-y: auto;
-  max-height: 90vh;
+  flex: 1 1 auto;
+  min-height: 0;
+  /* Smooth scroll on iOS */
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Scrollbar styling */
@@ -123,20 +127,20 @@ body.light-theme .food-modal-backdrop {
   background: rgba(99, 102, 241, 0.5);
 }
 
-/* Header Section */
+/* Header Section — horizontal on wider screens */
 .food-modal-header {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
 /* Product Image Container */
 .food-modal-image-container {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-  aspect-ratio: 1;
-  border-radius: 16px;
+  flex: 0 0 auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 14px;
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.03);
@@ -155,14 +159,21 @@ body.light-theme .food-modal-backdrop {
   object-fit: cover;
 }
 
-/* Product Info */
+/* Product Info — fills remaining space beside image */
 .food-modal-info {
-  text-align: center;
+  flex: 1 1 0;
+  text-align: left;
 }
 
 /* Nutrition Section */
 .food-modal-nutrition {
-  margin-top: 1rem;
+  margin-top: 0;
+}
+
+/* Section dividers — tighter than before */
+.food-modal-divider {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
 /* Modal Animation */
@@ -193,16 +204,27 @@ body.light-theme .food-modal-backdrop {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .food-modal {
-    max-width: 95%;
-    max-height: 95vh;
+    max-width: 98%;
+    max-height: 93vh;
+    border-radius: 14px;
   }
 
   .food-modal-scroll {
-    padding: 1.5rem;
+    padding: 1rem 1.1rem;
+  }
+
+  .food-modal-header {
+    flex-direction: column;
+    align-items: center;
   }
 
   .food-modal-image-container {
-    max-width: 250px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .food-modal-info {
+    text-align: center;
   }
 
   .food-modal-close {
@@ -211,12 +233,13 @@ body.light-theme .food-modal-backdrop {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .food-modal-scroll {
-    padding: 1rem;
+    padding: 0.875rem 1rem;
   }
 
   .food-modal-image-container {
-    max-width: 200px;
+    width: 90px;
+    height: 90px;
   }
 }
