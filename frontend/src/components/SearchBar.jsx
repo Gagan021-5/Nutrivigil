@@ -116,10 +116,10 @@ const SearchBar = ({ value, onChange, placeholder = 'Search products...' }) => {
           onChange={handleChange}
           onFocus={() => setShowRecent(true)}
           placeholder={placeholder}
-          className={`w-full pl-11 pr-10 py-3 rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
+          className={`w-full pl-11 pr-10 py-3 rounded-lg border-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${
             theme === 'dark'
-              ? 'bg-white/10 border-white/20 text-white placeholder-gray-400 hover:bg-white/15 focus:bg-white/15'
-              : 'bg-white border-gray-200 text-gray-900 placeholder-gray-500 hover:border-gray-300 focus:border-indigo-500'
+              ? 'bg-white/10 border-white/20 text-white placeholder-gray-400 hover:bg-white/15 focus:bg-white/15 focus:border-indigo-400 focus:ring-indigo-400 focus:ring-offset-gray-900'
+              : 'bg-white border-gray-200 text-gray-900 placeholder-gray-500 hover:border-gray-300 focus:border-indigo-500 focus:ring-offset-white'
           }`}
           aria-label="Search products"
         />

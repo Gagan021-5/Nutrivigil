@@ -81,8 +81,8 @@ const Navbar = () => {
             onClick={toggleTheme}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            aria-label="Toggle theme"
-            className={`p-2 min-h-[44px] min-w-[44px] rounded-lg border transition-all duration-300 flex items-center justify-center
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            className={`p-2 min-h-[44px] min-w-[44px] rounded-lg border transition-all duration-300 flex items-center justify-center overflow-hidden
               ${
                 theme === "dark"
                   ? "bg-white/10 hover:bg-white/20 border-white/20"
@@ -90,11 +90,31 @@ const Navbar = () => {
               }
             `}
           >
-            {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-white" />
-            ) : (
-              <Moon className="w-5 h-5 text-blue-600" />
-            )}
+            <AnimatePresence mode="wait" initial={false}>
+              {theme === "dark" ? (
+                <motion.span
+                  key="sun"
+                  initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.25, ease: "easeInOut" }}
+                  className="flex items-center justify-center"
+                >
+                  <Sun className="w-5 h-5 text-yellow-400" />
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="moon"
+                  initial={{ rotate: 90, opacity: 0, scale: 0.5 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: -90, opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.25, ease: "easeInOut" }}
+                  className="flex items-center justify-center"
+                >
+                  <Moon className="w-5 h-5 text-blue-600" />
+                </motion.span>
+              )}
+            </AnimatePresence>
           </motion.button>
 
           {/* Language Picker */}
