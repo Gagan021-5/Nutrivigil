@@ -3,128 +3,110 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Smartphone, Layout, Palette, Zap, Eye, Moon, Accessibility, Gauge, Shield, Heart, Camera, BarChart3, User, CheckCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
+import { useTranslation } from 'react-i18next';
 
 const AppInterface = () => {
     const { theme } = useTheme();
-    
+    const { t } = useTranslation();
+
     const keyScreens = [
         {
-            title: 'Smart Scanner',
+            title: t('appInterfacePage.keyScreens.scanner.title'),
             icon: <Camera className="w-8 h-8" />,
             color: 'from-purple-500 to-pink-500',
-            description: 'Upload or capture food images with AI-powered recognition',
-            features: ['Instant capture', 'Image upload', 'Batch scanning', 'Camera integration']
+            description: t('appInterfacePage.keyScreens.scanner.description'),
+            features: t('appInterfacePage.keyScreens.scanner.features', { returnObjects: true }),
         },
         {
-            title: 'Analysis Results',
+            title: t('appInterfacePage.keyScreens.results.title'),
             icon: <BarChart3 className="w-8 h-8" />,
             color: 'from-blue-500 to-cyan-500',
-            description: 'Comprehensive nutrition breakdown with safety signals',
-            features: ['Traffic light system', 'Nutrient details', 'Health alerts', 'Portion guidance']
+            description: t('appInterfacePage.keyScreens.results.description'),
+            features: t('appInterfacePage.keyScreens.results.features', { returnObjects: true }),
         },
         {
-            title: 'Health Profile',
+            title: t('appInterfacePage.keyScreens.profile.title'),
             icon: <User className="w-8 h-8" />,
             color: 'from-green-500 to-emerald-500',
-            description: 'Personalized settings for your health conditions',
-            features: ['Condition selection', 'Dietary preferences', 'Allergy tracking', 'Goal setting']
+            description: t('appInterfacePage.keyScreens.profile.description'),
+            features: t('appInterfacePage.keyScreens.profile.features', { returnObjects: true }),
         },
         {
-            title: 'Food Diary',
+            title: t('appInterfacePage.keyScreens.diary.title'),
             icon: <Heart className="w-8 h-8" />,
             color: 'from-red-500 to-pink-500',
-            description: 'Track your daily food intake and nutrition history',
-            features: ['Daily logs', 'Meal tracking', 'Nutrition trends', 'Export data']
+            description: t('appInterfacePage.keyScreens.diary.description'),
+            features: t('appInterfacePage.keyScreens.diary.features', { returnObjects: true }),
         }
     ];
 
     const features = [
         {
             icon: <Smartphone className="w-6 h-6" />,
-            title: 'Mobile-First Design',
-            description: 'Optimized for smartphones with touch-friendly interactions and responsive layouts'
+            title: t('appInterfacePage.features.mobile.title'),
+            description: t('appInterfacePage.features.mobile.description'),
         },
         {
             icon: <Layout className="w-6 h-6" />,
-            title: 'Responsive Layout',
-            description: 'Seamlessly adapts from mobile to tablet to desktop for consistent experience'
+            title: t('appInterfacePage.features.responsive.title'),
+            description: t('appInterfacePage.features.responsive.description'),
         },
         {
             icon: <Moon className="w-6 h-6" />,
-            title: 'Dark Mode Support',
-            description: 'Built-in dark theme reduces eye strain and saves battery on mobile devices'
+            title: t('appInterfacePage.features.darkMode.title'),
+            description: t('appInterfacePage.features.darkMode.description'),
         },
         {
             icon: <Accessibility className="w-6 h-6" />,
-            title: 'Accessibility First',
-            description: 'WCAG compliant with keyboard navigation, screen reader support, and high contrast'
+            title: t('appInterfacePage.features.accessibility.title'),
+            description: t('appInterfacePage.features.accessibility.description'),
         },
         {
             icon: <Zap className="w-6 h-6" />,
-            title: 'Fast & Responsive',
-            description: 'Lightning-fast performance with optimized loading and smooth animations'
+            title: t('appInterfacePage.features.fast.title'),
+            description: t('appInterfacePage.features.fast.description'),
         },
         {
             icon: <Shield className="w-6 h-6" />,
-            title: 'Privacy Focused',
-            description: 'Your data stays secure with encryption and no permanent image storage'
+            title: t('appInterfacePage.features.privacy.title'),
+            description: t('appInterfacePage.features.privacy.description'),
         }
     ];
 
     const designPrinciples = [
         {
             icon: <Eye className="w-8 h-8" />,
-            title: 'User-Friendly',
+            title: t('appInterfacePage.design.userFriendly.title'),
             color: 'from-purple-500 to-pink-500',
-            points: [
-                'Intuitive navigation with clear visual hierarchy',
-                'Simple, jargon-free language',
-                'One-tap actions for common tasks',
-                'Helpful tooltips and onboarding'
-            ]
+            points: t('appInterfacePage.design.userFriendly.points', { returnObjects: true }),
         },
         {
             icon: <Accessibility className="w-8 h-8" />,
-            title: 'Accessibility-First',
+            title: t('appInterfacePage.design.accessibilityFirst.title'),
             color: 'from-blue-500 to-cyan-500',
-            points: [
-                'WCAG 2.1 AA compliance',
-                'Screen reader optimized',
-                'Keyboard navigation support',
-                'High contrast color ratios'
-            ]
+            points: t('appInterfacePage.design.accessibilityFirst.points', { returnObjects: true }),
         },
         {
             icon: <Gauge className="w-8 h-8" />,
-            title: 'Fast & Responsive',
+            title: t('appInterfacePage.design.fastResponsive.title'),
             color: 'from-green-500 to-emerald-500',
-            points: [
-                'Sub-second page loads',
-                'Optimized images and assets',
-                'Progressive web app capabilities',
-                'Smooth 60fps animations'
-            ]
+            points: t('appInterfacePage.design.fastResponsive.points', { returnObjects: true }),
         },
         {
             icon: <Palette className="w-8 h-8" />,
-            title: 'Beautiful Gradients',
+            title: t('appInterfacePage.design.gradients.title'),
             color: 'from-orange-500 to-red-500',
-            points: [
-                'Modern gradient color schemes',
-                'Consistent design system',
-                'Glassmorphism effects',
-                'Smooth color transitions'
-            ]
+            points: t('appInterfacePage.design.gradients.points', { returnObjects: true }),
         }
     ];
 
     const uiComponents = [
-        { name: 'Color System', description: 'Purple, pink, blue gradient palette' },
-        { name: 'Typography', description: 'Clear, readable font hierarchy' },
-        { name: 'Cards', description: 'Rounded corners with subtle shadows' },
-        { name: 'Buttons', description: 'Gradient backgrounds with hover effects' },
-        { name: 'Icons', description: 'Lucide React icon library' },
-        { name: 'Animations', description: 'Framer Motion smooth transitions' }
+        { name: t('appInterfacePage.ui.colorSystem.name'), description: t('appInterfacePage.ui.colorSystem.description') },
+        { name: t('appInterfacePage.ui.typography.name'), description: t('appInterfacePage.ui.typography.description') },
+        { name: t('appInterfacePage.ui.cards.name'), description: t('appInterfacePage.ui.cards.description') },
+        { name: t('appInterfacePage.ui.buttons.name'), description: t('appInterfacePage.ui.buttons.description') },
+        { name: t('appInterfacePage.ui.icons.name'), description: t('appInterfacePage.ui.icons.description') },
+        { name: t('appInterfacePage.ui.animations.name'), description: t('appInterfacePage.ui.animations.description') },
     ];
 
     return (
@@ -136,14 +118,14 @@ const AppInterface = () => {
                 theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <Link 
-                        to="/" 
+                    <Link
+                        to="/"
                         className={`inline-flex items-center gap-2 transition-colors mb-8 ${
                             theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
                         }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
-                        Back to Home
+                        {t('appInterfacePage.backToHome')}
                     </Link>
 
                     <div className="text-center">
@@ -156,12 +138,12 @@ const AppInterface = () => {
                                 <Smartphone className="w-12 h-12 text-purple-400" />
                             </div>
                             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                Beautiful & Intuitive Interface
+                                {t('appInterfacePage.heroTitle')}
                             </h1>
                             <p className={`text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed transition-colors duration-300 ${
                                 theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                             }`}>
-                                Designed for simplicity, built for performance, crafted for health
+                                {t('appInterfacePage.heroSubtitle')}
                             </p>
                         </motion.div>
                     </div>
@@ -171,13 +153,13 @@ const AppInterface = () => {
             {/* Key Screens */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Key Screens</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">{t('appInterfacePage.keyScreensTitle')}</h2>
                     <p className={`text-center mb-12 max-w-2xl mx-auto transition-colors duration-300 ${
                         theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                        Every screen is designed with your health journey in mind
+                        {t('appInterfacePage.keyScreensSubtitle')}
                     </p>
-                    
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                         {keyScreens.map((screen, index) => (
                             <motion.div
@@ -198,7 +180,7 @@ const AppInterface = () => {
                                     theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                                 }`}>{screen.description}</p>
                                 <ul className="space-y-2">
-                                    {screen.features.map((feature, idx) => (
+                                    {Array.isArray(screen.features) && screen.features.map((feature, idx) => (
                                         <li key={idx} className={`text-sm flex items-start gap-2 transition-colors duration-300 ${
                                             theme === 'dark' ? 'text-gray-500' : 'text-gray-600'
                                         }`}>
@@ -218,13 +200,13 @@ const AppInterface = () => {
                 theme === 'dark' ? 'bg-[#1a1f2e]/30' : 'bg-gray-50'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Platform Features</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">{t('appInterfacePage.featuresTitle')}</h2>
                     <p className={`text-center mb-12 max-w-2xl mx-auto transition-colors duration-300 ${
                         theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                        Built with modern technologies for the best user experience
+                        {t('appInterfacePage.featuresSubtitle')}
                     </p>
-                    
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {features.map((feature, index) => (
                             <motion.div
@@ -253,13 +235,13 @@ const AppInterface = () => {
             {/* Design Principles */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">Design Principles</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">{t('appInterfacePage.designTitle')}</h2>
                     <p className={`text-center mb-12 max-w-2xl mx-auto transition-colors duration-300 ${
                         theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                        Our core values that guide every design decision
+                        {t('appInterfacePage.designSubtitle')}
                     </p>
-                    
+
                     <div className="grid md:grid-cols-2 gap-8">
                         {designPrinciples.map((principle, index) => (
                             <motion.div
@@ -281,7 +263,7 @@ const AppInterface = () => {
                                     </div>
                                 </div>
                                 <ul className="space-y-2">
-                                    {principle.points.map((point, idx) => (
+                                    {Array.isArray(principle.points) && principle.points.map((point, idx) => (
                                         <li key={idx} className={`text-sm flex items-start gap-2 transition-colors duration-300 ${
                                             theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                                         }`}>
@@ -301,13 +283,13 @@ const AppInterface = () => {
                 theme === 'dark' ? 'bg-[#1a1f2e]/30' : 'bg-gray-50'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">UI Components</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4">{t('appInterfacePage.uiTitle')}</h2>
                     <p className={`text-center mb-12 max-w-2xl mx-auto transition-colors duration-300 ${
                         theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                        Consistent design system across the entire platform
+                        {t('appInterfacePage.uiSubtitle')}
                     </p>
-                    
+
                     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {uiComponents.map((component, index) => (
                             <motion.div
@@ -333,11 +315,11 @@ const AppInterface = () => {
             {/* Technology Stack */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-4">Built With Modern Technology</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('appInterfacePage.techTitle')}</h2>
                     <p className={`mb-8 transition-colors duration-300 ${
                         theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                        Powered by cutting-edge frameworks and libraries
+                        {t('appInterfacePage.techSubtitle')}
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         {['React', 'Tailwind CSS', 'Framer Motion', 'Lucide Icons', 'Google Gemini AI', 'Vite'].map((tech, index) => (
@@ -362,18 +344,18 @@ const AppInterface = () => {
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-12 text-center border border-purple-500/20 transition-colors duration-300">
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Experience It Yourself</h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('appInterfacePage.ctaTitle')}</h2>
                         <p className={`text-xl mb-8 max-w-2xl mx-auto transition-colors duration-300 ${
                             theme === 'dark' ? 'text-gray-300' : 'text-gray-200'
                         }`}>
-                            Try NutriVigil and discover how beautiful nutrition tracking can be
+                            {t('appInterfacePage.ctaSubtitle')}
                         </p>
-                        <Link 
-                            to="/scan" 
+                        <Link
+                            to="/scan"
                             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
                         >
                             <Zap className="w-5 h-5" />
-                            Try the App
+                            {t('appInterfacePage.ctaButton')}
                         </Link>
                     </div>
                 </div>

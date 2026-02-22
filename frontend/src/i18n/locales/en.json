@@ -80,6 +80,99 @@
     }
   },
 
+  "appInterfacePage": {
+    "backToHome": "Back to Home",
+    "heroTitle": "Beautiful & Intuitive Interface",
+    "heroSubtitle": "Designed for simplicity, built for performance, crafted for health",
+    "keyScreensTitle": "Key Screens",
+    "keyScreensSubtitle": "Every screen is designed with your health journey in mind",
+    "keyScreens": {
+      "scanner": {
+        "title": "Smart Scanner",
+        "description": "Upload or capture food images with AI-powered recognition",
+        "features": ["Instant capture", "Image upload", "Batch scanning", "Camera integration"]
+      },
+      "results": {
+        "title": "Analysis Results",
+        "description": "Comprehensive nutrition breakdown with safety signals",
+        "features": ["Traffic light system", "Nutrient details", "Health alerts", "Portion guidance"]
+      },
+      "profile": {
+        "title": "Health Profile",
+        "description": "Personalized settings for your health conditions",
+        "features": ["Condition selection", "Dietary preferences", "Allergy tracking", "Goal setting"]
+      },
+      "diary": {
+        "title": "Food Diary",
+        "description": "Track your daily food intake and nutrition history",
+        "features": ["Daily logs", "Meal tracking", "Nutrition trends", "Export data"]
+      }
+    },
+    "featuresTitle": "Platform Features",
+    "featuresSubtitle": "Built with modern technologies for the best user experience",
+    "features": {
+      "mobile": {
+        "title": "Mobile-First Design",
+        "description": "Optimized for smartphones with touch-friendly interactions and responsive layouts"
+      },
+      "responsive": {
+        "title": "Responsive Layout",
+        "description": "Seamlessly adapts from mobile to tablet to desktop for consistent experience"
+      },
+      "darkMode": {
+        "title": "Dark Mode Support",
+        "description": "Built-in dark theme reduces eye strain and saves battery on mobile devices"
+      },
+      "accessibility": {
+        "title": "Accessibility First",
+        "description": "WCAG compliant with keyboard navigation, screen reader support, and high contrast"
+      },
+      "fast": {
+        "title": "Fast & Responsive",
+        "description": "Lightning-fast performance with optimized loading and smooth animations"
+      },
+      "privacy": {
+        "title": "Privacy Focused",
+        "description": "Your data stays secure with encryption and no permanent image storage"
+      }
+    },
+    "designTitle": "Design Principles",
+    "designSubtitle": "Our core values that guide every design decision",
+    "design": {
+      "userFriendly": {
+        "title": "User-Friendly",
+        "points": ["Intuitive navigation with clear visual hierarchy", "Simple, jargon-free language", "One-tap actions for common tasks", "Helpful tooltips and onboarding"]
+      },
+      "accessibilityFirst": {
+        "title": "Accessibility-First",
+        "points": ["WCAG 2.1 AA compliance", "Screen reader optimized", "Keyboard navigation support", "High contrast color ratios"]
+      },
+      "fastResponsive": {
+        "title": "Fast & Responsive",
+        "points": ["Sub-second page loads", "Optimized images and assets", "Progressive web app capabilities", "Smooth 60fps animations"]
+      },
+      "gradients": {
+        "title": "Beautiful Gradients",
+        "points": ["Modern gradient color schemes", "Consistent design system", "Glassmorphism effects", "Smooth color transitions"]
+      }
+    },
+    "uiTitle": "UI Components",
+    "uiSubtitle": "Consistent design system across the entire platform",
+    "ui": {
+      "colorSystem": {"name": "Color System", "description": "Purple, pink, blue gradient palette"},
+      "typography": {"name": "Typography", "description": "Clear, readable font hierarchy"},
+      "cards": {"name": "Cards", "description": "Rounded corners with subtle shadows"},
+      "buttons": {"name": "Buttons", "description": "Gradient backgrounds with hover effects"},
+      "icons": {"name": "Icons", "description": "Lucide React icon library"},
+      "animations": {"name": "Animations", "description": "Framer Motion smooth transitions"}
+    },
+    "techTitle": "Built With Modern Technology",
+    "techSubtitle": "Powered by cutting-edge frameworks and libraries",
+    "ctaTitle": "Experience It Yourself",
+    "ctaSubtitle": "Try NutriVigil and discover how beautiful nutrition tracking can be",
+    "ctaButton": "Try the App"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Upload Photo",

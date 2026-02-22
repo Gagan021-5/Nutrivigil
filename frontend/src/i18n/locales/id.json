@@ -80,6 +80,53 @@
     }
   },
 
+  "appInterfacePage": {
+    "backToHome": "Kembali ke Beranda",
+    "heroTitle": "Antarmuka Indah & Intuitif",
+    "heroSubtitle": "Dirancang untuk kesederhanaan, dibangun untuk performa, dibuat untuk kesehatan",
+    "keyScreensTitle": "Layar Utama",
+    "keyScreensSubtitle": "Setiap layar dirancang dengan mempertimbangkan perjalanan kesehatan Anda",
+    "keyScreens": {
+      "scanner": { "title": "Pemindai Cerdas", "description": "Unggah atau ambil gambar makanan dengan pengenalan berbasis AI", "features": ["Tangkap instan", "Unggah gambar", "Pemindaian massal", "Integrasi kamera"] },
+      "results": { "title": "Hasil Analisis", "description": "Rincian nutrisi lengkap dengan sinyal keamanan", "features": ["Sistem lampu lalu lintas", "Detail nutrisi", "Peringatan kesehatan", "Panduan porsi"] },
+      "profile": { "title": "Profil Kesehatan", "description": "Pengaturan personal untuk kondisi kesehatan Anda", "features": ["Pemilihan kondisi", "Preferensi diet", "Pelacakan alergi", "Penetapan tujuan"] },
+      "diary": { "title": "Catatan Makanan", "description": "Lacak asupan makanan harian dan riwayat nutrisi Anda", "features": ["Log harian", "Pelacakan makan", "Tren nutrisi", "Ekspor data"] }
+    },
+    "featuresTitle": "Fitur Platform",
+    "featuresSubtitle": "Dibangun dengan teknologi modern untuk pengalaman pengguna terbaik",
+    "features": {
+      "mobile": { "title": "Desain Mobile-First", "description": "Dioptimalkan untuk ponsel cerdas dengan interaksi ramah sentuh dan tata letak responsif" },
+      "responsive": { "title": "Tata Letak Responsif", "description": "Beradaptasi dengan mulus dari ponsel ke tablet ke desktop untuk pengalaman yang konsisten" },
+      "darkMode": { "title": "Dukungan Mode Gelap", "description": "Tema gelap bawaan mengurangi ketegangan mata dan menghemat baterai di perangkat seluler" },
+      "accessibility": { "title": "Aksesibilitas Pertama", "description": "Sesuai WCAG dengan navigasi keyboard, dukungan pembaca layar, dan kontras tinggi" },
+      "fast": { "title": "Cepat & Responsif", "description": "Performa super cepat dengan pemuatan teroptimalkan dan animasi mulus" },
+      "privacy": { "title": "Berfokus pada Privasi", "description": "Data Anda tetap aman dengan enkripsi dan tanpa penyimpanan gambar permanen" }
+    },
+    "designTitle": "Prinsip Desain",
+    "designSubtitle": "Nilai inti kami yang memandu setiap keputusan desain",
+    "design": {
+      "userFriendly": { "title": "Ramah Pengguna", "points": ["Navigasi intuitif dengan hierarki visual yang jelas", "Bahasa sederhana tanpa jargon", "Tindakan satu ketukan untuk tugas umum", "Tooltip dan orientasi yang membantu"] },
+      "accessibilityFirst": { "title": "Aksesibilitas-Pertama", "points": ["Kepatuhan WCAG 2.1 AA", "Dioptimalkan untuk pembaca layar", "Dukungan navigasi keyboard", "Rasio kontras warna tinggi"] },
+      "fastResponsive": { "title": "Cepat & Responsif", "points": ["Waktu muat halaman di bawah satu detik", "Gambar dan aset teroptimalkan", "Kemampuan aplikasi web progresif", "Animasi 60fps yang mulus"] },
+      "gradients": { "title": "Gradien Indah", "points": ["Skema warna gradien modern", "Sistem desain yang konsisten", "Efek glassmorfisme", "Transisi warna yang mulus"] }
+    },
+    "uiTitle": "Komponen UI",
+    "uiSubtitle": "Sistem desain yang konsisten di seluruh platform",
+    "ui": {
+      "colorSystem": { "name": "Sistem Warna", "description": "Palet gradien ungu, merah muda, biru" },
+      "typography": { "name": "Tipografi", "description": "Hierarki font yang jelas dan mudah dibaca" },
+      "cards": { "name": "Kartu", "description": "Sudut membulat dengan bayangan lembut" },
+      "buttons": { "name": "Tombol", "description": "Latar gradien dengan efek hover" },
+      "icons": { "name": "Ikon", "description": "Pustaka ikon Lucide React" },
+      "animations": { "name": "Animasi", "description": "Transisi mulus Framer Motion" }
+    },
+    "techTitle": "Dibangun dengan Teknologi Modern",
+    "techSubtitle": "Didukung oleh kerangka kerja dan pustaka mutakhir",
+    "ctaTitle": "Rasakan Sendiri",
+    "ctaSubtitle": "Coba NutriVigil dan temukan betapa indahnya pelacakan nutrisi",
+    "ctaButton": "Coba Aplikasinya"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Unggah Foto",
