@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "खाद्यपदार्थ ब्राउज करा",
+    "titleHighlight": "श्रेणीनुसार",
+    "subtitle": "हजारो खाद्यपदार्थांचे पोषणमूल्य शोधा",
+    "searchPlaceholder": "खाद्यपदार्थ शोधा...",
+    "items": "{{count}} आयटम",
+    "tapToExplore": "एक्सप्लोर करा",
+    "showing_a": "दाखवत आहे",
+    "showing_b": "सोबत",
+    "showing_c": "'{{query}}' शी जुळणारे एकूण आयटम",
+    "categoryOne": "श्रेणी",
+    "categoryOther": "श्रेणी",
+    "noResults": "कोणते परिणाम आढळले नाहीत",
+    "noResultsFor": "\"{{query}}\" साठी कोणते परिणाम नाहीत",
+    "trySearching": "हे शोधण्याचा प्रयत्न करा:",
+    "cantFind": "तुम्हाला हवे ते सापडत नाही?",
+    "scanDesc": "कोणत्याही अन्न उत्पादनाचे त्वरित विश्लेषण करण्यासाठी आमचा AI स्कॅनर वापरा",
+    "scanButton": "आता स्कॅन करा",
+    "categories": {
+      "baby-food": "बाळाचे खाणे",
+      "baking": "बेकिंग",
+      "bread": "ब्रेड",
+      "breakfast": "सकाळचा नाश्ता",
+      "cakes": "केक",
+      "canned-goods": "डब्यातील सामग्री",
+      "cereal": "धान्य",
+      "cheese": "चीज",
+      "coffee": "कॉफी",
+      "cookies-biscuits": "कुकीज आणि बिस्किटे",
+      "beverages": "पेये",
+      "pasta": "पास्ता",
+      "snacks": "स्नॅक्स",
+      "produce": "ताजी भाजी-फळे",
+      "ice-cream": "आइसक्रीम",
+      "frozen-foods": "गोठवलेले खाद्यपदार्थ"
+    },
+    "suggestions": {
+      "organicBananas": "सेंद्रिय केळी",
+      "gerber": "गेर्बर",
+      "coffee": "कॉफी",
+      "cheese": "चीज",
+      "iceCream": "आइसक्रीम",
+      "pasta": "पास्ता"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. फोटो अपलोड करा",

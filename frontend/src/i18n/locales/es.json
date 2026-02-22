@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "Explorar alimentos por",
+    "titleHighlight": "Categoría",
+    "subtitle": "Descubre la nutrición de miles de alimentos",
+    "searchPlaceholder": "Buscar alimentos...",
+    "items": "{{count}} artículos",
+    "tapToExplore": "Toca para explorar",
+    "showing_a": "Mostrando",
+    "showing_b": "con",
+    "showing_c": "artículos totales que coinciden con '{{query}}'",
+    "categoryOne": "categoría",
+    "categoryOther": "categorías",
+    "noResults": "No se encontraron resultados",
+    "noResultsFor": "No se encontraron resultados para \"{{query}}\"",
+    "trySearching": "Intenta buscar:",
+    "cantFind": "¿No encuentras lo que buscas?",
+    "scanDesc": "Usa nuestro escáner con IA para analizar cualquier producto alimenticio al instante",
+    "scanButton": "Escanear ahora",
+    "categories": {
+      "baby-food": "Comida de bebé",
+      "baking": "Repostería",
+      "bread": "Pan",
+      "breakfast": "Desayuno",
+      "cakes": "Pasteles",
+      "canned-goods": "Conservas",
+      "cereal": "Cereales",
+      "cheese": "Queso",
+      "coffee": "Café",
+      "cookies-biscuits": "Galletas y Bizcochos",
+      "beverages": "Bebidas",
+      "pasta": "Pasta",
+      "snacks": "Aperitivos",
+      "produce": "Productos frescos",
+      "ice-cream": "Helado",
+      "frozen-foods": "Alimentos congelados"
+    },
+    "suggestions": {
+      "organicBananas": "Plátanos orgánicos",
+      "gerber": "Gerber",
+      "coffee": "Café",
+      "cheese": "Queso",
+      "iceCream": "Helado",
+      "pasta": "Pasta"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Subir foto",

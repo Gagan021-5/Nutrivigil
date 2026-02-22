@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "ఆహారాలను బ్రౌజ్ చేయండి",
+    "titleHighlight": "వర్గం వారీగా",
+    "subtitle": "వేలాది ఆహారాల పోషక విలువలను అన్వేషించండి",
+    "searchPlaceholder": "ఆహారాలను వెతకండి...",
+    "items": "{{count}} అంశాలు",
+    "tapToExplore": "అన్వేషించండి",
+    "showing_a": "చూపిస్తున్నారు",
+    "showing_b": "తో",
+    "showing_c": "'{{query}}' కి సరిపోలే మొత్తం అంశాలు",
+    "categoryOne": "వర్గం",
+    "categoryOther": "వర్గాలు",
+    "noResults": "ఫలితాలు కనుగొనబడలేదు",
+    "noResultsFor": "\"{{query}}\" కోసం ఫలితాలు లేవు",
+    "trySearching": "ఇవి వెతకడానికి ప్రయత్నించండి:",
+    "cantFind": "మీరు వెతుకుతున్నది కనుగొనలేకపోయారా?",
+    "scanDesc": "ఏదైనా ఆహార ఉత్పత్తిని తక్షణం విశ్లేషించడానికి మా AI స్కానర్ ఉపయోగించండి",
+    "scanButton": "ఇప్పుడు స్కాన్ చేయండి",
+    "categories": {
+      "baby-food": "శిశు ఆహారం",
+      "baking": "బేకింగ్",
+      "bread": "బ్రెడ్",
+      "breakfast": "అల్పాహారం",
+      "cakes": "కేకులు",
+      "canned-goods": "డబ్బా వస్తువులు",
+      "cereal": "సీరియల్",
+      "cheese": "చీజ్",
+      "coffee": "కాఫీ",
+      "cookies-biscuits": "కుకీలు & బిస్కట్లు",
+      "beverages": "పానీయాలు",
+      "pasta": "పాస్తా",
+      "snacks": "స్నాక్స్",
+      "produce": "తాజా కూరగాయలు",
+      "ice-cream": "ఐస్ క్రీమ్",
+      "frozen-foods": "ఘనీభవించిన ఆహారాలు"
+    },
+    "suggestions": {
+      "organicBananas": "ఆర్గానిక్ అరటిపళ్ళు",
+      "gerber": "గెర్బర్",
+      "coffee": "కాఫీ",
+      "cheese": "చీజ్",
+      "iceCream": "ఐస్ క్రీమ్",
+      "pasta": "పాస్తా"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ఫోటో అప్లోడ్ చేయండి",

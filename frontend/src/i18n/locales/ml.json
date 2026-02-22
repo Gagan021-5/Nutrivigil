@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "ഭക്ഷണം ബ്രൗസ് ചെയ്യുക",
+    "titleHighlight": "വിഭാഗം അനുസരിച്ച്",
+    "subtitle": "ആയിരക്കണക്കിന് ഭക്ഷണങ്ങളുടെ പോഷകഗുണങ്ങൾ അന്വേഷിക്കുക",
+    "searchPlaceholder": "ഭക്ഷണം തിരയുക...",
+    "items": "{{count}} ഇനങ്ങൾ",
+    "tapToExplore": "അന്വേഷിക്കുക",
+    "showing_a": "കാണിക്കുന്നു",
+    "showing_b": "ഉള്ള",
+    "showing_c": "'{{query}}' ക്ക് യോജിക്കുന്ന മൊത്തം ഇനങ്ങൾ",
+    "categoryOne": "വിഭാഗം",
+    "categoryOther": "വിഭാഗങ്ങൾ",
+    "noResults": "ഫലങ്ങൾ കണ്ടെത്തിയില്ല",
+    "noResultsFor": "\"{{query}}\" ന് ഫലങ്ങൾ ഇല്ല",
+    "trySearching": "ഇവ തിരയുക:",
+    "cantFind": "തിരയുന്നത് കണ്ടെത്തുന്നില്ലേ?",
+    "scanDesc": "ഏത് ഭക്ഷ്യ ഉൽപ്പന്നവും ഉടനടി വിശകലനം ചെയ്യാൻ ഞങ്ങളുടെ AI സ്കാനർ ഉപയോഗിക്കുക",
+    "scanButton": "ഇപ്പോൾ സ്കാൻ ചെയ്യുക",
+    "categories": {
+      "baby-food": "ശിശു ഭക്ഷണം",
+      "baking": "ബേക്കിംഗ്",
+      "bread": "ബ്രഡ്",
+      "breakfast": "പ്രഭാത ഭക്ഷണം",
+      "cakes": "കേക്ക്",
+      "canned-goods": "ടിൻ ഭക്ഷണം",
+      "cereal": "ധാന്യം",
+      "cheese": "ചീസ്",
+      "coffee": "കാപ്പി",
+      "cookies-biscuits": "കുക്കീസ് & ബിസ്ക്കറ്റ്",
+      "beverages": "പാനീയങ്ങൾ",
+      "pasta": "പാസ്ത",
+      "snacks": "സ്നാക്ക്സ്",
+      "produce": "പഴങ്ങൾ & പച്ചക്കറികൾ",
+      "ice-cream": "ഐസ്ക്രീം",
+      "frozen-foods": "ഫ്രോസൺ ഭക്ഷണം"
+    },
+    "suggestions": {
+      "organicBananas": "ഓർഗാനിക് പഴം",
+      "gerber": "ഗെർബർ",
+      "coffee": "കാപ്പി",
+      "cheese": "ചീസ്",
+      "iceCream": "ഐസ്ക്രീം",
+      "pasta": "പാസ്ത"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ഫോട്ടോ അപ്‌ലോഡ് ചെയ്യുക",

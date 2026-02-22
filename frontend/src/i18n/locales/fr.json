@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "Parcourir les aliments par",
+    "titleHighlight": "Catégorie",
+    "subtitle": "Explorez la nutrition de milliers d'aliments",
+    "searchPlaceholder": "Rechercher des aliments...",
+    "items": "{{count}} articles",
+    "tapToExplore": "Appuyez pour explorer",
+    "showing_a": "Affichage de",
+    "showing_b": "avec",
+    "showing_c": "articles au total correspondant à '{{query}}'",
+    "categoryOne": "catégorie",
+    "categoryOther": "catégories",
+    "noResults": "Aucun résultat trouvé",
+    "noResultsFor": "Aucun résultat pour \"{{query}}\"",
+    "trySearching": "Essayez de rechercher :",
+    "cantFind": "Vous ne trouvez pas ce que vous cherchez ?",
+    "scanDesc": "Utilisez notre scanner IA pour analyser tout produit alimentaire instantanément",
+    "scanButton": "Scanner maintenant",
+    "categories": {
+      "baby-food": "Aliments pour bébé",
+      "baking": "Pâtisserie",
+      "bread": "Pain",
+      "breakfast": "Petit-déjeuner",
+      "cakes": "Gâteaux",
+      "canned-goods": "Conserves",
+      "cereal": "Céréales",
+      "cheese": "Fromage",
+      "coffee": "Café",
+      "cookies-biscuits": "Cookies et Biscuits",
+      "beverages": "Boissons",
+      "pasta": "Pâtes",
+      "snacks": "Collations",
+      "produce": "Produits frais",
+      "ice-cream": "Glace",
+      "frozen-foods": "Aliments surgelés"
+    },
+    "suggestions": {
+      "organicBananas": "Bananes bio",
+      "gerber": "Gerber",
+      "coffee": "Café",
+      "cheese": "Fromage",
+      "iceCream": "Glace",
+      "pasta": "Pâtes"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Télécharger une photo",

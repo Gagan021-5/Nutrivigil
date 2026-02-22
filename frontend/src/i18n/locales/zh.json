@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "按类别浏览食品",
+    "titleHighlight": "类别",
+    "subtitle": "探索数千种食品的营养信息",
+    "searchPlaceholder": "搜索食品...",
+    "items": "{{count}} 种食品",
+    "tapToExplore": "点击浏览",
+    "showing_a": "正在显示",
+    "showing_b": "包含",
+    "showing_c": "个与 '{{query}}' 匹配的总项目",
+    "categoryOne": "个类别",
+    "categoryOther": "个类别",
+    "noResults": "未找到结果",
+    "noResultsFor": "未找到 \"{{query}}\" 的结果",
+    "trySearching": "尝试搜索:",
+    "cantFind": "找不到您要找的内容？",
+    "scanDesc": "使用我们的人工智能扫描仪立即分析任何食品",
+    "scanButton": "立即扫描",
+    "categories": {
+      "baby-food": "婴儿食品",
+      "baking": "烘焙",
+      "bread": "面包",
+      "breakfast": "早餐",
+      "cakes": "蛋糕",
+      "canned-goods": "罐头食品",
+      "cereal": "麦片",
+      "cheese": "奶酪",
+      "coffee": "咖啡",
+      "cookies-biscuits": "饼干",
+      "beverages": "饮料",
+      "pasta": "意大利面",
+      "snacks": "零食",
+      "produce": "农产品",
+      "ice-cream": "冰淇淋",
+      "frozen-foods": "冷冻食品"
+    },
+    "suggestions": {
+      "organicBananas": "有机香蕉",
+      "gerber": "嘉宝",
+      "coffee": "咖啡",
+      "cheese": "奶酪",
+      "iceCream": "冰淇淋",
+      "pasta": "意大利面"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 上传照片",

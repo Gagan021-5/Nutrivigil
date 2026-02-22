@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "ଖାଦ୍ୟ ବ୍ରାଉଜ କରନ୍ତୁ",
+    "titleHighlight": "ବର୍ଗ ଅନୁସାରେ",
+    "subtitle": "ହଜାର ହଜାର ଖାଦ୍ୟର ପୋଷଣ ସୂଚନା ଅନ୍ୱେଷଣ କରନ୍ତୁ",
+    "searchPlaceholder": "ଖାଦ୍ୟ ଖୋଜନ୍ତୁ...",
+    "items": "{{count}} ଆଇଟମ",
+    "tapToExplore": "ଅନ୍ୱେଷଣ କରନ୍ତୁ",
+    "showing_a": "ଦେଖାଯାଉଛି",
+    "showing_b": "ସହ",
+    "showing_c": "'{{query}}' ସହ ମିଳୁଥିବା ମୋଟ ଆଇଟମ",
+    "categoryOne": "ବର୍ଗ",
+    "categoryOther": "ବର୍ଗ",
+    "noResults": "କୌଣସି ଫଳ ମିଳିଲା ନାହିଁ",
+    "noResultsFor": "\"{{query}}\" ପାଇଁ ଫଳ ମିଳିଲା ନାହିଁ",
+    "trySearching": "ଏଗୁଡ଼ିକ ଖୋଜନ୍ତୁ:",
+    "cantFind": "ଆପଣ ଖୋଜୁଥିବା ଜିନିସ ମିଳୁନି?",
+    "scanDesc": "ଯେ କୌଣସି ଖାଦ୍ୟ ଉତ୍ପାଦ ତୁରନ୍ତ ବିଶ୍ଳେଷଣ ପାଇଁ ଆମର AI ସ୍କ୍ୟାନ ବ୍ୟବହାର କରନ୍ତୁ",
+    "scanButton": "ଏବେ ସ୍କ୍ୟାନ କରନ୍ତୁ",
+    "categories": {
+      "baby-food": "ଶିଶୁ ଖାଦ୍ୟ",
+      "baking": "ବେକିଂ",
+      "bread": "ରୁଟି",
+      "breakfast": "ସକାଳ ଜଳଖିଆ",
+      "cakes": "କେକ",
+      "canned-goods": "ଟିଣ ଖାଦ୍ୟ",
+      "cereal": "ଶସ୍ୟ",
+      "cheese": "ଚୀଜ",
+      "coffee": "କଫି",
+      "cookies-biscuits": "କୁକି ଓ ବିସ୍କୁଟ",
+      "beverages": "ପାନୀୟ",
+      "pasta": "ପାସ୍ତା",
+      "snacks": "ସ୍ନ୍ୟାକ୍ସ",
+      "produce": "ଶ\u200dାଗ ଓ ଫଳ",
+      "ice-cream": "ଆଇସ କ୍ରିମ",
+      "frozen-foods": "ଫ୍ରୋଜନ ଖାଦ୍ୟ"
+    },
+    "suggestions": {
+      "organicBananas": "ଜୈବ କଦଳୀ",
+      "gerber": "ଜର୍ବର",
+      "coffee": "କଫି",
+      "cheese": "ଚୀଜ",
+      "iceCream": "ଆଇସ କ୍ରିମ",
+      "pasta": "ପାସ୍ତା"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ଫଟୋ ଅପଲୋଡ୍ କରନ୍ତୁ",

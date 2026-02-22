@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "Lebensmittel durchsuchen nach",
+    "titleHighlight": "Kategorie",
+    "subtitle": "Entdecke Ernährungswerte bei Tausenden von Lebensmitteln",
+    "searchPlaceholder": "Lebensmittel suchen...",
+    "items": "{{count}} Artikel",
+    "tapToExplore": "Tippen zum Erkunden",
+    "showing_a": "Zeige",
+    "showing_b": "mit",
+    "showing_c": "Gesamtartikel, die '{{query}}' entsprechen",
+    "categoryOne": "Kategorie",
+    "categoryOther": "Kategorien",
+    "noResults": "Keine Ergebnisse gefunden",
+    "noResultsFor": "Keine Ergebnisse für \"{{query}}\"",
+    "trySearching": "Versuche zu suchen nach:",
+    "cantFind": "Nicht gefunden, was du suchst?",
+    "scanDesc": "Verwende unseren KI-gestützten Scanner, um jedes Lebensmittelprodukt sofort zu analysieren",
+    "scanButton": "Jetzt scannen",
+    "categories": {
+      "baby-food": "Babynahrung",
+      "baking": "Backen",
+      "bread": "Brot",
+      "breakfast": "Frühstück",
+      "cakes": "Kuchen",
+      "canned-goods": "Dosenwaren",
+      "cereal": "Müsli",
+      "cheese": "Käse",
+      "coffee": "Kaffee",
+      "cookies-biscuits": "Kekse & Gebäck",
+      "beverages": "Getränke",
+      "pasta": "Nudeln",
+      "snacks": "Snacks",
+      "produce": "Frischprodukte",
+      "ice-cream": "Eis",
+      "frozen-foods": "Tiefkühlkost"
+    },
+    "suggestions": {
+      "organicBananas": "Bio-Bananen",
+      "gerber": "Gerber",
+      "coffee": "Kaffee",
+      "cheese": "Käse",
+      "iceCream": "Eis",
+      "pasta": "Nudeln"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto hochladen",

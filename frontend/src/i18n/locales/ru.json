@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "Просматривать продукты по",
+    "titleHighlight": "Категориям",
+    "subtitle": "Изучайте питание тысяч продуктов",
+    "searchPlaceholder": "Поиск продуктов...",
+    "items": "{{count}} товаров",
+    "tapToExplore": "Нажмите для изучения",
+    "showing_a": "Показано",
+    "showing_b": "с",
+    "showing_c": "товаров, соответствующих '{{query}}'",
+    "categoryOne": "категория",
+    "categoryOther": "категорий",
+    "noResults": "Результатов не найдено",
+    "noResultsFor": "Результатов не найдено для \"{{query}}\"",
+    "trySearching": "Попробуйте искать:",
+    "cantFind": "Не можете найти то, что ищете?",
+    "scanDesc": "Используйте наш AI-сканер для мгновенного анализа любого продукта питания",
+    "scanButton": "Сканировать сейчас",
+    "categories": {
+      "baby-food": "Детское питание",
+      "baking": "Выпечка",
+      "bread": "Хлеб",
+      "breakfast": "Завтрак",
+      "cakes": "Торты",
+      "canned-goods": "Консервы",
+      "cereal": "Зерновые",
+      "cheese": "Сыр",
+      "coffee": "Кофе",
+      "cookies-biscuits": "Печенье",
+      "beverages": "Напитки",
+      "pasta": "Макароны",
+      "snacks": "Снеки",
+      "produce": "Овощи и фрукты",
+      "ice-cream": "Мороженое",
+      "frozen-foods": "Замороженные продукты"
+    },
+    "suggestions": {
+      "organicBananas": "Органические бананы",
+      "gerber": "Gerber",
+      "coffee": "Кофе",
+      "cheese": "Сыр",
+      "iceCream": "Мороженое",
+      "pasta": "Макароны"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Загрузите фото",

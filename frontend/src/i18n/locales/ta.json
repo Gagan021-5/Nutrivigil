@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "உணவுகளை உலாவுங்கள்",
+    "titleHighlight": "வகை வாரியாக",
+    "subtitle": "ஆயிரக்கணக்கான உணவுகளின் ஊட்டச்சத்தை ஆராயுங்கள்",
+    "searchPlaceholder": "உணவுகளை தேடுங்கள்...",
+    "items": "{{count}} உணவுகள்",
+    "tapToExplore": "தட்டி ஆராயுங்கள்",
+    "showing_a": "காட்டப்படுகிறது",
+    "showing_b": "உடன்",
+    "showing_c": "'{{query}}' க்கு பொருந்தும் மொத்த உணவுகள்",
+    "categoryOne": "வகை",
+    "categoryOther": "வகைகள்",
+    "noResults": "முடிவுகள் எதுவும் இல்லை",
+    "noResultsFor": "\"{{query}}\" க்கான முடிவுகள் இல்லை",
+    "trySearching": "இதை தேடி பாருங்கள்:",
+    "cantFind": "தேடுவதை கண்டுபிடிக்க முடியவில்லையா?",
+    "scanDesc": "எந்த உணவுப் பொருளையும் உடனடியாக பகுப்பாய்வு செய்ய எங்கள் AI ஸ்கேனரை பயன்படுத்துங்கள்",
+    "scanButton": "இப்போது ஸ்கேன் செய்யுங்கள்",
+    "categories": {
+      "baby-food": "குழந்தை உணவு",
+      "baking": "பேக்கிங்",
+      "bread": "ரொட்டி",
+      "breakfast": "காலை உணவு",
+      "cakes": "கேக்",
+      "canned-goods": "டின் உணவுகள்",
+      "cereal": "தானியங்கள்",
+      "cheese": "சீஸ்",
+      "coffee": "காபி",
+      "cookies-biscuits": "குக்கீஸ் & பிஸ்கட்",
+      "beverages": "பானங்கள்",
+      "pasta": "பாஸ்தா",
+      "snacks": "சிற்றுண்டி",
+      "produce": "காய்கறிகள் & பழங்கள்",
+      "ice-cream": "ஐஸ்கிரீம்",
+      "frozen-foods": "குளிர்பதன உணவுகள்"
+    },
+    "suggestions": {
+      "organicBananas": "ஆர்கானிக் வாழைப்பழம்",
+      "gerber": "கெர்பர்",
+      "coffee": "காபி",
+      "cheese": "சீஸ்",
+      "iceCream": "ஐஸ்கிரீம்",
+      "pasta": "பாஸ்தா"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. புகைப்படம் பதிவேற்றவும்",

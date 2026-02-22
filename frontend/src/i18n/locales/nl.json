@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "Blader door voedsel op",
+    "titleHighlight": "Categorie",
+    "subtitle": "Ontdek voedingswaarden van duizenden producten",
+    "searchPlaceholder": "Zoek naar voedsel...",
+    "items": "{{count}} items",
+    "tapToExplore": "Tik om te verkennen",
+    "showing_a": "Weergave van",
+    "showing_b": "met",
+    "showing_c": "totale items die overeenkomen met '{{query}}'",
+    "categoryOne": "categorie",
+    "categoryOther": "categorieën",
+    "noResults": "Geen resultaten gevonden",
+    "noResultsFor": "Geen resultaten voor \"{{query}}\"",
+    "trySearching": "Probeer te zoeken naar:",
+    "cantFind": "Kunt u niet vinden wat u zoekt?",
+    "scanDesc": "Gebruik onze AI-scanner om elk voedingsproduct direct te analyseren",
+    "scanButton": "Nu scannen",
+    "categories": {
+      "baby-food": "Babyvoeding",
+      "baking": "Bakken",
+      "bread": "Brood",
+      "breakfast": "Ontbijt",
+      "cakes": "Cakes",
+      "canned-goods": "Conserven",
+      "cereal": "Granen",
+      "cheese": "Kaas",
+      "coffee": "Koffie",
+      "cookies-biscuits": "Koekjes & Biscuits",
+      "beverages": "Dranken",
+      "pasta": "Pasta",
+      "snacks": "Snacks",
+      "produce": "Verse producten",
+      "ice-cream": "Ijs",
+      "frozen-foods": "Diepvriesproducten"
+    },
+    "suggestions": {
+      "organicBananas": "Biologische bananen",
+      "gerber": "Gerber",
+      "coffee": "Koffie",
+      "cheese": "Kaas",
+      "iceCream": "Ijs",
+      "pasta": "Pasta"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto uploaden",

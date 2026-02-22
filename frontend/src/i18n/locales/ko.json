@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "음식 찾아보기",
+    "titleHighlight": "카테고리별",
+    "subtitle": "수천 가지 식품의 영양 정보 탐색",
+    "searchPlaceholder": "음식 검색...",
+    "items": "{{count}} 개 항목",
+    "tapToExplore": "탭하여 탐색",
+    "showing_a": "표시 중",
+    "showing_b": "에",
+    "showing_c": "'{{query}}'에 일치하는 총 항목",
+    "categoryOne": "카테고리",
+    "categoryOther": "카테고리",
+    "noResults": "결과 없음",
+    "noResultsFor": "\"{{query}}\"에 대한 결과 없음",
+    "trySearching": "다음을 검색해보세요:",
+    "cantFind": "원하는 것을 찾을 수 없나요?",
+    "scanDesc": "AI 스캐너를 사용하여 모든 식품을 즉시 분석하세요",
+    "scanButton": "지금 스캔",
+    "categories": {
+      "baby-food": "이유식",
+      "baking": "제과·베이킹",
+      "bread": "빵",
+      "breakfast": "아침 식사",
+      "cakes": "케이크",
+      "canned-goods": "통조림",
+      "cereal": "시리얼",
+      "cheese": "치즈",
+      "coffee": "커피",
+      "cookies-biscuits": "쿠키·비스킷",
+      "beverages": "음료",
+      "pasta": "파스타",
+      "snacks": "스낵",
+      "produce": "농산물",
+      "ice-cream": "아이스크림",
+      "frozen-foods": "냉동식품"
+    },
+    "suggestions": {
+      "organicBananas": "유기농 바나나",
+      "gerber": "거버",
+      "coffee": "커피",
+      "cheese": "치즈",
+      "iceCream": "아이스크림",
+      "pasta": "파스타"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 사진 업로드",

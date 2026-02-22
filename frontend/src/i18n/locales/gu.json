@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "ખોરાક બ્રાઉઝ કરો",
+    "titleHighlight": "કેટેગરી પ્રમાણે",
+    "subtitle": "હજારો ખોરાકની પોષક માહિતી શોધો",
+    "searchPlaceholder": "ખોરાક શોધો...",
+    "items": "{{count}} આઇટમ",
+    "tapToExplore": "અન્વેષણ કરો",
+    "showing_a": "બતાવી રહ્યા છીએ",
+    "showing_b": "સાથે",
+    "showing_c": "'{{query}}' સાથે મળતા કુલ આઇટમ",
+    "categoryOne": "કેટેગરી",
+    "categoryOther": "કેટેગરી",
+    "noResults": "કોઈ પરિણામ ન મળ્યું",
+    "noResultsFor": "\"{{query}}\" માટે કોઈ પરિણામ ન મળ્યું",
+    "trySearching": "આ શોધવાનો પ્રયત્ન કરો:",
+    "cantFind": "જે શોધો છો તે ન મળ્યું?",
+    "scanDesc": "કોઈ પણ ખાદ્ય ઉત્પાદનનું તુરંત વિશ્લેષણ કરવા અમારા AI સ્કેનર નો ઉપયોગ કરો",
+    "scanButton": "હવે સ્કેન કરો",
+    "categories": {
+      "baby-food": "બાળ ખોરાક",
+      "baking": "બેકિંગ",
+      "bread": "બ્રેડ",
+      "breakfast": "નાસ્તો",
+      "cakes": "કેક",
+      "canned-goods": "ડબ્બાબંધ ખોરાક",
+      "cereal": "અનાજ",
+      "cheese": "ચીઝ",
+      "coffee": "કોફી",
+      "cookies-biscuits": "કૂકીઝ અને બિસ્કિટ",
+      "beverages": "પીણાં",
+      "pasta": "પાસ્તા",
+      "snacks": "નાસ્તો",
+      "produce": "તાજાં ફળ-શાભ",
+      "ice-cream": "આઇસ્ક્રીમ",
+      "frozen-foods": "ઠંડું ખોરાક"
+    },
+    "suggestions": {
+      "organicBananas": "ઓર્ગેનિક કેળાં",
+      "gerber": "ગર્બર",
+      "coffee": "કોફી",
+      "cheese": "ચીઝ",
+      "iceCream": "આઇસ્ક્રીમ",
+      "pasta": "પાસ્તા"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ફોટો અપલોડ કરો",

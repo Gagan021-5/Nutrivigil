@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "খাবার ব্রাউজ করুন",
+    "titleHighlight": "বিভাগ অনুযায়ী",
+    "subtitle": "হাজারো খাবারের পুষ্টি তথ্য অন্বেষণ করুন",
+    "searchPlaceholder": "খাবার খুঁজুন...",
+    "items": "{{count}} টি আইটেম",
+    "tapToExplore": "অন্বেষণ করুন",
+    "showing_a": "দেখাচ্ছে",
+    "showing_b": "সহ",
+    "showing_c": "'{{query}}' এর সাথে মিলে এমন মোট আইটেম",
+    "categoryOne": "বিভাগ",
+    "categoryOther": "বিভাগ",
+    "noResults": "কোনো ফলাফল পাওয়া যায়নি",
+    "noResultsFor": "\"{{query}}\" এর জন্য কোনো ফলাফল পাওয়া যায়নি",
+    "trySearching": "এগুলো খোঁজার চেষ্টা করুন:",
+    "cantFind": "যা খুঁজছেন তা খুঁজে পাচ্ছেন না?",
+    "scanDesc": "যেকোনো খাদ্যপণ্য তাৎক্ষণিকভাবে বিশ্লেষণ করতে আমাদের AI স্ক্যানার ব্যবহার করুন",
+    "scanButton": "এখনই স্ক্যান করুন",
+    "categories": {
+      "baby-food": "শিশু খাবার",
+      "baking": "বেকিং",
+      "bread": "পাউরুটি",
+      "breakfast": "সকালের নাশতা",
+      "cakes": "কেক",
+      "canned-goods": "টিনজাত খাবার",
+      "cereal": "সিরিয়াল",
+      "cheese": "পনির",
+      "coffee": "কফি",
+      "cookies-biscuits": "কুকিজ ও বিস্কুট",
+      "beverages": "পানীয়",
+      "pasta": "পাস্তা",
+      "snacks": "স্ন্যাকস",
+      "produce": "তাজা সবজি ও ফল",
+      "ice-cream": "আইসক্রিম",
+      "frozen-foods": "হিমায়িত খাবার"
+    },
+    "suggestions": {
+      "organicBananas": "জৈব কলা",
+      "gerber": "গার্বার",
+      "coffee": "কফি",
+      "cheese": "পনির",
+      "iceCream": "আইসক্রিম",
+      "pasta": "পাস্তা"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "১. ছবি আপলোড করুন",
