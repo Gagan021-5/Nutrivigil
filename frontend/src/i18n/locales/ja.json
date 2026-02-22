@@ -80,6 +80,53 @@
     }
   },
 
+  "appInterfacePage": {
+    "backToHome": "ホームに戻る",
+    "heroTitle": "美しく直感的なインターフェース",
+    "heroSubtitle": "シンプルさのために設計され、パフォーマンスのために構築され、健康のために作られた",
+    "keyScreensTitle": "主要画面",
+    "keyScreensSubtitle": "すべての画面はあなたの健康の旅を念頭に置いて設計されています",
+    "keyScreens": {
+      "scanner": { "title": "スマートスキャナー", "description": "AI搭載の認識機能で食品画像をアップロードまたは撮影", "features": ["即時撮影", "画像アップロード", "バッチスキャン", "カメラ連携"] },
+      "results": { "title": "分析結果", "description": "安全シグナル付きの包括的な栄養成分表示", "features": ["信号機システム", "栄養素の詳細", "健康アラート", "摂取量ガイダンス"] },
+      "profile": { "title": "健康プロフィール", "description": "健康状態に合わせたパーソナライズ設定", "features": ["状態の選択", "食事の好み", "アレルギー追跡", "目標設定"] },
+      "diary": { "title": "食事日記", "description": "毎日の食事摂取量と栄養履歴のトラッキング", "features": ["毎日のログ", "食事の記録", "栄養トレンド", "データエクスポート"] }
+    },
+    "featuresTitle": "プラットフォーム機能",
+    "featuresSubtitle": "最高のユーザー体験のために最新技術で構築",
+    "features": {
+      "mobile": { "title": "モバイルファーストデザイン", "description": "タッチ操作に対応したインタラクションとレスポンシブレイアウトでスマートフォンに最適化" },
+      "responsive": { "title": "レスポンシブレイアウト", "description": "一貫した体験のためにモバイルからタブレット、デスクトップまでシームレスに適応" },
+      "darkMode": { "title": "ダークモード対応", "description": "内蔵のダークテーマで目の疲れを軽減し、モバイルデバイスのバッテリーを節約" },
+      "accessibility": { "title": "アクセシビリティファースト", "description": "キーボードナビゲーション、スクリーンリーダー対応、高コントラスト対応のWCAG準拠" },
+      "fast": { "title": "高速かつレスポンシブ", "description": "最適化されたローディングとスムーズなアニメーションによる超高速パフォーマンス" },
+      "privacy": { "title": "プライバシー重視", "description": "暗号化と画像の永続保存なしでデータを安全に保護" }
+    },
+    "designTitle": "デザイン原則",
+    "designSubtitle": "すべてのデザイン決定を導くコアバリュー",
+    "design": {
+      "userFriendly": { "title": "ユーザーフレンドリー", "points": ["明確なビジュアル階層による直感的なナビゲーション", "シンプルで専門用語のない言語", "よく使うタスクのワンタップ操作", "役立つツールチップとオンボーディング"] },
+      "accessibilityFirst": { "title": "アクセシビリティファースト", "points": ["WCAG 2.1 AA準拠", "スクリーンリーダー最適化", "キーボードナビゲーション対応", "高コントラストの色比率"] },
+      "fastResponsive": { "title": "高速かつレスポンシブ", "points": ["1秒未満のページ読み込み", "最適化された画像とアセット", "プログレッシブウェブアプリ機能", "滑らかな60fpsアニメーション"] },
+      "gradients": { "title": "美しいグラデーション", "points": ["モダンなグラデーションカラースキーム", "一貫したデザインシステム", "グラスモーフィズム効果", "スムーズなカラートランジション"] }
+    },
+    "uiTitle": "UIコンポーネント",
+    "uiSubtitle": "プラットフォーム全体での一貫したデザインシステム",
+    "ui": {
+      "colorSystem": { "name": "カラーシステム", "description": "パープル・ピンク・ブルーのグラデーションパレット" },
+      "typography": { "name": "タイポグラフィ", "description": "明確で読みやすいフォント階層" },
+      "cards": { "name": "カード", "description": "柔らかい影付きの角丸デザイン" },
+      "buttons": { "name": "ボタン", "description": "ホバーエフェクト付きグラデーション背景" },
+      "icons": { "name": "アイコン", "description": "Lucide Reactアイコンライブラリ" },
+      "animations": { "name": "アニメーション", "description": "Framer Motionのスムーズなトランジション" }
+    },
+    "techTitle": "最新技術で構築",
+    "techSubtitle": "最先端のフレームワークとライブラリによって動作",
+    "ctaTitle": "ご自身で体験してください",
+    "ctaSubtitle": "NutriVigilを試して、栄養トラッキングがいかに美しいかを実感してください",
+    "ctaButton": "アプリを試す"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 写真をアップロード",

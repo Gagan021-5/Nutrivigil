@@ -80,6 +80,53 @@
     }
   },
 
+  "appInterfacePage": {
+    "backToHome": "Voltar para o Início",
+    "heroTitle": "Interface Bonita e Intuitiva",
+    "heroSubtitle": "Projetada para a simplicidade, construída para o desempenho, criada para a saúde",
+    "keyScreensTitle": "Telas Principais",
+    "keyScreensSubtitle": "Cada tela é projetada com sua jornada de saúde em mente",
+    "keyScreens": {
+      "scanner": { "title": "Scanner Inteligente", "description": "Envie ou capture imagens de alimentos com reconhecimento por IA", "features": ["Captura instantânea", "Upload de imagens", "Escaneamento em lote", "Integração com câmera"] },
+      "results": { "title": "Resultados da Análise", "description": "Detalhamento nutricional completo com sinais de segurança", "features": ["Sistema semafórico", "Detalhes de nutrientes", "Alertas de saúde", "Orientação de porções"] },
+      "profile": { "title": "Perfil de Saúde", "description": "Configurações personalizadas para suas condições de saúde", "features": ["Seleção de condição", "Preferências alimentares", "Rastreamento de alergias", "Definição de metas"] },
+      "diary": { "title": "Diário Alimentar", "description": "Acompanhe sua ingestão diária de alimentos e histórico nutricional", "features": ["Registros diários", "Rastreamento de refeições", "Tendências nutricionais", "Exportar dados"] }
+    },
+    "featuresTitle": "Recursos da Plataforma",
+    "featuresSubtitle": "Construído com tecnologias modernas para a melhor experiência do usuário",
+    "features": {
+      "mobile": { "title": "Design Mobile-First", "description": "Otimizado para smartphones com interações intuitivas por toque e layouts responsivos" },
+      "responsive": { "title": "Layout Responsivo", "description": "Adapta-se perfeitamente de celular a tablet a desktop para uma experiência consistente" },
+      "darkMode": { "title": "Suporte ao Modo Escuro", "description": "Tema escuro integrado reduz a fadiga ocular e economiza bateria em dispositivos móveis" },
+      "accessibility": { "title": "Acessibilidade em Primeiro Lugar", "description": "Compatível com WCAG, navegação por teclado, suporte a leitor de tela e alto contraste" },
+      "fast": { "title": "Rápido e Responsivo", "description": "Desempenho ultrarrápido com carregamento otimizado e animações suaves" },
+      "privacy": { "title": "Focado na Privacidade", "description": "Seus dados ficam seguros com criptografia e sem armazenamento permanente de imagens" }
+    },
+    "designTitle": "Princípios de Design",
+    "designSubtitle": "Nossos valores fundamentais que orientam cada decisão de design",
+    "design": {
+      "userFriendly": { "title": "Fácil de Usar", "points": ["Navegação intuitiva com hierarquia visual clara", "Linguagem simples e sem jargão", "Ações com um toque para tarefas comuns", "Dicas úteis e integração"] },
+      "accessibilityFirst": { "title": "Acessibilidade em Primeiro Lugar", "points": ["Conformidade WCAG 2.1 AA", "Otimizado para leitor de tela", "Suporte à navegação por teclado", "Proporções de contraste de cor elevadas"] },
+      "fastResponsive": { "title": "Rápido e Responsivo", "points": ["Carregamento de páginas em menos de um segundo", "Imagens e recursos otimizados", "Recursos de aplicativo web progressivo", "Animações suaves a 60fps"] },
+      "gradients": { "title": "Gradientes Belos", "points": ["Esquemas de cores com gradientes modernos", "Sistema de design consistente", "Efeitos de glassmorfismo", "Transições de cor suaves"] }
+    },
+    "uiTitle": "Componentes de UI",
+    "uiSubtitle": "Sistema de design consistente em toda a plataforma",
+    "ui": {
+      "colorSystem": { "name": "Sistema de Cores", "description": "Paleta de gradiente roxo, rosa e azul" },
+      "typography": { "name": "Tipografia", "description": "Hierarquia de fontes clara e legível" },
+      "cards": { "name": "Cards", "description": "Cantos arredondados com sombras sutis" },
+      "buttons": { "name": "Botões", "description": "Fundos em gradiente com efeitos de hover" },
+      "icons": { "name": "Ícones", "description": "Biblioteca de ícones Lucide React" },
+      "animations": { "name": "Animações", "description": "Transições suaves com Framer Motion" }
+    },
+    "techTitle": "Construído com Tecnologia Moderna",
+    "techSubtitle": "Alimentado por frameworks e bibliotecas de ponta",
+    "ctaTitle": "Experimente Você Mesmo",
+    "ctaSubtitle": "Experimente o NutriVigil e descubra como o rastreamento de nutrição pode ser bonito",
+    "ctaButton": "Experimentar o App"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Enviar Foto",

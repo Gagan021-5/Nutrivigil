@@ -80,6 +80,53 @@
     }
   },
 
+  "appInterfacePage": {
+    "backToHome": "返回首页",
+    "heroTitle": "美观且直观的界面",
+    "heroSubtitle": "为简洁而设计，为性能而构建，为健康而打造",
+    "keyScreensTitle": "核心界面",
+    "keyScreensSubtitle": "每个界面都以您的健康之旅为核心进行设计",
+    "keyScreens": {
+      "scanner": { "title": "智能扫描仪", "description": "通过 AI 识别技术上传或拍摄食物图片", "features": ["即时拍摄", "图片上传", "批量扫描", "摄像头集成"] },
+      "results": { "title": "分析结果", "description": "包含安全信号的全面营养分解", "features": ["交通灯系统", "营养详情", "健康警报", "份量指导"] },
+      "profile": { "title": "健康档案", "description": "根据您的健康状况进行个性化设置", "features": ["病症选择", "饮食偏好", "过敏追踪", "目标设定"] },
+      "diary": { "title": "饮食日记", "description": "记录您每日的饮食摄入和营养历史", "features": ["每日记录", "膳食追踪", "营养趋势", "数据导出"] }
+    },
+    "featuresTitle": "平台功能",
+    "featuresSubtitle": "采用现代技术打造，提供最佳用户体验",
+    "features": {
+      "mobile": { "title": "移动优先设计", "description": "专为智能手机优化，支持触控友好的交互和响应式布局" },
+      "responsive": { "title": "响应式布局", "description": "从手机到平板再到桌面无缝适配，提供一致的体验" },
+      "darkMode": { "title": "深色模式支持", "description": "内置深色主题减轻眼部疲劳，并节省移动设备电量" },
+      "accessibility": { "title": "无障碍优先", "description": "符合 WCAG 标准，支持键盘导航、屏幕阅读器及高对比度" },
+      "fast": { "title": "快速且响应", "description": "优化的加载速度和流畅的动画，带来闪电般的性能" },
+      "privacy": { "title": "注重隐私", "description": "通过加密保护您的数据安全，不永久存储图片" }
+    },
+    "designTitle": "设计原则",
+    "designSubtitle": "指导每一个设计决策的核心价值观",
+    "design": {
+      "userFriendly": { "title": "用户友好", "points": ["清晰视觉层级的直观导航", "简洁、无术语的语言", "常用操作的一键功能", "实用的工具提示和引导"] },
+      "accessibilityFirst": { "title": "无障碍优先", "points": ["符合 WCAG 2.1 AA", "屏幕阅读器优化", "键盘导航支持", "高对比度色彩比例"] },
+      "fastResponsive": { "title": "快速且响应", "points": ["亚秒级页面加载", "图片和资源优化", "渐进式 Web 应用能力", "流畅的 60fps 动画"] },
+      "gradients": { "title": "精美渐变", "points": ["现代渐变配色方案", "一致的设计体系", "玻璃拟态效果", "流畅的色彩过渡"] }
+    },
+    "uiTitle": "UI 组件",
+    "uiSubtitle": "整个平台统一的设计体系",
+    "ui": {
+      "colorSystem": { "name": "颜色体系", "description": "紫色、粉色、蓝色渐变调色板" },
+      "typography": { "name": "排版", "description": "清晰、易读的字体层级" },
+      "cards": { "name": "卡片", "description": "圆角搭配细腻阴影" },
+      "buttons": { "name": "按钮", "description": "渐变背景搭配悬停效果" },
+      "icons": { "name": "图标", "description": "Lucide React 图标库" },
+      "animations": { "name": "动画", "description": "Framer Motion 流畅过渡" }
+    },
+    "techTitle": "基于现代技术构建",
+    "techSubtitle": "由尖端框架和库提供支持",
+    "ctaTitle": "亲身体验",
+    "ctaSubtitle": "试用 NutriVigil，探索营养追踪可以有多美观",
+    "ctaButton": "立即体验"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 上传照片",

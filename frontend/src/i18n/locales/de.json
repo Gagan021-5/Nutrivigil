@@ -80,6 +80,81 @@
     }
   },
 
+  "appInterfacePage": {
+    "backToHome": "Zurück zur Startseite",
+    "heroTitle": "Schöne und intuitive Benutzeroberfläche",
+    "heroSubtitle": "Für Einfachheit gestaltet, für Leistung gebaut, für Gesundheit gemacht",
+    "keyScreensTitle": "Hauptbildschirme",
+    "keyScreensSubtitle": "Jeder Bildschirm wurde mit Ihrer Gesundheitsreise im Sinn gestaltet",
+    "keyScreens": {
+      "scanner": {
+        "title": "Intelligenter Scanner",
+        "description": "Lebensmittelbilder mit KI-gestützter Erkennung hochladen oder aufnehmen",
+        "features": ["Sofortaufnahme", "Bild hochladen", "Batch-Scan", "Kamera-Integration"]
+      },
+      "results": {
+        "title": "Analyseergebnisse",
+        "description": "Umfassende Nährwertanalyse mit Sicherheitssignalen",
+        "features": ["Ampelsystem", "Nährwertdetails", "Gesundheitshinweise", "Portionsempfehlungen"]
+      },
+      "profile": {
+        "title": "Gesundheitsprofil",
+        "description": "Personalisierte Einstellungen für Ihre Gesundheitszustände",
+        "features": ["Zustandsauswahl", "Ernährungspräferenzen", "Allergienverfolgung", "Zielsetzung"]
+      },
+      "diary": {
+        "title": "Ernährungstagebuch",
+        "description": "Verfolgen Sie Ihre tägliche Nahrungsaufnahme und Ernährungsgeschichte",
+        "features": ["Tagesprotokolle", "Mahlzeitenverfolgung", "Ernährungstrends", "Daten exportieren"]
+      }
+    },
+    "featuresTitle": "Plattformfunktionen",
+    "featuresSubtitle": "Mit modernen Technologien für das beste Nutzererlebnis entwickelt",
+    "features": {
+      "mobile": {"title": "Mobile-First-Design", "description": "Optimiert für Smartphones mit berührungsfreundlichen Interaktionen und responsiven Layouts"},
+      "responsive": {"title": "Responsives Layout", "description": "Passt sich nahtlos von Mobil zu Tablet zu Desktop für ein konsistentes Erlebnis an"},
+      "darkMode": {"title": "Dark-Mode-Unterstützung", "description": "Eingebautes dunkles Design reduziert Augenbelastung und spart Akku auf Mobilgeräten"},
+      "accessibility": {"title": "Barrierefreiheit zuerst", "description": "WCAG-konform mit Tastaturnavigation, Bildschirmlesegerät-Unterstützung und hohem Kontrast"},
+      "fast": {"title": "Schnell und reaktionsschnell", "description": "Blitzschnelle Leistung mit optimiertem Laden und flüssigen Animationen"},
+      "privacy": {"title": "Datenschutzorientiert", "description": "Ihre Daten bleiben mit Verschlüsselung und ohne dauerhaftem Bildspeicher sicher"}
+    },
+    "designTitle": "Designprinzipien",
+    "designSubtitle": "Unsere Grundwerte, die jede Designentscheidung leiten",
+    "design": {
+      "userFriendly": {
+        "title": "Benutzerfreundlich",
+        "points": ["Intuitive Navigation mit klarer visueller Hierarchie", "Einfache, verständliche Sprache", "Ein-Tipp-Aktionen für häufige Aufgaben", "Hilfreiche Tooltips und Einführung"]
+      },
+      "accessibilityFirst": {
+        "title": "Barrierefreiheit zuerst",
+        "points": ["WCAG 2.1 AA-Konformität", "Für Bildschirmlesegeräte optimiert", "Unterstützung der Tastaturnavigation", "Hohe Farbkontrastverhältnisse"]
+      },
+      "fastResponsive": {
+        "title": "Schnell und reaktionsschnell",
+        "points": ["Seitenladezeiten unter einer Sekunde", "Optimierte Bilder und Assets", "Progressive-Web-App-Funktionen", "Flüssige 60fps-Animationen"]
+      },
+      "gradients": {
+        "title": "Schöne Verläufe",
+        "points": ["Moderne Farbverlaufsschemata", "Konsistentes Designsystem", "Glasmorphismus-Effekte", "Weiche Farbübergänge"]
+      }
+    },
+    "uiTitle": "UI-Komponenten",
+    "uiSubtitle": "Konsistentes Designsystem auf der gesamten Plattform",
+    "ui": {
+      "colorSystem": {"name": "Farbsystem", "description": "Lila, Rosa, Blau Verlaufsfarbpalette"},
+      "typography": {"name": "Typografie", "description": "Klare, lesbare Schriftenhierarchie"},
+      "cards": {"name": "Karten", "description": "Abgerundete Ecken mit subtilen Schatten"},
+      "buttons": {"name": "Schaltflächen", "description": "Verlaufshintergründe mit Hover-Effekten"},
+      "icons": {"name": "Symbole", "description": "Lucide React Symbolbibliothek"},
+      "animations": {"name": "Animationen", "description": "Framer Motion weiche Übergänge"}
+    },
+    "techTitle": "Mit moderner Technologie gebaut",
+    "techSubtitle": "Angetrieben von modernsten Frameworks und Bibliotheken",
+    "ctaTitle": "Erleben Sie es selbst",
+    "ctaSubtitle": "Probieren Sie NutriVigil und entdecken Sie, wie schön Ernährungsverfolgung sein kann",
+    "ctaButton": "App ausprobieren"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto hochladen",

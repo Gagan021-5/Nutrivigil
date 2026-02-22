@@ -80,6 +80,53 @@
     }
   },
 
+  "appInterfacePage": {
+    "backToHome": "Terug naar Home",
+    "heroTitle": "Mooi en intuïtief interface",
+    "heroSubtitle": "Ontworpen voor eenvoud, gebouwd voor prestaties, gemaakt voor gezondheid",
+    "keyScreensTitle": "Belangrijkste schermen",
+    "keyScreensSubtitle": "Elk scherm is ontworpen met uw gezondheidstraject in gedachten",
+    "keyScreens": {
+      "scanner": { "title": "Slimme scanner", "description": "Upload of maak foto's van voedsel met AI-gestuurde herkenning", "features": ["Direct vastleggen", "Afbeelding uploaden", "Batch scannen", "Camera-integratie"] },
+      "results": { "title": "Analyseresultaten", "description": "Uitgebreide voedingsanalyse met veiligheidssignalen", "features": ["Stoplichtensysteem", "Voedingstofdetails", "Gezondheidswaarschuwingen", "Portiebegeleiding"] },
+      "profile": { "title": "Gezondheidsprofiel", "description": "Gepersonaliseerde instellingen voor uw gezondheidsomstandigheden", "features": ["Aandoening selecteren", "Dieetvoorkeuren", "Allergie bijhouden", "Doelen instellen"] },
+      "diary": { "title": "Voedsellogboek", "description": "Bijhouden van dagelijkse voedselinname en voedingsgeschiedenis", "features": ["Dagelijkse logs", "Maaltijdbeheer", "Voedingstoftrends", "Gegevens exporteren"] }
+    },
+    "featuresTitle": "Platformfuncties",
+    "featuresSubtitle": "Gebouwd met moderne technologieën voor de beste gebruikerservaring",
+    "features": {
+      "mobile": { "title": "Mobile-first ontwerp", "description": "Geoptimaliseerd voor smartphones met aanraakvriendelijke interacties en responsieve lay-outs" },
+      "responsive": { "title": "Responsieve lay-out", "description": "Past naadloos aan van mobiel naar tablet naar desktop voor een consistente ervaring" },
+      "darkMode": { "title": "Donkere modus ondersteuning", "description": "Ingebouwd donker thema vermindert oogvermoeidheid en bespaart batterij op mobiele apparaten" },
+      "accessibility": { "title": "Toegankelijkheid eerst", "description": "WCAG-conform met toetsenbordnavigatie, schermlezer-ondersteuning en hoog contrast" },
+      "fast": { "title": "Snel en responsief", "description": "Bliksemsnelle prestaties met geoptimaliseerd laden en vloeiende animaties" },
+      "privacy": { "title": "Privacygericht", "description": "Uw gegevens blijven veilig met versleuteling en geen permanente afbeeldingsopslag" }
+    },
+    "designTitle": "Ontwerpprincipes",
+    "designSubtitle": "Onze kernwaarden die elke ontwerpbeslissing sturen",
+    "design": {
+      "userFriendly": { "title": "Gebruiksvriendelijk", "points": ["Intuïtieve navigatie met duidelijke visuele hiërarchie", "Eenvoudige, jargonvrije taal", "Één-tik acties voor veelgebruikte taken", "Handige tooltips en onboarding"] },
+      "accessibilityFirst": { "title": "Toegankelijkheid-eerst", "points": ["WCAG 2.1 AA-naleving", "Geoptimaliseerd voor schermlezers", "Toetsenbordnavigatie-ondersteuning", "Hoge contrastkleurverhouding"] },
+      "fastResponsive": { "title": "Snel en responsief", "points": ["Pagina-laadtijden onder een seconde", "Geoptimaliseerde afbeeldingen en assets", "Progressive web app-mogelijkheden", "Vloeiende 60fps-animaties"] },
+      "gradients": { "title": "Mooie kleurverlopen", "points": ["Moderne kleurverloopschema's", "Consistent ontwerpsysteem", "Glasmorfisme-effecten", "Vloeiende kleurovergangen"] }
+    },
+    "uiTitle": "UI-componenten",
+    "uiSubtitle": "Consistent ontwerpsysteem over het hele platform",
+    "ui": {
+      "colorSystem": { "name": "Kleurensysteem", "description": "Paars, roze, blauw kleurverlooppalet" },
+      "typography": { "name": "Typografie", "description": "Duidelijke, leesbare lettertypehiërarchie" },
+      "cards": { "name": "Kaarten", "description": "Afgeronde hoeken met subtiele schaduwen" },
+      "buttons": { "name": "Knoppen", "description": "Kleurverloop-achtergronden met zweefeffecten" },
+      "icons": { "name": "Pictogrammen", "description": "Lucide React-pictogrammenbibliotheek" },
+      "animations": { "name": "Animaties", "description": "Framer Motion vloeiende overgangen" }
+    },
+    "techTitle": "Gebouwd met moderne technologie",
+    "techSubtitle": "Aangedreven door geavanceerde frameworks en bibliotheken",
+    "ctaTitle": "Ervaar het zelf",
+    "ctaSubtitle": "Probeer NutriVigil en ontdek hoe mooi voedingsbeheer kan zijn",
+    "ctaButton": "Probeer de app"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto uploaden",

@@ -80,6 +80,81 @@
     }
   },
 
+  "appInterfacePage": {
+    "backToHome": "Retour à l'accueil",
+    "heroTitle": "Interface belle et intuitive",
+    "heroSubtitle": "Conçue pour la simplicité, construite pour la performance, élaborée pour la santé",
+    "keyScreensTitle": "Écrans principaux",
+    "keyScreensSubtitle": "Chaque écran est conçu en tenant compte de votre parcours de santé",
+    "keyScreens": {
+      "scanner": {
+        "title": "Scanner intelligent",
+        "description": "Téléversez ou capturez des images alimentaires avec une reconnaissance alimentée par IA",
+        "features": ["Capture instantanée", "Téléversement d'image", "Scan par lots", "Intégration caméra"]
+      },
+      "results": {
+        "title": "Résultats d'analyse",
+        "description": "Bilan nutritionnel complet avec signaux de sécurité",
+        "features": ["Système feux tricolores", "Détails des nutriments", "Alertes santé", "Guide des portions"]
+      },
+      "profile": {
+        "title": "Profil de santé",
+        "description": "Paramètres personnalisés pour vos conditions de santé",
+        "features": ["Sélection de la condition", "Préférences alimentaires", "Suivi des allergies", "Définition des objectifs"]
+      },
+      "diary": {
+        "title": "Journal alimentaire",
+        "description": "Suivez votre apport alimentaire quotidien et l'historique nutritionnel",
+        "features": ["Journaux quotidiens", "Suivi des repas", "Tendances nutritionnelles", "Exporter les données"]
+      }
+    },
+    "featuresTitle": "Fonctionnalités de la plateforme",
+    "featuresSubtitle": "Construit avec des technologies modernes pour la meilleure expérience utilisateur",
+    "features": {
+      "mobile": {"title": "Conception Mobile-First", "description": "Optimisé pour les smartphones avec des interactions tactiles et des mises en page réactives"},
+      "responsive": {"title": "Mise en page réactive", "description": "S'adapte harmonieusement du mobile à la tablette au bureau pour une expérience cohérente"},
+      "darkMode": {"title": "Prise en charge du mode sombre", "description": "Le thème sombre intégré réduit la fatigue oculaire et économise la batterie sur les appareils mobiles"},
+      "accessibility": {"title": "L'accessibilité d'abord", "description": "Conforme WCAG avec navigation au clavier, support de lecteur d'écran et contraste élevé"},
+      "fast": {"title": "Rapide et réactif", "description": "Performances ultra-rapides avec chargement optimisé et animations fluides"},
+      "privacy": {"title": "Axé sur la confidentialité", "description": "Vos données restent sécurisées grâce au chiffrement et sans stockage permanent d'images"}
+    },
+    "designTitle": "Principes de conception",
+    "designSubtitle": "Nos valeurs fondamentales qui guident chaque décision de conception",
+    "design": {
+      "userFriendly": {
+        "title": "Convivial",
+        "points": ["Navigation intuitive avec une hiérarchie visuelle claire", "Langage simple et sans jargon", "Actions en un clic pour les tâches courantes", "Info-bulles utiles et intégration"]
+      },
+      "accessibilityFirst": {
+        "title": "L'accessibilité d'abord",
+        "points": ["Conformité WCAG 2.1 AA", "Optimisé pour les lecteurs d'écran", "Support de navigation au clavier", "Ratios de contraste de couleur élevés"]
+      },
+      "fastResponsive": {
+        "title": "Rapide et réactif",
+        "points": ["Chargement des pages en moins d'une seconde", "Images et ressources optimisées", "Capacités d'application web progressive", "Animations fluides à 60fps"]
+      },
+      "gradients": {
+        "title": "Beaux dégradés",
+        "points": ["Schémas de couleurs dégradés modernes", "Système de conception cohérent", "Effets de glassmorphisme", "Transitions de couleurs douces"]
+      }
+    },
+    "uiTitle": "Composants UI",
+    "uiSubtitle": "Système de conception cohérent sur toute la plateforme",
+    "ui": {
+      "colorSystem": {"name": "Système de couleurs", "description": "Palette de dégradés violet, rose, bleu"},
+      "typography": {"name": "Typographie", "description": "Hiérarchie de polices claire et lisible"},
+      "cards": {"name": "Cartes", "description": "Coins arrondis avec des ombres subtiles"},
+      "buttons": {"name": "Boutons", "description": "Arrière-plans dégradés avec effets au survol"},
+      "icons": {"name": "Icônes", "description": "Bibliothèque d'icônes Lucide React"},
+      "animations": {"name": "Animations", "description": "Transitions douces avec Framer Motion"}
+    },
+    "techTitle": "Construit avec une technologie moderne",
+    "techSubtitle": "Propulsé par des frameworks et bibliothèques de pointe",
+    "ctaTitle": "Découvrez-le vous-même",
+    "ctaSubtitle": "Essayez NutriVigil et découvrez à quel point le suivi nutritionnel peut être beau",
+    "ctaButton": "Essayer l'app"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Télécharger une photo",

@@ -80,6 +80,53 @@
     }
   },
 
+  "appInterfacePage": {
+    "backToHome": "홈으로 돌아가기",
+    "heroTitle": "아름답고 직관적인 인터페이스",
+    "heroSubtitle": "심플함을 위해 설계되고, 성능을 위해 구축되고, 건강을 위해 만들어졌습니다",
+    "keyScreensTitle": "주요 화면",
+    "keyScreensSubtitle": "모든 화면은 당신의 건강 여정을 염두에 두고 설계되었습니다",
+    "keyScreens": {
+      "scanner": { "title": "스마트 스캐너", "description": "AI 기반 인식으로 음식 이미지를 업로드하거나 촬영", "features": ["즉시 촬영", "이미지 업로드", "일괄 스캔", "카메라 통합"] },
+      "results": { "title": "분석 결과", "description": "안전 신호가 포함된 종합 영양 분석", "features": ["신호등 시스템", "영양소 세부 정보", "건강 알림", "섭취량 안내"] },
+      "profile": { "title": "건강 프로필", "description": "건강 상태에 맞는 개인화 설정", "features": ["상태 선택", "식이 선호도", "알레르기 추적", "목표 설정"] },
+      "diary": { "title": "식사 일기", "description": "일일 식품 섭취량과 영양 기록을 추적", "features": ["일일 로그", "식사 추적", "영양 트렌드", "데이터 내보내기"] }
+    },
+    "featuresTitle": "플랫폼 기능",
+    "featuresSubtitle": "최고의 사용자 경험을 위한 최신 기술로 구축",
+    "features": {
+      "mobile": { "title": "모바일 우선 설계", "description": "터치 친화적인 인터랙션과 반응형 레이아웃으로 스마트폰에 최적화" },
+      "responsive": { "title": "반응형 레이아웃", "description": "일관된 경험을 위해 모바일에서 태블릿, 데스크톱까지 원활하게 적응" },
+      "darkMode": { "title": "다크 모드 지원", "description": "내장 다크 테마로 눈의 피로를 줄이고 모바일 기기 배터리를 절약" },
+      "accessibility": { "title": "접근성 우선", "description": "키보드 탐색, 화면 읽기 프로그램 지원, 고대비로 WCAG 준수" },
+      "fast": { "title": "빠르고 반응형", "description": "최적화된 로딩과 부드러운 애니메이션으로 번개처럼 빠른 성능" },
+      "privacy": { "title": "개인정보 중심", "description": "암호화와 영구 이미지 저장 없이 데이터를 안전하게 보호" }
+    },
+    "designTitle": "디자인 원칙",
+    "designSubtitle": "모든 디자인 결정을 이끄는 핵심 가치",
+    "design": {
+      "userFriendly": { "title": "사용하기 쉬운", "points": ["명확한 시각적 계층 구조를 통한 직관적인 탐색", "간단하고 전문 용어 없는 언어", "일반 작업에 대한 한 번의 탭 동작", "유용한 툴팁 및 온보딩"] },
+      "accessibilityFirst": { "title": "접근성 우선", "points": ["WCAG 2.1 AA 준수", "화면 읽기 프로그램 최적화", "키보드 탐색 지원", "높은 대비 색상 비율"] },
+      "fastResponsive": { "title": "빠르고 반응형", "points": ["1초 미만의 페이지 로드", "최적화된 이미지 및 에셋", "프로그레시브 웹 앱 기능", "부드러운 60fps 애니메이션"] },
+      "gradients": { "title": "아름다운 그라데이션", "points": ["모던 그라데이션 색상 구성표", "일관된 디자인 시스템", "글래스모피즘 효과", "부드러운 색상 전환"] }
+    },
+    "uiTitle": "UI 컴포넌트",
+    "uiSubtitle": "전체 플랫폼에서 일관된 디자인 시스템",
+    "ui": {
+      "colorSystem": { "name": "색상 시스템", "description": "보라, 분홍, 파랑 그라데이션 팔레트" },
+      "typography": { "name": "타이포그래피", "description": "명확하고 읽기 쉬운 폰트 계층" },
+      "cards": { "name": "카드", "description": "은은한 그림자가 있는 둥근 모서리" },
+      "buttons": { "name": "버튼", "description": "호버 효과가 있는 그라데이션 배경" },
+      "icons": { "name": "아이콘", "description": "Lucide React 아이콘 라이브러리" },
+      "animations": { "name": "애니메이션", "description": "Framer Motion 부드러운 전환" }
+    },
+    "techTitle": "최신 기술로 구축됨",
+    "techSubtitle": "최첨단 프레임워크와 라이브러리로 구동",
+    "ctaTitle": "직접 경험해 보세요",
+    "ctaSubtitle": "NutriVigil을 사용해보고 영양 추적이 얼마나 아름다울 수 있는지 알아보세요",
+    "ctaButton": "앱 사용해 보기"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 사진 업로드",
