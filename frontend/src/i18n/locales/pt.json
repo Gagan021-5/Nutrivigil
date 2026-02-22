@@ -80,6 +80,49 @@
     }
   },
 
+  "howItWorks": {
+    "backToHome": "Voltar ao início",
+    "title": "Como funciona",
+    "subtitle": "Da foto a insights de saúde personalizados em 4 passos simples. Deixe a IA guiar a sua jornada nutricional.",
+    "steps": {
+      "step1": {
+        "title": "Carregar foto do alimento",
+        "description": "Tire uma foto da embalagem do alimento, rótulo ou refeição. A nossa IA funciona com qualquer imagem de alimento - de pratos de restaurante a produtos de mercearia."
+      },
+      "step2": {
+        "title": "A IA identifica o alimento",
+        "description": "Alimentado pela Gemini 2.5 AI, o nosso sistema reconhece instantaneamente o alimento e extrai informação nutricional de rótulos ou bases de dados."
+      },
+      "step3": {
+        "title": "Análise de saúde",
+        "description": "Com base na sua condição de saúde (diabetes, hipertensão, etc.), a nossa IA analisa se o alimento é seguro, fornecendo um veredicto com código de cores."
+      },
+      "step4": {
+        "title": "Receber recomendações",
+        "description": "Receba sugestões personalizadas, alternativas mais saudáveis e análises nutricionais detalhadas adaptadas aos seus objetivos de saúde."
+      }
+    },
+    "featuresTitle": "O que o torna especial",
+    "features": {
+      "trafficLight": {
+        "title": "Sistema de semáforo",
+        "description": "Indicadores visuais rápidos: Verde (Seguro), Amarelo (Moderado), Vermelho (Evitar)"
+      },
+      "privacy": {
+        "title": "Privacidade em primeiro lugar",
+        "description": "Toda a análise acontece de forma segura. Os seus dados de saúde mantêm-se privados."
+      },
+      "realTime": {
+        "title": "Resultados em tempo real",
+        "description": "Obtenha análise completa em menos de 3 segundos"
+      }
+    },
+    "ctaTitle": "Pronto para experimentar?",
+    "ctaDesc": "Junte-se a milhares de utilizadores que fazem escolhas alimentares mais inteligentes com análise nutricional por IA.",
+    "startScanning": "Começar a analisar agora",
+    "learnMore": "Saiba mais sobre nós"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Carregar Foto",

@@ -80,6 +80,49 @@
     }
   },
 
+  "howItWorks": {
+    "backToHome": "Terug naar home",
+    "title": "Hoe het werkt",
+    "subtitle": "Van foto naar gepersonaliseerde gezondheidsinzichten in 4 eenvoudige stappen. Laat AI uw voedingsreis begeleiden.",
+    "steps": {
+      "step1": {
+        "title": "Upload voedingsfoto",
+        "description": "Maak een foto van uw voedselverpakking, etiket of maaltijd. Onze AI werkt met elke voedingsafbeelding - van restaurantgerechten tot kruidenierswaren."
+      },
+      "step2": {
+        "title": "AI identificeert voedsel",
+        "description": "Aangedreven door Gemini 2.5 AI herkent ons systeem het voedselitem direct en extraheert voedingsinformatie uit etiketten of databases."
+      },
+      "step3": {
+        "title": "Gezondheidsanalyse",
+        "description": "Op basis van uw gezondheidsconditie (diabetes, hypertensie, etc.) analyseert onze AI of het voedsel veilig is en geeft een kleurgecodeerd oordeel."
+      },
+      "step4": {
+        "title": "Ontvang aanbevelingen",
+        "description": "Ontvang gepersonaliseerde suggesties, gezondere alternatieven en gedetailleerde voedingsoverzichten afgestemd op uw gezondheidsdoelen."
+      }
+    },
+    "featuresTitle": "Wat het bijzonder maakt",
+    "features": {
+      "trafficLight": {
+        "title": "Verkeerslichtsysteem",
+        "description": "Snelle visuele indicatoren: Groen (Veilig), Geel (Matig), Rood (Vermijden)"
+      },
+      "privacy": {
+        "title": "Privacy eerst",
+        "description": "Alle analyses verlopen veilig. Uw gezondheidsgegevens blijven privé."
+      },
+      "realTime": {
+        "title": "Realtime resultaten",
+        "description": "Ontvang uitgebreide analyse in minder dan 3 seconden"
+      }
+    },
+    "ctaTitle": "Klaar om het te proberen?",
+    "ctaDesc": "Sluit u aan bij duizenden gebruikers die slimmere voedselkeuzes maken met AI-gestuurde voedingsanalyse.",
+    "startScanning": "Nu beginnen met scannen",
+    "learnMore": "Meer over ons"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto uploaden",

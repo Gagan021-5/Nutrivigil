@@ -80,6 +80,49 @@
     }
   },
 
+  "howItWorks": {
+    "backToHome": "Back to Home",
+    "title": "How It Works",
+    "subtitle": "From photo to personalized health insights in 4 simple steps. Let AI guide your nutrition journey.",
+    "steps": {
+      "step1": {
+        "title": "Upload Food Photo",
+        "description": "Take a picture of your food package, label, or meal. Our AI works with any food image - from restaurant dishes to grocery items."
+      },
+      "step2": {
+        "title": "AI Identifies Food",
+        "description": "Powered by Gemini 2.5 AI, our system instantly recognizes the food item and extracts nutritional information from labels or databases."
+      },
+      "step3": {
+        "title": "Health Analysis",
+        "description": "Based on your health condition (diabetes, hypertension, etc.), our AI analyzes if the food is safe, providing a color-coded verdict."
+      },
+      "step4": {
+        "title": "Get Recommendations",
+        "description": "Receive personalized suggestions, healthier alternatives, and detailed nutritional breakdowns tailored to your health goals."
+      }
+    },
+    "featuresTitle": "What Makes It Special",
+    "features": {
+      "trafficLight": {
+        "title": "Traffic Light System",
+        "description": "Quick visual indicators: Green (Safe), Yellow (Moderate), Red (Avoid)"
+      },
+      "privacy": {
+        "title": "Privacy First",
+        "description": "All analysis happens securely. Your health data stays private."
+      },
+      "realTime": {
+        "title": "Real-Time Results",
+        "description": "Get comprehensive analysis in under 3 seconds"
+      }
+    },
+    "ctaTitle": "Ready to Try It?",
+    "ctaDesc": "Join thousands of users making smarter food choices with AI-powered nutrition analysis.",
+    "startScanning": "Start Scanning Now",
+    "learnMore": "Learn More About Us"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Upload Photo",

@@ -80,6 +80,49 @@
     }
   },
 
+  "howItWorks": {
+    "backToHome": "홈으로 돌아가기",
+    "title": "작동 방식",
+    "subtitle": "사진에서 4가지 간단한 단계로 개인화된 건강 인사이트까지. AI가 영양 여정을 안내합니다.",
+    "steps": {
+      "step1": {
+        "title": "음식 사진 업로드",
+        "description": "식품 포장, 라벨 또는 식사 사진을 찍으세요. AI는 모든 음식 이미지와 함께 작동합니다."
+      },
+      "step2": {
+        "title": "AI가 음식 식별",
+        "description": "Gemini 2.5 AI로 구동되는 시스템이 즉시 식품을 인식하고 영양 정보를 추출합니다."
+      },
+      "step3": {
+        "title": "건강 분석",
+        "description": "건강 상태에 따라 AI가 음식의 안전 여부를 분석하고 색상 코드로 판정을 제공합니다."
+      },
+      "step4": {
+        "title": "추천 받기",
+        "description": "건강 목표에 맞춘 개인화된 제안, 더 건강한 대안, 자세한 영양 분석을 받으세요."
+      }
+    },
+    "featuresTitle": "특별한 이유",
+    "features": {
+      "trafficLight": {
+        "title": "신호등 시스템",
+        "description": "빠른 시각적 지표: 초록 (안전), 노랑 (보통), 빨강 (피해야 함)"
+      },
+      "privacy": {
+        "title": "개인정보 보호 우선",
+        "description": "모든 분석은 안전하게 이루어집니다. 건강 데이터는 비공개로 유지됩니다."
+      },
+      "realTime": {
+        "title": "실시간 결과",
+        "description": "3초 이내에 종합적인 분석 결과 받기"
+      }
+    },
+    "ctaTitle": "시도할 준비가 되셨나요?",
+    "ctaDesc": "AI 기반 영양 분석으로 더 스마트한 식품 선택을 하는 수천 명의 사용자와 함께하세요.",
+    "startScanning": "지금 스캔 시작",
+    "learnMore": "우리에 대해 더 알아보기"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 사진 업로드",

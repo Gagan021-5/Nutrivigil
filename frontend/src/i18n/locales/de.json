@@ -80,6 +80,49 @@
     }
   },
 
+  "howItWorks": {
+    "backToHome": "Zurück zur Startseite",
+    "title": "So funktioniert es",
+    "subtitle": "Vom Foto zu personalisierten Gesundheitseinblicken in 4 einfachen Schritten. Lassen Sie KI Ihre Ernährungsreise begleiten.",
+    "steps": {
+      "step1": {
+        "title": "Lebensmittelfoto hochladen",
+        "description": "Machen Sie ein Foto von Ihrer Lebensmittelverpackung, dem Etikett oder der Mahlzeit. Unsere KI arbeitet mit jedem Lebensmittelbild - von Restaurantgerichten bis hin zu Lebensmitteln."
+      },
+      "step2": {
+        "title": "KI identifiziert Lebensmittel",
+        "description": "Betrieben von Gemini 2.5 AI erkennt unser System das Lebensmittel sofort und extrahiert Nährwertinformationen aus Etiketten oder Datenbanken."
+      },
+      "step3": {
+        "title": "Gesundheitsanalyse",
+        "description": "Basierend auf Ihrem Gesundheitszustand (Diabetes, Bluthochdruck usw.) analysiert unsere KI, ob das Lebensmittel sicher ist, und liefert ein farbcodiertes Urteil."
+      },
+      "step4": {
+        "title": "Empfehlungen erhalten",
+        "description": "Erhalten Sie personalisierte Vorschläge, gesündere Alternativen und detaillierte Nährwertanalysen, die auf Ihre Gesundheitsziele zugeschnitten sind."
+      }
+    },
+    "featuresTitle": "Was es besonders macht",
+    "features": {
+      "trafficLight": {
+        "title": "Ampelsystem",
+        "description": "Schnelle visuelle Indikatoren: Grün (Sicher), Gelb (Moderat), Rot (Vermeiden)"
+      },
+      "privacy": {
+        "title": "Datenschutz zuerst",
+        "description": "Die gesamte Analyse erfolgt sicher. Ihre Gesundheitsdaten bleiben privat."
+      },
+      "realTime": {
+        "title": "Echtzeit-Ergebnisse",
+        "description": "Erhalten Sie eine umfassende Analyse in unter 3 Sekunden"
+      }
+    },
+    "ctaTitle": "Bereit zum Ausprobieren?",
+    "ctaDesc": "Schließen Sie sich Tausenden von Nutzern an, die mit KI-gestützter Ernährungsanalyse klügere Lebensmittelentscheidungen treffen.",
+    "startScanning": "Jetzt scannen",
+    "learnMore": "Mehr über uns erfahren"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto hochladen",

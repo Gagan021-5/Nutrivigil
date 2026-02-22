@@ -80,6 +80,49 @@
     }
   },
 
+  "howItWorks": {
+    "backToHome": "Kembali ke Beranda",
+    "title": "Cara Kerjanya",
+    "subtitle": "Dari foto ke wawasan kesehatan yang dipersonalisasi dalam 4 langkah sederhana. Biarkan AI membimbing perjalanan nutrisi Anda.",
+    "steps": {
+      "step1": {
+        "title": "Unggah Foto Makanan",
+        "description": "Ambil foto kemasan makanan, label, atau hidangan Anda. AI kami bekerja dengan gambar makanan apa pun."
+      },
+      "step2": {
+        "title": "AI Mengidentifikasi Makanan",
+        "description": "Didukung oleh Gemini 2.5 AI, sistem kami langsung mengenali item makanan dan mengekstrak informasi nutrisi."
+      },
+      "step3": {
+        "title": "Analisis Kesehatan",
+        "description": "Berdasarkan kondisi kesehatan Anda, AI kami menganalisis apakah makanan aman, memberikan keputusan berkode warna."
+      },
+      "step4": {
+        "title": "Dapatkan Rekomendasi",
+        "description": "Terima saran yang dipersonalisasi, alternatif yang lebih sehat, dan analisis nutrisi lengkap sesuai tujuan kesehatan Anda."
+      }
+    },
+    "featuresTitle": "Yang Membuatnya Istimewa",
+    "features": {
+      "trafficLight": {
+        "title": "Sistem Lampu Lalu Lintas",
+        "description": "Indikator visual cepat: Hijau (Aman), Kuning (Sedang), Merah (Hindari)"
+      },
+      "privacy": {
+        "title": "Privasi Lebih Dulu",
+        "description": "Semua analisis dilakukan dengan aman. Data kesehatan Anda tetap pribadi."
+      },
+      "realTime": {
+        "title": "Hasil Waktu Nyata",
+        "description": "Dapatkan analisis komprehensif dalam waktu kurang dari 3 detik"
+      }
+    },
+    "ctaTitle": "Siap Mencobanya?",
+    "ctaDesc": "Bergabunglah dengan ribuan pengguna yang membuat pilihan makanan lebih cerdas dengan analisis nutrisi bertenaga AI.",
+    "startScanning": "Mulai Memindai Sekarang",
+    "learnMore": "Pelajari Lebih Lanjut Tentang Kami"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Unggah Foto",

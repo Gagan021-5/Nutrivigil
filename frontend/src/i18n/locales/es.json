@@ -80,6 +80,49 @@
     }
   },
 
+  "howItWorks": {
+    "backToHome": "Volver al inicio",
+    "title": "Cómo funciona",
+    "subtitle": "De la foto a perspectivas de salud personalizadas en 4 sencillos pasos. Deja que la IA guíe tu viaje nutricional.",
+    "steps": {
+      "step1": {
+        "title": "Sube una foto del alimento",
+        "description": "Toma una foto del envase del alimento, la etiqueta o la comida. Nuestra IA funciona con cualquier imagen de alimento - desde platos de restaurante hasta artículos de tienda."
+      },
+      "step2": {
+        "title": "La IA identifica el alimento",
+        "description": "Impulsado por Gemini 2.5 AI, nuestro sistema reconoce instantáneamente el alimento y extrae información nutricional de etiquetas o bases de datos."
+      },
+      "step3": {
+        "title": "Análisis de salud",
+        "description": "Basándose en tu condición de salud (diabetes, hipertensión, etc.), nuestra IA analiza si el alimento es seguro, proporcionando un veredicto con código de colores."
+      },
+      "step4": {
+        "title": "Obtener recomendaciones",
+        "description": "Recibe sugerencias personalizadas, alternativas más saludables y análisis nutricionales detallados adaptados a tus objetivos de salud."
+      }
+    },
+    "featuresTitle": "Qué lo hace especial",
+    "features": {
+      "trafficLight": {
+        "title": "Sistema de semáforo",
+        "description": "Indicadores visuales rápidos: Verde (Seguro), Amarillo (Moderado), Rojo (Evitar)"
+      },
+      "privacy": {
+        "title": "Privacidad primero",
+        "description": "Todo el análisis ocurre de forma segura. Tus datos de salud permanecen privados."
+      },
+      "realTime": {
+        "title": "Resultados en tiempo real",
+        "description": "Obtén un análisis completo en menos de 3 segundos"
+      }
+    },
+    "ctaTitle": "¿Listo para probarlo?",
+    "ctaDesc": "Únete a miles de usuarios que toman decisiones alimentarias más inteligentes con análisis nutricional impulsado por IA.",
+    "startScanning": "Empezar a escanear ahora",
+    "learnMore": "Más información sobre nosotros"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Subir foto",
