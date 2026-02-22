@@ -3,186 +3,86 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Activity, Heart, Droplet, Shield, Scale, AlertCircle, ChevronDown, CheckCircle, XCircle, Zap, Brain } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
+import { useTranslation } from 'react-i18next';
 
 const Protocol = () => {
     const { theme } = useTheme();
+    const { t } = useTranslation();
     const [expandedProtocol, setExpandedProtocol] = useState(null);
 
 const protocols = [
     {
         id: 'diabetes',
-        title: 'Diabetes Management',
         icon: <Activity className="w-6 h-6" />,
         color: 'from-blue-500 to-cyan-500',
         bgColor: 'bg-blue-500/10',
         borderColor: 'border-blue-500/30',
-        description: 'Manage blood sugar levels through mindful carbohydrate intake and balanced nutrition.',
-        dos: [
-            'Choose low-glycemic index foods',
-            'Monitor carbohydrate portions',
-            'Include fiber-rich foods',
-            'Eat regular, balanced meals',
-            'Stay hydrated with water'
-        ],
-        donts: [
-            'Avoid sugary drinks and sodas',
-            'Limit white bread and refined grains',
-            'Skip processed snacks high in sugar',
-            'Avoid fruit juices with added sugar',
-            'Minimize fried and fatty foods'
-        ],
-        nutrients: [
-            { name: 'Carbohydrates', note: 'Monitor intake, choose complex carbs' },
-            { name: 'Fiber', note: 'Aim for 25-30g daily' },
-            { name: 'Sugar', note: 'Limit added sugars, watch natural sugars' },
-            { name: 'Protein', note: 'Include lean sources at each meal' }
-        ]
+        title: t('protocolPage.protocols.diabetes.title'),
+        description: t('protocolPage.protocols.diabetes.description'),
+        dos: t('protocolPage.protocols.diabetes.dos', { returnObjects: true }),
+        donts: t('protocolPage.protocols.diabetes.donts', { returnObjects: true }),
+        nutrients: t('protocolPage.protocols.diabetes.nutrients', { returnObjects: true }),
     },
     {
         id: 'hypertension',
-        title: 'Hypertension (High Blood Pressure)',
         icon: <Heart className="w-6 h-6" />,
         color: 'from-red-500 to-pink-500',
         bgColor: 'bg-red-500/10',
         borderColor: 'border-red-500/30',
-        description: 'Control blood pressure through reduced sodium intake and heart-healthy foods.',
-        dos: [
-            'Choose fresh, whole foods',
-            'Use herbs and spices for flavor',
-            'Include potassium-rich foods',
-            'Eat fruits and vegetables daily',
-            'Select low-sodium options'
-        ],
-        donts: [
-            'Avoid adding table salt',
-            'Limit processed and canned foods',
-            'Skip salty snacks and chips',
-            'Avoid pickled and preserved foods',
-            'Minimize restaurant and fast food'
-        ],
-        nutrients: [
-            { name: 'Sodium', note: 'Limit to <2,300mg daily (ideally <1,500mg)' },
-            { name: 'Potassium', note: 'Increase intake (bananas, spinach)' },
-            { name: 'Calcium', note: 'Support with low-fat dairy' },
-            { name: 'Magnesium', note: 'Include nuts, seeds, whole grains' }
-        ]
+        title: t('protocolPage.protocols.hypertension.title'),
+        description: t('protocolPage.protocols.hypertension.description'),
+        dos: t('protocolPage.protocols.hypertension.dos', { returnObjects: true }),
+        donts: t('protocolPage.protocols.hypertension.donts', { returnObjects: true }),
+        nutrients: t('protocolPage.protocols.hypertension.nutrients', { returnObjects: true }),
     },
     {
         id: 'heart',
-        title: 'Heart Disease',
         icon: <Heart className="w-6 h-6" />,
         color: 'from-purple-500 to-pink-500',
         bgColor: 'bg-purple-500/10',
         borderColor: 'border-purple-500/30',
-        description: 'Protect heart health by managing cholesterol, fats, and maintaining healthy weight.',
-        dos: [
-            'Choose lean proteins (fish, poultry)',
-            'Include omega-3 fatty acids',
-            'Eat plenty of vegetables and fruits',
-            'Select whole grains over refined',
-            'Use healthy oils (olive, avocado)'
-        ],
-        donts: [
-            'Avoid trans fats and partially hydrogenated oils',
-            'Limit saturated fats (red meat, butter)',
-            'Skip fried and greasy foods',
-            'Avoid high-cholesterol foods',
-            'Minimize processed meats'
-        ],
-        nutrients: [
-            { name: 'Saturated Fat', note: 'Limit to <7% of daily calories' },
-            { name: 'Cholesterol', note: 'Keep below 200mg daily' },
-            { name: 'Omega-3', note: 'Eat fatty fish 2x per week' },
-            { name: 'Fiber', note: 'Helps lower cholesterol' }
-        ]
+        title: t('protocolPage.protocols.heart.title'),
+        description: t('protocolPage.protocols.heart.description'),
+        dos: t('protocolPage.protocols.heart.dos', { returnObjects: true }),
+        donts: t('protocolPage.protocols.heart.donts', { returnObjects: true }),
+        nutrients: t('protocolPage.protocols.heart.nutrients', { returnObjects: true }),
     },
     {
         id: 'kidney',
-        title: 'Kidney Disease',
         icon: <Droplet className="w-6 h-6" />,
         color: 'from-teal-500 to-cyan-500',
         bgColor: 'bg-teal-500/10',
         borderColor: 'border-teal-500/30',
-        description: 'Support kidney function by managing protein, potassium, phosphorus, and sodium.',
-        dos: [
-            'Control protein portions (consult dietitian)',
-            'Choose low-potassium fruits and vegetables',
-            'Select low-phosphorus foods',
-            'Stay within fluid limits if prescribed',
-            'Monitor portion sizes carefully'
-        ],
-        donts: [
-            'Avoid high-potassium foods (bananas, oranges)',
-            'Limit dairy and high-phosphorus foods',
-            'Skip processed foods high in sodium',
-            'Avoid dark colas and certain beverages',
-            'Minimize protein from red meat'
-        ],
-        nutrients: [
-            { name: 'Protein', note: 'Moderate intake as advised by doctor' },
-            { name: 'Potassium', note: 'Limit to recommended levels' },
-            { name: 'Phosphorus', note: 'Avoid additives in processed foods' },
-            { name: 'Sodium', note: 'Keep intake low' }
-        ]
+        title: t('protocolPage.protocols.kidney.title'),
+        description: t('protocolPage.protocols.kidney.description'),
+        dos: t('protocolPage.protocols.kidney.dos', { returnObjects: true }),
+        donts: t('protocolPage.protocols.kidney.donts', { returnObjects: true }),
+        nutrients: t('protocolPage.protocols.kidney.nutrients', { returnObjects: true }),
     },
     {
         id: 'obesity',
-        title: 'Obesity & Weight Management',
         icon: <Scale className="w-6 h-6" />,
         color: 'from-orange-500 to-red-500',
         bgColor: 'bg-orange-500/10',
         borderColor: 'border-orange-500/30',
-        description: 'Achieve healthy weight through balanced nutrition, portion control, and mindful eating.',
-        dos: [
-            'Eat nutrient-dense, low-calorie foods',
-            'Practice portion control',
-            'Include plenty of vegetables',
-            'Choose lean proteins',
-            'Stay physically active regularly'
-        ],
-        donts: [
-            'Avoid sugary beverages and snacks',
-            'Limit high-calorie processed foods',
-            'Skip large portions and second helpings',
-            'Avoid eating out of boredom or stress',
-            'Minimize fried and fatty foods'
-        ],
-        nutrients: [
-            { name: 'Calories', note: 'Create a moderate deficit (500-750 cal/day)' },
-            { name: 'Protein', note: 'Helps preserve muscle during weight loss' },
-            { name: 'Fiber', note: 'Promotes fullness and satiety' },
-            { name: 'Water', note: 'Drink plenty to support metabolism' }
-        ]
+        title: t('protocolPage.protocols.obesity.title'),
+        description: t('protocolPage.protocols.obesity.description'),
+        dos: t('protocolPage.protocols.obesity.dos', { returnObjects: true }),
+        donts: t('protocolPage.protocols.obesity.donts', { returnObjects: true }),
+        nutrients: t('protocolPage.protocols.obesity.nutrients', { returnObjects: true }),
     },
     {
         id: 'allergies',
-        title: 'Food Allergies',
         icon: <Shield className="w-6 h-6" />,
         color: 'from-yellow-500 to-orange-500',
         bgColor: 'bg-yellow-500/10',
         borderColor: 'border-yellow-500/30',
-        description: 'Avoid allergens and prevent cross-contamination while maintaining balanced nutrition.',
-        dos: [
-            'Read all food labels carefully',
-            'Ask about ingredients when eating out',
-            'Carry emergency medication (if prescribed)',
-            'Inform others about your allergies',
-            'Find safe alternatives for nutrients'
-        ],
-        donts: [
-            'Never consume known allergens',
-            'Avoid foods with unclear ingredients',
-            'Don\'t assume "may contain" is safe',
-            'Avoid cross-contaminated surfaces',
-            'Don\'t risk trying new foods without checking'
-        ],
-        nutrients: [
-            { name: 'Common Allergens', note: 'Milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, soy' },
-            { name: 'Nutritional Gaps', note: 'Replace nutrients from avoided foods' },
-            { name: 'Cross-Contamination', note: 'Be vigilant in food preparation' },
-            { name: 'Emergency Plan', note: 'Always be prepared' }
-        ]
-    }
+        title: t('protocolPage.protocols.allergies.title'),
+        description: t('protocolPage.protocols.allergies.description'),
+        dos: t('protocolPage.protocols.allergies.dos', { returnObjects: true }),
+        donts: t('protocolPage.protocols.allergies.donts', { returnObjects: true }),
+        nutrients: t('protocolPage.protocols.allergies.nutrients', { returnObjects: true }),
+    },
 ];
 
     const toggleProtocol = (id) => {
@@ -198,14 +98,14 @@ const protocols = [
                 theme === 'dark' ? 'bg-gradient-to-b from-[#1a1f2e] to-[#0a0e1a]' : 'bg-gradient-to-b from-gray-50 to-white'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <Link 
-                        to="/" 
+                    <Link
+                        to="/"
                         className={`inline-flex items-center gap-2 transition-colors mb-8 ${
                             theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
                         }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
-                        Back to Home
+                        {t('protocolPage.backToHome')}
                     </Link>
 
                     <div className="text-center">
@@ -215,12 +115,12 @@ const protocols = [
                             transition={{ duration: 0.6 }}
                         >
                             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                Health Protocols
+                                {t('protocolPage.heroTitle')}
                             </h1>
                             <p className={`text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed ${
                                 theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                             }`}>
-                                Evidence-based dietary guidelines tailored to your specific health conditions
+                                {t('protocolPage.heroSubtitle')}
                             </p>
                         </motion.div>
                     </div>
@@ -230,8 +130,8 @@ const protocols = [
             {/* Supported Conditions */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-5xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Supported Health Conditions</h2>
-                    
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">{t('protocolPage.conditionsTitle')}</h2>
+
                     <div className="space-y-4">
                         {protocols.map((protocol, index) => (
                             <motion.div
@@ -287,10 +187,10 @@ const protocols = [
                                                     }`}>
                                                         <div className="flex items-center gap-2 mb-4">
                                                             <CheckCircle className="w-5 h-5 text-green-400" />
-                                                            <h4 className="font-bold text-green-400">Recommended (Do's)</h4>
+                                                            <h4 className="font-bold text-green-400">{t('protocolPage.dosLabel')}</h4>
                                                         </div>
                                                         <ul className="space-y-2">
-                                                            {protocol.dos.map((item, idx) => (
+                                                            {Array.isArray(protocol.dos) && protocol.dos.map((item, idx) => (
                                                                 <li key={idx} className={`text-sm flex items-start gap-2 transition-colors duration-300 ${
                                                                     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                                                                 }`}>
@@ -307,10 +207,10 @@ const protocols = [
                                                     }`}>
                                                         <div className="flex items-center gap-2 mb-4">
                                                             <XCircle className="w-5 h-5 text-red-400" />
-                                                            <h4 className="font-bold text-red-400">Avoid (Don'ts)</h4>
+                                                            <h4 className="font-bold text-red-400">{t('protocolPage.dontsLabel')}</h4>
                                                         </div>
                                                         <ul className="space-y-2">
-                                                            {protocol.donts.map((item, idx) => (
+                                                            {Array.isArray(protocol.donts) && protocol.donts.map((item, idx) => (
                                                                 <li key={idx} className={`text-sm flex items-start gap-2 transition-colors duration-300 ${
                                                                     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                                                                 }`}>
@@ -328,10 +228,10 @@ const protocols = [
                                                 }`}>
                                                     <h4 className="font-bold text-purple-400 mb-4 flex items-center gap-2">
                                                         <AlertCircle className="w-5 h-5" />
-                                                        Key Nutrients to Monitor
+                                                        {t('protocolPage.nutrientsLabel')}
                                                     </h4>
                                                     <div className="grid sm:grid-cols-2 gap-3">
-                                                        {protocol.nutrients.map((nutrient, idx) => (
+                                                        {Array.isArray(protocol.nutrients) && protocol.nutrients.map((nutrient, idx) => (
                                                             <div key={idx} className="text-sm">
                                                                 <span className={`font-semibold transition-colors duration-300 ${
                                                                     theme === 'dark' ? 'text-white' : 'text-gray-900'
@@ -358,7 +258,7 @@ const protocols = [
                 theme === 'dark' ? 'bg-[#1a1f2e]/30' : 'bg-gray-50'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">How NutriVigil Helps</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">{t('protocolPage.howHelpTitle')}</h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -372,11 +272,11 @@ const protocols = [
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white mx-auto mb-4">
                                 <Brain className="w-8 h-8" />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">AI Protocol Analysis</h3>
+                            <h3 className="text-xl font-bold mb-3">{t('protocolPage.help.ai.title')}</h3>
                             <p className={`transition-colors duration-300 ${
                                 theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                             }`}>
-                                Our AI cross-references food items with your selected health protocols to provide accurate recommendations
+                                {t('protocolPage.help.ai.desc')}
                             </p>
                         </motion.div>
 
@@ -392,11 +292,11 @@ const protocols = [
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white mx-auto mb-4">
                                 <Heart className="w-8 h-8" />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Personalized Recommendations</h3>
+                            <h3 className="text-xl font-bold mb-3">{t('protocolPage.help.personalized.title')}</h3>
                             <p className={`transition-colors duration-300 ${
                                 theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                             }`}>
-                                Get tailored nutrition advice based on your specific health conditions and dietary needs
+                                {t('protocolPage.help.personalized.desc')}
                             </p>
                         </motion.div>
 
@@ -412,11 +312,11 @@ const protocols = [
                             <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white mx-auto mb-4">
                                 <Zap className="w-8 h-8" />
                             </div>
-                            <h3 className="text-xl font-bold mb-3">Real-Time Safety Checks</h3>
+                            <h3 className="text-xl font-bold mb-3">{t('protocolPage.help.safety.title')}</h3>
                             <p className={`transition-colors duration-300 ${
                                 theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                             }`}>
-                                Instant traffic light signals (Green/Yellow/Red) for every food you scan based on your protocols
+                                {t('protocolPage.help.safety.desc')}
                             </p>
                         </motion.div>
                     </div>
@@ -435,21 +335,21 @@ const protocols = [
                         <div className="flex items-start gap-4">
                             <AlertCircle className="w-8 h-8 text-yellow-400 flex-shrink-0 mt-1" />
                             <div>
-                                <h3 className="text-2xl font-bold text-yellow-400 mb-3">Important Medical Disclaimer</h3>
+                                <h3 className="text-2xl font-bold text-yellow-400 mb-3">{t('protocolPage.disclaimerTitle')}</h3>
                                 <div className={`space-y-3 transition-colors duration-300 ${
                                     theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                                 }`}>
                                     <p>
-                                        <strong>NutriVigil provides educational information and general guidance only.</strong> Our recommendations are based on evidence-based dietary guidelines but should not replace professional medical advice, diagnosis, or treatment.
+                                        <strong>{t('protocolPage.disclaimerP1Bold')}</strong>{t('protocolPage.disclaimerP1Rest')}
                                     </p>
                                     <p>
-                                        Always consult your healthcare provider, registered dietitian, or qualified medical professional before making significant changes to your diet, especially if you have existing health conditions or take medications.
+                                        {t('protocolPage.disclaimerP2')}
                                     </p>
                                     <p>
-                                        Individual nutritional needs vary greatly based on medical history, current health status, medications, and other factors. What works for one person may not be appropriate for another.
+                                        {t('protocolPage.disclaimerP3')}
                                     </p>
                                     <p className="font-semibold text-yellow-400">
-                                        In case of emergency or severe symptoms, seek immediate medical attention.
+                                        {t('protocolPage.disclaimerP4')}
                                     </p>
                                 </div>
                             </div>
@@ -462,18 +362,18 @@ const protocols = [
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-3xl p-12 text-center border border-purple-500/20 transition-colors duration-300">
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('protocolPage.ctaTitle')}</h2>
                         <p className={`text-xl mb-8 max-w-2xl mx-auto transition-colors duration-300 ${
                             theme === 'dark' ? 'text-gray-300' : 'text-gray-200'
                         }`}>
-                            Set up your health profile and receive personalized nutrition recommendations
+                            {t('protocolPage.ctaSubtitle')}
                         </p>
-                        <Link 
-                            to="/scan" 
+                        <Link
+                            to="/scan"
                             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
                         >
                             <Zap className="w-5 h-5" />
-                            Start Scanning Food
+                            {t('protocolPage.ctaButton')}
                         </Link>
                     </div>
                 </div>

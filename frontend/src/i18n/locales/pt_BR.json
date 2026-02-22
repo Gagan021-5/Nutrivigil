@@ -80,6 +80,113 @@
     }
   },
 
+  "protocolPage": {
+    "backToHome": "Voltar ao Início",
+    "heroTitle": "Protocolos de Saúde",
+    "heroSubtitle": "Diretrizes alimentares baseadas em evidências adaptadas às suas condições de saúde específicas",
+    "conditionsTitle": "Condições de Saúde Suportadas",
+    "dosLabel": "Recomendado (O que fazer)",
+    "dontsLabel": "Evitar (O que não fazer)",
+    "nutrientsLabel": "Principais Nutrientes para Monitorar",
+    "howHelpTitle": "Como o NutriVigil Ajuda",
+    "help": {
+      "ai": {
+        "title": "Análise de Protocolo por IA",
+        "desc": "Nossa IA faz referência cruzada dos alimentos com seus protocolos de saúde selecionados e fornece recomendações precisas"
+      },
+      "personalized": {
+        "title": "Recomendações Personalizadas",
+        "desc": "Receba conselhos nutricionais personalizados com base nas suas condições de saúde específicas e necessidades alimentares"
+      },
+      "safety": {
+        "title": "Verificações de Segurança em Tempo Real",
+        "desc": "Sinais de semáforo instantâneos (verde/amarelo/vermelho) para cada alimento que você escanear com base nos seus protocolos"
+      }
+    },
+    "disclaimerTitle": "Aviso Legal Médico Importante",
+    "disclaimerP1Bold": "O NutriVigil fornece apenas informações educativas e orientações gerais.",
+    "disclaimerP1Rest": " Nossas recomendações são baseadas em diretrizes alimentares baseadas em evidências, mas não devem substituir o conselho médico profissional, diagnóstico ou tratamento.",
+    "disclaimerP2": "Sempre consulte seu médico, nutricionista registrado ou profissional de saúde qualificado antes de fazer mudanças significativas na sua dieta, especialmente se você tiver condições de saúde preexistentes ou estiver tomando medicamentos.",
+    "disclaimerP3": "As necessidades nutricionais individuais variam muito com base no histórico médico, estado de saúde atual, medicamentos e outros fatores. O que funciona para uma pessoa pode não ser adequado para outra.",
+    "disclaimerP4": "Em caso de emergência ou sintomas graves, procure assistência médica imediata.",
+    "ctaTitle": "Pronto para Começar?",
+    "ctaSubtitle": "Configure seu perfil de saúde e receba recomendações nutricionais personalizadas",
+    "ctaButton": "Começar a Escanear Alimentos",
+    "protocols": {
+      "diabetes": {
+        "title": "Gerenciamento do Diabetes",
+        "description": "Gerenciar os níveis de açúcar no sangue por meio de ingestão consciente de carboidratos e nutrição equilibrada.",
+        "dos": ["Escolha alimentos com baixo índice glicêmico", "Monitore as porções de carboidratos", "Inclua alimentos ricos em fibras", "Faça refeições regulares e equilibradas", "Mantenha-se hidratado bebendo água"],
+        "donts": ["Evite bebidas açucaradas e refrigerantes", "Limite pão branco e grãos refinados", "Evite lanches processados com alto teor de açúcar", "Evite sucos de fruta com açúcares adicionados", "Minimize alimentos fritos e gordurosos"],
+        "nutrients": [
+          {"name": "Carboidratos", "note": "Monitore a ingestão, escolha carboidratos complexos"},
+          {"name": "Fibras", "note": "Meta de 25-30g por dia"},
+          {"name": "Açúcar", "note": "Limite açúcares adicionados, atenção aos naturais"},
+          {"name": "Proteína", "note": "Inclua fontes magras em cada refeição"}
+        ]
+      },
+      "hypertension": {
+        "title": "Hipertensão",
+        "description": "Controlar a pressão arterial reduzindo a ingestão de sódio e com alimentos saudáveis para o coração.",
+        "dos": ["Escolha alimentos frescos e integrais", "Use ervas e especiarias para temperar", "Inclua alimentos ricos em potássio", "Coma frutas e vegetais diariamente", "Escolha opções com baixo teor de sódio"],
+        "donts": ["Evite adicionar sal de mesa", "Limite alimentos processados e enlatados", "Evite salgadinhos e batatas fritas", "Evite alimentos em conserva e preservados", "Minimize restaurantes e fast food"],
+        "nutrients": [
+          {"name": "Sódio", "note": "Limite a <2.300mg/dia (idealmente <1.500mg)"},
+          {"name": "Potássio", "note": "Aumente a ingestão (bananas, espinafre)"},
+          {"name": "Cálcio", "note": "Apoie com laticínios magros"},
+          {"name": "Magnésio", "note": "Inclua nozes, sementes, grãos integrais"}
+        ]
+      },
+      "heart": {
+        "title": "Doenças Cardíacas",
+        "description": "Proteja a saúde do coração gerenciando o colesterol, as gorduras e mantendo um peso saudável.",
+        "dos": ["Escolha proteínas magras (peixe, frango)", "Inclua ácidos graxos ômega-3", "Coma bastantes vegetais e frutas", "Escolha grãos integrais em vez de refinados", "Use óleos saudáveis (azeite, abacate)"],
+        "donts": ["Evite gorduras trans e óleos parcialmente hidrogenados", "Limite gorduras saturadas (carne vermelha, manteiga)", "Evite alimentos fritos e gordurosos", "Evite alimentos ricos em colesterol", "Minimize carnes processadas"],
+        "nutrients": [
+          {"name": "Gordura Saturada", "note": "Limite a <7% das calorias diárias"},
+          {"name": "Colesterol", "note": "Mantenha abaixo de 200mg por dia"},
+          {"name": "Ômega-3", "note": "Coma peixe gordo 2x por semana"},
+          {"name": "Fibras", "note": "Ajuda a reduzir o colesterol"}
+        ]
+      },
+      "kidney": {
+        "title": "Doença Renal",
+        "description": "Apoie a função renal gerenciando proteínas, potássio, fósforo e sódio.",
+        "dos": ["Controle as porções de proteína (consulte um nutricionista)", "Escolha frutas e vegetais com baixo teor de potássio", "Escolha alimentos com baixo teor de fósforo", "Mantenha-se dentro dos limites de líquidos se prescrito", "Monitore os tamanhos das porções com cuidado"],
+        "donts": ["Evite alimentos ricos em potássio (bananas, laranjas)", "Limite laticínios e alimentos ricos em fósforo", "Evite alimentos processados com alto teor de sódio", "Evite refrigerante cola escuro e certas bebidas", "Minimize proteínas de carne vermelha"],
+        "nutrients": [
+          {"name": "Proteína", "note": "Ingestão moderada conforme conselho médico"},
+          {"name": "Potássio", "note": "Limite aos níveis recomendados"},
+          {"name": "Fósforo", "note": "Evite aditivos em alimentos processados"},
+          {"name": "Sódio", "note": "Mantenha a ingestão baixa"}
+        ]
+      },
+      "obesity": {
+        "title": "Obesidade e Controle de Peso",
+        "description": "Alcance um peso saudável por meio de nutrição equilibrada, controle de porções e alimentação consciente.",
+        "dos": ["Coma alimentos nutritivos e de baixas calorias", "Pratique o controle de porções", "Inclua bastantes vegetais", "Escolha proteínas magras", "Mantenha-se fisicamente ativo regularmente"],
+        "donts": ["Evite bebidas açucaradas e salgadinhos", "Limite alimentos processados com muitas calorias", "Evite porções grandes e repetições", "Evite comer por tédio ou estresse", "Minimize alimentos fritos e gordurosos"],
+        "nutrients": [
+          {"name": "Calorias", "note": "Crie um déficit moderado (500-750 cal/dia)"},
+          {"name": "Proteína", "note": "Ajuda a preservar a massa muscular durante a perda de peso"},
+          {"name": "Fibras", "note": "Promove saciedade e satisfação"},
+          {"name": "Água", "note": "Beba o suficiente para apoiar o metabolismo"}
+        ]
+      },
+      "allergies": {
+        "title": "Alergias Alimentares",
+        "description": "Evite alérgenos e previna a contaminação cruzada mantendo uma nutrição equilibrada.",
+        "dos": ["Leia todos os rótulos alimentares com atenção", "Pergunte sobre ingredientes ao comer fora", "Carregue medicação de emergência (se prescrita)", "Informe outras pessoas sobre suas alergias", "Encontre alternativas seguras para os nutrientes"],
+        "donts": ["Nunca consuma alérgenos conhecidos", "Evite alimentos com ingredientes pouco claros", "Não assuma que \"pode conter\" é seguro", "Evite superfícies com contaminação cruzada", "Não arrisque experimentar novos alimentos sem verificar"],
+        "nutrients": [
+          {"name": "Alérgenos Comuns", "note": "Leite, ovos, peixe, frutos do mar, nozes, amendoins, trigo, soja"},
+          {"name": "Lacunas Nutricionais", "note": "Substitua os nutrientes dos alimentos evitados"},
+          {"name": "Contaminação Cruzada", "note": "Fique atento na preparação de alimentos"},
+          {"name": "Plano de Emergência", "note": "Esteja sempre preparado"}
+        ]
+      }
+    }
+  },
   "howSteps": {
     "upload": {
       "title": "1. Enviar Foto",

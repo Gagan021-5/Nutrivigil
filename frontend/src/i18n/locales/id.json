@@ -80,6 +80,113 @@
     }
   },
 
+  "protocolPage": {
+    "backToHome": "Kembali ke Beranda",
+    "heroTitle": "Protokol Kesehatan",
+    "heroSubtitle": "Panduan diet berbasis bukti yang disesuaikan dengan kondisi kesehatan spesifik Anda",
+    "conditionsTitle": "Kondisi Kesehatan yang Didukung",
+    "dosLabel": "Dianjurkan (Lakukan)",
+    "dontsLabel": "Hindari (Jangan Lakukan)",
+    "nutrientsLabel": "Nutrisi Utama yang Perlu Dipantau",
+    "howHelpTitle": "Bagaimana NutriVigil Membantu",
+    "help": {
+      "ai": {
+        "title": "Analisis Protokol AI",
+        "desc": "AI kami mencocokkan item makanan dengan protokol kesehatan Anda yang dipilih untuk memberikan rekomendasi yang akurat"
+      },
+      "personalized": {
+        "title": "Rekomendasi Personal",
+        "desc": "Dapatkan saran nutrisi yang disesuaikan berdasarkan kondisi kesehatan dan kebutuhan diet spesifik Anda"
+      },
+      "safety": {
+        "title": "Pemeriksaan Keamanan Real-Time",
+        "desc": "Sinyal lampu lalu lintas instan (Hijau/Kuning/Merah) untuk setiap makanan yang Anda pindai berdasarkan protokol Anda"
+      }
+    },
+    "disclaimerTitle": "Penafian Medis Penting",
+    "disclaimerP1Bold": "NutriVigil hanya menyediakan informasi edukasi dan panduan umum.",
+    "disclaimerP1Rest": " Rekomendasi kami didasarkan pada panduan diet berbasis bukti tetapi tidak boleh menggantikan saran medis profesional, diagnosis, atau pengobatan.",
+    "disclaimerP2": "Selalu konsultasikan dengan penyedia layanan kesehatan, ahli gizi terdaftar, atau profesional medis yang berkualifikasi sebelum membuat perubahan signifikan pada diet Anda, terutama jika Anda memiliki kondisi kesehatan yang ada atau mengonsumsi obat-obatan.",
+    "disclaimerP3": "Kebutuhan nutrisi individu sangat bervariasi berdasarkan riwayat medis, status kesehatan saat ini, obat-obatan, dan faktor lainnya. Apa yang berhasil untuk satu orang mungkin tidak cocok untuk orang lain.",
+    "disclaimerP4": "Dalam keadaan darurat atau gejala parah, segera cari pertolongan medis.",
+    "ctaTitle": "Siap Memulai?",
+    "ctaSubtitle": "Siapkan profil kesehatan Anda dan terima rekomendasi nutrisi yang dipersonalisasi",
+    "ctaButton": "Mulai Memindai Makanan",
+    "protocols": {
+      "diabetes": {
+        "title": "Manajemen Diabetes",
+        "description": "Kelola kadar gula darah melalui asupan karbohidrat yang bijaksana dan nutrisi seimbang.",
+        "dos": ["Pilih makanan dengan indeks glikemik rendah", "Pantau porsi karbohidrat", "Sertakan makanan kaya serat", "Makan makanan teratur dan seimbang", "Tetap terhidrasi dengan air"],
+        "donts": ["Hindari minuman manis dan soda", "Batasi roti putih dan biji-bijian olahan", "Hindari camilan olahan tinggi gula", "Hindari jus buah dengan gula tambahan", "Minimalkan makanan goreng dan berlemak"],
+        "nutrients": [
+          {"name": "Karbohidrat", "note": "Pantau asupan, pilih karbohidrat kompleks"},
+          {"name": "Serat", "note": "Targetkan 25-30g per hari"},
+          {"name": "Gula", "note": "Batasi gula tambahan, perhatikan gula alami"},
+          {"name": "Protein", "note": "Sertakan sumber tanpa lemak di setiap makan"}
+        ]
+      },
+      "hypertension": {
+        "title": "Hipertensi (Tekanan Darah Tinggi)",
+        "description": "Kendalikan tekanan darah melalui pengurangan asupan natrium dan makanan yang baik untuk jantung.",
+        "dos": ["Pilih makanan segar dan utuh", "Gunakan rempah dan bumbu untuk rasa", "Sertakan makanan kaya kalium", "Makan buah dan sayuran setiap hari", "Pilih opsi rendah natrium"],
+        "donts": ["Hindari menambahkan garam meja", "Batasi makanan olahan dan kalengan", "Hindari camilan asin dan keripik", "Hindari makanan acar dan diawetkan", "Minimalkan makanan restoran dan cepat saji"],
+        "nutrients": [
+          {"name": "Natrium", "note": "Batasi hingga <2.300mg per hari (idealnya <1.500mg)"},
+          {"name": "Kalium", "note": "Tingkatkan asupan (pisang, bayam)"},
+          {"name": "Kalsium", "note": "Dukung dengan susu rendah lemak"},
+          {"name": "Magnesium", "note": "Sertakan kacang, biji-bijian, biji-bijian utuh"}
+        ]
+      },
+      "heart": {
+        "title": "Penyakit Jantung",
+        "description": "Lindungi kesehatan jantung dengan mengelola kolesterol, lemak, dan menjaga berat badan sehat.",
+        "dos": ["Pilih protein tanpa lemak (ikan, unggas)", "Sertakan asam lemak omega-3", "Makan banyak sayuran dan buah", "Pilih biji-bijian utuh dibanding olahan", "Gunakan minyak sehat (zaitun, alpukat)"],
+        "donts": ["Hindari lemak trans dan minyak terhidrogenasi parsial", "Batasi lemak jenuh (daging merah, mentega)", "Hindari makanan goreng dan berminyak", "Hindari makanan tinggi kolesterol", "Minimalkan daging olahan"],
+        "nutrients": [
+          {"name": "Lemak Jenuh", "note": "Batasi hingga <7% dari kalori harian"},
+          {"name": "Kolesterol", "note": "Jaga di bawah 200mg per hari"},
+          {"name": "Omega-3", "note": "Makan ikan berlemak 2x per minggu"},
+          {"name": "Serat", "note": "Membantu menurunkan kolesterol"}
+        ]
+      },
+      "kidney": {
+        "title": "Penyakit Ginjal",
+        "description": "Dukung fungsi ginjal dengan mengelola protein, kalium, fosfor, dan natrium.",
+        "dos": ["Kendalikan porsi protein (konsultasikan dengan ahli gizi)", "Pilih buah dan sayuran rendah kalium", "Pilih makanan rendah fosfor", "Tetap dalam batas cairan jika diresepkan", "Pantau ukuran porsi dengan cermat"],
+        "donts": ["Hindari makanan tinggi kalium (pisang, jeruk)", "Batasi produk susu dan makanan tinggi fosfor", "Hindari makanan olahan tinggi natrium", "Hindari cola gelap dan minuman tertentu", "Minimalkan protein dari daging merah"],
+        "nutrients": [
+          {"name": "Protein", "note": "Asupan moderat sesuai saran dokter"},
+          {"name": "Kalium", "note": "Batasi pada tingkat yang direkomendasikan"},
+          {"name": "Fosfor", "note": "Hindari aditif dalam makanan olahan"},
+          {"name": "Natrium", "note": "Jaga asupan tetap rendah"}
+        ]
+      },
+      "obesity": {
+        "title": "Obesitas & Manajemen Berat Badan",
+        "description": "Capai berat badan sehat melalui nutrisi seimbang, kontrol porsi, dan makan dengan bijaksana.",
+        "dos": ["Makan makanan padat nutrisi dan rendah kalori", "Praktikkan kontrol porsi", "Sertakan banyak sayuran", "Pilih protein tanpa lemak", "Tetap aktif secara fisik secara teratur"],
+        "donts": ["Hindari minuman dan camilan manis", "Batasi makanan olahan tinggi kalori", "Hindari porsi besar dan tambahan", "Hindari makan karena bosan atau stres", "Minimalkan makanan goreng dan berlemak"],
+        "nutrients": [
+          {"name": "Kalori", "note": "Ciptakan defisit sedang (500-750 kal/hari)"},
+          {"name": "Protein", "note": "Membantu menjaga otot selama penurunan berat badan"},
+          {"name": "Serat", "note": "Meningkatkan rasa kenyang dan kepuasan"},
+          {"name": "Air", "note": "Minum banyak untuk mendukung metabolisme"}
+        ]
+      },
+      "allergies": {
+        "title": "Alergi Makanan",
+        "description": "Hindari alergen dan cegah kontaminasi silang sambil menjaga nutrisi seimbang.",
+        "dos": ["Baca semua label makanan dengan cermat", "Tanyakan tentang bahan saat makan di luar", "Bawa obat darurat (jika diresepkan)", "Informasikan orang lain tentang alergi Anda", "Temukan alternatif aman untuk nutrisi"],
+        "donts": ["Jangan pernah mengonsumsi alergen yang diketahui", "Hindari makanan dengan bahan yang tidak jelas", "Jangan anggap \"mungkin mengandung\" aman", "Hindari permukaan yang terkontaminasi silang", "Jangan berisiko mencoba makanan baru tanpa memeriksa"],
+        "nutrients": [
+          {"name": "Alergen Umum", "note": "Susu, telur, ikan, kerang, kacang pohon, kacang tanah, gandum, kedelai"},
+          {"name": "Kekurangan Nutrisi", "note": "Ganti nutrisi dari makanan yang dihindari"},
+          {"name": "Kontaminasi Silang", "note": "Waspada dalam persiapan makanan"},
+          {"name": "Rencana Darurat", "note": "Selalu siap"}
+        ]
+      }
+    }
+  },
   "howSteps": {
     "upload": {
       "title": "1. Unggah Foto",

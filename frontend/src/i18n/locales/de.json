@@ -80,6 +80,113 @@
     }
   },
 
+  "protocolPage": {
+    "backToHome": "Zurück zur Startseite",
+    "heroTitle": "Gesundheitsprotokolle",
+    "heroSubtitle": "Evidenzbasierte Ernährungsrichtlinien, die auf Ihre spezifischen Gesundheitszustände zugeschnitten sind",
+    "conditionsTitle": "Unterstützte Gesundheitszustände",
+    "dosLabel": "Empfohlen (Tun)",
+    "dontsLabel": "Vermeiden (Nicht tun)",
+    "nutrientsLabel": "Wichtige Nährstoffe zur Überwachung",
+    "howHelpTitle": "Wie NutriVigil hilft",
+    "help": {
+      "ai": {
+        "title": "KI-Protokollanalyse",
+        "desc": "Unsere KI vergleicht Lebensmittel mit Ihren ausgewählten Gesundheitsprotokollen, um genaue Empfehlungen zu geben"
+      },
+      "personalized": {
+        "title": "Personalisierte Empfehlungen",
+        "desc": "Erhalten Sie maßgeschneiderte Ernährungsberatung basierend auf Ihren spezifischen Gesundheitszuständen und Ernährungsbedürfnissen"
+      },
+      "safety": {
+        "title": "Echtzeit-Sicherheitsprüfungen",
+        "desc": "Sofortige Ampelsignale (Grün/Gelb/Rot) für jedes gescannte Lebensmittel basierend auf Ihren Protokollen"
+      }
+    },
+    "disclaimerTitle": "Wichtiger medizinischer Haftungsausschluss",
+    "disclaimerP1Bold": "NutriVigil bietet nur Bildungsinformationen und allgemeine Hinweise.",
+    "disclaimerP1Rest": " Unsere Empfehlungen basieren auf evidenzbasierten Ernährungsrichtlinien, sollten jedoch professionelle medizinische Beratung, Diagnose oder Behandlung nicht ersetzen.",
+    "disclaimerP2": "Konsultieren Sie immer Ihren Gesundheitsdienstleister, registrierten Ernährungsberater oder qualifizierten Mediziner, bevor Sie wesentliche Änderungen an Ihrer Ernährung vornehmen, besonders wenn Sie bestehende Gesundheitszustände haben oder Medikamente einnehmen.",
+    "disclaimerP3": "Der individuelle Nährstoffbedarf variiert stark je nach Krankengeschichte, aktuellem Gesundheitszustand, Medikamenten und anderen Faktoren. Was für eine Person funktioniert, ist möglicherweise nicht für eine andere geeignet.",
+    "disclaimerP4": "Im Notfall oder bei schweren Symptomen sofort ärztliche Hilfe aufsuchen.",
+    "ctaTitle": "Bereit loszulegen?",
+    "ctaSubtitle": "Richten Sie Ihr Gesundheitsprofil ein und erhalten Sie personalisierte Ernährungsempfehlungen",
+    "ctaButton": "Lebensmittel scannen starten",
+    "protocols": {
+      "diabetes": {
+        "title": "Diabetes-Management",
+        "description": "Blutzuckerspiegel durch bewusste Kohlenhydrataufnahme und ausgewogene Ernährung regulieren.",
+        "dos": ["Lebensmittel mit niedrigem glykämischen Index wählen", "Kohlenhydratportionen überwachen", "Ballaststoffreiche Lebensmittel einbeziehen", "Regelmäßige, ausgewogene Mahlzeiten einnehmen", "Mit Wasser hydratisiert bleiben"],
+        "donts": ["Zuckerhaltige Getränke und Limonaden vermeiden", "Weißbrot und raffinierte Getreideprodukte begrenzen", "Verarbeitete Snacks mit hohem Zuckergehalt meiden", "Fruchtsäfte mit Zuckerzusatz vermeiden", "Frittierte und fettige Speisen minimieren"],
+        "nutrients": [
+          {"name": "Kohlenhydrate", "note": "Aufnahme überwachen, komplexe Kohlenhydrate wählen"},
+          {"name": "Ballaststoffe", "note": "25-30 g täglich anstreben"},
+          {"name": "Zucker", "note": "Zugesetzten Zucker begrenzen, natürliche Zucker beachten"},
+          {"name": "Protein", "note": "Magere Quellen bei jeder Mahlzeit einbeziehen"}
+        ]
+      },
+      "hypertension": {
+        "title": "Bluthochdruck",
+        "description": "Blutdruck durch reduzierte Natriumaufnahme und herzgesunde Lebensmittel kontrollieren.",
+        "dos": ["Frische, vollwertige Lebensmittel wählen", "Kräuter und Gewürze zum Würzen verwenden", "Kaliumreiche Lebensmittel einbeziehen", "Täglich Obst und Gemüse essen", "Natriumarme Optionen auswählen"],
+        "donts": ["Tafelsalz hinzufügen vermeiden", "Verarbeitete und Dosenlebensmittel begrenzen", "Salzige Snacks und Chips meiden", "Gepökelte und konservierte Lebensmittel vermeiden", "Restaurant- und Fast Food minimieren"],
+        "nutrients": [
+          {"name": "Natrium", "note": "Auf <2.300 mg täglich begrenzen (idealerweise <1.500 mg)"},
+          {"name": "Kalium", "note": "Aufnahme erhöhen (Bananen, Spinat)"},
+          {"name": "Kalzium", "note": "Mit fettarmen Milchprodukten unterstützen"},
+          {"name": "Magnesium", "note": "Nüsse, Samen, Vollkornprodukte einbeziehen"}
+        ]
+      },
+      "heart": {
+        "title": "Herzerkrankung",
+        "description": "Herzgesundheit durch Cholesterin- und Fettmanagement sowie gesundes Gewicht schützen.",
+        "dos": ["Mageres Protein wählen (Fisch, Geflügel)", "Omega-3-Fettsäuren einbeziehen", "Viel Gemüse und Obst essen", "Vollkornprodukte statt Raffiniertem wählen", "Gesunde Öle verwenden (Oliven-, Avocadoöl)"],
+        "donts": ["Transfette und teilgehärtete Öle vermeiden", "Gesättigte Fette begrenzen (rotes Fleisch, Butter)", "Frittierte und fettige Speisen meiden", "Cholesterinreiche Lebensmittel vermeiden", "Verarbeitete Fleischwaren minimieren"],
+        "nutrients": [
+          {"name": "Gesättigte Fette", "note": "Auf <7% der täglichen Kalorien begrenzen"},
+          {"name": "Cholesterin", "note": "Unter 200 mg täglich halten"},
+          {"name": "Omega-3", "note": "2x pro Woche fetten Fisch essen"},
+          {"name": "Ballaststoffe", "note": "Hilft, Cholesterin zu senken"}
+        ]
+      },
+      "kidney": {
+        "title": "Nierenerkrankung",
+        "description": "Nierenfunktion durch Management von Protein, Kalium, Phosphor und Natrium unterstützen.",
+        "dos": ["Proteinportionen kontrollieren (Ernährungsberater konsultieren)", "Kaliumarme Früchte und Gemüse wählen", "Phosphorarme Lebensmittel auswählen", "Bei Verschreibung in Flüssigkeitsgrenzen bleiben", "Portionsgrößen sorgfältig überwachen"],
+        "donts": ["Kaliumreiche Lebensmittel vermeiden (Bananen, Orangen)", "Milchprodukte und phosphorreiche Lebensmittel begrenzen", "Natriumreiche verarbeitete Lebensmittel meiden", "Dunkle Colas und bestimmte Getränke vermeiden", "Protein aus rotem Fleisch minimieren"],
+        "nutrients": [
+          {"name": "Protein", "note": "Moderate Aufnahme gemäß ärztlichem Rat"},
+          {"name": "Kalium", "note": "Auf empfohlene Werte begrenzen"},
+          {"name": "Phosphor", "note": "Zusatzstoffe in verarbeiteten Lebensmitteln vermeiden"},
+          {"name": "Natrium", "note": "Aufnahme niedrig halten"}
+        ]
+      },
+      "obesity": {
+        "title": "Fettleibigkeit & Gewichtsmanagement",
+        "description": "Gesundes Gewicht durch ausgewogene Ernährung, Portionskontrolle und bewusstes Essen erreichen.",
+        "dos": ["Nährstoffreiche, kalorienarme Lebensmittel essen", "Portionskontrolle üben", "Viel Gemüse einbeziehen", "Magere Proteine wählen", "Regelmäßig körperlich aktiv sein"],
+        "donts": ["Zuckerhaltige Getränke und Snacks vermeiden", "Kalorienreiche verarbeitete Lebensmittel begrenzen", "Große Portionen und Nachschlag vermeiden", "Aus Langeweile oder Stress essen vermeiden", "Frittierte und fettige Speisen minimieren"],
+        "nutrients": [
+          {"name": "Kalorien", "note": "Moderates Defizit schaffen (500-750 kcal/Tag)"},
+          {"name": "Protein", "note": "Hilft, Muskeln beim Gewichtsverlust zu erhalten"},
+          {"name": "Ballaststoffe", "note": "Fördert Sättigung und Völlegefühl"},
+          {"name": "Wasser", "note": "Viel trinken, um den Stoffwechsel zu unterstützen"}
+        ]
+      },
+      "allergies": {
+        "title": "Lebensmittelallergien",
+        "description": "Allergene vermeiden und Kreuzkontamination verhindern, dabei ausgewogene Ernährung beibehalten.",
+        "dos": ["Alle Lebensmitteletiketten sorgfältig lesen", "Beim Auswärtsessen nach Zutaten fragen", "Notfallmedikamente mitführen (falls verschrieben)", "Andere über Ihre Allergien informieren", "Sichere Alternativen für Nährstoffe finden"],
+        "donts": ["Bekannte Allergene niemals verzehren", "Lebensmittel mit unklaren Zutaten vermeiden", "Nicht annehmen, dass \"kann enthalten\" sicher ist", "Kreuzkontaminierte Oberflächen vermeiden", "Nicht riskieren, neue Lebensmittel ohne Prüfung zu probieren"],
+        "nutrients": [
+          {"name": "Häufige Allergene", "note": "Milch, Eier, Fisch, Schalentiere, Baumnüsse, Erdnüsse, Weizen, Soja"},
+          {"name": "Ernährungslücken", "note": "Nährstoffe aus gemiedenen Lebensmitteln ersetzen"},
+          {"name": "Kreuzkontamination", "note": "Bei der Lebensmittelzubereitung wachsam sein"},
+          {"name": "Notfallplan", "note": "Immer vorbereitet sein"}
+        ]
+      }
+    }
+  },
   "howSteps": {
     "upload": {
       "title": "1. Foto hochladen",
