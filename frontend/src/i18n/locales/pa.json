@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "ਭੋਜਨ ਬ੍ਰਾਊਜ਼ ਕਰੋ",
+    "titleHighlight": "ਸ਼੍ਰੇਣੀ ਅਨੁਸਾਰ",
+    "subtitle": "ਹਜ਼ਾਰਾਂ ਭੋਜਨ ਦੀ ਪੋਸ਼ਣ ਜਾਣਕਾਰੀ ਖੋਜੋ",
+    "searchPlaceholder": "ਭੋਜਨ ਖੋਜੋ...",
+    "items": "{{count}} ਆਈਟਮ",
+    "tapToExplore": "ਐਕਸਪਲੋਰ ਕਰੋ",
+    "showing_a": "ਦਿਖਾਇਆ ਜਾ ਰਿਹਾ ਹੈ",
+    "showing_b": "ਦੇ ਨਾਲ",
+    "showing_c": "'{{query}}' ਨਾਲ ਮੇਲ ਖਾਂਦੇ ਕੁੱਲ ਆਈਟਮ",
+    "categoryOne": "ਸ਼੍ਰੇਣੀ",
+    "categoryOther": "ਸ਼੍ਰੇਣੀਆਂ",
+    "noResults": "ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਮਿਲਿਆ",
+    "noResultsFor": "\"{{query}}\" ਲਈ ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਮਿਲਿਆ",
+    "trySearching": "ਇਹ ਖੋਜਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ:",
+    "cantFind": "ਜੋ ਲੱਭ ਰਹੇ ਹੋ ਉਹ ਨਹੀਂ ਮਿਲ ਰਿਹਾ?",
+    "scanDesc": "ਕਿਸੇ ਵੀ ਭੋਜਨ ਉਤਪਾਦ ਦਾ ਤੁਰੰਤ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਲਈ ਸਾਡਾ AI ਸਕੈਨਰ ਵਰਤੋ",
+    "scanButton": "ਹੁਣੇ ਸਕੈਨ ਕਰੋ",
+    "categories": {
+      "baby-food": "ਬੱਚਿਆਂ ਦਾ ਭੋਜਨ",
+      "baking": "ਬੇਕਿੰਗ",
+      "bread": "ਰੋਟੀ",
+      "breakfast": "ਨਾਸ਼ਤਾ",
+      "cakes": "ਕੇਕ",
+      "canned-goods": "ਡੱਬਾਬੰਦ ਸਾਮਾਨ",
+      "cereal": "ਅਨਾਜ",
+      "cheese": "ਪਨੀਰ",
+      "coffee": "ਕੌਫੀ",
+      "cookies-biscuits": "ਕੂਕੀਜ਼ ਅਤੇ ਬਿਸਕੁਟ",
+      "beverages": "ਪੀਣ ਵਾਲੇ ਪਦਾਰਥ",
+      "pasta": "ਪਾਸਤਾ",
+      "snacks": "ਸਨੈਕਸ",
+      "produce": "ਤਾਜ਼ੇ ਉਤਪਾਦ",
+      "ice-cream": "ਆਇਸ ਕਰੀਮ",
+      "frozen-foods": "ਫ੍ਰੋਜ਼ਨ ਭੋਜਨ"
+    },
+    "suggestions": {
+      "organicBananas": "ਆਰਗੈਨਿਕ ਕੇਲੇ",
+      "gerber": "ਗੇਰਬਰ",
+      "coffee": "ਕੌਫੀ",
+      "cheese": "ਪਨੀਰ",
+      "iceCream": "ਆਇਸ ਕਰੀਮ",
+      "pasta": "ਪਾਸਤਾ"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ਫੋਟੋ ਅਪਲੋਡ ਕਰੋ",

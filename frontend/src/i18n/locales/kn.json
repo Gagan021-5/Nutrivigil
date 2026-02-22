@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "ಆಹಾರ ಬ್ರೌಸ್ ಮಾಡಿ",
+    "titleHighlight": "ವರ್ಗದ ಮೂಲಕ",
+    "subtitle": "ಸಾವಿರಾರು ಆಹಾರಗಳ ಪೌಷ್ಟಿಕಾಂಶ ಅನ್ವೇಷಿಸಿ",
+    "searchPlaceholder": "ಆಹಾರ ಹುಡುಕಿ...",
+    "items": "{{count}} ಐಟಂಗಳು",
+    "tapToExplore": "ಅನ್ವೇಷಿಸಿ",
+    "showing_a": "ತೋರಿಸಲಾಗುತ್ತಿದೆ",
+    "showing_b": "ಜೊತೆ",
+    "showing_c": "'{{query}}' ಹೊಂದಾಣಿಕೆಯ ಒಟ್ಟು ಐಟಂಗಳು",
+    "categoryOne": "ವರ್ಗ",
+    "categoryOther": "ವರ್ಗಗಳು",
+    "noResults": "ಫಲಿತಾಂಶಗಳು ಕಂಡುಬಂದಿಲ್ಲ",
+    "noResultsFor": "\"{{query}}\" ಗೆ ಫಲಿತಾಂಶಗಳಿಲ್ಲ",
+    "trySearching": "ಇವನ್ನು ಹುಡುಕಲು ಪ್ರಯತ್ನಿಸಿ:",
+    "cantFind": "ನೀವು ಹುಡುಕುತ್ತಿರುವುದು ಕಂಡಿಲ್ಲವೇ?",
+    "scanDesc": "ಯಾವುದೇ ಆಹಾರ ಉತ್ಪನ್ನವನ್ನು ತಕ್ಷಣ ವಿಶ್ಲೇಷಿಸಲು ನಮ್ಮ AI ಸ್ಕ್ಯಾನರ್ ಬಳಸಿ",
+    "scanButton": "ಈಗ ಸ್ಕ್ಯಾನ್ ಮಾಡಿ",
+    "categories": {
+      "baby-food": "ಶಿಶು ಆಹಾರ",
+      "baking": "ಬೇಕಿಂಗ್",
+      "bread": "ಬ್ರೆಡ್",
+      "breakfast": "ಉಪಹಾರ",
+      "cakes": "ಕೇಕ್",
+      "canned-goods": "ಡಬ್ಬಿ ಸರಕು",
+      "cereal": "ಧಾನ್ಯ",
+      "cheese": "ಚೀಸ್",
+      "coffee": "ಕಾಫಿ",
+      "cookies-biscuits": "ಕುಕೀಸ್ & ಬಿಸ್ಕಟ್",
+      "beverages": "ಪಾನೀಯ",
+      "pasta": "ಪಾಸ್ತಾ",
+      "snacks": "ಸ್ನ್ಯಾಕ್ಸ್",
+      "produce": "ತರಕಾರಿ ಮತ್ತು ಹಣ್ಣುಗಳು",
+      "ice-cream": "ಐಸ್ ಕ್ರೀಮ್",
+      "frozen-foods": "ಹೆಪ್ಪುಗಟ್ಟಿದ ಆಹಾರ"
+    },
+    "suggestions": {
+      "organicBananas": "ಆರ್ಗಾನಿಕ್ ಬಾಳೆಹಣ್ಣು",
+      "gerber": "ಗೆರ್ಬರ್",
+      "coffee": "ಕಾಫಿ",
+      "cheese": "ಚೀಸ್",
+      "iceCream": "ಐಸ್ ಕ್ರೀಮ್",
+      "pasta": "ಪಾಸ್ತಾ"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ಫೋಟೋ ಅಪ್‌ಲೋಡ್ ಮಾಡಿ",

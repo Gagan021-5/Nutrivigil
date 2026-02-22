@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "Procurar alimentos por",
+    "titleHighlight": "Categoria",
+    "subtitle": "Explore a nutrição em milhares de alimentos",
+    "searchPlaceholder": "Pesquisar alimentos...",
+    "items": "{{count}} itens",
+    "tapToExplore": "Toque para explorar",
+    "showing_a": "Mostrando",
+    "showing_b": "com",
+    "showing_c": "itens totais correspondendo a '{{query}}'",
+    "categoryOne": "categoria",
+    "categoryOther": "categorias",
+    "noResults": "Nenhum resultado encontrado",
+    "noResultsFor": "Nenhum resultado encontrado para \"{{query}}\"",
+    "trySearching": "Tente pesquisar por:",
+    "cantFind": "Não encontrou o que procura?",
+    "scanDesc": "Use nosso scanner com IA para analisar qualquer produto alimentício instantaneamente",
+    "scanButton": "Escanear agora",
+    "categories": {
+      "baby-food": "Comida para bebê",
+      "baking": "Confeitaria",
+      "bread": "Pão",
+      "breakfast": "Café da manhã",
+      "cakes": "Bolos",
+      "canned-goods": "Conservas",
+      "cereal": "Cereal",
+      "cheese": "Queijo",
+      "coffee": "Café",
+      "cookies-biscuits": "Biscoitos",
+      "beverages": "Bebidas",
+      "pasta": "Massas",
+      "snacks": "Salgadinhos",
+      "produce": "Hortifruti",
+      "ice-cream": "Sorvete",
+      "frozen-foods": "Alimentos congelados"
+    },
+    "suggestions": {
+      "organicBananas": "Bananas orgânicas",
+      "gerber": "Gerber",
+      "coffee": "Café",
+      "cheese": "Queijo",
+      "iceCream": "Sorvete",
+      "pasta": "Massas"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Enviar Foto",

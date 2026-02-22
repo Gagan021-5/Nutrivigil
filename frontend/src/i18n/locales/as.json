@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "খাদ্য ব্ৰাউজ কৰক",
+    "titleHighlight": "শ্ৰেণী অনুসৰি",
+    "subtitle": "হাজাৰ হাজাৰ খাদ্যৰ পুষ্টিৰ তথ্য অনুসন্ধান কৰক",
+    "searchPlaceholder": "খাদ্য বিচাৰক...",
+    "items": "{{count}} টা আইটেম",
+    "tapToExplore": "অন্বেষণ কৰক",
+    "showing_a": "দেখুওৱা হৈছে",
+    "showing_b": "ৰ সৈতে",
+    "showing_c": "'{{query}}' ৰ সৈতে মিলা মুঠ আইটেম",
+    "categoryOne": "শ্ৰেণী",
+    "categoryOther": "শ্ৰেণী",
+    "noResults": "কোনো ফলাফল পোৱা নগ'ল",
+    "noResultsFor": "\"{{query}}\" ৰ বাবে কোনো ফলাফল নাই",
+    "trySearching": "এইবোৰ বিচাৰিবলৈ চেষ্টা কৰক:",
+    "cantFind": "আপুনি বিচৰা বস্তু পোৱা নাই?",
+    "scanDesc": "যিকোনো খাদ্য সামগ্ৰী তাৎক্ষণিকভাৱে বিশ্লেষণ কৰিবলৈ আমাৰ AI স্কেনাৰ ব্যৱহাৰ কৰক",
+    "scanButton": "এতিয়াই স্কেন কৰক",
+    "categories": {
+      "baby-food": "শিশু খাদ্য",
+      "baking": "বেকিং",
+      "bread": "পাউৰুটি",
+      "breakfast": "পুৱাৰ জলপান",
+      "cakes": "কেক",
+      "canned-goods": "টিনত বন্ধ খাদ্য",
+      "cereal": "শস্য",
+      "cheese": "চীজ",
+      "coffee": "কফি",
+      "cookies-biscuits": "কুকিজ আৰু বিস্কুট",
+      "beverages": "পানীয়",
+      "pasta": "পাস্তা",
+      "snacks": "স্নেক্স",
+      "produce": "তাজা শাক-পাচলি",
+      "ice-cream": "আইচক্ৰিম",
+      "frozen-foods": "হিমায়িত খাদ্য"
+    },
+    "suggestions": {
+      "organicBananas": "জৈৱিক কল",
+      "gerber": "গাৰ্বাৰ",
+      "coffee": "কফি",
+      "cheese": "চীজ",
+      "iceCream": "আইচক্ৰিম",
+      "pasta": "পাস্তা"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. ফটো আপলোড কৰক",

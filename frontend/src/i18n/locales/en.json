@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "Browse Foods by",
+    "titleHighlight": "Category",
+    "subtitle": "Explore nutrition across thousands of foods",
+    "searchPlaceholder": "Search for foods...",
+    "items": "{{count}} items",
+    "tapToExplore": "Tap to explore",
+    "showing_a": "Showing",
+    "showing_b": "with",
+    "showing_c": "total items matching '{{query}}'",
+    "categoryOne": "category",
+    "categoryOther": "categories",
+    "noResults": "No results found",
+    "noResultsFor": "No results found for \"{{query}}\"",
+    "trySearching": "Try searching for:",
+    "cantFind": "Can't find what you're looking for?",
+    "scanDesc": "Use our AI-powered scanner to analyze any food product instantly",
+    "scanButton": "Scan Food Now",
+    "categories": {
+      "baby-food": "Baby Food",
+      "baking": "Baking",
+      "bread": "Bread",
+      "breakfast": "Breakfast",
+      "cakes": "Cakes",
+      "canned-goods": "Canned Goods",
+      "cereal": "Cereal",
+      "cheese": "Cheese",
+      "coffee": "Coffee",
+      "cookies-biscuits": "Cookies & Biscuits",
+      "beverages": "Beverages",
+      "pasta": "Pasta",
+      "snacks": "Snacks",
+      "produce": "Produce",
+      "ice-cream": "Ice Cream",
+      "frozen-foods": "Frozen Foods"
+    },
+    "suggestions": {
+      "organicBananas": "Organic Bananas",
+      "gerber": "Gerber",
+      "coffee": "Coffee",
+      "cheese": "Cheese",
+      "iceCream": "Ice Cream",
+      "pasta": "Pasta"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Upload Photo",

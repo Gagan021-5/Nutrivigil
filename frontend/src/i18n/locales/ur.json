@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "کھانوں کی کٹیگری دیکھیں",
+    "titleHighlight": "زمرے کے مطابق",
+    "subtitle": "ہزاروں کھانوں کی غذائیت دریافت کریں",
+    "searchPlaceholder": "کھانا تلاش کریں...",
+    "items": "{{count}} اشیاء",
+    "tapToExplore": "دریافت کریں",
+    "showing_a": "دکھایا جا رہا ہے",
+    "showing_b": "کے ساتھ",
+    "showing_c": "کل اشیاء '{{query}}' سے ملتی ہیں",
+    "categoryOne": "زمرہ",
+    "categoryOther": "زمرے",
+    "noResults": "کوئی نتیجہ نہیں ملا",
+    "noResultsFor": "\"{{query}}\" کے لیے کوئی نتیجہ نہیں ملا",
+    "trySearching": "یہ تلاش کریں:",
+    "cantFind": "جو چاہتے ہیں وہ نہیں مل رہا؟",
+    "scanDesc": "کسی بھی غذائی پروڈکٹ کا فوری تجزیہ کرنے کے لیے ہمارا AI اسکینر استعمال کریں",
+    "scanButton": "ابھی اسکین کریں",
+    "categories": {
+      "baby-food": "بچوں کا کھانا",
+      "baking": "بیکنگ",
+      "bread": "روٹی",
+      "breakfast": "ناشتہ",
+      "cakes": "کیک",
+      "canned-goods": "ڈبہ بند سامان",
+      "cereal": "اناج",
+      "cheese": "پنیر",
+      "coffee": "کافی",
+      "cookies-biscuits": "کوکیز اور بسکٹ",
+      "beverages": "مشروبات",
+      "pasta": "پاستا",
+      "snacks": "اسنیکس",
+      "produce": "تازہ پیداوار",
+      "ice-cream": "آئس کریم",
+      "frozen-foods": "منجمد کھانا"
+    },
+    "suggestions": {
+      "organicBananas": "آرگینک کیلے",
+      "gerber": "گربر",
+      "coffee": "کافی",
+      "cheese": "پنیر",
+      "iceCream": "آئس کریم",
+      "pasta": "پاستا"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. تصویر اپ لوڈ کریں",

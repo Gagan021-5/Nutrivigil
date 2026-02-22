@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 import { Search, X, ChevronRight } from 'lucide-react';
 import FOOD_ITEMS from '../data/foodItems';
@@ -26,6 +27,7 @@ import frozenFoodsImg from '../assets/frozen-foods.jpg';
 const BrowseFoods = () => {
   const { theme } = useTheme();
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
 
@@ -41,7 +43,6 @@ const BrowseFoods = () => {
   const categories = [
     {
       id: 1,
-      name: 'Baby Food',
       image: babyFoodImg,
       count: 124,
       slug: 'baby-food',
@@ -49,7 +50,6 @@ const BrowseFoods = () => {
     },
     {
       id: 2,
-      name: 'Baking',
       image: bakingImg,
       count: 234,
       slug: 'baking',
@@ -57,7 +57,6 @@ const BrowseFoods = () => {
     },
     {
       id: 3,
-      name: 'Bread',
       image: breadImg,
       count: 189,
       slug: 'bread',
@@ -65,7 +64,6 @@ const BrowseFoods = () => {
     },
     {
       id: 4,
-      name: 'Breakfast',
       image: breakfastImg,
       count: 312,
       slug: 'breakfast',
@@ -73,7 +71,6 @@ const BrowseFoods = () => {
     },
     {
       id: 5,
-      name: 'Cakes',
       image: cakesImg,
       count: 156,
       slug: 'cakes',
@@ -81,7 +78,6 @@ const BrowseFoods = () => {
     },
     {
       id: 6,
-      name: 'Canned Goods',
       image: cannedGoodsImg,
       count: 278,
       slug: 'canned-goods',
@@ -89,7 +85,6 @@ const BrowseFoods = () => {
     },
     {
       id: 7,
-      name: 'Cereal',
       image: cerealImg,
       count: 198,
       slug: 'cereal',
@@ -97,7 +92,6 @@ const BrowseFoods = () => {
     },
     {
       id: 8,
-      name: 'Cheese',
       image: cheeseImg,
       count: 167,
       slug: 'cheese',
@@ -105,7 +99,6 @@ const BrowseFoods = () => {
     },
     {
       id: 9,
-      name: 'Coffee',
       image: coffeeImg,
       count: 145,
       slug: 'coffee',
@@ -113,7 +106,6 @@ const BrowseFoods = () => {
     },
     {
       id: 10,
-      name: 'Cookies & Biscuits',
       image: cookiesBiscuitImg,
       count: 223,
       slug: 'cookies-biscuits',
@@ -121,7 +113,6 @@ const BrowseFoods = () => {
     },
     {
       id: 11,
-      name: 'Beverages',
       image: beveragesImg,
       count: 345,
       slug: 'beverages',
@@ -129,7 +120,6 @@ const BrowseFoods = () => {
     },
     {
       id: 12,
-      name: 'Pasta',
       image: pastaImg,
       count: 187,
       slug: 'pasta',
@@ -137,7 +127,6 @@ const BrowseFoods = () => {
     },
     {
       id: 13,
-      name: 'Snacks',
       image: snacksImg,
       count: 412,
       slug: 'snacks',
@@ -145,7 +134,6 @@ const BrowseFoods = () => {
     },
     {
       id: 14,
-      name: 'Produce',
       image: produceImg,
       count: 289,
       slug: 'produce',
@@ -153,7 +141,6 @@ const BrowseFoods = () => {
     },
     {
       id: 15,
-      name: 'Ice Cream',
       image: icecreamImg,
       count: 256,
       slug: 'ice-cream',
@@ -161,7 +148,6 @@ const BrowseFoods = () => {
     },
     {
       id: 16,
-      name: 'Frozen Foods',
       image: frozenFoodsImg,
       count: 198,
       slug: 'frozen-foods',
@@ -179,8 +165,9 @@ const BrowseFoods = () => {
     const filtered = [];
 
     categories.forEach(category => {
-      // Check if category name matches
-      const categoryNameMatches = category.name.toLowerCase().includes(query);
+      // Check if translated category name matches
+      const translatedName = t(`browse.categories.${category.slug}`);
+      const categoryNameMatches = translatedName.toLowerCase().includes(query);
 
       // Get items for this category
       const categorySlug = category.slug;
@@ -203,7 +190,7 @@ const BrowseFoods = () => {
     });
 
     return filtered;
-  }, [debouncedSearchQuery, categories]);
+  }, [debouncedSearchQuery, categories, t]);
 
   // Calculate total matching items
   const totalMatchingItems = useMemo(() => {
@@ -211,9 +198,17 @@ const BrowseFoods = () => {
   }, [filteredCategories]);
 
   const handleCategoryClick = (slug) => {
-    // Navigate to category detail page
     navigate(`/browse/${slug}`);
   };
+
+  const suggestions = [
+    t('browse.suggestions.organicBananas'),
+    t('browse.suggestions.gerber'),
+    t('browse.suggestions.coffee'),
+    t('browse.suggestions.cheese'),
+    t('browse.suggestions.iceCream'),
+    t('browse.suggestions.pasta'),
+  ];
 
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
@@ -226,15 +221,15 @@ const BrowseFoods = () => {
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
-            Browse Foods by{' '}
+            {t('browse.title')}{' '}
             <span className="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
-              Category
+              {t('browse.titleHighlight')}
             </span>
           </h1>
           <p className={`text-xl md:text-2xl mb-8 ${
             theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
           }`}>
-            Explore nutrition across thousands of foods
+            {t('browse.subtitle')}
           </p>
 
           {/* Search Bar */}
@@ -255,7 +250,7 @@ const BrowseFoods = () => {
                 } ${searchQuery ? 'animate-pulse' : ''}`} />
                 <input
                   type="text"
-                  placeholder="Search for foods..."
+                  placeholder={t('browse.searchPlaceholder')}
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className={`flex-1 bg-transparent outline-none text-lg ${
@@ -294,12 +289,16 @@ const BrowseFoods = () => {
           >
             {filteredCategories.length > 0 ? (
               <p className="text-lg">
-                Showing <span className="font-semibold text-indigo-500">{filteredCategories.length}</span> {filteredCategories.length === 1 ? 'category' : 'categories'} with{' '}
-                <span className="font-semibold text-indigo-500">{totalMatchingItems}</span> total items matching '{debouncedSearchQuery}'
+                {t('browse.showing_a')}{' '}
+                <span className="font-semibold text-indigo-500">{filteredCategories.length}</span>{' '}
+                {filteredCategories.length === 1 ? t('browse.categoryOne') : t('browse.categoryOther')}{' '}
+                {t('browse.showing_b')}{' '}
+                <span className="font-semibold text-indigo-500">{totalMatchingItems}</span>{' '}
+                {t('browse.showing_c', { query: debouncedSearchQuery })}
               </p>
             ) : (
               <p className="text-lg">
-                No results found
+                {t('browse.noResults')}
               </p>
             )}
           </motion.div>
@@ -332,7 +331,7 @@ const BrowseFoods = () => {
                   <div className="relative h-48 overflow-hidden">
                     <img
                       src={category.image}
-                      alt={category.name}
+                      alt={t(`browse.categories.${category.slug}`)}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -342,7 +341,7 @@ const BrowseFoods = () => {
 
                     {/* Count Badge — top-left, uses category gradient */}
                     <div className={`absolute top-3 left-3 px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${category.gradient} shadow-lg`}>
-                      {category.count} items
+                      {t('browse.items', { count: category.count })}
                     </div>
 
                     {/* Arrow chip — top-right, slides in on hover */}
@@ -364,12 +363,12 @@ const BrowseFoods = () => {
                     <h3 className={`text-lg font-bold mb-0.5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:${category.gradient} transition-all duration-300 ${
                       theme === 'dark' ? 'text-white' : 'text-gray-900'
                     }`}>
-                      {category.name}
+                      {t(`browse.categories.${category.slug}`)}
                     </h3>
                     <p className={`text-xs font-medium ${
                       theme === 'dark' ? 'text-gray-500' : 'text-gray-400'
                     }`}>
-                      Tap to explore
+                      {t('browse.tapToExplore')}
                     </p>
                   </div>
 
@@ -398,15 +397,15 @@ const BrowseFoods = () => {
               <h3 className={`text-2xl font-bold mb-3 ${
                 theme === 'dark' ? 'text-white' : 'text-gray-900'
               }`}>
-                No results found for "{debouncedSearchQuery}"
+                {t('browse.noResultsFor', { query: debouncedSearchQuery })}
               </h3>
               <p className={`text-lg mb-6 ${
                 theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
               }`}>
-                Try searching for:
+                {t('browse.trySearching')}
               </p>
               <div className="flex flex-wrap gap-3 justify-center max-w-2xl mx-auto">
-                {['Organic Bananas', 'Gerber', 'Coffee', 'Cheese', 'Ice Cream', 'Pasta'].map((suggestion) => (
+                {suggestions.map((suggestion) => (
                   <button
                     key={suggestion}
                     onClick={() => setSearchQuery(suggestion)}
@@ -438,12 +437,12 @@ const BrowseFoods = () => {
           <h2 className={`text-2xl font-bold mb-3 ${
             theme === 'dark' ? 'text-white' : 'text-gray-900'
           }`}>
-            Can't find what you're looking for?
+            {t('browse.cantFind')}
           </h2>
           <p className={`text-lg mb-6 ${
             theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
           }`}>
-            Use our AI-powered scanner to analyze any food product instantly
+            {t('browse.scanDesc')}
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -451,7 +450,7 @@ const BrowseFoods = () => {
             onClick={() => navigate('/scan')}
             className="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
           >
-            Scan Food Now
+            {t('browse.scanButton')}
           </motion.button>
         </motion.div>
       </div>

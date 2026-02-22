@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "食品を検索",
+    "titleHighlight": "カテゴリ別",
+    "subtitle": "数千の食品の栄養素を探索する",
+    "searchPlaceholder": "食品を検索...",
+    "items": "{{count}} アイテム",
+    "tapToExplore": "タップして探索",
+    "showing_a": "表示中",
+    "showing_b": "合計",
+    "showing_c": "'{{query}}' に一致するアイテムがあります",
+    "categoryOne": "カテゴリ",
+    "categoryOther": "カテゴリ",
+    "noResults": "結果が見つかりません",
+    "noResultsFor": "「{{query}}」の結果が見つかりません",
+    "trySearching": "次を検索してみてください:",
+    "cantFind": "お探しのものが見つかりませんか？",
+    "scanDesc": "AIスキャナーを使用して、あらゆる食品を即座に分析",
+    "scanButton": "今すぐスキャン",
+    "categories": {
+      "baby-food": "ベビーフード",
+      "baking": "製菓・ベーキング",
+      "bread": "パン",
+      "breakfast": "朝食",
+      "cakes": "ケーキ",
+      "canned-goods": "缶詰",
+      "cereal": "シリアル",
+      "cheese": "チーズ",
+      "coffee": "コーヒー",
+      "cookies-biscuits": "クッキー・ビスケット",
+      "beverages": "飲料",
+      "pasta": "パスタ",
+      "snacks": "スナック",
+      "produce": "農産物",
+      "ice-cream": "アイスクリーム",
+      "frozen-foods": "冷凍食品"
+    },
+    "suggestions": {
+      "organicBananas": "オーガニックバナナ",
+      "gerber": "ガーバー",
+      "coffee": "コーヒー",
+      "cheese": "チーズ",
+      "iceCream": "アイスクリーム",
+      "pasta": "パスタ"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. 写真をアップロード",

@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "खाद्य पदार्थ ब्राउज़ करें",
+    "titleHighlight": "श्रेणी के अनुसार",
+    "subtitle": "हजारों खाद्य पदार्थों का पोषण जानें",
+    "searchPlaceholder": "खाद्य पदार्थ खोजें...",
+    "items": "{{count}} आइटम",
+    "tapToExplore": "एक्सप्लोर करें",
+    "showing_a": "दिखाया जा रहा है",
+    "showing_b": "के साथ",
+    "showing_c": "कुल आइटम '{{query}}' से मेल खाते हैं",
+    "categoryOne": "श्रेणी",
+    "categoryOther": "श्रेणियाँ",
+    "noResults": "कोई परिणाम नहीं मिला",
+    "noResultsFor": "\"{{query}}\" के लिए कोई परिणाम नहीं मिला",
+    "trySearching": "इन्हें खोजने का प्रयास करें:",
+    "cantFind": "जो खोज रहे हैं वह नहीं मिल रहा?",
+    "scanDesc": "किसी भी खाद्य उत्पाद का तुरंत विश्लेषण करने के लिए हमारे AI स्कैनर का उपयोग करें",
+    "scanButton": "अभी स्कैन करें",
+    "categories": {
+      "baby-food": "बेबी फूड",
+      "baking": "बेकिंग",
+      "bread": "ब्रेड",
+      "breakfast": "नाश्ता",
+      "cakes": "केक",
+      "canned-goods": "डिब्बाबंद सामान",
+      "cereal": "अनाज",
+      "cheese": "चीज़",
+      "coffee": "कॉफी",
+      "cookies-biscuits": "कुकीज़ और बिस्किट",
+      "beverages": "पेय पदार्थ",
+      "pasta": "पास्ता",
+      "snacks": "स्नैक्स",
+      "produce": "ताज़े उत्पाद",
+      "ice-cream": "आइसक्रीम",
+      "frozen-foods": "फ्रोज़न फूड"
+    },
+    "suggestions": {
+      "organicBananas": "ऑर्गेनिक केले",
+      "gerber": "गेर्बर",
+      "coffee": "कॉफी",
+      "cheese": "चीज़",
+      "iceCream": "आइसक्रीम",
+      "pasta": "पास्ता"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. फोटो अपलोड करें",

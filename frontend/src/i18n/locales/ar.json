@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "تصفح الأطعمة حسب",
+    "titleHighlight": "الفئة",
+    "subtitle": "استكشف التغذية عبر آلاف المنتجات الغذائية",
+    "searchPlaceholder": "ابحث عن الأطعمة...",
+    "items": "{{count}} عنصر",
+    "tapToExplore": "اضغط للاستكشاف",
+    "showing_a": "عرض",
+    "showing_b": "مع",
+    "showing_c": "إجمالي العناصر المطابقة لـ '{{query}}'",
+    "categoryOne": "فئة",
+    "categoryOther": "فئات",
+    "noResults": "لا توجد نتائج",
+    "noResultsFor": "لا توجد نتائج لـ \"{{query}}\"",
+    "trySearching": "جرب البحث عن:",
+    "cantFind": "لم تجد ما تبحث عنه؟",
+    "scanDesc": "استخدم الماسح الضوئي المدعوم بالذكاء الاصطناعي لتحليل أي منتج غذائي فوراً",
+    "scanButton": "امسح الآن",
+    "categories": {
+      "baby-food": "غذاء الأطفال",
+      "baking": "المخبوزات",
+      "bread": "خبز",
+      "breakfast": "إفطار",
+      "cakes": "كعك",
+      "canned-goods": "معلبات",
+      "cereal": "حبوب",
+      "cheese": "جبن",
+      "coffee": "قهوة",
+      "cookies-biscuits": "كوكيز وبسكويت",
+      "beverages": "مشروبات",
+      "pasta": "مكرونة",
+      "snacks": "وجبات خفيفة",
+      "produce": "منتجات طازجة",
+      "ice-cream": "آيس كريم",
+      "frozen-foods": "أطعمة مجمدة"
+    },
+    "suggestions": {
+      "organicBananas": "موز عضوي",
+      "gerber": "جيربر",
+      "coffee": "قهوة",
+      "cheese": "جبن",
+      "iceCream": "آيس كريم",
+      "pasta": "مكرونة"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. تحميل صورة",

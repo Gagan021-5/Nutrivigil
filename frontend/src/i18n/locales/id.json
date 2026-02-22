@@ -34,6 +34,52 @@
     }
   },
 
+  "browse": {
+    "title": "Telusuri Makanan berdasarkan",
+    "titleHighlight": "Kategori",
+    "subtitle": "Jelajahi nutrisi dari ribuan makanan",
+    "searchPlaceholder": "Cari makanan...",
+    "items": "{{count}} item",
+    "tapToExplore": "Ketuk untuk menjelajahi",
+    "showing_a": "Menampilkan",
+    "showing_b": "dengan",
+    "showing_c": "total item yang cocok dengan '{{query}}'",
+    "categoryOne": "kategori",
+    "categoryOther": "kategori",
+    "noResults": "Tidak ada hasil ditemukan",
+    "noResultsFor": "Tidak ada hasil untuk \"{{query}}\"",
+    "trySearching": "Coba cari:",
+    "cantFind": "Tidak menemukan yang Anda cari?",
+    "scanDesc": "Gunakan pemindai AI kami untuk menganalisis produk makanan secara instan",
+    "scanButton": "Pindai Sekarang",
+    "categories": {
+      "baby-food": "Makanan Bayi",
+      "baking": "Roti & Kue",
+      "bread": "Roti",
+      "breakfast": "Sarapan",
+      "cakes": "Kue",
+      "canned-goods": "Makanan Kaleng",
+      "cereal": "Sereal",
+      "cheese": "Keju",
+      "coffee": "Kopi",
+      "cookies-biscuits": "Biskuit",
+      "beverages": "Minuman",
+      "pasta": "Pasta",
+      "snacks": "Camilan",
+      "produce": "Produk Segar",
+      "ice-cream": "Es Krim",
+      "frozen-foods": "Makanan Beku"
+    },
+    "suggestions": {
+      "organicBananas": "Pisang Organik",
+      "gerber": "Gerber",
+      "coffee": "Kopi",
+      "cheese": "Keju",
+      "iceCream": "Es Krim",
+      "pasta": "Pasta"
+    }
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Unggah Foto",
