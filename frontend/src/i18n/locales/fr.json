@@ -80,6 +80,49 @@
     }
   },
 
+  "missionPage": {
+    "backToHome": "Retour à l'accueil",
+    "title": "Notre Mission",
+    "subtitle": "Permettre à chacun de faire des choix alimentaires éclairés et plus sains grâce à une analyse nutritionnelle accessible par IA.",
+    "subtitle2": "Nous croyons que comprendre ce que vous mangez doit être simple, instantané et personnalisé selon vos besoins de santé uniques. NutriVigil comble le fossé entre les données nutritionnelles complexes et les décisions alimentaires quotidiennes.",
+    "impactTitle": "Notre Impact",
+    "stats": {
+      "activeUsers": "Utilisateurs Actifs",
+      "foodItemsAnalyzed": "Aliments Analysés",
+      "languagesSupported": "Langues Supportées",
+      "accuracyRate": "Taux de Précision"
+    },
+    "whyTitle": "Pourquoi nous avons créé NutriVigil",
+    "whyP1": "Chaque année, des millions de personnes luttent contre des problèmes de santé liés à l'alimentation comme le diabète, l'hypertension et les maladies cardiaques. Pourtant, comprendre les étiquettes alimentaires et faire des choix diététiques sûrs reste complexe et chronophage.",
+    "whyP2Highlight": "Nous avons créé NutriVigil pour changer cela.",
+    "whyP2": "En utilisant une technologie d'IA de pointe, nous avons rendu l'analyse nutritionnelle instantanée, précise et personnalisée selon vos besoins de santé.",
+    "whyP3Before": "Notre mission va au-delà de la technologie—il s'agit de",
+    "whyP3Highlight": "démocratiser l'information sur la santé",
+    "whyP3After": ", soutenir des communautés diverses dans le monde entier et vous aider à vivre votre vie la plus saine, un repas à la fois.",
+    "valuesTitle": "Nos Valeurs Fondamentales",
+    "values": {
+      "health": {
+        "title": "La Santé d'Abord",
+        "description": "Nous privilégions votre santé et votre bien-être par-dessus tout. Chaque fonctionnalité est conçue avec votre sécurité à l'esprit."
+      },
+      "privacy": {
+        "title": "Confidentialité & Sécurité",
+        "description": "Vos données sont chiffrées et jamais partagées. Toutes les analyses se font en toute sécurité sur notre plateforme conforme HIPAA."
+      },
+      "accuracy": {
+        "title": "La Précision Compte",
+        "description": "Propulsé par Gemini 2.5 AI de Google, nous fournissons des informations nutritionnelles précises en lesquelles vous pouvez avoir confiance."
+      },
+      "accessibility": {
+        "title": "Accessibilité pour Tous",
+        "description": "Prise en charge de 20+ langues et de multiples conditions de santé pour servir tout le monde, partout."
+      }
+    },
+    "ctaTitle": "Rejoignez Notre Mission",
+    "ctaSubtitle": "Faites partie du mouvement vers des habitudes alimentaires plus saines et plus éclairées.",
+    "ctaButton": "Commencez Votre Voyage Aujourd'hui"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Télécharger une photo",

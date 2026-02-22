@@ -80,6 +80,49 @@
     }
   },
 
+  "missionPage": {
+    "backToHome": "Terug naar home",
+    "title": "Onze Missie",
+    "subtitle": "Iedereen in staat stellen om weloverwogen, gezondere voedingskeuzes te maken via toegankelijke AI-gestuurde voedingsanalyse.",
+    "subtitle2": "Wij geloven dat begrijpen wat je eet eenvoudig, direct en gepersonaliseerd op jouw unieke gezondheidsbehoeften moet zijn. NutriVigil overbrugt de kloof tussen complexe voedingsdata en dagelijkse voedingsbeslissingen.",
+    "impactTitle": "Onze Impact",
+    "stats": {
+      "activeUsers": "Actieve Gebruikers",
+      "foodItemsAnalyzed": "Geanalyseerde Voedingsmiddelen",
+      "languagesSupported": "Ondersteunde Talen",
+      "accuracyRate": "Nauwkeurigheidspercentage"
+    },
+    "whyTitle": "Waarom we NutriVigil hebben gebouwd",
+    "whyP1": "Elk jaar worstelen miljoenen mensen met dieetgerelateerde gezondheidsproblemen zoals diabetes, hypertensie en hartziekten. Toch blijft het begrijpen van voedseletiketten en het maken van veilige voedingskeuzes complex en tijdrovend.",
+    "whyP2Highlight": "We hebben NutriVigil gemaakt om dat te veranderen.",
+    "whyP2": "Door gebruik te maken van geavanceerde AI-technologie, hebben we voedingsanalyse direct, nauwkeurig en gepersonaliseerd op uw gezondheidsbehoeften gemaakt.",
+    "whyP3Before": "Onze missie gaat verder dan technologie—het gaat om",
+    "whyP3Highlight": "democratisering van gezondheidsinformatie",
+    "whyP3After": ", ondersteuning van diverse gemeenschappen wereldwijd, en u helpen uw gezondste leven te leiden, één maaltijd tegelijk.",
+    "valuesTitle": "Onze Kernwaarden",
+    "values": {
+      "health": {
+        "title": "Gezondheid Voorop",
+        "description": "We stellen uw gezondheid en welzijn boven alles. Elke functie is ontworpen met uw veiligheid in gedachten."
+      },
+      "privacy": {
+        "title": "Privacy & Veiligheid",
+        "description": "Uw data is versleuteld en wordt nooit gedeeld. Alle analyses verlopen veilig op ons HIPAA-conform platform."
+      },
+      "accuracy": {
+        "title": "Nauwkeurigheid Telt",
+        "description": "Aangedreven door Google's Gemini 2.5 AI, leveren we nauwkeurige voedingsinzichten waarop u kunt vertrouwen."
+      },
+      "accessibility": {
+        "title": "Toegankelijkheid voor Iedereen",
+        "description": "Ondersteuning van 20+ talen en meerdere gezondheidsaandoeningen om iedereen, overal te bedienen."
+      }
+    },
+    "ctaTitle": "Doe Mee met Onze Missie",
+    "ctaSubtitle": "Wees onderdeel van de beweging naar gezondere, beter geïnformeerde eetgewoonten.",
+    "ctaButton": "Begin Vandaag Uw Reis"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto uploaden",

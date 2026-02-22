@@ -80,6 +80,49 @@
     }
   },
 
+  "missionPage": {
+    "backToHome": "Zurück zur Startseite",
+    "title": "Unsere Mission",
+    "subtitle": "Jeden Menschen zu befähigen, informierte, gesündere Ernährungsentscheidungen durch zugängliche KI-gestützte Nährwertanalyse zu treffen.",
+    "subtitle2": "Wir glauben, dass das Verstehen dessen, was man isst, einfach, sofort und auf die einzigartigen Gesundheitsbedürfnisse jedes Einzelnen zugeschnitten sein sollte. NutriVigil überbrückt die Lücke zwischen komplexen Nährwertdaten und alltäglichen Lebensmittelentscheidungen.",
+    "impactTitle": "Unsere Wirkung",
+    "stats": {
+      "activeUsers": "Aktive Nutzer",
+      "foodItemsAnalyzed": "Analysierte Lebensmittel",
+      "languagesSupported": "Unterstützte Sprachen",
+      "accuracyRate": "Genauigkeitsrate"
+    },
+    "whyTitle": "Warum wir NutriVigil entwickelt haben",
+    "whyP1": "Jedes Jahr kämpfen Millionen Menschen mit ernährungsbedingten Erkrankungen wie Diabetes, Bluthochdruck und Herzerkrankungen. Dennoch bleibt das Verstehen von Lebensmitteletiketten und das Treffen sicherer Ernährungsentscheidungen komplex und zeitaufwändig.",
+    "whyP2Highlight": "Wir haben NutriVigil entwickelt, um das zu ändern.",
+    "whyP2": "Durch den Einsatz modernster KI-Technologie haben wir die Nährwertanalyse sofortig, präzise und auf Ihre Gesundheitsbedürfnisse personalisiert.",
+    "whyP3Before": "Unsere Mission geht über Technologie hinaus – es geht um",
+    "whyP3Highlight": "Demokratisierung von Gesundheitsinformationen",
+    "whyP3After": ", Unterstützung vielfältiger Gemeinschaften weltweit und die Hilfe, das gesündeste Leben zu führen, eine Mahlzeit nach der anderen.",
+    "valuesTitle": "Unsere Grundwerte",
+    "values": {
+      "health": {
+        "title": "Gesundheit zuerst",
+        "description": "Wir stellen Ihre Gesundheit und Ihr Wohlbefinden über alles. Jede Funktion ist mit Ihrer Sicherheit im Sinn entwickelt."
+      },
+      "privacy": {
+        "title": "Datenschutz & Sicherheit",
+        "description": "Ihre Daten sind verschlüsselt und werden nie geteilt. Alle Analysen erfolgen sicher auf unserer HIPAA-konformen Plattform."
+      },
+      "accuracy": {
+        "title": "Genauigkeit zählt",
+        "description": "Betrieben von Googles Gemini 2.5 KI, liefern wir präzise Nährwertinformationen, denen Sie vertrauen können."
+      },
+      "accessibility": {
+        "title": "Barrierefreiheit für alle",
+        "description": "Unterstützung von 20+ Sprachen und mehreren Gesundheitszuständen, um allen überall zu dienen."
+      }
+    },
+    "ctaTitle": "Schließen Sie sich unserer Mission an",
+    "ctaSubtitle": "Seien Sie Teil der Bewegung hin zu gesünderen, informierteren Essgewohnheiten.",
+    "ctaButton": "Starten Sie Ihre Reise heute"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto hochladen",

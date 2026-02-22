@@ -80,6 +80,49 @@
     }
   },
 
+  "missionPage": {
+    "backToHome": "Kembali ke Beranda",
+    "title": "Misi Kami",
+    "subtitle": "Memberdayakan semua orang untuk membuat pilihan makanan yang lebih sehat dan terinformasi melalui analisis nutrisi berbasis AI yang mudah diakses.",
+    "subtitle2": "Kami percaya bahwa memahami apa yang Anda makan harus sederhana, instan, dan disesuaikan dengan kebutuhan kesehatan unik Anda. NutriVigil menjembatani kesenjangan antara data nutrisi yang kompleks dan keputusan makanan sehari-hari.",
+    "impactTitle": "Dampak Kami",
+    "stats": {
+      "activeUsers": "Pengguna Aktif",
+      "foodItemsAnalyzed": "Makanan Dianalisis",
+      "languagesSupported": "Bahasa Didukung",
+      "accuracyRate": "Tingkat Akurasi"
+    },
+    "whyTitle": "Mengapa Kami Membangun NutriVigil",
+    "whyP1": "Setiap tahun, jutaan orang berjuang dengan kondisi kesehatan terkait diet seperti diabetes, hipertensi, dan penyakit jantung. Namun memahami label makanan dan membuat pilihan diet yang aman tetap kompleks dan memakan waktu.",
+    "whyP2Highlight": "Kami menciptakan NutriVigil untuk mengubah itu.",
+    "whyP2": "Menggunakan teknologi AI mutakhir, kami telah membuat analisis nutrisi menjadi instan, akurat, dan dipersonalisasi sesuai kebutuhan kesehatan Anda.",
+    "whyP3Before": "Misi kami melampaui teknologi—ini tentang",
+    "whyP3Highlight": "demokratisasi informasi kesehatan",
+    "whyP3After": ", mendukung komunitas yang beragam di seluruh dunia, dan membantu Anda menjalani hidup paling sehat, satu makanan sekaligus.",
+    "valuesTitle": "Nilai Inti Kami",
+    "values": {
+      "health": {
+        "title": "Kesehatan Utama",
+        "description": "Kami memprioritaskan kesehatan dan kesejahteraan Anda di atas segalanya. Setiap fitur dirancang dengan keselamatan Anda dalam pikiran."
+      },
+      "privacy": {
+        "title": "Privasi & Keamanan",
+        "description": "Data Anda dienkripsi dan tidak pernah dibagikan. Semua analisis dilakukan dengan aman di platform kami yang mematuhi HIPAA."
+      },
+      "accuracy": {
+        "title": "Akurasi Penting",
+        "description": "Didukung oleh Gemini 2.5 AI Google, kami memberikan wawasan nutrisi yang tepat yang dapat Anda percaya."
+      },
+      "accessibility": {
+        "title": "Aksesibilitas untuk Semua",
+        "description": "Mendukung 20+ bahasa dan berbagai kondisi kesehatan untuk melayani semua orang, di mana saja."
+      }
+    },
+    "ctaTitle": "Bergabunglah dengan Misi Kami",
+    "ctaSubtitle": "Jadilah bagian dari gerakan menuju kebiasaan makan yang lebih sehat dan terinformasi.",
+    "ctaButton": "Mulai Perjalanan Anda Hari Ini"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Unggah Foto",

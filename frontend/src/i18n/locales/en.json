@@ -80,6 +80,49 @@
     }
   },
 
+  "missionPage": {
+    "backToHome": "Back to Home",
+    "title": "Our Mission",
+    "subtitle": "Empowering everyone to make informed, healthier food choices through accessible AI-powered nutrition analysis.",
+    "subtitle2": "We believe that understanding what you eat should be simple, instant, and personalized to your unique health needs. NutriVigil bridges the gap between complex nutritional data and everyday food decisions.",
+    "impactTitle": "Our Impact",
+    "stats": {
+      "activeUsers": "Active Users",
+      "foodItemsAnalyzed": "Food Items Analyzed",
+      "languagesSupported": "Languages Supported",
+      "accuracyRate": "Accuracy Rate"
+    },
+    "whyTitle": "Why We Built NutriVigil",
+    "whyP1": "Every year, millions struggle with diet-related health conditions like diabetes, hypertension, and heart disease. Yet understanding food labels and making safe dietary choices remains complex and time-consuming.",
+    "whyP2Highlight": "We created NutriVigil to change that.",
+    "whyP2": "Using cutting-edge AI technology, we've made nutrition analysis instant, accurate, and personalized to your health needs.",
+    "whyP3Before": "Our mission goes beyond technology—it's about",
+    "whyP3Highlight": "democratizing health information",
+    "whyP3After": ", supporting diverse communities worldwide, and helping you live your healthiest life, one meal at a time.",
+    "valuesTitle": "Our Core Values",
+    "values": {
+      "health": {
+        "title": "Health First",
+        "description": "We prioritize your health and well-being above everything. Every feature is designed with your safety in mind."
+      },
+      "privacy": {
+        "title": "Privacy & Security",
+        "description": "Your data is encrypted and never shared. All analysis happens securely on our HIPAA-compliant platform."
+      },
+      "accuracy": {
+        "title": "Accuracy Matters",
+        "description": "Powered by Google's Gemini 2.5 AI, we deliver precise nutritional insights you can trust."
+      },
+      "accessibility": {
+        "title": "Accessibility for All",
+        "description": "Supporting 20+ languages and multiple health conditions to serve everyone, everywhere."
+      }
+    },
+    "ctaTitle": "Join Our Mission",
+    "ctaSubtitle": "Be part of the movement towards healthier, more informed eating habits.",
+    "ctaButton": "Start Your Journey Today"
+  },
+
   "howSteps": {
     "upload": {
       "title": "1. Upload Photo",
