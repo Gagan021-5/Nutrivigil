@@ -261,7 +261,7 @@ const FOOD_ITEMS = {
     { id: 13, name: 'Pear Puree (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: pearPuree, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 2 } },
     { id: 14, name: 'Sweet Potato & Turkey', brand: 'Beech-Nut', isVegetarian: false, servingSize: '113g', image: sweetPotatoTurkey, nutrition: { calories: 70, protein: 3, carbs: 11, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 25, sugar: 4, fiber: 2 } },
     { id: 15, name: 'Organic Mango Puree', brand: "Earth's Best", isVegetarian: true, servingSize: '113g', image: organicMango, nutrition: { calories: 70, protein: 1, carbs: 16, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 13, fiber: 1 } },
-    // New 5 items for this PR
+    
     { id: 16, name: 'Banana & Strawberry (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: bananaStrawberry, nutrition: { calories: 90, protein: 1, carbs: 21, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 15, fiber: 2 } },
     { id: 17, name: 'First Foods Prunes', brand: 'Gerber', isVegetarian: true, servingSize: '71g', image: prunePuree, nutrition: { calories: 70, protein: 0, carbs: 17, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 2 } },
     { id: 18, name: 'Just Carrots (Stage 2)', brand: 'Beech-Nut', isVegetarian: true, servingSize: '113g', image: carrotPuree, nutrition: { calories: 45, protein: 1, carbs: 10, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 50, sugar: 5, fiber: 3 } },
@@ -288,7 +288,7 @@ const FOOD_ITEMS = {
     { id: 16, name: 'Active Dry Yeast', brand: 'Fleischmann\'s', isVegetarian: true, servingSize: '7g', image: dryYeast, nutrition: { calories: 20, protein: 3, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 0, fiber: 1 } },
     { id: 17, name: 'Unsweetened Cocoa Powder', brand: 'Hershey\'s', isVegetarian: true, servingSize: '5g', image: cocoaPowder, nutrition: { calories: 10, protein: 1, carbs: 3, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 2 } },
     { id: 18, name: 'Baking Soda', brand: 'Arm & Hammer', isVegetarian: true, servingSize: '1g', image: bakingSoda, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 0, fiber: 0 } },
-    // New 5 items for this PR
+   
     { id: 19, name: 'Pure Vanilla Extract', brand: 'McCormick', isVegetarian: true, servingSize: '5ml', image: vanillaExtract, nutrition: { calories: 12, protein: 0, carbs: 0.5, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 20, name: 'All-Purpose Flour', brand: 'Gold Medal', isVegetarian: true, servingSize: '30g', image: allPurposeFlour, nutrition: { calories: 100, protein: 3, carbs: 22, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 1 } },
     { id: 21, name: 'Granulated Sugar', brand: 'Domino', isVegetarian: true, servingSize: '4g', image: granulatedSugar, nutrition: { calories: 15, protein: 0, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 4, fiber: 0 } },
