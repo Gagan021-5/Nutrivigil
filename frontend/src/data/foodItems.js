@@ -45,6 +45,14 @@ import chocolateSwirlCheesecake from '../assets/cake/chocolate-swirl-cheesecake.
 import peachPie from '../assets/cake/peach-pie.jpg';
 import raspberrySwirlCheesecake from '../assets/cake/raspberry-swirl-cheesecake.jpg';
 import sugarlessApplePie from '../assets/cake/sugarless-apple-pie.jpg';
+import devilsFoodCake from '../assets/cake/devilsFoodCake.jpg';
+import carrotCakeMix from '../assets/cake/carrotCakeMix.jpg';
+import redVelvetCake from '../assets/cake/redVelvetCake.jpg';
+import chocolateLavaCake from '../assets/cake/chocolateLavaCake.jpg';
+import lemonPoppySeed from '../assets/cake/lemonpoppyseed.jpg';
+import classicPoundCake from '../assets/cake/classicPoundCake.jpg';
+import funfettiCake from '../assets/cake/funfettiCake.jpg';
+import victoriaSponge from '../assets/cake/victoriasponge.jpg';
 
 // cheese image imports (normalized)
 import oneYearSharpCheddar from '../assets/cheese/1-year-sharp-cheddar.jpg';
@@ -91,6 +99,14 @@ import bushsBestLightRedKidney from '../assets/canned-goods/bushs-best-light-red
 import cajunChefNachoSlices from '../assets/canned-goods/cajun-chef-nacho-slices.jpg';
 import castelvetranoOlives from '../assets/canned-goods/castelvetrano-olives.jpg';
 import choppedOliveTapenade from '../assets/canned-goods/chopped-olive-tapenade.jpg';
+import sweetCornCanned from '../assets/canned-goods/sweetcornCanned.jpg';
+import tomatoSoup from '../assets/canned-goods/tomatosoup.jpg';
+import chunkLightTuna from '../assets/canned-goods/chunklighttuna.jpg';
+import blackBeansCanned from '../assets/canned-goods/blackbeansCanned.jpg';
+import garbanzoBeans from '../assets/canned-goods/garbanzobeans.jpg';
+import lentilSoupCanned from '../assets/canned-goods/lentilsoupCanned.jpg';
+import pumpkinPureeCanned from '../assets/canned-goods/pumpkinpureeCanned.jpg';
+import cannedPeaches from '../assets/canned-goods/cannedpeaches.jpg';
 // bread image imports (normalized)
 import bread100RyeBread from '../assets/bread/100-rye-bread.jpg';
 import bread100PureMapleSyrup from '../assets/bread/100-pure-maple-syrup.jpg';
@@ -314,9 +330,15 @@ const FOOD_ITEMS = {
     { id: 8, name: 'Perfectly Moist Peach Cobbler Mix', brand: 'Duncan Hines', isVegetarian: true, servingSize: '1/12 package (43g)', image: peachPie, nutrition: { calories: 170, protein: 1, carbs: 37, totalFat: 2.5, saturatedFat: 1, transFat: 0, sodium: 290, sugar: 19, fiber: 0 } },
     { id: 9, name: 'Deluxe Raspberry Cheesecake Mix', brand: 'Betty Crocker', isVegetarian: true, servingSize: '1/8 package (45g)', image: raspberrySwirlCheesecake, nutrition: { calories: 180, protein: 2, carbs: 32, totalFat: 5, saturatedFat: 2.5, transFat: 0, sodium: 240, sugar: 22, fiber: 0 } },
     { id: 10, name: 'No Sugar Added Apple Pie', brand: "Entenmann's", isVegetarian: true, servingSize: '1/6 pie (113g)', image: sugarlessApplePie, nutrition: { calories: 240, protein: 3, carbs: 34, totalFat: 11, saturatedFat: 5, transFat: 0, sodium: 310, sugar: 4, fiber: 3 } },
-    { id: 11, name: 'Devil\'s Food Cake Mix', brand: 'Duncan Hines', isVegetarian: true, servingSize: '43g', image: null, nutrition: { calories: 160, protein: 1, carbs: 35, totalFat: 2, saturatedFat: 1, transFat: 0, sodium: 340, sugar: 18, fiber: 1 } },
-{ id: 12, name: 'Carrot Cake Mix', brand: 'Betty Crocker', isVegetarian: true, servingSize: '43g', image: null, nutrition: { calories: 160, protein: 1, carbs: 36, totalFat: 1.5, saturatedFat: 1, transFat: 0, sodium: 310, sugar: 19, fiber: 0 } },
-{ id: 13, name: 'Red Velvet Cake Mix', brand: 'Duncan Hines', isVegetarian: true, servingSize: '43g', image: null, nutrition: { calories: 160, protein: 1, carbs: 34, totalFat: 2, saturatedFat: 1, transFat: 0, sodium: 350, sugar: 19, fiber: 0 } }
+    { id: 11, name: 'Devil\'s Food Cake Mix', brand: 'Duncan Hines', isVegetarian: true, servingSize: '43g', image: devilsFoodCake, nutrition: { calories: 160, protein: 1, carbs: 35, totalFat: 2, saturatedFat: 1, transFat: 0, sodium: 340, sugar: 18, fiber: 1 } },
+    { id: 12, name: 'Carrot Cake Mix', brand: 'Betty Crocker', isVegetarian: true, servingSize: '43g', image: carrotCakeMix, nutrition: { calories: 160, protein: 1, carbs: 36, totalFat: 1.5, saturatedFat: 1, transFat: 0, sodium: 310, sugar: 19, fiber: 0 } },
+    { id: 13, name: 'Red Velvet Cake Mix', brand: 'Duncan Hines', isVegetarian: true, servingSize: '43g', image: redVelvetCake, nutrition: { calories: 160, protein: 1, carbs: 34, totalFat: 2, saturatedFat: 1, transFat: 0, sodium: 350, sugar: 19, fiber: 0 } },
+    
+    { id: 14, name: 'Chocolate Lava Cakes', brand: "Godiva", isVegetarian: true, servingSize: '85g (1 cake)', image: chocolateLavaCake, nutrition: { calories: 340, protein: 4, carbs: 38, totalFat: 20, saturatedFat: 12, transFat: 0, sodium: 120, sugar: 28, fiber: 2 } },
+    { id: 15, name: 'Lemon Poppy Seed Mix', brand: "Krusteaz", isVegetarian: true, servingSize: '43g', image: lemonPoppySeed, nutrition: { calories: 150, protein: 2, carbs: 32, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 310, sugar: 17, fiber: 1 } },
+    { id: 16, name: 'Golden Pound Cake', brand: "Sara Lee", isVegetarian: true, servingSize: '76g (1 slice)', image: classicPoundCake, nutrition: { calories: 290, protein: 3, carbs: 32, totalFat: 16, saturatedFat: 10, transFat: 0.5, sodium: 170, sugar: 18, fiber: 0 } },
+    { id: 17, name: 'Funfetti Celebration Cake', brand: "Pillsbury", isVegetarian: true, servingSize: '43g (mix)', image: funfettiCake, nutrition: { calories: 160, protein: 1, carbs: 36, totalFat: 1.5, saturatedFat: 1, transFat: 0, sodium: 320, sugar: 20, fiber: 0 } },
+    { id: 18, name: 'Victoria Sponge Cake', brand: "Classic British", isVegetarian: true, servingSize: '100g', image: victoriaSponge, nutrition: { calories: 400, protein: 5, carbs: 50, totalFat: 20, saturatedFat: 12, transFat: 0, sodium: 280, sugar: 35, fiber: 1 } },
   ],
 
   'canned-goods': [
@@ -334,9 +356,15 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Nacho Sliced Jalapeños', brand: 'Cajun Chef', isVegetarian: true, servingSize: '30g', image: cajunChefNachoSlices, nutrition: { calories: 10, protein: 0, carbs: 2, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 430, sugar: 0, fiber: 1 } },
     { id: 13, name: 'Castelvetrano Olives', brand: 'Mezzetta', isVegetarian: true, servingSize: '15g', image: castelvetranoOlives, nutrition: { calories: 25, protein: 0, carbs: 1, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 210, sugar: 0, fiber: 0 } },
     { id: 14, name: 'Olive Tapenade', brand: 'Mezzetta', isVegetarian: true, servingSize: '30g', image: choppedOliveTapenade, nutrition: { calories: 90, protein: 1, carbs: 2, totalFat: 9, saturatedFat: 1.5, transFat: 0, sodium: 450, sugar: 0, fiber: 1 } },
-    { id: 15, name: 'Sweet Corn (Canned)', brand: 'Green Giant', isVegetarian: true, servingSize: '125g', image: null, nutrition: { calories: 90, protein: 2, carbs: 18, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 2 } },
-{ id: 16, name: 'Tomato Soup', brand: 'Campbell\'s', isVegetarian: true, servingSize: '245g', image: null, nutrition: { calories: 90, protein: 2, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 12, fiber: 1 } },
-{ id: 17, name: 'Chunk Light Tuna in Water', brand: 'StarKist', isVegetarian: false, servingSize: '56g', image: null, nutrition: { calories: 50, protein: 11, carbs: 0, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } }
+    { id: 15, name: 'Sweet Corn (Canned)', brand: 'Green Giant', isVegetarian: true, servingSize: '125g', image: sweetCornCanned, nutrition: { calories: 90, protein: 2, carbs: 18, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 2 } },
+    { id: 16, name: 'Tomato Soup', brand: 'Campbell\'s', isVegetarian: true, servingSize: '245g', image: tomatoSoup, nutrition: { calories: 90, protein: 2, carbs: 20, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 12, fiber: 1 } },
+    { id: 17, name: 'Chunk Light Tuna in Water', brand: 'StarKist', isVegetarian: false, servingSize: '56g', image: chunkLightTuna, nutrition: { calories: 50, protein: 11, carbs: 0, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    
+    { id: 18, name: 'Organic Black Beans', brand: "S&W", isVegetarian: true, servingSize: '130g', image: blackBeansCanned, nutrition: { calories: 110, protein: 7, carbs: 20, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 135, sugar: 1, fiber: 6 } },
+    { id: 19, name: 'Garbanzo Beans (Chickpeas)', brand: "Goya", isVegetarian: true, servingSize: '130g', image: garbanzoBeans, nutrition: { calories: 120, protein: 6, carbs: 21, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 360, sugar: 1, fiber: 6 } },
+    { id: 20, name: 'Organic Lentil Soup', brand: "Amy's Kitchen", isVegetarian: true, servingSize: '245g', image: lentilSoupCanned, nutrition: { calories: 140, protein: 8, carbs: 22, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 680, sugar: 3, fiber: 7 } },
+    { id: 21, name: '100% Pure Pumpkin Puree', brand: "Libby's", isVegetarian: true, servingSize: '122g', image: pumpkinPureeCanned, nutrition: { calories: 45, protein: 2, carbs: 10, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 4, fiber: 7 } },
+    { id: 22, name: 'Yellow Cling Sliced Peaches', brand: "Del Monte", isVegetarian: true, servingSize: '124g', image: cannedPeaches, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 13, fiber: 1 } },
   ],
 
   'cereal': [
