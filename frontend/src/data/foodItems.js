@@ -506,6 +506,9 @@ const FOOD_ITEMS = {
     { id: 8, name: 'Café Bustelo Espresso Style', brand: 'Café Bustelo', isVegetarian: true, servingSize: '1 tbsp (5g)', image: busteloCafeEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 9, name: 'Classic Roast Whole Bean', brand: 'Folgers', isVegetarian: true, servingSize: '1 tbsp (5g)', image: espressoWholeBeanCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 10, name: 'Everyday Value Medium Roast', brand: '365 Whole Foods', isVegetarian: true, servingSize: '1 cup (240ml)', image: everydayValue, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
+    { id: 11, name: 'French Roast Grounds', brand: 'Starbucks', isVegetarian: true, servingSize: '5g', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+{ id: 12, name: 'Instant Coffee', brand: 'Folgers', isVegetarian: true, servingSize: '2g', image: null, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+{ id: 13, name: 'Iced Coffee (Unsweetened)', brand: 'Starbucks', isVegetarian: true, servingSize: '355ml', image: null, nutrition: { calories: 5, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } }
   ],
 
   'cookies-biscuits': [
@@ -522,6 +525,9 @@ const FOOD_ITEMS = {
     { id: 11, name: 'Cheddar Chive Garlic Biscuits', brand: 'Red Lobster', isVegetarian: true, servingSize: '1 biscuit (50g)', image: annsBiscuitsCheddarChiveGarlicBiscuits, nutrition: { calories: 160, protein: 3, carbs: 16, totalFat: 10, saturatedFat: 4.5, transFat: 0, sodium: 380, sugar: 1, fiber: 1 } },
     { id: 12, name: 'Organic Bunny Grahams (Cocoa)', brand: 'Annie\'s Homegrown', isVegetarian: true, servingSize: '31g', image: anniesGlutenFreeCocoa, nutrition: { calories: 140, protein: 2, carbs: 23, totalFat: 5, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 8, fiber: 1 } },
     { id: 13, name: 'Organic Honey Grahams', brand: 'Annie\'s Homegrown', isVegetarian: true, servingSize: '2 full sheets (31g)', image: anniesHomegrownOrganicHoneyGrahamCrackers, nutrition: { calories: 130, protein: 2, carbs: 24, totalFat: 3, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 8, fiber: 1 } },
+    { id: 14, name: 'Chocolate Chip Cookies', brand: 'Chips Ahoy!', isVegetarian: true, servingSize: '33g', image: null, nutrition: { calories: 160, protein: 1, carbs: 22, totalFat: 8, saturatedFat: 2.5, transFat: 0, sodium: 110, sugar: 11, fiber: 1 } },
+{ id: 15, name: 'Double Stuf Oreos', brand: 'Oreo', isVegetarian: true, servingSize: '29g', image: null, nutrition: { calories: 140, protein: 1, carbs: 21, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 13, fiber: 1 } },
+{ id: 16, name: 'Shortbread Cookies', brand: 'Walkers', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 150, protein: 1, carbs: 16, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 80, sugar: 5, fiber: 0 } }
   ],
 
   'beverages': [
@@ -539,6 +545,9 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Sparkling Water Lime', brand: 'La Croix', servingSize: '12 fl oz (355ml)', image: trueLemonRaspberryLemonade, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 13, name: 'Grape Juice', brand: 'Welch\'s', servingSize: '8 fl oz (240ml)', image: trueLemonStrawberryLemonade, nutrition: { calories: 140, protein: 0, carbs: 36, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 15, sugar: 36, fiber: 0 } },
     { id: 14, name: 'Cranberry Juice', brand: 'Ocean Spray', servingSize: '8 fl oz (240ml)', image: naturallyCranberryJuice, nutrition: { calories: 110, protein: 0, carbs: 28, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 28, fiber: 0 } },
+    { id: 15, name: 'Coconut Water', brand: 'Vita Coco', isVegetarian: true, servingSize: '330ml', image: null, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 13, fiber: 0 } },
+{ id: 16, name: 'Diet Coke', brand: 'Coca-Cola', isVegetarian: true, servingSize: '355ml', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
+{ id: 17, name: 'Pomegranate Juice', brand: 'POM Wonderful', isVegetarian: true, servingSize: '240ml', image: null, nutrition: { calories: 160, protein: 0, carbs: 39, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 34, fiber: 0 } }
   ],
 
   'pasta': [
@@ -554,6 +563,9 @@ const FOOD_ITEMS = {
     { id: 10, name: 'One Pot White Cheddar & Shells', brand: "Annie's Homegrown", isVegetarian: true, servingSize: '108g (1 cup)', image: anniesOnePotWhiteCheddarPasta, nutrition: { calories: 270, protein: 10, carbs: 46, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 540, sugar: 5, fiber: 2 } },
     { id: 11, name: 'Provolone & Prosciutto Tortelloni', brand: 'Buitoni', isVegetarian: false, servingSize: '100g (3/4 cup)', image: agedProvoloneAndProsciuttoTortelloni, nutrition: { calories: 290, protein: 12, carbs: 42, totalFat: 8, saturatedFat: 4, transFat: 0, sodium: 680, sugar: 2, fiber: 2 } },
     { id: 12, name: 'Chickpea Alphabets', brand: 'Banza', isVegetarian: true, servingSize: '56g (2 oz)', image: banzaChickpeaPastaAlphabets, nutrition: { calories: 190, protein: 11, carbs: 35, totalFat: 3, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 2, fiber: 8 } },
+    { id: 13, name: 'Classic Fettuccine', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+{ id: 14, name: 'Whole Grain Penne', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: null, nutrition: { calories: 180, protein: 8, carbs: 39, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 7 } },
+{ id: 15, name: 'Potato Gnocchi', brand: 'De Cecco', isVegetarian: true, servingSize: '100g', image: null, nutrition: { calories: 150, protein: 4, carbs: 32, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 1, fiber: 1 } }
   ],
 
   'snacks': [
