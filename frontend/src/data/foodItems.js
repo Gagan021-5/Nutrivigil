@@ -34,6 +34,26 @@ import purePumpkin from '../assets/baking/pure-pumpkin.jpg';
 import semiSweetBakingChips from '../assets/baking/semi-sweet-baking-chips.jpg';
 import bakingHero from '../assets/baking.jpg';
 
+// New Baby Food Images
+import pearPuree from '../assets/baby-food/pearPuree.jpg';
+import sweetPotatoTurkey from '../assets/baby-food/sweetPotatoTurkey.jpg';
+import organicMango from '../assets/baby-food/organicMango.jpg';
+import bananaStrawberry from '../assets/baby-food/bananastrawberry.jpg';
+import prunePuree from '../assets/baby-food/prunepuree.jpg';
+import carrotPuree from '../assets/baby-food/carrotpuree.jpg';
+import peaPuree from '../assets/baby-food/peapuree.jpg';
+import appleSpinachPouch from '../assets/baby-food/applespinachpouch.jpg';
+
+// New Baking Images
+import dryYeast from '../assets/baby-food/dryyeast.jpg';
+import cocoaPowder from '../assets/baby-food/cocoapowder.jpg';
+import bakingSoda from '../assets/baby-food/bakingsoda.jpg';
+import vanillaExtract from '../assets/baby-food/vanillaextract.jpg';
+import allPurposeFlour from '../assets/baby-food/allpurposeflour.jpg';
+import granulatedSugar from '../assets/baby-food/granulatedsugar.jpg';
+import bakingPowder from '../assets/baby-food/bakingpowder.jpg';
+import darkChocolateChips from '../assets/baby-food/darkchocolatechips.jpg';
+
 // cake image imports (normalized)
 import organicTraditional2 from '../assets/cake/organic-traditional-2.jpg';
 import fourInVeganVanillaCake from '../assets/cake/4in-vegan-vanilla-cake.jpg';
@@ -238,9 +258,15 @@ const FOOD_ITEMS = {
     { id: 10, name: 'Turkey & Turkey Broth', brand: 'Beech-Nut', isVegetarian: false, servingSize: '71g', image: turkeyBroth, nutrition: { calories: 50, protein: 8, carbs: 0, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 20, sugar: 0, fiber: 0 } },
     { id: 11, name: 'Beef & Beef Broth', brand: "Earth's Best", isVegetarian: false, servingSize: '71g', image: beefBroth, nutrition: { calories: 60, protein: 9, carbs: 0, totalFat: 2, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
     { id: 12, name: 'Banana Puree (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: stage2Bananas, nutrition: { calories: 100, protein: 1, carbs: 25, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 20, fiber: 1 } },
-    { id: 13, name: 'Pear Puree (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: null, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 2 } },
-{ id: 14, name: 'Sweet Potato & Turkey', brand: 'Beech-Nut', isVegetarian: false, servingSize: '113g', image: null, nutrition: { calories: 70, protein: 3, carbs: 11, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 25, sugar: 4, fiber: 2 } },
-{ id: 15, name: 'Organic Mango Puree', brand: "Earth's Best", isVegetarian: true, servingSize: '113g', image: null, nutrition: { calories: 70, protein: 1, carbs: 16, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 13, fiber: 1 } }
+    { id: 13, name: 'Pear Puree (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: pearPuree, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 12, fiber: 2 } },
+    { id: 14, name: 'Sweet Potato & Turkey', brand: 'Beech-Nut', isVegetarian: false, servingSize: '113g', image: sweetPotatoTurkey, nutrition: { calories: 70, protein: 3, carbs: 11, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 25, sugar: 4, fiber: 2 } },
+    { id: 15, name: 'Organic Mango Puree', brand: "Earth's Best", isVegetarian: true, servingSize: '113g', image: organicMango, nutrition: { calories: 70, protein: 1, carbs: 16, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 13, fiber: 1 } },
+    // New 5 items for this PR
+    { id: 16, name: 'Banana & Strawberry (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: bananaStrawberry, nutrition: { calories: 90, protein: 1, carbs: 21, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 15, fiber: 2 } },
+    { id: 17, name: 'First Foods Prunes', brand: 'Gerber', isVegetarian: true, servingSize: '71g', image: prunePuree, nutrition: { calories: 70, protein: 0, carbs: 17, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 2 } },
+    { id: 18, name: 'Just Carrots (Stage 2)', brand: 'Beech-Nut', isVegetarian: true, servingSize: '113g', image: carrotPuree, nutrition: { calories: 45, protein: 1, carbs: 10, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 50, sugar: 5, fiber: 3 } },
+    { id: 19, name: 'Sweet Peas (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: peaPuree, nutrition: { calories: 60, protein: 4, carbs: 10, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 4, fiber: 4 } },
+    { id: 20, name: 'Apple & Spinach Pouch', brand: "Earth's Best", isVegetarian: true, servingSize: '99g', image: appleSpinachPouch, nutrition: { calories: 50, protein: 1, carbs: 12, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 8, fiber: 2 } }
   ],
 
   'baking': [
@@ -259,9 +285,15 @@ const FOOD_ITEMS = {
     { id: 13, name: 'Japanese Style Panko', brand: '4C', isVegetarian: true, servingSize: '28g', image: fourCJapanesePankoBreadcrumbs, nutrition: { calories: 110, protein: 4, carbs: 22, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 115, sugar: 1, fiber: 1 } },
     { id: 14, name: 'Seasoned Panko', brand: '4C', isVegetarian: true, servingSize: '28g', image: fourCAJapaneseSeasonedPanko, nutrition: { calories: 100, protein: 4, carbs: 21, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 540, sugar: 1, fiber: 1 } },
     { id: 15, name: 'Plain Bread Crumbs', brand: '4C', isVegetarian: true, servingSize: '28g', image: fourCPlainBreadCrumbs, nutrition: { calories: 100, protein: 4, carbs: 21, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 230, sugar: 2, fiber: 1 } },
-    { id: 16, name: 'Active Dry Yeast', brand: 'Fleischmann\'s', isVegetarian: true, servingSize: '7g', image: null, nutrition: { calories: 20, protein: 3, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 0, fiber: 1 } },
-{ id: 17, name: 'Unsweetened Cocoa Powder', brand: 'Hershey\'s', isVegetarian: true, servingSize: '5g', image: null, nutrition: { calories: 10, protein: 1, carbs: 3, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 2 } },
-{ id: 18, name: 'Baking Soda', brand: 'Arm & Hammer', isVegetarian: true, servingSize: '1g', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 0, fiber: 0 } }
+    { id: 16, name: 'Active Dry Yeast', brand: 'Fleischmann\'s', isVegetarian: true, servingSize: '7g', image: dryYeast, nutrition: { calories: 20, protein: 3, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 0, fiber: 1 } },
+    { id: 17, name: 'Unsweetened Cocoa Powder', brand: 'Hershey\'s', isVegetarian: true, servingSize: '5g', image: cocoaPowder, nutrition: { calories: 10, protein: 1, carbs: 3, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 2 } },
+    { id: 18, name: 'Baking Soda', brand: 'Arm & Hammer', isVegetarian: true, servingSize: '1g', image: bakingSoda, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 0, fiber: 0 } },
+    // New 5 items for this PR
+    { id: 19, name: 'Pure Vanilla Extract', brand: 'McCormick', isVegetarian: true, servingSize: '5ml', image: vanillaExtract, nutrition: { calories: 12, protein: 0, carbs: 0.5, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 20, name: 'All-Purpose Flour', brand: 'Gold Medal', isVegetarian: true, servingSize: '30g', image: allPurposeFlour, nutrition: { calories: 100, protein: 3, carbs: 22, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 1 } },
+    { id: 21, name: 'Granulated Sugar', brand: 'Domino', isVegetarian: true, servingSize: '4g', image: granulatedSugar, nutrition: { calories: 15, protein: 0, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 4, fiber: 0 } },
+    { id: 22, name: 'Baking Powder', brand: 'Clabber Girl', isVegetarian: true, servingSize: '5g', image: bakingPowder, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 0, fiber: 0 } },
+    { id: 23, name: '60% Cacao Dark Chocolate Chips', brand: 'Ghirardelli', isVegetarian: true, servingSize: '14g', image: darkChocolateChips, nutrition: { calories: 80, protein: 1, carbs: 8, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 0, sugar: 6, fiber: 1 } }
   ],
 
   'bread': [
