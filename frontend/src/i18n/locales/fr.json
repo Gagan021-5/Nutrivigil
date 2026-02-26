@@ -80,33 +80,113 @@
     }
   },
 
-  "about": {
+  "protocolPage": {
     "backToHome": "Retour à l'accueil",
-    "title": "À propos de NutriVigil",
-    "subtitle": "Votre scanner de santé personnel par IA. Analysez les repas instantanément pour maintenir votre nutrition parfaitement alignée avec vos objectifs de santé.",
-    "hallTitle": "Hall des Contributions",
-    "hallDesc": "Reconnaître les personnes qui contribuent activement à la croissance et à la transparence de NutriVigil.",
-    "projectAdmin": "Administrateur du projet",
-    "contributor": "Contributeur",
-    "missionTitle": "Notre Mission",
-    "mission": {
-      "accurate": {
-        "title": "Analyse Précise",
-        "description": "Propulsé par l'IA Gemini v2.5 de pointe pour des informations nutritionnelles précises adaptées à vos conditions de santé."
+    "heroTitle": "Protocoles de Santé",
+    "heroSubtitle": "Directives diététiques fondées sur des preuves adaptées à vos conditions de santé spécifiques",
+    "conditionsTitle": "Conditions de Santé Prises en Charge",
+    "dosLabel": "Recommandé (À faire)",
+    "dontsLabel": "Éviter (À ne pas faire)",
+    "nutrientsLabel": "Nutriments Clés à Surveiller",
+    "howHelpTitle": "Comment NutriVigil Aide",
+    "help": {
+      "ai": {
+        "title": "Analyse de Protocole par IA",
+        "desc": "Notre IA recoupe les aliments avec vos protocoles de santé sélectionnés pour fournir des recommandations précises"
       },
-      "health": {
-        "title": "La Santé d'abord",
-        "description": "Recommandations personnalisées basées sur vos conditions de santé spécifiques comme le diabète, l'hypertension et plus encore."
+      "personalized": {
+        "title": "Recommandations Personnalisées",
+        "desc": "Obtenez des conseils nutritionnels adaptés à vos conditions de santé spécifiques et à vos besoins alimentaires"
       },
-      "instant": {
-        "title": "Résultats Instantanés",
-        "description": "Obtenez une analyse nutritionnelle complète en secondes, pas en heures. Téléchargez, scannez et recevez des informations détaillées instantanément."
+      "safety": {
+        "title": "Vérifications de Sécurité en Temps Réel",
+        "desc": "Signaux de feux tricolores instantanés (Vert/Jaune/Rouge) pour chaque aliment scanné selon vos protocoles"
       }
     },
-    "ctaTitle": "Prêt à commencer votre parcours santé ?",
-    "tryScanner": "Essayer le scanner maintenant"
+    "disclaimerTitle": "Avertissement Médical Important",
+    "disclaimerP1Bold": "NutriVigil fournit uniquement des informations éducatives et des conseils généraux.",
+    "disclaimerP1Rest": " Nos recommandations sont basées sur des directives diététiques fondées sur des preuves, mais ne doivent pas remplacer les conseils médicaux professionnels, le diagnostic ou le traitement.",
+    "disclaimerP2": "Consultez toujours votre prestataire de soins de santé, votre diététicien agréé ou un professionnel médical qualifié avant d'apporter des changements importants à votre alimentation, surtout si vous avez des problèmes de santé existants ou prenez des médicaments.",
+    "disclaimerP3": "Les besoins nutritionnels individuels varient considérablement selon les antécédents médicaux, l'état de santé actuel, les médicaments et d'autres facteurs. Ce qui fonctionne pour une personne peut ne pas convenir à une autre.",
+    "disclaimerP4": "En cas d'urgence ou de symptômes graves, consultez immédiatement un médecin.",
+    "ctaTitle": "Prêt à Commencer ?",
+    "ctaSubtitle": "Configurez votre profil de santé et recevez des recommandations nutritionnelles personnalisées",
+    "ctaButton": "Commencer à Scanner les Aliments",
+    "protocols": {
+      "diabetes": {
+        "title": "Gestion du Diabète",
+        "description": "Gérez les niveaux de glycémie grâce à une consommation consciente de glucides et une nutrition équilibrée.",
+        "dos": ["Choisissez des aliments à faible index glycémique", "Surveillez les portions de glucides", "Incluez des aliments riches en fibres", "Mangez des repas réguliers et équilibrés", "Restez hydraté avec de l'eau"],
+        "donts": ["Évitez les boissons sucrées et les sodas", "Limitez le pain blanc et les céréales raffinées", "Évitez les snacks transformés riches en sucre", "Évitez les jus de fruits avec du sucre ajouté", "Minimisez les aliments frits et gras"],
+        "nutrients": [
+          {"name": "Glucides", "note": "Surveillez la consommation, choisissez des glucides complexes"},
+          {"name": "Fibres", "note": "Visez 25-30 g par jour"},
+          {"name": "Sucre", "note": "Limitez les sucres ajoutés, surveillez les sucres naturels"},
+          {"name": "Protéines", "note": "Incluez des sources maigres à chaque repas"}
+        ]
+      },
+      "hypertension": {
+        "title": "Hypertension Artérielle",
+        "description": "Contrôlez la pression artérielle en réduisant la consommation de sodium et avec des aliments bons pour le cœur.",
+        "dos": ["Choisissez des aliments frais et complets", "Utilisez des herbes et des épices pour la saveur", "Incluez des aliments riches en potassium", "Mangez des fruits et légumes quotidiennement", "Sélectionnez des options pauvres en sodium"],
+        "donts": ["Évitez d'ajouter du sel de table", "Limitez les aliments transformés et en conserve", "Évitez les snacks salés et les chips", "Évitez les aliments marinés et conservés", "Minimisez la nourriture des restaurants et fast-food"],
+        "nutrients": [
+          {"name": "Sodium", "note": "Limitez à <2 300 mg par jour (idéalement <1 500 mg)"},
+          {"name": "Potassium", "note": "Augmentez l'apport (bananes, épinards)"},
+          {"name": "Calcium", "note": "Soutenez avec des produits laitiers allégés"},
+          {"name": "Magnésium", "note": "Incluez noix, graines, céréales complètes"}
+        ]
+      },
+      "heart": {
+        "title": "Maladies Cardiaques",
+        "description": "Protégez la santé cardiaque en gérant le cholestérol, les graisses et en maintenant un poids santé.",
+        "dos": ["Choisissez des protéines maigres (poisson, volaille)", "Incluez des acides gras oméga-3", "Mangez beaucoup de légumes et de fruits", "Sélectionnez des céréales complètes plutôt que raffinées", "Utilisez des huiles saines (olive, avocat)"],
+        "donts": ["Évitez les graisses trans et les huiles partiellement hydrogénées", "Limitez les graisses saturées (viande rouge, beurre)", "Évitez les aliments frits et gras", "Évitez les aliments riches en cholestérol", "Minimisez les viandes transformées"],
+        "nutrients": [
+          {"name": "Graisses Saturées", "note": "Limitez à <7% des calories quotidiennes"},
+          {"name": "Cholestérol", "note": "Maintenez en dessous de 200 mg par jour"},
+          {"name": "Oméga-3", "note": "Mangez du poisson gras 2 fois par semaine"},
+          {"name": "Fibres", "note": "Aide à réduire le cholestérol"}
+        ]
+      },
+      "kidney": {
+        "title": "Maladie Rénale",
+        "description": "Soutenez la fonction rénale en gérant les protéines, le potassium, le phosphore et le sodium.",
+        "dos": ["Contrôlez les portions de protéines (consultez un diététicien)", "Choisissez des fruits et légumes pauvres en potassium", "Sélectionnez des aliments pauvres en phosphore", "Restez dans les limites de liquides si prescrit", "Surveillez attentivement les tailles des portions"],
+        "donts": ["Évitez les aliments riches en potassium (bananes, oranges)", "Limitez les produits laitiers et les aliments riches en phosphore", "Évitez les aliments transformés riches en sodium", "Évitez les colas foncés et certaines boissons", "Minimisez les protéines de la viande rouge"],
+        "nutrients": [
+          {"name": "Protéines", "note": "Apport modéré selon les conseils du médecin"},
+          {"name": "Potassium", "note": "Limitez aux niveaux recommandés"},
+          {"name": "Phosphore", "note": "Évitez les additifs dans les aliments transformés"},
+          {"name": "Sodium", "note": "Maintenez l'apport faible"}
+        ]
+      },
+      "obesity": {
+        "title": "Obésité et Gestion du Poids",
+        "description": "Atteignez un poids santé grâce à une nutrition équilibrée, un contrôle des portions et une alimentation consciente.",
+        "dos": ["Mangez des aliments denses en nutriments et faibles en calories", "Pratiquez le contrôle des portions", "Incluez beaucoup de légumes", "Choisissez des protéines maigres", "Restez physiquement actif régulièrement"],
+        "donts": ["Évitez les boissons et snacks sucrés", "Limitez les aliments transformés riches en calories", "Évitez les grandes portions et les secondes portions", "Évitez de manger par ennui ou stress", "Minimisez les aliments frits et gras"],
+        "nutrients": [
+          {"name": "Calories", "note": "Créez un déficit modéré (500-750 cal/jour)"},
+          {"name": "Protéines", "note": "Aide à préserver les muscles pendant la perte de poids"},
+          {"name": "Fibres", "note": "Favorise la satiété et la plénitude"},
+          {"name": "Eau", "note": "Buvez abondamment pour soutenir le métabolisme"}
+        ]
+      },
+      "allergies": {
+        "title": "Allergies Alimentaires",
+        "description": "Évitez les allergènes et prévenez la contamination croisée tout en maintenant une nutrition équilibrée.",
+        "dos": ["Lisez attentivement toutes les étiquettes alimentaires", "Demandez les ingrédients lorsque vous mangez dehors", "Portez un médicament d'urgence (si prescrit)", "Informez les autres de vos allergies", "Trouvez des alternatives sûres pour les nutriments"],
+        "donts": ["Ne consommez jamais d'allergènes connus", "Évitez les aliments avec des ingrédients peu clairs", "Ne supposez pas que \"peut contenir\" est sûr", "Évitez les surfaces contaminées croisées", "Ne risquez pas d'essayer de nouveaux aliments sans vérification"],
+        "nutrients": [
+          {"name": "Allergènes Courants", "note": "Lait, œufs, poisson, crustacés, noix d'arbre, cacahuètes, blé, soja"},
+          {"name": "Lacunes Nutritionnelles", "note": "Remplacez les nutriments des aliments évités"},
+          {"name": "Contamination Croisée", "note": "Soyez vigilant dans la préparation des aliments"},
+          {"name": "Plan d'Urgence", "note": "Soyez toujours préparé"}
+        ]
+      }
+    }
   },
-
   "howSteps": {
     "upload": {
       "title": "1. Télécharger une photo",
