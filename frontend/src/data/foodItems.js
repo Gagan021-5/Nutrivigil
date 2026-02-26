@@ -105,6 +105,14 @@ import bread7NutSeedBread from '../assets/bread/7-nut-and-seed-bread.jpg';
 import bread7SproutedGrainsCinnamonRaisinBread from '../assets/bread/7-sprouted-grains-cinnamon-raisin-bread.jpg';
 import bread7DaysSoftCroissantChocolateBreakfastPastry from '../assets/bread/7days-soft-croissant-chocolate-breakfast-pastry.jpg';
 import breadAgainstTheGrainGlutenFreeRosemaryBaguettes from '../assets/bread/against-the-grain-gluten-free-fresh-rosemary-baguettes.jpg';
+import sourdoughLoaf from '../assets/bread/sourdoughloaf.jpg';
+import plainBagels from '../assets/bread/plainbagels.jpg';
+import englishMuffins from '../assets/bread/englishmuffins.jpg';
+import multigrainBread from '../assets/bread/multigrainbread.jpg';
+import briocheLoaf from '../assets/bread/briocheloaf.jpg';
+import challahBread from '../assets/bread/challahbread.jpg';
+import garlicNaan from '../assets/bread/garlicnaan.jpg';
+import wholeWheatPita from '../assets/bread/wholewheatpita.jpg';
 
 // breakfast image imports (normalized)
 import mapleBreakfastSausage from '../assets/breakfast/maple-breakfast-sausage.jpg';
@@ -121,6 +129,14 @@ import belvitaPeanutButterBreakfastBiscuits from '../assets/breakfast/belvita-pe
 import belvitaProteinOatsHoneyAndChocolateBreakfast from '../assets/breakfast/belvita-protein-oats-honey-and-chocolate-breakfast.jpg';
 import bettyCrockerBisquickPancake from '../assets/breakfast/betty-crocker-bisquick-pancake.jpg';
 import bettyCrockerBisquickShake from '../assets/breakfast/betty-crocker-bisquick-shake.jpg';
+import greekYogurt from '../assets/breakfast/greekyogurt.jpg';
+import blueberryGranola from '../assets/breakfast/blueberrygranola.jpg';
+import hardBoiledEggs from '../assets/breakfast/hardboiledeggs.jpg';
+import belgianWaffles from '../assets/breakfast/belgianwaffles.jpg';
+import chiaPudding from '../assets/breakfast/chiapudding.jpg';
+import avocadoToast from '../assets/breakfast/avocadotoast.jpg';
+import eggBites from '../assets/breakfast/eggbites.jpg';
+import steelCutOats from '../assets/breakfast/steelcutoats.jpg';
 
 // cookies-biscuits image imports (normalized)
 import abcMultiGrainCookies from '../assets/cokies-biscuit/abc-multi-grain-cookies.jpg';
@@ -278,9 +294,15 @@ const FOOD_ITEMS = {
     { id: 11, name: 'Cinnamon Raisin Bagel', brand: "Thomas'", isVegetarian: true, servingSize: '1 bagel (95g)', image: bread7SproutedGrainsCinnamonRaisinBread, nutrition: { calories: 260, protein: 9, carbs: 54, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 380, sugar: 10, fiber: 2 } },
     { id: 12, name: 'Soft Croissant (Vanilla)', brand: "7Days", isVegetarian: true, servingSize: '1 croissant (75g)', image: bread7DaysSoftCroissantChocolateBreakfastPastry, nutrition: { calories: 340, protein: 4, carbs: 32, totalFat: 21, saturatedFat: 8, transFat: 0, sodium: 120, sugar: 14, fiber: 1 } },
     { id: 13, name: 'GF Rosemary Baguette', brand: "Against the Grain", isVegetarian: true, servingSize: '1/3 baguette (71g)', image: breadAgainstTheGrainGlutenFreeRosemaryBaguettes, nutrition: { calories: 210, protein: 2, carbs: 30, totalFat: 8, saturatedFat: 2, transFat: 0, sodium: 240, sugar: 0, fiber: 0 } },
-    { id: 14, name: 'Classic Sourdough Loaf', brand: 'Boudin', isVegetarian: true, servingSize: '50g', image: null, nutrition: { calories: 130, protein: 4, carbs: 26, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 280, sugar: 1, fiber: 1 } },
-{ id: 15, name: 'Plain Bagels', brand: 'Thomas\'', isVegetarian: true, servingSize: '95g', image: null, nutrition: { calories: 250, protein: 9, carbs: 50, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 440, sugar: 6, fiber: 2 } },
-{ id: 16, name: 'English Muffins', brand: 'Thomas\'', isVegetarian: true, servingSize: '57g', image: null, nutrition: { calories: 120, protein: 4, carbs: 24, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 1, fiber: 1 } }
+    { id: 14, name: 'Classic Sourdough Loaf', brand: 'Boudin', isVegetarian: true, servingSize: '50g', image: sourdoughLoaf, nutrition: { calories: 130, protein: 4, carbs: 26, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 280, sugar: 1, fiber: 1 } },
+    { id: 15, name: 'Plain Bagels', brand: "Thomas'", isVegetarian: true, servingSize: '95g', image: plainBagels, nutrition: { calories: 250, protein: 9, carbs: 50, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 440, sugar: 6, fiber: 2 } },
+    { id: 16, name: 'English Muffins', brand: "Thomas'", isVegetarian: true, servingSize: '57g', image: englishMuffins, nutrition: { calories: 120, protein: 4, carbs: 24, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 1, fiber: 1 } },
+    
+    { id: 17, name: 'Goodseed Multigrain Bread', brand: "Dave's Killer Bread", isVegetarian: true, servingSize: '1 slice (43g)', image: multigrainBread, nutrition: { calories: 120, protein: 5, carbs: 21, totalFat: 3, saturatedFat: 0, transFat: 0, sodium: 170, sugar: 5, fiber: 3 } },
+    { id: 18, name: 'Handcrafted Brioche Loaf', brand: "St Pierre", isVegetarian: true, servingSize: '1 slice (38g)', image: briocheLoaf, nutrition: { calories: 130, protein: 3, carbs: 19, totalFat: 5, saturatedFat: 2.5, transFat: 0, sodium: 160, sugar: 4, fiber: 1 } },
+    { id: 19, name: 'Authentic Challah Bread', brand: "Zomick's", isVegetarian: true, servingSize: '1 slice (57g)', image: challahBread, nutrition: { calories: 160, protein: 5, carbs: 28, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 240, sugar: 5, fiber: 1 } },
+    { id: 20, name: 'Roasted Garlic Naan', brand: "Stonefire", isVegetarian: true, servingSize: '1/2 naan (62g)', image: garlicNaan, nutrition: { calories: 190, protein: 5, carbs: 29, totalFat: 6, saturatedFat: 1.5, transFat: 0, sodium: 370, sugar: 2, fiber: 1 } },
+    { id: 21, name: 'Whole Wheat Pita Pockets', brand: "Toufayan", isVegetarian: true, servingSize: '1 pita (57g)', image: wholeWheatPita, nutrition: { calories: 150, protein: 6, carbs: 30, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 300, sugar: 1, fiber: 4 } }
   ],
 
   'breakfast': [
@@ -298,9 +320,15 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Protein Oats & Honey Soft Baked', brand: 'belVita', isVegetarian: true, servingSize: '1 biscuit (50g)', image: belvitaProteinOatsHoneyAndChocolateBreakfast, nutrition: { calories: 200, protein: 10, carbs: 22, totalFat: 8, saturatedFat: 2, transFat: 0, sodium: 220, sugar: 10, fiber: 3 } },
     { id: 13, name: 'Original Pancake & Baking Mix', brand: "Bisquick", isVegetarian: true, servingSize: '1/3 cup dry (40g)', image: bettyCrockerBisquickPancake, nutrition: { calories: 140, protein: 3, carbs: 28, totalFat: 3, saturatedFat: 1, transFat: 0, sodium: 380, sugar: 2, fiber: 1 } },
     { id: 14, name: 'Shake \'n Pour Buttermilk', brand: 'Bisquick', isVegetarian: true, servingSize: '1/2 cup mix (74g)', image: bettyCrockerBisquickShake, nutrition: { calories: 230, protein: 6, carbs: 45, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 480, sugar: 10, fiber: 1 } },
-    { id: 15, name: 'Greek Yogurt (Plain)', brand: 'Chobani', isVegetarian: true, servingSize: '150g', image: null, nutrition: { calories: 80, protein: 15, carbs: 6, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 55, sugar: 4, fiber: 0 } },
-{ id: 16, name: 'Blueberry Granola', brand: 'KIND', isVegetarian: true, servingSize: '65g', image: null, nutrition: { calories: 260, protein: 5, carbs: 42, totalFat: 10, saturatedFat: 1, transFat: 0, sodium: 45, sugar: 12, fiber: 6 } },
-{ id: 17, name: 'Hard Boiled Eggs', brand: 'Vital Farms', isVegetarian: true, servingSize: '44g', image: null, nutrition: { calories: 70, protein: 6, carbs: 0, totalFat: 5, saturatedFat: 1.5, transFat: 0, sodium: 60, sugar: 0, fiber: 0 } }
+    { id: 15, name: 'Greek Yogurt (Plain)', brand: 'Chobani', isVegetarian: true, servingSize: '150g', image: greekYogurt, nutrition: { calories: 80, protein: 15, carbs: 6, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 55, sugar: 4, fiber: 0 } },
+    { id: 16, name: 'Blueberry Granola', brand: 'KIND', isVegetarian: true, servingSize: '65g', image: blueberryGranola, nutrition: { calories: 260, protein: 5, carbs: 42, totalFat: 10, saturatedFat: 1, transFat: 0, sodium: 45, sugar: 12, fiber: 6 } },
+    { id: 17, name: 'Hard Boiled Eggs', brand: 'Vital Farms', isVegetarian: true, servingSize: '44g', image: hardBoiledEggs, nutrition: { calories: 70, protein: 6, carbs: 0, totalFat: 5, saturatedFat: 1.5, transFat: 0, sodium: 60, sugar: 0, fiber: 0 } },
+    
+    { id: 18, name: 'Belgian Waffles (Frozen)', brand: "Eggo", isVegetarian: true, servingSize: '70g (2 waffles)', image: belgianWaffles, nutrition: { calories: 180, protein: 4, carbs: 25, totalFat: 7, saturatedFat: 1.5, transFat: 0, sodium: 350, sugar: 4, fiber: 1 } },
+    { id: 19, name: 'Vanilla Bean Chia Pudding', brand: "Mush", isVegetarian: true, servingSize: '142g', image: chiaPudding, nutrition: { calories: 190, protein: 6, carbs: 18, totalFat: 10, saturatedFat: 1, transFat: 0, sodium: 110, sugar: 10, fiber: 8 } },
+    { id: 20, name: 'Classic Avocado Toast', brand: "Good & Gather", isVegetarian: true, servingSize: '113g', image: avocadoToast, nutrition: { calories: 160, protein: 3, carbs: 12, totalFat: 12, saturatedFat: 1.5, transFat: 0, sodium: 210, sugar: 1, fiber: 4 } },
+    { id: 21, name: 'Three Cheese Egg Bites', brand: "Starbucks", isVegetarian: true, servingSize: '130g (2 pieces)', image: eggBites , nutrition: { calories: 230, protein: 15, carbs: 11, totalFat: 14, saturatedFat: 9, transFat: 0, sodium: 530, sugar: 2, fiber: 0 } },
+    { id: 22, name: 'Maple Brown Sugar Steel Cut Oats', brand: "McCann's", isVegetarian: true, servingSize: '43g (1 packet)', image: steelCutOats, nutrition: { calories: 160, protein: 4, carbs: 32, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 150, sugar: 12, fiber: 3 } }
   ],
 
   'cakes': [
