@@ -75,6 +75,14 @@ import appleCinnamonGranola from '../assets/cereal/apple-cinnamon-granola.jpg';
 import appleCinnamonInstantOatmeal from '../assets/cereal/apple-cinnamon-instant-oatmeal.jpg';
 import appleJacksBreakfastCereal from '../assets/cereal/apple-jacks-breakfast-cereal.jpg';
 import appleJacksGiantCereal from '../assets/cereal/apple-jacks-giant-cereal.jpg';
+import honeyNutCheerios from '../assets/cereal/honeynutcheerios.jpg';
+import riceKrispies from '../assets/cereal/ricekrispies.jpg';
+import raisinBran from '../assets/cereal/raisinbran.jpg';
+import frostedFlakes from '../assets/cereal/frostedflakes.jpg';
+import cheeriosOriginal from '../assets/cereal/cheeriosoriginal.jpg';
+import cinnamonToastCrunch from '../assets/cereal/cinnamontoastcrunch.jpg';
+import luckyCharms from '../assets/cereal/luckycharms.jpg';
+import cornFlakes from '../assets/cereal/cornflakes.jpg';
 
 // canned-goods image imports (normalized)
 import bMOriginalBakedBeans from '../assets/canned-goods/b-m-original-baked-beans.jpg';
@@ -224,6 +232,16 @@ import redBullTheYellow from '../assets/beverages/red-bull-the-yellow.jpg';
 import trueLemonRaspberryLemonade from '../assets/beverages/true-lemon-raspberry-lemonade.jpg';
 import trueLemonStrawberryLemonade from '../assets/beverages/true-lemon-strawberry-lemonade.jpg';
 
+// New Cheese Images
+import shreddedMozzarella from '../assets/cheese/shreddedmozzarella.jpg';
+import pepperJackSlices from '../assets/cheese/pepperJackSlices.jpg';
+import crumbledFeta from '../assets/cheese/crumbledFeta.jpg';
+import provoloneSlices from '../assets/cheese/provoloneSlices.jpg';
+import muensterCheese from '../assets/cheese/muensterCheese.jpg';
+import blueCheeseCrumbles from '../assets/cheese/blueCheeseCrumbles.jpg';
+import wholeMilkRicotta from '../assets/cheese/wholeMilkRicotta.jpg';
+import mascarponeCheese from '../assets/cheese/mascarponeCheese.jpg';
+
 const FOOD_ITEMS = {
   'baby-food': [
     { id: 1, name: 'Applesauce (Stage 2)', brand: 'Gerber', isVegetarian: true, servingSize: '113g', image: stage2Applesauce, nutrition: { calories: 50, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 11, fiber: 1 } },
@@ -354,9 +372,15 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Apple Cinnamon Instant Oatmeal', brand: 'Quaker', isVegetarian: true, servingSize: '1 packet (43g)', image: appleCinnamonInstantOatmeal, nutrition: { calories: 160, protein: 4, carbs: 33, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 220, sugar: 12, fiber: 3 } },
     { id: 13, name: 'Apple Zings (Bulk)', brand: 'Malt-O-Meal', isVegetarian: true, servingSize: '1 1/3 cup (39g)', image: appleJacksBreakfastCereal, nutrition: { calories: 150, protein: 2, carbs: 34, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 15, fiber: 1 } },
     { id: 14, name: 'Apple Cinnamon Protein Granola', brand: 'KIND', isVegetarian: true, servingSize: '2/3 cup (65g)', image: appleCinnamonGranola, nutrition: { calories: 270, protein: 10, carbs: 38, totalFat: 9, saturatedFat: 1, transFat: 0, sodium: 100, sugar: 12, fiber: 5 } },
-    { id: 15, name: 'Honey Nut Cheerios', brand: 'General Mills', isVegetarian: true, servingSize: '39g', image: null, nutrition: { calories: 140, protein: 3, carbs: 30, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 210, sugar: 12, fiber: 3 } },
-{ id: 16, name: 'Rice Krispies', brand: 'Kellogg\'s', isVegetarian: true, servingSize: '39g', image: null, nutrition: { calories: 150, protein: 3, carbs: 35, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 0 } },
-{ id: 17, name: 'Raisin Bran', brand: 'Kellogg\'s', isVegetarian: true, servingSize: '59g', image: null, nutrition: { calories: 190, protein: 5, carbs: 46, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 17, fiber: 8 } }
+    { id: 15, name: 'Honey Nut Cheerios', brand: 'General Mills', isVegetarian: true, servingSize: '39g', image: honeyNutCheerios, nutrition: { calories: 140, protein: 3, carbs: 30, totalFat: 2, saturatedFat: 0.5, transFat: 0, sodium: 210, sugar: 12, fiber: 3 } },
+    { id: 16, name: 'Rice Krispies', brand: "Kellogg's", isVegetarian: true, servingSize: '39g', image: riceKrispies, nutrition: { calories: 150, protein: 3, carbs: 35, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 4, fiber: 0 } },
+    { id: 17, name: 'Raisin Bran', brand: "Kellogg's", isVegetarian: true, servingSize: '59g', image: raisinBran, nutrition: { calories: 190, protein: 5, carbs: 46, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 200, sugar: 17, fiber: 8 } },
+    
+    { id: 18, name: 'Frosted Flakes', brand: "Kellogg's", isVegetarian: true, servingSize: '39g (1 cup)', image: frostedFlakes, nutrition: { calories: 140, protein: 1, carbs: 33, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 190, sugar: 12, fiber: 1 } },
+    { id: 19, name: 'Original Cheerios', brand: 'General Mills', isVegetarian: true, servingSize: '39g (1 1/2 cup)', image: cheeriosOriginal, nutrition: { calories: 140, protein: 5, carbs: 29, totalFat: 2.5, saturatedFat: 0.5, transFat: 0, sodium: 190, sugar: 2, fiber: 4 } },
+    { id: 20, name: 'Cinnamon Toast Crunch', brand: 'General Mills', isVegetarian: true, servingSize: '41g (1 cup)', image: cinnamonToastCrunch, nutrition: { calories: 170, protein: 2, carbs: 33, totalFat: 4, saturatedFat: 1, transFat: 0, sodium: 230, sugar: 12, fiber: 2 } },
+    { id: 21, name: 'Lucky Charms', brand: 'General Mills', isVegetarian: false, servingSize: '36g (1 cup)', image: luckyCharms, nutrition: { calories: 140, protein: 2, carbs: 30, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 230, sugar: 12, fiber: 2 } },
+    { id: 22, name: 'Corn Flakes', brand: "Kellogg's", isVegetarian: true, servingSize: '39g (1 1/2 cup)', image: cornFlakes, nutrition: { calories: 150, protein: 3, carbs: 34, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 300, sugar: 4, fiber: 1 } },
   ],
 
   'cheese': [
@@ -372,9 +396,15 @@ const FOOD_ITEMS = {
     { id: 10, name: 'Aged Gouda Wheel', brand: 'Old Amsterdam', isVegetarian: true, servingSize: '1 oz (28g)', image: yearGouda, nutrition: { calories: 110, protein: 7, carbs: 0, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 250, sugar: 0, fiber: 0 } },
     { id: 11, name: 'Vermont Sharp White Cheddar', brand: 'Cabot', isVegetarian: true, servingSize: '1 oz (28g)', image: yearVintageWhiteCheddar, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
     { id: 12, name: 'Seriously Sharp White Cheddar', brand: 'Cabot', isVegetarian: true, servingSize: '1 oz (28g)', image: yearWhiteCheddar, nutrition: { calories: 110, protein: 7, carbs: 1, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
-    { id: 13, name: 'Shredded Mozzarella', brand: 'Sargento', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 80, protein: 7, carbs: 1, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 190, sugar: 0, fiber: 0 } },
-{ id: 14, name: 'Pepper Jack Slices', brand: 'Cabot', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 100, protein: 7, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 170, sugar: 0, fiber: 0 } },
-{ id: 15, name: 'Crumbled Feta', brand: 'Athenos', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } }
+    { id: 13, name: 'Shredded Mozzarella', brand: 'Sargento', isVegetarian: true, servingSize: '28g', image: shreddedMozzarella, nutrition: { calories: 80, protein: 7, carbs: 1, totalFat: 6, saturatedFat: 3.5, transFat: 0, sodium: 190, sugar: 0, fiber: 0 } },
+    { id: 14, name: 'Pepper Jack Slices', brand: 'Cabot', isVegetarian: true, servingSize: '28g', image: pepperJackSlices, nutrition: { calories: 100, protein: 7, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 170, sugar: 0, fiber: 0 } },
+    { id: 15, name: 'Crumbled Feta', brand: 'Athenos', isVegetarian: true, servingSize: '28g', image: crumbledFeta, nutrition: { calories: 70, protein: 4, carbs: 1, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 360, sugar: 1, fiber: 0 } },
+    
+    { id: 16, name: 'Provolone Slices', brand: 'Sargento', isVegetarian: true, servingSize: '19g (1 slice)', image: provoloneSlices, nutrition: { calories: 70, protein: 5, carbs: 0, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 150, sugar: 0, fiber: 0 } },
+    { id: 17, name: 'Muenster Cheese Slices', brand: 'Cabot', isVegetarian: true, servingSize: '28g', image: muensterCheese, nutrition: { calories: 100, protein: 7, carbs: 0, totalFat: 9, saturatedFat: 5, transFat: 0, sodium: 180, sugar: 0, fiber: 0 } },
+    { id: 18, name: 'Blue Cheese Crumbles', brand: 'Treasure Cave', isVegetarian: true, servingSize: '28g', image: blueCheeseCrumbles, nutrition: { calories: 100, protein: 6, carbs: 1, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 390, sugar: 0, fiber: 0 } },
+    { id: 19, name: 'Whole Milk Ricotta', brand: 'Galbani', isVegetarian: true, servingSize: '62g (1/4 cup)', image: wholeMilkRicotta, nutrition: { calories: 100, protein: 7, carbs: 3, totalFat: 6, saturatedFat: 4, transFat: 0, sodium: 35, sugar: 2, fiber: 0 } },
+    { id: 20, name: 'Italian Mascarpone', brand: 'BelGioioso', isVegetarian: true, servingSize: '28g', image: mascarponeCheese, nutrition: { calories: 120, protein: 1, carbs: 1, totalFat: 13, saturatedFat: 9, transFat: 0, sodium: 15, sugar: 1, fiber: 0 } },
   ],
 
 'coffee': [
