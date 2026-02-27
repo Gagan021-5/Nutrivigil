@@ -208,6 +208,24 @@ import brightLightsNewEngland from '../assets/coffee/bright-lights-new-england.j
 import busteloCafeEspresso from '../assets/coffee/bustelo-cafe-espresso.jpg';
 import espressoWholeBeanCoffee from '../assets/coffee/espresso-whole-bean-coffee.jpg';
 import everydayValue from '../assets/coffee/everyday-value.jpg';
+import frenchRoastGrounds from '../assets/coffee/french-roast.jpg';
+import instantCoffeeFolgers from '../assets/coffee/instant-coffee.jpg';
+import icedCoffeeUnsweetened from '../assets/coffee/iced-coffee-starbucks.jpg';
+import vanillaKCup from '../assets/coffee/vanilla-kcup.jpg';
+import blondeRoastStarbucks from '../assets/coffee/blonde-roast.jpg';
+import coldBrewConcentrate from '../assets/coffee/cold-brew-concentrate.jpg';
+import decafHouseBlend from '../assets/coffee/decaf-house-blend.jpg';
+import espressoRoastLavazza from '../assets/coffee/espresso-lavazza.jpg';
+
+// New Cookies & Biscuits Images
+import chipsAhoyOriginal from '../assets/cokies-biscuit/chips-ahoy-original.jpg';
+import doubleStufOreo from '../assets/cokies-biscuit/double-stuf-oreo.jpg';
+import walkersShortbread from '../assets/cokies-biscuit/walkers-shortbread.jpg';
+import nutterButterNabisco from '../assets/cokies-biscuit/nutter-butter.jpg';
+import biscoffLotus from '../assets/cokies-biscuit/biscoff-cookies.jpg';
+import milanoCookies from '../assets/cokies-biscuit/milano-cookies.jpg';
+import digestiveBiscuits from '../assets/cokies-biscuit/digestive-biscuits.jpg';
+import lornaDooneShortbread from '../assets/cokies-biscuit/lorna-doone.jpg';
 
 // pasta image imports (normalized)
 import barillaCollezioneBucatiniPasta from '../assets/pasta/barilla-collezione-bucatini-pasta.jpg';
@@ -506,9 +524,15 @@ const FOOD_ITEMS = {
     { id: 8, name: 'Café Bustelo Espresso Style', brand: 'Café Bustelo', isVegetarian: true, servingSize: '1 tbsp (5g)', image: busteloCafeEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 9, name: 'Classic Roast Whole Bean', brand: 'Folgers', isVegetarian: true, servingSize: '1 tbsp (5g)', image: espressoWholeBeanCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 10, name: 'Everyday Value Medium Roast', brand: '365 Whole Foods', isVegetarian: true, servingSize: '1 cup (240ml)', image: everydayValue, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
-    { id: 11, name: 'French Roast Grounds', brand: 'Starbucks', isVegetarian: true, servingSize: '5g', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-{ id: 12, name: 'Instant Coffee', brand: 'Folgers', isVegetarian: true, servingSize: '2g', image: null, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-{ id: 13, name: 'Iced Coffee (Unsweetened)', brand: 'Starbucks', isVegetarian: true, servingSize: '355ml', image: null, nutrition: { calories: 5, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } }
+    { id: 11, name: 'French Roast Grounds', brand: 'Starbucks', isVegetarian: true, servingSize: '5g', image: frenchRoastGrounds, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 12, name: 'Instant Coffee', brand: 'Folgers', isVegetarian: true, servingSize: '2g', image: instantCoffeeFolgers, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 13, name: 'Iced Coffee (Unsweetened)', brand: 'Starbucks', isVegetarian: true, servingSize: '355ml', image: icedCoffeeUnsweetened, nutrition: { calories: 5, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
+    
+    { id: 14, name: 'Vanilla Roast K-Cup', brand: "Dunkin'", isVegetarian: true, servingSize: '1 pod (10g)', image: vanillaKCup, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 15, name: 'Blonde Roast Whole Bean', brand: 'Starbucks', isVegetarian: true, servingSize: '5g', image: blondeRoastStarbucks, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 16, name: 'Cold Brew Concentrate', brand: 'Chameleon', isVegetarian: true, servingSize: '120ml', image: coldBrewConcentrate, nutrition: { calories: 15, protein: 1, carbs: 2, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
+    { id: 17, name: 'Decaf House Blend', brand: "Peet's Coffee", isVegetarian: true, servingSize: '5g', image: decafHouseBlend, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 18, name: 'Espresso Roast Whole Bean', brand: 'Lavazza', isVegetarian: true, servingSize: '5g', image: espressoRoastLavazza, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
   ],
 
   'cookies-biscuits': [
@@ -525,9 +549,15 @@ const FOOD_ITEMS = {
     { id: 11, name: 'Cheddar Chive Garlic Biscuits', brand: 'Red Lobster', isVegetarian: true, servingSize: '1 biscuit (50g)', image: annsBiscuitsCheddarChiveGarlicBiscuits, nutrition: { calories: 160, protein: 3, carbs: 16, totalFat: 10, saturatedFat: 4.5, transFat: 0, sodium: 380, sugar: 1, fiber: 1 } },
     { id: 12, name: 'Organic Bunny Grahams (Cocoa)', brand: 'Annie\'s Homegrown', isVegetarian: true, servingSize: '31g', image: anniesGlutenFreeCocoa, nutrition: { calories: 140, protein: 2, carbs: 23, totalFat: 5, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 8, fiber: 1 } },
     { id: 13, name: 'Organic Honey Grahams', brand: 'Annie\'s Homegrown', isVegetarian: true, servingSize: '2 full sheets (31g)', image: anniesHomegrownOrganicHoneyGrahamCrackers, nutrition: { calories: 130, protein: 2, carbs: 24, totalFat: 3, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 8, fiber: 1 } },
-    { id: 14, name: 'Chocolate Chip Cookies', brand: 'Chips Ahoy!', isVegetarian: true, servingSize: '33g', image: null, nutrition: { calories: 160, protein: 1, carbs: 22, totalFat: 8, saturatedFat: 2.5, transFat: 0, sodium: 110, sugar: 11, fiber: 1 } },
-{ id: 15, name: 'Double Stuf Oreos', brand: 'Oreo', isVegetarian: true, servingSize: '29g', image: null, nutrition: { calories: 140, protein: 1, carbs: 21, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 13, fiber: 1 } },
-{ id: 16, name: 'Shortbread Cookies', brand: 'Walkers', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 150, protein: 1, carbs: 16, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 80, sugar: 5, fiber: 0 } }
+    { id: 14, name: 'Chocolate Chip Cookies', brand: 'Chips Ahoy!', isVegetarian: true, servingSize: '33g', image: chipsAhoyOriginal, nutrition: { calories: 160, protein: 1, carbs: 22, totalFat: 8, saturatedFat: 2.5, transFat: 0, sodium: 110, sugar: 11, fiber: 1 } },
+    { id: 15, name: 'Double Stuf Oreos', brand: 'Oreo', isVegetarian: true, servingSize: '29g', image: doubleStufOreo, nutrition: { calories: 140, protein: 1, carbs: 21, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 13, fiber: 1 } },
+    { id: 16, name: 'Shortbread Cookies', brand: 'Walkers', isVegetarian: true, servingSize: '28g', image: walkersShortbread, nutrition: { calories: 150, protein: 1, carbs: 16, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 80, sugar: 5, fiber: 0 } },
+    
+    { id: 17, name: 'Nutter Butter Cookies', brand: 'Nabisco', isVegetarian: true, servingSize: '2 cookies (28g)', image: nutterButterNabisco, nutrition: { calories: 140, protein: 2, carbs: 19, totalFat: 6, saturatedFat: 1, transFat: 0, sodium: 105, sugar: 9, fiber: 1 } },
+    { id: 18, name: 'Biscoff Cookies', brand: 'Lotus', isVegetarian: true, servingSize: '4 cookies (31g)', image: biscoffLotus, nutrition: { calories: 150, protein: 1, carbs: 23, totalFat: 6, saturatedFat: 3, transFat: 0, sodium: 115, sugar: 12, fiber: 0 } },
+    { id: 19, name: 'Milano Dark Chocolate', brand: 'Pepperidge Farm', isVegetarian: true, servingSize: '2 cookies (24g)', image: milanoCookies, nutrition: { calories: 130, protein: 1, carbs: 15, totalFat: 7, saturatedFat: 4, transFat: 0, sodium: 40, sugar: 7, fiber: 1 } },
+    { id: 20, name: 'Digestive Biscuits', brand: "McVitie's", isVegetarian: true, servingSize: '1 biscuit (15g)', image: digestiveBiscuits, nutrition: { calories: 70, protein: 1, carbs: 9, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 65, sugar: 2, fiber: 1 } },
+    { id: 21, name: 'Lorna Doone Shortbread', brand: 'Nabisco', isVegetarian: true, servingSize: '4 cookies (28g)', image: lornaDooneShortbread, nutrition: { calories: 140, protein: 1, carbs: 19, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 125, sugar: 5, fiber: 0 } },
   ],
 
   'beverages': [
