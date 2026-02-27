@@ -238,6 +238,23 @@ import bakedRufflesFlamin from '../assets/snacks/baked-ruffles-flamin.jpg';
 import bakedSeaSaltPitaChips from '../assets/snacks/baked-sea-salt-pita-chips.jpg';
 import doubleChocolateSnack from '../assets/snacks/double-chocolate.jpg';
 import roastedSeaweedSnacks from '../assets/snacks/roasted-seaweed-snacks.jpg';
+import roastedAlmonds from '../assets/snacks/roasted-almonds.jpg';
+import sabraHummus from '../assets/snacks/sabra-hummus.jpg';
+import skinnyPop from '../assets/snacks/skinny-pop.jpg';
+import stacysPitaChips from '../assets/snacks/pita-chips.jpg';
+import piratesBooty from '../assets/snacks/pirates-booty.jpg';
+import veggieStraws from '../assets/snacks/veggie-straws.jpg';
+import slimJimBeefStick from '../assets/snacks/slim-jim.jpg';
+import quakerGranolaBar from '../assets/snacks/quaker-granola-bar.jpg';
+// New Produce Images
+import babySpinach from '../assets/produce/baby-spinach.jpg';
+import hassAvocado from '../assets/produce/hass-avocado.jpg';
+import freshBlueberries from '../assets/produce/blueberries.jpg';
+import galaApples from '../assets/produce/gala-apples.jpg';
+import babyCarrots from '../assets/produce/baby-carrots.jpg';
+import doleBanana from '../assets/produce/banana.jpg';
+import broccoliCrowns from '../assets/produce/broccoli.jpg';
+import redBellPepper from '../assets/produce/red-bell-pepper.jpg';
 
 // produce images (normalized)
 import aDozenCousinsClassicRefriedPintoBeans from '../assets/produce/a-dozen-cousins-classic-refried-pinto-beans.jpg';
@@ -583,9 +600,15 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Deluxe Mixed Nuts', brand: 'Planters', isVegetarian: true, servingSize: '28g (1 oz)', image: roastedSeaweedSnacks, nutrition: { calories: 170, protein: 5, carbs: 6, totalFat: 15, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 1, fiber: 2 } },
     { id: 13, name: 'Oats \'n Honey Crunchy Granola Bars', brand: 'Nature Valley', isVegetarian: true, servingSize: '42g (2 bars)', image: alaniNutritionProteinBar, nutrition: { calories: 190, protein: 3, carbs: 29, totalFat: 7, saturatedFat: 1, transFat: 0, sodium: 180, sugar: 11, fiber: 2 } },
     { id: 14, name: 'Original Beef Jerky', brand: "Jack Link's", isVegetarian: false, servingSize: '28g (1 oz)', image: annieChun, nutrition: { calories: 80, protein: 12, carbs: 6, totalFat: 1, saturatedFat: 0.5, transFat: 0, sodium: 590, sugar: 6, fiber: 0 } },
-    { id: 15, name: 'Roasted Almonds', brand: 'Blue Diamond', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 170, protein: 6, carbs: 5, totalFat: 15, saturatedFat: 1, transFat: 0, sodium: 150, sugar: 1, fiber: 3 } },
-{ id: 16, name: 'Classic Hummus', brand: 'Sabra', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 70, protein: 2, carbs: 4, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 130, sugar: 0, fiber: 1 } },
-{ id: 17, name: 'SkinnyPop Popcorn', brand: 'SkinnyPop', isVegetarian: true, servingSize: '14g', image: null, nutrition: { calories: 80, protein: 1, carbs: 7, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 45, sugar: 0, fiber: 1 } }
+    { id: 15, name: 'Roasted Almonds', brand: 'Blue Diamond', isVegetarian: true, servingSize: '28g', image: roastedAlmonds, nutrition: { calories: 170, protein: 6, carbs: 5, totalFat: 15, saturatedFat: 1, transFat: 0, sodium: 150, sugar: 1, fiber: 3 } },
+    { id: 16, name: 'Classic Hummus', brand: 'Sabra', isVegetarian: true, servingSize: '28g', image: sabraHummus, nutrition: { calories: 70, protein: 2, carbs: 4, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 130, sugar: 0, fiber: 1 } },
+    { id: 17, name: 'SkinnyPop Popcorn', brand: 'SkinnyPop', isVegetarian: true, servingSize: '14g', image: skinnyPop, nutrition: { calories: 80, protein: 1, carbs: 7, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 45, sugar: 0, fiber: 1 } },
+    
+    { id: 18, name: 'Sea Salt Pita Chips', brand: "Stacy's", isVegetarian: true, servingSize: '28g', image: stacysPitaChips, nutrition: { calories: 130, protein: 3, carbs: 18, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 270, sugar: 0, fiber: 1 } },
+    { id: 19, name: 'Aged White Cheddar Puffs', brand: "Pirate's Booty", isVegetarian: true, servingSize: '28g', image: piratesBooty, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 1, transFat: 0, sodium: 190, sugar: 1, fiber: 0 } },
+    { id: 20, name: 'Veggie Straws (Sea Salt)', brand: 'Sensible Portions', isVegetarian: true, servingSize: '28g', image: veggieStraws, nutrition: { calories: 130, protein: 1, carbs: 16, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 220, sugar: 0, fiber: 0 } },
+    { id: 21, name: 'Original Smoked Beef Stick', brand: 'Slim Jim', isVegetarian: false, servingSize: '28g', image: slimJimBeefStick, nutrition: { calories: 160, protein: 6, carbs: 4, totalFat: 13, saturatedFat: 5, transFat: 0, sodium: 480, sugar: 1, fiber: 0 } },
+    { id: 22, name: 'Chocolate Chip Granola Bar', brand: 'Quaker', isVegetarian: true, servingSize: '24g (1 bar)', image: quakerGranolaBar, nutrition: { calories: 100, protein: 1, carbs: 17, totalFat: 3.5, saturatedFat: 1, transFat: 0, sodium: 70, sugar: 7, fiber: 1 } },
   ],
 
   'produce': [
@@ -603,9 +626,15 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Diced Peaches in Juice', brand: 'Dole', isVegetarian: true, servingSize: '113g (1 cup)', image: orangesIn100PercentFruitJuice, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 14, fiber: 1 } },
     { id: 13, name: 'Organic Unsweetened Coconut Flakes', brand: 'Edward & Sons', isVegetarian: true, servingSize: '15g (3 tbsp)', image: organicCoconutFlakes, nutrition: { calories: 100, protein: 1, carbs: 4, totalFat: 9, saturatedFat: 8, transFat: 0, sodium: 5, sugar: 1, fiber: 2 } },
     { id: 14, name: '100% Pure Vermont Maple Syrup', brand: 'Hidden Springs', isVegetarian: true, servingSize: '20g (1 tbsp)', image: pureVermontMapleSyrup, nutrition: { calories: 52, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 2, sugar: 13, fiber: 0 } },
-    { id: 15, name: 'Fresh Baby Spinach', brand: 'Dole', isVegetarian: true, servingSize: '85g', image: null, nutrition: { calories: 20, protein: 2, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 0, fiber: 2 } },
-{ id: 16, name: 'Hass Avocado', brand: 'Avocados from Mexico', isVegetarian: true, servingSize: '50g', image: null, nutrition: { calories: 80, protein: 1, carbs: 4, totalFat: 7, saturatedFat: 1, transFat: 0, sodium: 0, sugar: 0, fiber: 3 } },
-{ id: 17, name: 'Fresh Blueberries', brand: 'Driscoll\'s', isVegetarian: true, servingSize: '148g', image: null, nutrition: { calories: 80, protein: 1, carbs: 21, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 15, fiber: 4 } }
+    { id: 15, name: 'Fresh Baby Spinach', brand: 'Dole', isVegetarian: true, servingSize: '85g', image: babySpinach, nutrition: { calories: 20, protein: 2, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 0, fiber: 2 } },
+    { id: 16, name: 'Hass Avocado', brand: 'Avocados from Mexico', isVegetarian: true, servingSize: '50g', image: hassAvocado, nutrition: { calories: 80, protein: 1, carbs: 4, totalFat: 7, saturatedFat: 1, transFat: 0, sodium: 0, sugar: 0, fiber: 3 } },
+    { id: 17, name: 'Fresh Blueberries', brand: 'Driscoll\'s', isVegetarian: true, servingSize: '148g', image: freshBlueberries, nutrition: { calories: 80, protein: 1, carbs: 21, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 15, fiber: 4 } },
+   
+    { id: 18, name: 'Fresh Gala Apples', brand: "Washington State", isVegetarian: true, servingSize: '182g (1 apple)', image: galaApples, nutrition: { calories: 95, protein: 0.5, carbs: 25, totalFat: 0.3, saturatedFat: 0, transFat: 0, sodium: 2, sugar: 19, fiber: 4 } },
+    { id: 19, name: 'Baby Carrots', brand: 'Grimmway Farms', isVegetarian: true, servingSize: '85g', image: babyCarrots, nutrition: { calories: 35, protein: 1, carbs: 8, totalFat: 0.1, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 5, fiber: 3 } },
+    { id: 20, name: 'Sweet Banana', brand: 'Dole', isVegetarian: true, servingSize: '118g (1 banana)', image: doleBanana, nutrition: { calories: 105, protein: 1, carbs: 27, totalFat: 0.4, saturatedFat: 0, transFat: 0, sodium: 1, sugar: 14, fiber: 3 } },
+    { id: 21, name: 'Fresh Broccoli Crowns', brand: 'Taylor Farms', isVegetarian: true, servingSize: '91g', image: broccoliCrowns, nutrition: { calories: 30, protein: 2.5, carbs: 6, totalFat: 0.3, saturatedFat: 0, transFat: 0, sodium: 30, sugar: 1.5, fiber: 2.5 } },
+    { id: 22, name: 'Red Bell Pepper', brand: 'NatureSweet', isVegetarian: true, servingSize: '119g', image: redBellPepper, nutrition: { calories: 30, protein: 1, carbs: 7, totalFat: 0.3, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 5, fiber: 2.5 } },
   ],
 
   'ice-cream': [
