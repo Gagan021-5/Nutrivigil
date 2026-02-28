@@ -3,32 +3,34 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Heart, Users, TrendingUp, Globe, Target, Zap, Shield, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
+import { useTranslation } from 'react-i18next';
 
 const Mission = () => {
     const { theme } = useTheme();
+    const { t } = useTranslation();
     const stats = [
         {
             icon: <Users className="w-8 h-8" />,
             number: "50K+",
-            label: "Active Users",
+            label: t('missionPage.stats.activeUsers'),
             color: "from-purple-500 to-indigo-500"
         },
         {
             icon: <Zap className="w-8 h-8" />,
             number: "500K+",
-            label: "Food Items Analyzed",
+            label: t('missionPage.stats.foodItemsAnalyzed'),
             color: "from-indigo-500 to-blue-500"
         },
         {
             icon: <Globe className="w-8 h-8" />,
             number: "20+",
-            label: "Languages Supported",
+            label: t('missionPage.stats.languagesSupported'),
             color: "from-blue-500 to-cyan-500"
         },
         {
             icon: <Award className="w-8 h-8" />,
             number: "99.2%",
-            label: "Accuracy Rate",
+            label: t('missionPage.stats.accuracyRate'),
             color: "from-cyan-500 to-teal-500"
         }
     ];
@@ -36,23 +38,23 @@ const Mission = () => {
     const values = [
         {
             icon: <Heart className="w-6 h-6" />,
-            title: "Health First",
-            description: "We prioritize your health and well-being above everything. Every feature is designed with your safety in mind."
+            title: t('missionPage.values.health.title'),
+            description: t('missionPage.values.health.description')
         },
         {
             icon: <Shield className="w-6 h-6" />,
-            title: "Privacy & Security",
-            description: "Your data is encrypted and never shared. All analysis happens securely on our HIPAA-compliant platform."
+            title: t('missionPage.values.privacy.title'),
+            description: t('missionPage.values.privacy.description')
         },
         {
             icon: <Target className="w-6 h-6" />,
-            title: "Accuracy Matters",
-            description: "Powered by Google's Gemini 2.5 AI, we deliver precise nutritional insights you can trust."
+            title: t('missionPage.values.accuracy.title'),
+            description: t('missionPage.values.accuracy.description')
         },
         {
             icon: <Users className="w-6 h-6" />,
-            title: "Accessibility for All",
-            description: "Supporting 20+ languages and multiple health conditions to serve everyone, everywhere."
+            title: t('missionPage.values.accessibility.title'),
+            description: t('missionPage.values.accessibility.description')
         }
     ];
 
@@ -66,14 +68,14 @@ const Mission = () => {
             }`}>
                 <div className="max-w-7xl mx-auto">
                     {/* Back Button */}
-                    <Link 
-                        to="/" 
+                    <Link
+                        to="/"
                         className={`inline-flex items-center gap-2 transition-colors mb-8 ${
                             theme === 'dark' ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-600'
                         }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
-                        Back to Home
+                        {t('missionPage.backToHome')}
                     </Link>
 
                     {/* Hero Content */}
@@ -84,18 +86,17 @@ const Mission = () => {
                             transition={{ duration: 0.6 }}
                         >
                             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                Our Mission
+                                {t('missionPage.title')}
                             </h1>
                             <p className={`text-2xl sm:text-3xl max-w-4xl mx-auto leading-relaxed font-semibold mb-4 ${
                                 theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                             }`}>
-                                Empowering everyone to make informed, healthier food choices through accessible AI-powered nutrition analysis.
+                                {t('missionPage.subtitle')}
                             </p>
                             <p className={`text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed ${
                                 theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                             }`}>
-                                We believe that understanding what you eat should be simple, instant, and personalized to your unique health needs. 
-                                NutriVigil bridges the gap between complex nutritional data and everyday food decisions.
+                                {t('missionPage.subtitle2')}
                             </p>
                         </motion.div>
                     </div>
@@ -107,7 +108,7 @@ const Mission = () => {
                 theme === 'dark' ? 'bg-[#0a0e1a]' : 'bg-gray-50'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Our Impact</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">{t('missionPage.impactTitle')}</h2>
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {stats.map((stat, index) => (
                             <motion.div
@@ -141,21 +142,17 @@ const Mission = () => {
                     <div className={`rounded-2xl p-8 sm:p-12 border transition-colors duration-300 ${
                         theme === 'dark' ? 'bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500/20' : 'bg-gradient-to-r from-purple-100 to-pink-100 border-purple-200'
                     }`}>
-                        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">Why We Built NutriVigil</h2>
+                        <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">{t('missionPage.whyTitle')}</h2>
                         <div className={`max-w-4xl mx-auto space-y-6 text-lg leading-relaxed ${
                             theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                         }`}>
+                            <p>{t('missionPage.whyP1')}</p>
                             <p>
-                                Every year, millions struggle with diet-related health conditions like diabetes, hypertension, 
-                                and heart disease. Yet understanding food labels and making safe dietary choices remains complex and time-consuming.
+                                <span className="text-purple-400 font-semibold">{t('missionPage.whyP2Highlight')}</span>{' '}
+                                {t('missionPage.whyP2')}
                             </p>
                             <p>
-                                <span className="text-purple-400 font-semibold">We created NutriVigil to change that.</span> Using 
-                                cutting-edge AI technology, we've made nutrition analysis instant, accurate, and personalized to your health needs.
-                            </p>
-                            <p>
-                                Our mission goes beyond technology—it's about <span className="text-pink-400 font-semibold">democratizing health information</span>, 
-                                supporting diverse communities worldwide, and helping you live your healthiest life, one meal at a time.
+                                {t('missionPage.whyP3Before')} <span className="text-pink-400 font-semibold">{t('missionPage.whyP3Highlight')}</span>{t('missionPage.whyP3After')}
                             </p>
                         </div>
                     </div>
@@ -167,7 +164,7 @@ const Mission = () => {
                 theme === 'dark' ? 'bg-[#1a1f2e]' : 'bg-gray-50'
             }`}>
                 <div className="max-w-7xl mx-auto">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">Our Core Values</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">{t('missionPage.valuesTitle')}</h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         {values.map((value, index) => (
                             <motion.div
@@ -200,18 +197,18 @@ const Mission = () => {
             {/* CTA Section */}
             <section className="py-16 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center">
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-6">Join Our Mission</h2>
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-6">{t('missionPage.ctaTitle')}</h2>
                     <p className={`text-xl mb-8 max-w-2xl mx-auto ${
                         theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                     }`}>
-                        Be part of the movement towards healthier, more informed eating habits.
+                        {t('missionPage.ctaSubtitle')}
                     </p>
-                    <Link 
-                        to="/scan" 
+                    <Link
+                        to="/scan"
                         className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
                     >
                         <Zap className="w-5 h-5" />
-                        Start Your Journey Today
+                        {t('missionPage.ctaButton')}
                     </Link>
                 </div>
             </section>

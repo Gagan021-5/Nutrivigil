@@ -80,112 +80,47 @@
     }
   },
 
-  "protocolPage": {
+  "missionPage": {
     "backToHome": "Back to Home",
-    "heroTitle": "Health Protocols",
-    "heroSubtitle": "Evidence-based dietary guidelines tailored to your specific health conditions",
-    "conditionsTitle": "Supported Health Conditions",
-    "dosLabel": "Recommended (Do's)",
-    "dontsLabel": "Avoid (Don'ts)",
-    "nutrientsLabel": "Key Nutrients to Monitor",
-    "howHelpTitle": "How NutriVigil Helps",
-    "help": {
-      "ai": {
-        "title": "AI Protocol Analysis",
-        "desc": "Our AI cross-references food items with your selected health protocols to provide accurate recommendations"
+    "title": "Our Mission",
+    "subtitle": "Empowering everyone to make informed, healthier food choices through accessible AI-powered nutrition analysis.",
+    "subtitle2": "We believe that understanding what you eat should be simple, instant, and personalized to your unique health needs. NutriVigil bridges the gap between complex nutritional data and everyday food decisions.",
+    "impactTitle": "Our Impact",
+    "stats": {
+      "activeUsers": "Active Users",
+      "foodItemsAnalyzed": "Food Items Analyzed",
+      "languagesSupported": "Languages Supported",
+      "accuracyRate": "Accuracy Rate"
+    },
+    "whyTitle": "Why We Built NutriVigil",
+    "whyP1": "Every year, millions struggle with diet-related health conditions like diabetes, hypertension, and heart disease. Yet understanding food labels and making safe dietary choices remains complex and time-consuming.",
+    "whyP2Highlight": "We created NutriVigil to change that.",
+    "whyP2": "Using cutting-edge AI technology, we've made nutrition analysis instant, accurate, and personalized to your health needs.",
+    "whyP3Before": "Our mission goes beyond technology—it's about",
+    "whyP3Highlight": "democratizing health information",
+    "whyP3After": ", supporting diverse communities worldwide, and helping you live your healthiest life, one meal at a time.",
+    "valuesTitle": "Our Core Values",
+    "values": {
+      "health": {
+        "title": "Health First",
+        "description": "We prioritize your health and well-being above everything. Every feature is designed with your safety in mind."
       },
-      "personalized": {
-        "title": "Personalized Recommendations",
-        "desc": "Get tailored nutrition advice based on your specific health conditions and dietary needs"
+      "privacy": {
+        "title": "Privacy & Security",
+        "description": "Your data is encrypted and never shared. All analysis happens securely on our HIPAA-compliant platform."
       },
-      "safety": {
-        "title": "Real-Time Safety Checks",
-        "desc": "Instant traffic light signals (Green/Yellow/Red) for every food you scan based on your protocols"
+      "accuracy": {
+        "title": "Accuracy Matters",
+        "description": "Powered by Google's Gemini 2.5 AI, we deliver precise nutritional insights you can trust."
+      },
+      "accessibility": {
+        "title": "Accessibility for All",
+        "description": "Supporting 20+ languages and multiple health conditions to serve everyone, everywhere."
       }
     },
-    "disclaimerTitle": "Important Medical Disclaimer",
-    "disclaimerP1Bold": "NutriVigil provides educational information and general guidance only.",
-    "disclaimerP1Rest": " Our recommendations are based on evidence-based dietary guidelines but should not replace professional medical advice, diagnosis, or treatment.",
-    "disclaimerP2": "Always consult your healthcare provider, registered dietitian, or qualified medical professional before making significant changes to your diet, especially if you have existing health conditions or take medications.",
-    "disclaimerP3": "Individual nutritional needs vary greatly based on medical history, current health status, medications, and other factors. What works for one person may not be appropriate for another.",
-    "disclaimerP4": "In case of emergency or severe symptoms, seek immediate medical attention.",
-    "ctaTitle": "Ready to Get Started?",
-    "ctaSubtitle": "Set up your health profile and receive personalized nutrition recommendations",
-    "ctaButton": "Start Scanning Food",
-    "protocols": {
-      "diabetes": {
-        "title": "Diabetes Management",
-        "description": "Manage blood sugar levels through mindful carbohydrate intake and balanced nutrition.",
-        "dos": ["Choose low-glycemic index foods", "Monitor carbohydrate portions", "Include fiber-rich foods", "Eat regular, balanced meals", "Stay hydrated with water"],
-        "donts": ["Avoid sugary drinks and sodas", "Limit white bread and refined grains", "Skip processed snacks high in sugar", "Avoid fruit juices with added sugar", "Minimize fried and fatty foods"],
-        "nutrients": [
-          {"name": "Carbohydrates", "note": "Monitor intake, choose complex carbs"},
-          {"name": "Fiber", "note": "Aim for 25-30g daily"},
-          {"name": "Sugar", "note": "Limit added sugars, watch natural sugars"},
-          {"name": "Protein", "note": "Include lean sources at each meal"}
-        ]
-      },
-      "hypertension": {
-        "title": "Hypertension (High Blood Pressure)",
-        "description": "Control blood pressure through reduced sodium intake and heart-healthy foods.",
-        "dos": ["Choose fresh, whole foods", "Use herbs and spices for flavor", "Include potassium-rich foods", "Eat fruits and vegetables daily", "Select low-sodium options"],
-        "donts": ["Avoid adding table salt", "Limit processed and canned foods", "Skip salty snacks and chips", "Avoid pickled and preserved foods", "Minimize restaurant and fast food"],
-        "nutrients": [
-          {"name": "Sodium", "note": "Limit to <2,300mg daily (ideally <1,500mg)"},
-          {"name": "Potassium", "note": "Increase intake (bananas, spinach)"},
-          {"name": "Calcium", "note": "Support with low-fat dairy"},
-          {"name": "Magnesium", "note": "Include nuts, seeds, whole grains"}
-        ]
-      },
-      "heart": {
-        "title": "Heart Disease",
-        "description": "Protect heart health by managing cholesterol, fats, and maintaining healthy weight.",
-        "dos": ["Choose lean proteins (fish, poultry)", "Include omega-3 fatty acids", "Eat plenty of vegetables and fruits", "Select whole grains over refined", "Use healthy oils (olive, avocado)"],
-        "donts": ["Avoid trans fats and partially hydrogenated oils", "Limit saturated fats (red meat, butter)", "Skip fried and greasy foods", "Avoid high-cholesterol foods", "Minimize processed meats"],
-        "nutrients": [
-          {"name": "Saturated Fat", "note": "Limit to <7% of daily calories"},
-          {"name": "Cholesterol", "note": "Keep below 200mg daily"},
-          {"name": "Omega-3", "note": "Eat fatty fish 2x per week"},
-          {"name": "Fiber", "note": "Helps lower cholesterol"}
-        ]
-      },
-      "kidney": {
-        "title": "Kidney Disease",
-        "description": "Support kidney function by managing protein, potassium, phosphorus, and sodium.",
-        "dos": ["Control protein portions (consult dietitian)", "Choose low-potassium fruits and vegetables", "Select low-phosphorus foods", "Stay within fluid limits if prescribed", "Monitor portion sizes carefully"],
-        "donts": ["Avoid high-potassium foods (bananas, oranges)", "Limit dairy and high-phosphorus foods", "Skip processed foods high in sodium", "Avoid dark colas and certain beverages", "Minimize protein from red meat"],
-        "nutrients": [
-          {"name": "Protein", "note": "Moderate intake as advised by doctor"},
-          {"name": "Potassium", "note": "Limit to recommended levels"},
-          {"name": "Phosphorus", "note": "Avoid additives in processed foods"},
-          {"name": "Sodium", "note": "Keep intake low"}
-        ]
-      },
-      "obesity": {
-        "title": "Obesity & Weight Management",
-        "description": "Achieve healthy weight through balanced nutrition, portion control, and mindful eating.",
-        "dos": ["Eat nutrient-dense, low-calorie foods", "Practice portion control", "Include plenty of vegetables", "Choose lean proteins", "Stay physically active regularly"],
-        "donts": ["Avoid sugary beverages and snacks", "Limit high-calorie processed foods", "Skip large portions and second helpings", "Avoid eating out of boredom or stress", "Minimize fried and fatty foods"],
-        "nutrients": [
-          {"name": "Calories", "note": "Create a moderate deficit (500-750 cal/day)"},
-          {"name": "Protein", "note": "Helps preserve muscle during weight loss"},
-          {"name": "Fiber", "note": "Promotes fullness and satiety"},
-          {"name": "Water", "note": "Drink plenty to support metabolism"}
-        ]
-      },
-      "allergies": {
-        "title": "Food Allergies",
-        "description": "Avoid allergens and prevent cross-contamination while maintaining balanced nutrition.",
-        "dos": ["Read all food labels carefully", "Ask about ingredients when eating out", "Carry emergency medication (if prescribed)", "Inform others about your allergies", "Find safe alternatives for nutrients"],
-        "donts": ["Never consume known allergens", "Avoid foods with unclear ingredients", "Don't assume \"may contain\" is safe", "Avoid cross-contaminated surfaces", "Don't risk trying new foods without checking"],
-        "nutrients": [
-          {"name": "Common Allergens", "note": "Milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, soy"},
-          {"name": "Nutritional Gaps", "note": "Replace nutrients from avoided foods"},
-          {"name": "Cross-Contamination", "note": "Be vigilant in food preparation"},
-          {"name": "Emergency Plan", "note": "Always be prepared"}
-        ]
-      }
-    }
+    "ctaTitle": "Join Our Mission",
+    "ctaSubtitle": "Be part of the movement towards healthier, more informed eating habits.",
+    "ctaButton": "Start Your Journey Today"
   },
 
   "howSteps": {
