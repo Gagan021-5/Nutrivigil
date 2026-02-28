@@ -5,24 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '../contexts/ThemeContext';
 import { Search, X, ChevronRight } from 'lucide-react';
 import FOOD_ITEMS from '../data/foodItems';
-
-// Import images
-import babyFoodImg from '../assets/baby-food.jpg';
-import bakingImg from '../assets/baking.jpg';
-import breadImg from '../assets/bread.jpg';
-import breakfastImg from '../assets/breakfast.jpg';
-import cakesImg from '../assets/cakes.jpg';
-import cannedGoodsImg from '../assets/canned-goods.jpg';
-import cerealImg from '../assets/cereal.jpg';
-import cheeseImg from '../assets/chees.jpg';
-import coffeeImg from '../assets/coffee.jpg';
-import cookiesBiscuitImg from '../assets/cokies-biscuit.jpg';
-import beveragesImg from '../assets/beverages.jpg';
-import pastaImg from '../assets/pasta.jpg';
-import snacksImg from '../assets/snacks.jpg';
-import produceImg from '../assets/produce.jpg';
-import icecreamImg from '../assets/icecream.jpg';
-import frozenFoodsImg from '../assets/frozen-foods.jpg';
+import CATEGORIES_WITH_COUNTS from '../constants/categoryConstants';
 
 const BrowseFoods = () => {
   const { theme } = useTheme();
@@ -40,6 +23,7 @@ const BrowseFoods = () => {
     return () => clearTimeout(timer);
   }, [searchQuery]);
 
+<<<<<<< Updated upstream
   const categories = [
     {
       id: 1,
@@ -154,6 +138,10 @@ const BrowseFoods = () => {
       gradient: 'from-cyan-500 to-blue-500'
     }
   ];
+=======
+  // Categories with counts from FOOD_ITEMS (shared with CategoryDetail)
+  const categories = CATEGORIES_WITH_COUNTS;
+>>>>>>> Stashed changes
 
   // Filter categories based on search query
   const filteredCategories = useMemo(() => {
