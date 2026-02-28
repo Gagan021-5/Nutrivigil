@@ -222,6 +222,22 @@ import anniesOnePotWhiteCheddarPasta from '../assets/pasta/annies-one-pot-white-
 import agedProvoloneAndProsciuttoTortelloni from '../assets/pasta/aged-provolone-and-prosciutto-tortelloni.jpg';
 import banzaChickpeaPastaAlphabets from '../assets/pasta/banza-chickpea-pasta-alphabets.jpg';
 import buckwheatSobaNoodles from '../assets/pasta/buckwheat-soba-noodles.jpg';
+import classicFettuccine from '../assets/pasta/fettuccine.jpg';
+import wholeGrainPenne from '../assets/pasta/whole-grain-penne.jpg';
+import potatoGnocchi from '../assets/pasta/gnocchi.jpg';
+import rigatoniBarilla from '../assets/pasta/rigatoni.jpg';
+import glutenFreeFusilli from '../assets/pasta/gf-fusilli.jpg';
+import farfalleBowtie from '../assets/pasta/farfalle.jpg';
+import lasagnaNoodlesWheat from '../assets/pasta/lasagna-noodles.jpg';
+import elbowMacaroni from '../assets/pasta/elbow-macaroni.jpg';
+import coconutWater from '../assets/beverages/coconut-water.jpg';
+import dietCoke from '../assets/beverages/diet-coke.jpg';
+import pomegranateJuice from '../assets/beverages/pomegranate-juice.jpg';
+import almondMilkUnsweetened from '../assets/beverages/almond-milk.jpg';
+import vegetableJuiceV8 from '../assets/beverages/v8-juice.jpg';
+import mountainDewSoda from '../assets/beverages/mountain-dew.jpg';
+import smartWaterVaporDistilled from '../assets/beverages/smart-water.jpg';
+import blackTeaUnsweetened from '../assets/beverages/pure-leaf-tea.jpg';
 
 // snacks imports (normalized filenames)
 import agedCheddarThaiRice from '../assets/snacks/aged-cheddar-thai-rice.jpg';
@@ -535,7 +551,7 @@ const FOOD_ITEMS = {
     { id: 2, name: 'Orange Juice No Pulp', brand: 'Tropicana', servingSize: '8 fl oz (240ml)', image: orangeJuiceCalciumVitaminD, nutrition: { calories: 110, protein: 2, carbs: 26, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 22, fiber: 0 } },
     { id: 3, name: 'Red Bull Energy Drink', brand: 'Red Bull', servingSize: '8.4 fl oz (248ml)', image: redBullEnergyDrink, nutrition: { calories: 110, protein: 1, carbs: 28, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 105, sugar: 27, fiber: 0 } },
     { id: 4, name: 'Green Tea', brand: 'Arizona', servingSize: '8 fl oz (240ml)', image: juiceOrganicAppleJuice, nutrition: { calories: 70, protein: 0, carbs: 18, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 15, sugar: 17, fiber: 0 } },
-    { id: 5, name: 'Sprite', brand: 'Coca-Cola', servingSize: '12 fl oz (355ml)', image: null, nutrition: { calories: 140, protein: 0, carbs: 38, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 38, fiber: 0 } },
+    { id: 5, name: 'Sprite', brand: 'Coca-Cola', servingSize: '12 fl oz (355ml)', image: smartWaterVaporDistilled, nutrition: { calories: 140, protein: 0, carbs: 38, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 38, fiber: 0 } },
     { id: 6, name: 'Apple Juice', brand: 'Mott\'s', servingSize: '8 fl oz (240ml)', image: appleJuice, nutrition: { calories: 110, protein: 0, carbs: 28, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 24, fiber: 0 } },
     { id: 7, name: 'Gatorade Lemon-Lime', brand: 'Gatorade', servingSize: '12 fl oz (355ml)', image: packPinkLemonade, nutrition: { calories: 80, protein: 0, carbs: 21, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 21, fiber: 0 } },
     { id: 8, name: 'Iced Tea Lemon', brand: 'Lipton', servingSize: '12 fl oz (355ml)', image: redBullEnergyDrinkPlumTwist, nutrition: { calories: 80, protein: 0, carbs: 21, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 100, sugar: 21, fiber: 0 } },
@@ -545,9 +561,15 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Sparkling Water Lime', brand: 'La Croix', servingSize: '12 fl oz (355ml)', image: trueLemonRaspberryLemonade, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 13, name: 'Grape Juice', brand: 'Welch\'s', servingSize: '8 fl oz (240ml)', image: trueLemonStrawberryLemonade, nutrition: { calories: 140, protein: 0, carbs: 36, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 15, sugar: 36, fiber: 0 } },
     { id: 14, name: 'Cranberry Juice', brand: 'Ocean Spray', servingSize: '8 fl oz (240ml)', image: naturallyCranberryJuice, nutrition: { calories: 110, protein: 0, carbs: 28, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 28, fiber: 0 } },
-    { id: 15, name: 'Coconut Water', brand: 'Vita Coco', isVegetarian: true, servingSize: '330ml', image: null, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 13, fiber: 0 } },
-{ id: 16, name: 'Diet Coke', brand: 'Coca-Cola', isVegetarian: true, servingSize: '355ml', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
-{ id: 17, name: 'Pomegranate Juice', brand: 'POM Wonderful', isVegetarian: true, servingSize: '240ml', image: null, nutrition: { calories: 160, protein: 0, carbs: 39, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 34, fiber: 0 } }
+    { id: 15, name: 'Coconut Water', brand: 'Vita Coco', isVegetarian: true, servingSize: '330ml', image: coconutWater, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 13, fiber: 0 } },
+    { id: 16, name: 'Diet Coke', brand: 'Coca-Cola', isVegetarian: true, servingSize: '355ml', image: dietCoke, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
+    { id: 17, name: 'Pomegranate Juice', brand: 'POM Wonderful', isVegetarian: true, servingSize: '240ml', image: pomegranateJuice, nutrition: { calories: 160, protein: 0, carbs: 39, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 34, fiber: 0 } },
+    
+    { id: 18, name: 'Unsweetened Almond Milk', brand: 'Silk', isVegetarian: true, servingSize: '240ml', image: almondMilkUnsweetened, nutrition: { calories: 30, protein: 1, carbs: 1, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 0, fiber: 1 } },
+    { id: 19, name: 'Original Vegetable Juice', brand: 'V8', isVegetarian: true, servingSize: '240ml', image: vegetableJuiceV8, nutrition: { calories: 45, protein: 2, carbs: 9, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 640, sugar: 7, fiber: 2 } },
+    { id: 20, name: 'Mountain Dew', brand: 'PepsiCo', isVegetarian: true, servingSize: '355ml', image: mountainDewSoda, nutrition: { calories: 170, protein: 0, carbs: 46, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 60, sugar: 46, fiber: 0 } },
+    { id: 21, name: 'Smartwater', brand: 'Glaceau', isVegetarian: true, servingSize: '591ml', image: smartWaterVaporDistilled, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 22, name: 'Unsweetened Black Tea', brand: 'Pure Leaf', isVegetarian: true, servingSize: '547ml', image: blackTeaUnsweetened, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
   ],
 
   'pasta': [
@@ -563,9 +585,15 @@ const FOOD_ITEMS = {
     { id: 10, name: 'One Pot White Cheddar & Shells', brand: "Annie's Homegrown", isVegetarian: true, servingSize: '108g (1 cup)', image: anniesOnePotWhiteCheddarPasta, nutrition: { calories: 270, protein: 10, carbs: 46, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 540, sugar: 5, fiber: 2 } },
     { id: 11, name: 'Provolone & Prosciutto Tortelloni', brand: 'Buitoni', isVegetarian: false, servingSize: '100g (3/4 cup)', image: agedProvoloneAndProsciuttoTortelloni, nutrition: { calories: 290, protein: 12, carbs: 42, totalFat: 8, saturatedFat: 4, transFat: 0, sodium: 680, sugar: 2, fiber: 2 } },
     { id: 12, name: 'Chickpea Alphabets', brand: 'Banza', isVegetarian: true, servingSize: '56g (2 oz)', image: banzaChickpeaPastaAlphabets, nutrition: { calories: 190, protein: 11, carbs: 35, totalFat: 3, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 2, fiber: 8 } },
-    { id: 13, name: 'Classic Fettuccine', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-{ id: 14, name: 'Whole Grain Penne', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: null, nutrition: { calories: 180, protein: 8, carbs: 39, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 7 } },
-{ id: 15, name: 'Potato Gnocchi', brand: 'De Cecco', isVegetarian: true, servingSize: '100g', image: null, nutrition: { calories: 150, protein: 4, carbs: 32, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 1, fiber: 1 } }
+    { id: 13, name: 'Classic Fettuccine', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: classicFettuccine, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 14, name: 'Whole Grain Penne', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: wholeGrainPenne, nutrition: { calories: 180, protein: 8, carbs: 39, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 7 } },
+    { id: 15, name: 'Potato Gnocchi', brand: 'De Cecco', isVegetarian: true, servingSize: '100g', image: potatoGnocchi, nutrition: { calories: 150, protein: 4, carbs: 32, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 1, fiber: 1 } },
+    
+    { id: 16, name: 'Rigatoni', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: rigatoniBarilla, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 17, name: 'Gluten Free Fusilli', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: glutenFreeFusilli, nutrition: { calories: 200, protein: 4, carbs: 44, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 18, name: 'Farfalle (Bow Ties)', brand: 'De Cecco', isVegetarian: true, servingSize: '56g', image: farfalleBowtie, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 19, name: 'Oven-Ready Lasagna', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: lasagnaNoodlesWheat, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 20, name: 'Elbow Macaroni', brand: 'Mueller\'s', isVegetarian: true, servingSize: '56g', image: elbowMacaroni, nutrition: { calories: 210, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 2 } },
   ],
 
   'snacks': [
