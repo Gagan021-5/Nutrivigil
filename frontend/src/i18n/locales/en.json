@@ -80,47 +80,47 @@
     }
   },
 
-  "missionPage": {
+  "howItWorks": {
     "backToHome": "Back to Home",
-    "title": "Our Mission",
-    "subtitle": "Empowering everyone to make informed, healthier food choices through accessible AI-powered nutrition analysis.",
-    "subtitle2": "We believe that understanding what you eat should be simple, instant, and personalized to your unique health needs. NutriVigil bridges the gap between complex nutritional data and everyday food decisions.",
-    "impactTitle": "Our Impact",
-    "stats": {
-      "activeUsers": "Active Users",
-      "foodItemsAnalyzed": "Food Items Analyzed",
-      "languagesSupported": "Languages Supported",
-      "accuracyRate": "Accuracy Rate"
-    },
-    "whyTitle": "Why We Built NutriVigil",
-    "whyP1": "Every year, millions struggle with diet-related health conditions like diabetes, hypertension, and heart disease. Yet understanding food labels and making safe dietary choices remains complex and time-consuming.",
-    "whyP2Highlight": "We created NutriVigil to change that.",
-    "whyP2": "Using cutting-edge AI technology, we've made nutrition analysis instant, accurate, and personalized to your health needs.",
-    "whyP3Before": "Our mission goes beyond technology—it's about",
-    "whyP3Highlight": "democratizing health information",
-    "whyP3After": ", supporting diverse communities worldwide, and helping you live your healthiest life, one meal at a time.",
-    "valuesTitle": "Our Core Values",
-    "values": {
-      "health": {
-        "title": "Health First",
-        "description": "We prioritize your health and well-being above everything. Every feature is designed with your safety in mind."
+    "title": "How It Works",
+    "subtitle": "From photo to personalized health insights in 4 simple steps. Let AI guide your nutrition journey.",
+    "steps": {
+      "step1": {
+        "title": "Upload Food Photo",
+        "description": "Take a picture of your food package, label, or meal. Our AI works with any food image - from restaurant dishes to grocery items."
       },
-      "privacy": {
-        "title": "Privacy & Security",
-        "description": "Your data is encrypted and never shared. All analysis happens securely on our HIPAA-compliant platform."
+      "step2": {
+        "title": "AI Identifies Food",
+        "description": "Powered by Gemini 2.5 AI, our system instantly recognizes the food item and extracts nutritional information from labels or databases."
       },
-      "accuracy": {
-        "title": "Accuracy Matters",
-        "description": "Powered by Google's Gemini 2.5 AI, we deliver precise nutritional insights you can trust."
+      "step3": {
+        "title": "Health Analysis",
+        "description": "Based on your health condition (diabetes, hypertension, etc.), our AI analyzes if the food is safe, providing a color-coded verdict."
       },
-      "accessibility": {
-        "title": "Accessibility for All",
-        "description": "Supporting 20+ languages and multiple health conditions to serve everyone, everywhere."
+      "step4": {
+        "title": "Get Recommendations",
+        "description": "Receive personalized suggestions, healthier alternatives, and detailed nutritional breakdowns tailored to your health goals."
       }
     },
-    "ctaTitle": "Join Our Mission",
-    "ctaSubtitle": "Be part of the movement towards healthier, more informed eating habits.",
-    "ctaButton": "Start Your Journey Today"
+    "featuresTitle": "What Makes It Special",
+    "features": {
+      "trafficLight": {
+        "title": "Traffic Light System",
+        "description": "Quick visual indicators: Green (Safe), Yellow (Moderate), Red (Avoid)"
+      },
+      "privacy": {
+        "title": "Privacy First",
+        "description": "All analysis happens securely. Your health data stays private."
+      },
+      "realTime": {
+        "title": "Real-Time Results",
+        "description": "Get comprehensive analysis in under 3 seconds"
+      }
+    },
+    "ctaTitle": "Ready to Try It?",
+    "ctaDesc": "Join thousands of users making smarter food choices with AI-powered nutrition analysis.",
+    "startScanning": "Start Scanning Now",
+    "learnMore": "Learn More About Us"
   },
 
   "howSteps": {

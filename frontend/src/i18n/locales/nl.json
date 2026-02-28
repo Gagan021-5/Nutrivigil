@@ -80,47 +80,47 @@
     }
   },
 
-  "missionPage": {
+  "howItWorks": {
     "backToHome": "Terug naar home",
-    "title": "Onze Missie",
-    "subtitle": "Iedereen in staat stellen om weloverwogen, gezondere voedingskeuzes te maken via toegankelijke AI-gestuurde voedingsanalyse.",
-    "subtitle2": "Wij geloven dat begrijpen wat je eet eenvoudig, direct en gepersonaliseerd op jouw unieke gezondheidsbehoeften moet zijn. NutriVigil overbrugt de kloof tussen complexe voedingsdata en dagelijkse voedingsbeslissingen.",
-    "impactTitle": "Onze Impact",
-    "stats": {
-      "activeUsers": "Actieve Gebruikers",
-      "foodItemsAnalyzed": "Geanalyseerde Voedingsmiddelen",
-      "languagesSupported": "Ondersteunde Talen",
-      "accuracyRate": "Nauwkeurigheidspercentage"
-    },
-    "whyTitle": "Waarom we NutriVigil hebben gebouwd",
-    "whyP1": "Elk jaar worstelen miljoenen mensen met dieetgerelateerde gezondheidsproblemen zoals diabetes, hypertensie en hartziekten. Toch blijft het begrijpen van voedseletiketten en het maken van veilige voedingskeuzes complex en tijdrovend.",
-    "whyP2Highlight": "We hebben NutriVigil gemaakt om dat te veranderen.",
-    "whyP2": "Door gebruik te maken van geavanceerde AI-technologie, hebben we voedingsanalyse direct, nauwkeurig en gepersonaliseerd op uw gezondheidsbehoeften gemaakt.",
-    "whyP3Before": "Onze missie gaat verder dan technologie—het gaat om",
-    "whyP3Highlight": "democratisering van gezondheidsinformatie",
-    "whyP3After": ", ondersteuning van diverse gemeenschappen wereldwijd, en u helpen uw gezondste leven te leiden, één maaltijd tegelijk.",
-    "valuesTitle": "Onze Kernwaarden",
-    "values": {
-      "health": {
-        "title": "Gezondheid Voorop",
-        "description": "We stellen uw gezondheid en welzijn boven alles. Elke functie is ontworpen met uw veiligheid in gedachten."
+    "title": "Hoe het werkt",
+    "subtitle": "Van foto naar gepersonaliseerde gezondheidsinzichten in 4 eenvoudige stappen. Laat AI uw voedingsreis begeleiden.",
+    "steps": {
+      "step1": {
+        "title": "Upload voedingsfoto",
+        "description": "Maak een foto van uw voedselverpakking, etiket of maaltijd. Onze AI werkt met elke voedingsafbeelding - van restaurantgerechten tot kruidenierswaren."
       },
-      "privacy": {
-        "title": "Privacy & Veiligheid",
-        "description": "Uw data is versleuteld en wordt nooit gedeeld. Alle analyses verlopen veilig op ons HIPAA-conform platform."
+      "step2": {
+        "title": "AI identificeert voedsel",
+        "description": "Aangedreven door Gemini 2.5 AI herkent ons systeem het voedselitem direct en extraheert voedingsinformatie uit etiketten of databases."
       },
-      "accuracy": {
-        "title": "Nauwkeurigheid Telt",
-        "description": "Aangedreven door Google's Gemini 2.5 AI, leveren we nauwkeurige voedingsinzichten waarop u kunt vertrouwen."
+      "step3": {
+        "title": "Gezondheidsanalyse",
+        "description": "Op basis van uw gezondheidsconditie (diabetes, hypertensie, etc.) analyseert onze AI of het voedsel veilig is en geeft een kleurgecodeerd oordeel."
       },
-      "accessibility": {
-        "title": "Toegankelijkheid voor Iedereen",
-        "description": "Ondersteuning van 20+ talen en meerdere gezondheidsaandoeningen om iedereen, overal te bedienen."
+      "step4": {
+        "title": "Ontvang aanbevelingen",
+        "description": "Ontvang gepersonaliseerde suggesties, gezondere alternatieven en gedetailleerde voedingsoverzichten afgestemd op uw gezondheidsdoelen."
       }
     },
-    "ctaTitle": "Doe Mee met Onze Missie",
-    "ctaSubtitle": "Wees onderdeel van de beweging naar gezondere, beter geïnformeerde eetgewoonten.",
-    "ctaButton": "Begin Vandaag Uw Reis"
+    "featuresTitle": "Wat het bijzonder maakt",
+    "features": {
+      "trafficLight": {
+        "title": "Verkeerslichtsysteem",
+        "description": "Snelle visuele indicatoren: Groen (Veilig), Geel (Matig), Rood (Vermijden)"
+      },
+      "privacy": {
+        "title": "Privacy eerst",
+        "description": "Alle analyses verlopen veilig. Uw gezondheidsgegevens blijven privé."
+      },
+      "realTime": {
+        "title": "Realtime resultaten",
+        "description": "Ontvang uitgebreide analyse in minder dan 3 seconden"
+      }
+    },
+    "ctaTitle": "Klaar om het te proberen?",
+    "ctaDesc": "Sluit u aan bij duizenden gebruikers die slimmere voedselkeuzes maken met AI-gestuurde voedingsanalyse.",
+    "startScanning": "Nu beginnen met scannen",
+    "learnMore": "Meer over ons"
   },
 
   "howSteps": {

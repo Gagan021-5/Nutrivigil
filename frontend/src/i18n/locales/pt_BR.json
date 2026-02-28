@@ -80,47 +80,47 @@
     }
   },
 
-  "missionPage": {
-    "backToHome": "Voltar para o início",
-    "title": "Nossa Missão",
-    "subtitle": "Capacitar a todos para fazer escolhas alimentares mais informadas e saudáveis por meio de análise nutricional acessível com IA.",
-    "subtitle2": "Acreditamos que entender o que você come deve ser simples, instantâneo e personalizado para suas necessidades únicas de saúde. O NutriVigil preenche a lacuna entre dados nutricionais complexos e decisões alimentares do cotidiano.",
-    "impactTitle": "Nosso Impacto",
-    "stats": {
-      "activeUsers": "Usuários Ativos",
-      "foodItemsAnalyzed": "Alimentos Analisados",
-      "languagesSupported": "Idiomas Suportados",
-      "accuracyRate": "Taxa de Precisão"
-    },
-    "whyTitle": "Por que criamos o NutriVigil",
-    "whyP1": "Todo ano, milhões de pessoas lutam com condições de saúde relacionadas à dieta, como diabetes, hipertensão e doenças cardíacas. Ainda assim, entender os rótulos dos alimentos e fazer escolhas alimentares seguras continua sendo complexo e demorado.",
-    "whyP2Highlight": "Criamos o NutriVigil para mudar isso.",
-    "whyP2": "Usando tecnologia de IA de ponta, tornamos a análise nutricional instantânea, precisa e personalizada para suas necessidades de saúde.",
-    "whyP3Before": "Nossa missão vai além da tecnologia—é sobre",
-    "whyP3Highlight": "democratizar a informação em saúde",
-    "whyP3After": ", apoiar comunidades diversas no mundo inteiro e ajudá-lo a viver sua vida mais saudável, uma refeição de cada vez.",
-    "valuesTitle": "Nossos Valores Essenciais",
-    "values": {
-      "health": {
-        "title": "Saúde em Primeiro Lugar",
-        "description": "Priorizamos sua saúde e bem-estar acima de tudo. Cada funcionalidade é projetada pensando na sua segurança."
+  "howItWorks": {
+    "backToHome": "Voltar ao início",
+    "title": "Como funciona",
+    "subtitle": "Da foto a insights de saúde personalizados em 4 passos simples. Deixe a IA guiar a sua jornada nutricional.",
+    "steps": {
+      "step1": {
+        "title": "Enviar foto do alimento",
+        "description": "Tire uma foto da embalagem do alimento, rótulo ou refeição. Nossa IA funciona com qualquer imagem de alimento - de pratos de restaurante a itens de mercearia."
       },
-      "privacy": {
-        "title": "Privacidade e Segurança",
-        "description": "Seus dados são criptografados e jamais compartilhados. Todas as análises ocorrem com segurança em nossa plataforma compatível com HIPAA."
+      "step2": {
+        "title": "A IA identifica o alimento",
+        "description": "Alimentado pela Gemini 2.5 AI, nosso sistema reconhece instantaneamente o alimento e extrai informações nutricionais de rótulos ou bancos de dados."
       },
-      "accuracy": {
-        "title": "Precisão é Fundamental",
-        "description": "Impulsionado pelo Gemini 2.5 AI do Google, fornecemos insights nutricionais precisos nos quais você pode confiar."
+      "step3": {
+        "title": "Análise de saúde",
+        "description": "Com base na sua condição de saúde (diabetes, hipertensão, etc.), nossa IA analisa se o alimento é seguro, fornecendo um veredicto com código de cores."
       },
-      "accessibility": {
-        "title": "Acessibilidade para Todos",
-        "description": "Suporte a mais de 20 idiomas e múltiplas condições de saúde para atender a todos, em qualquer lugar."
+      "step4": {
+        "title": "Receber recomendações",
+        "description": "Receba sugestões personalizadas, alternativas mais saudáveis e análises nutricionais detalhadas adaptadas aos seus objetivos de saúde."
       }
     },
-    "ctaTitle": "Junte-se à Nossa Missão",
-    "ctaSubtitle": "Faça parte do movimento em direção a hábitos alimentares mais saudáveis e conscientes.",
-    "ctaButton": "Comece Sua Jornada Hoje"
+    "featuresTitle": "O que torna especial",
+    "features": {
+      "trafficLight": {
+        "title": "Sistema de semáforo",
+        "description": "Indicadores visuais rápidos: Verde (Seguro), Amarelo (Moderado), Vermelho (Evitar)"
+      },
+      "privacy": {
+        "title": "Privacidade em primeiro lugar",
+        "description": "Toda análise acontece de forma segura. Seus dados de saúde ficam privados."
+      },
+      "realTime": {
+        "title": "Resultados em tempo real",
+        "description": "Obtenha análise completa em menos de 3 segundos"
+      }
+    },
+    "ctaTitle": "Pronto para experimentar?",
+    "ctaDesc": "Junte-se a milhares de usuários que fazem escolhas alimentares mais inteligentes com análise nutricional por IA.",
+    "startScanning": "Começar a escanear agora",
+    "learnMore": "Saiba mais sobre nós"
   },
 
   "howSteps": {

@@ -80,47 +80,47 @@
     }
   },
 
-  "missionPage": {
+  "howItWorks": {
     "backToHome": "홈으로 돌아가기",
-    "title": "우리의 사명",
-    "subtitle": "접근 가능한 AI 기반 영양 분석을 통해 모든 사람이 정보에 입각한 더 건강한 식품 선택을 할 수 있도록 역량을 강화합니다.",
-    "subtitle2": "우리는 먹는 것을 이해하는 것이 간단하고 즉각적이며 개인의 고유한 건강 필요에 맞게 개인화되어야 한다고 믿습니다. NutriVigil은 복잡한 영양 데이터와 일상적인 식품 결정 사이의 격차를 해소합니다.",
-    "impactTitle": "우리의 영향",
-    "stats": {
-      "activeUsers": "활성 사용자",
-      "foodItemsAnalyzed": "분석된 식품",
-      "languagesSupported": "지원 언어",
-      "accuracyRate": "정확도"
-    },
-    "whyTitle": "NutriVigil을 만든 이유",
-    "whyP1": "매년 수백만 명이 당뇨병, 고혈압, 심장병과 같은 식이 관련 건강 상태로 고통받습니다. 그러나 식품 라벨을 이해하고 안전한 식이 선택을 하는 것은 여전히 복잡하고 시간이 많이 걸립니다.",
-    "whyP2Highlight": "우리는 그것을 바꾸기 위해 NutriVigil을 만들었습니다.",
-    "whyP2": "최첨단 AI 기술을 사용하여, 영양 분석을 즉각적이고 정확하며 건강 필요에 맞게 개인화했습니다.",
-    "whyP3Before": "우리의 사명은 기술을 넘어서 있습니다—그것은",
-    "whyP3Highlight": "건강 정보의 민주화",
-    "whyP3After": ", 전 세계 다양한 커뮤니티를 지원하고, 한 번에 한 끼씩 당신이 가장 건강한 삶을 살도록 돕는 것입니다.",
-    "valuesTitle": "우리의 핵심 가치",
-    "values": {
-      "health": {
-        "title": "건강 최우선",
-        "description": "모든 것 위에 당신의 건강과 웰빙을 우선시합니다. 모든 기능은 당신의 안전을 염두에 두고 설계되었습니다."
+    "title": "작동 방식",
+    "subtitle": "사진에서 4가지 간단한 단계로 개인화된 건강 인사이트까지. AI가 영양 여정을 안내합니다.",
+    "steps": {
+      "step1": {
+        "title": "음식 사진 업로드",
+        "description": "식품 포장, 라벨 또는 식사 사진을 찍으세요. AI는 모든 음식 이미지와 함께 작동합니다."
       },
-      "privacy": {
-        "title": "개인정보 및 보안",
-        "description": "귀하의 데이터는 암호화되어 있으며 절대 공유되지 않습니다. 모든 분석은 HIPAA 준수 플랫폼에서 안전하게 이루어집니다."
+      "step2": {
+        "title": "AI가 음식 식별",
+        "description": "Gemini 2.5 AI로 구동되는 시스템이 즉시 식품을 인식하고 영양 정보를 추출합니다."
       },
-      "accuracy": {
-        "title": "정확성이 중요합니다",
-        "description": "Google의 Gemini 2.5 AI로 구동되어, 신뢰할 수 있는 정확한 영양 정보를 제공합니다."
+      "step3": {
+        "title": "건강 분석",
+        "description": "건강 상태에 따라 AI가 음식의 안전 여부를 분석하고 색상 코드로 판정을 제공합니다."
       },
-      "accessibility": {
-        "title": "모두를 위한 접근성",
-        "description": "20개 이상의 언어와 여러 건강 상태를 지원하여 어디서나 모든 사람에게 서비스를 제공합니다."
+      "step4": {
+        "title": "추천 받기",
+        "description": "건강 목표에 맞춘 개인화된 제안, 더 건강한 대안, 자세한 영양 분석을 받으세요."
       }
     },
-    "ctaTitle": "우리의 사명에 동참하세요",
-    "ctaSubtitle": "더 건강하고 정보에 입각한 식습관을 향한 운동의 일부가 되세요.",
-    "ctaButton": "오늘 당신의 여정을 시작하세요"
+    "featuresTitle": "특별한 이유",
+    "features": {
+      "trafficLight": {
+        "title": "신호등 시스템",
+        "description": "빠른 시각적 지표: 초록 (안전), 노랑 (보통), 빨강 (피해야 함)"
+      },
+      "privacy": {
+        "title": "개인정보 보호 우선",
+        "description": "모든 분석은 안전하게 이루어집니다. 건강 데이터는 비공개로 유지됩니다."
+      },
+      "realTime": {
+        "title": "실시간 결과",
+        "description": "3초 이내에 종합적인 분석 결과 받기"
+      }
+    },
+    "ctaTitle": "시도할 준비가 되셨나요?",
+    "ctaDesc": "AI 기반 영양 분석으로 더 스마트한 식품 선택을 하는 수천 명의 사용자와 함께하세요.",
+    "startScanning": "지금 스캔 시작",
+    "learnMore": "우리에 대해 더 알아보기"
   },
 
   "howSteps": {

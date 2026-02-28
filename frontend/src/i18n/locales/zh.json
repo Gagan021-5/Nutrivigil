@@ -80,47 +80,47 @@
     }
   },
 
-  "missionPage": {
-    "backToHome": "返回首页",
-    "title": "我们的使命",
-    "subtitle": "通过易于使用的AI驱动营养分析，使每个人都能做出明智、更健康的食物选择。",
-    "subtitle2": "我们相信，了解您所吃的食物应该是简单、即时且个性化的，以满足您独特的健康需求。NutriVigil弥合了复杂营养数据与日常饮食决策之间的差距。",
-    "impactTitle": "我们的影响",
-    "stats": {
-      "activeUsers": "活跃用户",
-      "foodItemsAnalyzed": "已分析食品",
-      "languagesSupported": "支持语言",
-      "accuracyRate": "准确率"
-    },
-    "whyTitle": "我们为什么构建NutriVigil",
-    "whyP1": "每年，数百万人与糖尿病、高血压和心脏病等饮食相关健康状况作斗争。然而，理解食品标签和做出安全的饮食选择仍然复杂耗时。",
-    "whyP2Highlight": "我们创建了NutriVigil来改变这一状况。",
-    "whyP2": "利用尖端AI技术，我们让营养分析即时、精准，并针对您的健康需求个性化定制。",
-    "whyP3Before": "我们的使命超越技术——它是关于",
-    "whyP3Highlight": "健康信息的民主化",
-    "whyP3After": "，支持全球多元化社区，帮助您过上最健康的生活，一次一餐。",
-    "valuesTitle": "我们的核心价值观",
-    "values": {
-      "health": {
-        "title": "健康优先",
-        "description": "我们将您的健康和福祉置于一切之上。每项功能都以您的安全为核心设计。"
+  "howItWorks": {
+    "backToHome": "返回主页",
+    "title": "工作原理",
+    "subtitle": "通过4个简单步骤，从照片获得个性化健康洞察。让AI引导您的营养之旅。",
+    "steps": {
+      "step1": {
+        "title": "上传食物照片",
+        "description": "拍摄食品包装、标签或餐食的照片。我们的AI可以处理任何食物图像。"
       },
-      "privacy": {
-        "title": "隐私与安全",
-        "description": "您的数据已加密，绝不共享。所有分析在我们符合HIPAA的平台上安全进行。"
+      "step2": {
+        "title": "AI识别食物",
+        "description": "由Gemini 2.5 AI驱动，我们的系统即时识别食品并从标签或数据库中提取营养信息。"
       },
-      "accuracy": {
-        "title": "准确性至关重要",
-        "description": "由Google的Gemini 2.5 AI驱动，我们提供您可以信赖的精确营养见解。"
+      "step3": {
+        "title": "健康分析",
+        "description": "根据您的健康状况，AI分析食物是否安全，并提供颜色编码的判断。"
       },
-      "accessibility": {
-        "title": "面向所有人的可访问性",
-        "description": "支持20多种语言和多种健康状况，为任何地方的每个人提供服务。"
+      "step4": {
+        "title": "获取建议",
+        "description": "获取个性化建议、更健康的替代品以及针对您健康目标定制的详细营养分析。"
       }
     },
-    "ctaTitle": "加入我们的使命",
-    "ctaSubtitle": "成为朝更健康、更知情的饮食习惯运动的一部分。",
-    "ctaButton": "今天开始您的旅程"
+    "featuresTitle": "为何与众不同",
+    "features": {
+      "trafficLight": {
+        "title": "交通灯系统",
+        "description": "快速视觉指标：绿色（安全），黄色（适中），红色（避免）"
+      },
+      "privacy": {
+        "title": "隐私优先",
+        "description": "所有分析都安全进行。您的健康数据保持私密。"
+      },
+      "realTime": {
+        "title": "实时结果",
+        "description": "在3秒内获得全面分析"
+      }
+    },
+    "ctaTitle": "准备好尝试了吗？",
+    "ctaDesc": "加入数千名使用AI营养分析做出更明智食品选择的用户。",
+    "startScanning": "立即开始扫描",
+    "learnMore": "了解更多关于我们"
   },
 
   "howSteps": {
