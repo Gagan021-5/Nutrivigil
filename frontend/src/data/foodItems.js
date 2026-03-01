@@ -4,6 +4,19 @@
  * Total: ~220 food items with complete nutrition information
  */
 
+import lasagnaMeatSauce from '../assets/frozen-foods/lasagnaMeatSauce.jpg';
+import chickenPotPie from '../assets/frozen-foods/chickenPotPie.jpg';
+import mixedVegetables from '../assets/frozen-foods/mixedVegetables.jpg';
+import pizzaRolls from '../assets/frozen-foods/pizzaRolls.jpg';
+import chickenNuggets from '../assets/frozen-foods/chickenNuggets.jpg';
+import macAndCheese from '../assets/frozen-foods/macAndCheese.jpg';
+import broccoliFlorets from '../assets/frozen-foods/broccoliFlorets.jpg';
+import crinkleFries from '../assets/frozen-foods/crinkleFries.jpg';
+import fourCheesePizza from '../assets/frozen-foods/fourCheesePizza.jpg';
+import fishSticks from '../assets/frozen-foods/fishSticks.jpg';
+import italianMeatballs from '../assets/frozen-foods/italianMeatballs.jpg';
+import chickenAlfredo from '../assets/frozen-foods/chickenAlfredo.jpg';
+import beefBeanBurrito from '../assets/frozen-foods/beefBeanBurrito.jpg';
 import genericFood from '../assets/generic-food.jpg';
 import appleGrape from '../assets/baby-food/apple-grape.jpg';
 import applePeach from '../assets/baby-food/apple-peach.jpg';
@@ -208,6 +221,24 @@ import brightLightsNewEngland from '../assets/coffee/bright-lights-new-england.j
 import busteloCafeEspresso from '../assets/coffee/bustelo-cafe-espresso.jpg';
 import espressoWholeBeanCoffee from '../assets/coffee/espresso-whole-bean-coffee.jpg';
 import everydayValue from '../assets/coffee/everyday-value.jpg';
+import frenchRoastGrounds from '../assets/coffee/french-roast.jpg';
+import instantCoffeeFolgers from '../assets/coffee/instant-coffee.jpg';
+import icedCoffeeUnsweetened from '../assets/coffee/iced-coffee-starbucks.jpg';
+import vanillaKCup from '../assets/coffee/vanilla-kcup.jpg';
+import blondeRoastStarbucks from '../assets/coffee/blonde-roast.jpg';
+import coldBrewConcentrate from '../assets/coffee/cold-brew-concentrate.jpg';
+import decafHouseBlend from '../assets/coffee/decaf-house-blend.jpg';
+import espressoRoastLavazza from '../assets/coffee/espresso-lavazza.jpg';
+
+// New Cookies & Biscuits Images
+import chipsAhoyOriginal from '../assets/cokies-biscuit/chips-ahoy-original.jpg';
+import doubleStufOreo from '../assets/cokies-biscuit/double-stuf-oreo.jpg';
+import walkersShortbread from '../assets/cokies-biscuit/walkers-shortbread.jpg';
+import nutterButterNabisco from '../assets/cokies-biscuit/nutter-butter.jpg';
+import biscoffLotus from '../assets/cokies-biscuit/biscoff-cookies.jpg';
+import milanoCookies from '../assets/cokies-biscuit/milano-cookies.jpg';
+import digestiveBiscuits from '../assets/cokies-biscuit/digestive-biscuits.jpg';
+import lornaDooneShortbread from '../assets/cokies-biscuit/lorna-doone.jpg';
 
 // pasta image imports (normalized)
 import barillaCollezioneBucatiniPasta from '../assets/pasta/barilla-collezione-bucatini-pasta.jpg';
@@ -222,6 +253,22 @@ import anniesOnePotWhiteCheddarPasta from '../assets/pasta/annies-one-pot-white-
 import agedProvoloneAndProsciuttoTortelloni from '../assets/pasta/aged-provolone-and-prosciutto-tortelloni.jpg';
 import banzaChickpeaPastaAlphabets from '../assets/pasta/banza-chickpea-pasta-alphabets.jpg';
 import buckwheatSobaNoodles from '../assets/pasta/buckwheat-soba-noodles.jpg';
+import classicFettuccine from '../assets/pasta/fettuccine.jpg';
+import wholeGrainPenne from '../assets/pasta/whole-grain-penne.jpg';
+import potatoGnocchi from '../assets/pasta/gnocchi.jpg';
+import rigatoniBarilla from '../assets/pasta/rigatoni.jpg';
+import glutenFreeFusilli from '../assets/pasta/gf-fusilli.jpg';
+import farfalleBowtie from '../assets/pasta/farfalle.jpg';
+import lasagnaNoodlesWheat from '../assets/pasta/lasagna-noodles.jpg';
+import elbowMacaroni from '../assets/pasta/elbow-macaroni.jpg';
+import coconutWater from '../assets/beverages/coconut-water.jpg';
+import dietCoke from '../assets/beverages/diet-coke.jpg';
+import pomegranateJuice from '../assets/beverages/pomegranate-juice.jpg';
+import almondMilkUnsweetened from '../assets/beverages/almond-milk.jpg';
+import vegetableJuiceV8 from '../assets/beverages/v8-juice.jpg';
+import mountainDewSoda from '../assets/beverages/mountain-dew.jpg';
+import smartWaterVaporDistilled from '../assets/beverages/smart-water.jpg';
+import blackTeaUnsweetened from '../assets/beverages/pure-leaf-tea.jpg';
 
 // snacks imports (normalized filenames)
 import agedCheddarThaiRice from '../assets/snacks/aged-cheddar-thai-rice.jpg';
@@ -238,6 +285,23 @@ import bakedRufflesFlamin from '../assets/snacks/baked-ruffles-flamin.jpg';
 import bakedSeaSaltPitaChips from '../assets/snacks/baked-sea-salt-pita-chips.jpg';
 import doubleChocolateSnack from '../assets/snacks/double-chocolate.jpg';
 import roastedSeaweedSnacks from '../assets/snacks/roasted-seaweed-snacks.jpg';
+import roastedAlmonds from '../assets/snacks/roasted-almonds.jpg';
+import sabraHummus from '../assets/snacks/sabra-hummus.jpg';
+import skinnyPop from '../assets/snacks/skinny-pop.jpg';
+import stacysPitaChips from '../assets/snacks/pita-chips.jpg';
+import piratesBooty from '../assets/snacks/pirates-booty.jpg';
+import veggieStraws from '../assets/snacks/veggie-straws.jpg';
+import slimJimBeefStick from '../assets/snacks/slim-jim.jpg';
+import quakerGranolaBar from '../assets/snacks/quaker-granola-bar.jpg';
+// New Produce Images
+import babySpinach from '../assets/produce/baby-spinach.jpg';
+import hassAvocado from '../assets/produce/hass-avocado.jpg';
+import freshBlueberries from '../assets/produce/blueberries.jpg';
+import galaApples from '../assets/produce/gala-apples.jpg';
+import babyCarrots from '../assets/produce/baby-carrots.jpg';
+import doleBanana from '../assets/produce/banana.jpg';
+import broccoliCrowns from '../assets/produce/broccoli.jpg';
+import redBellPepper from '../assets/produce/red-bell-pepper.jpg';
 
 // produce images (normalized)
 import aDozenCousinsClassicRefriedPintoBeans from '../assets/produce/a-dozen-cousins-classic-refried-pinto-beans.jpg';
@@ -523,9 +587,15 @@ const FOOD_ITEMS = {
     { id: 8, name: 'Café Bustelo Espresso Style', brand: 'Café Bustelo', isVegetarian: true, servingSize: '1 tbsp (5g)', image: busteloCafeEspresso, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 9, name: 'Classic Roast Whole Bean', brand: 'Folgers', isVegetarian: true, servingSize: '1 tbsp (5g)', image: espressoWholeBeanCoffee, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 10, name: 'Everyday Value Medium Roast', brand: '365 Whole Foods', isVegetarian: true, servingSize: '1 cup (240ml)', image: everydayValue, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
-    { id: 11, name: 'French Roast Grounds', brand: 'Starbucks', isVegetarian: true, servingSize: '5g', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-{ id: 12, name: 'Instant Coffee', brand: 'Folgers', isVegetarian: true, servingSize: '2g', image: null, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
-{ id: 13, name: 'Iced Coffee (Unsweetened)', brand: 'Starbucks', isVegetarian: true, servingSize: '355ml', image: null, nutrition: { calories: 5, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } }
+    { id: 11, name: 'French Roast Grounds', brand: 'Starbucks', isVegetarian: true, servingSize: '5g', image: frenchRoastGrounds, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 12, name: 'Instant Coffee', brand: 'Folgers', isVegetarian: true, servingSize: '2g', image: instantCoffeeFolgers, nutrition: { calories: 5, protein: 0, carbs: 1, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 13, name: 'Iced Coffee (Unsweetened)', brand: 'Starbucks', isVegetarian: true, servingSize: '355ml', image: icedCoffeeUnsweetened, nutrition: { calories: 5, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
+    
+    { id: 14, name: 'Vanilla Roast K-Cup', brand: "Dunkin'", isVegetarian: true, servingSize: '1 pod (10g)', image: vanillaKCup, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 15, name: 'Blonde Roast Whole Bean', brand: 'Starbucks', isVegetarian: true, servingSize: '5g', image: blondeRoastStarbucks, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 16, name: 'Cold Brew Concentrate', brand: 'Chameleon', isVegetarian: true, servingSize: '120ml', image: coldBrewConcentrate, nutrition: { calories: 15, protein: 1, carbs: 2, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 0, fiber: 0 } },
+    { id: 17, name: 'Decaf House Blend', brand: "Peet's Coffee", isVegetarian: true, servingSize: '5g', image: decafHouseBlend, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 18, name: 'Espresso Roast Whole Bean', brand: 'Lavazza', isVegetarian: true, servingSize: '5g', image: espressoRoastLavazza, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
   ],
 
   'cookies-biscuits': [
@@ -542,9 +612,15 @@ const FOOD_ITEMS = {
     { id: 11, name: 'Cheddar Chive Garlic Biscuits', brand: 'Red Lobster', isVegetarian: true, servingSize: '1 biscuit (50g)', image: annsBiscuitsCheddarChiveGarlicBiscuits, nutrition: { calories: 160, protein: 3, carbs: 16, totalFat: 10, saturatedFat: 4.5, transFat: 0, sodium: 380, sugar: 1, fiber: 1 } },
     { id: 12, name: 'Organic Bunny Grahams (Cocoa)', brand: 'Annie\'s Homegrown', isVegetarian: true, servingSize: '31g', image: anniesGlutenFreeCocoa, nutrition: { calories: 140, protein: 2, carbs: 23, totalFat: 5, saturatedFat: 0, transFat: 0, sodium: 150, sugar: 8, fiber: 1 } },
     { id: 13, name: 'Organic Honey Grahams', brand: 'Annie\'s Homegrown', isVegetarian: true, servingSize: '2 full sheets (31g)', image: anniesHomegrownOrganicHoneyGrahamCrackers, nutrition: { calories: 130, protein: 2, carbs: 24, totalFat: 3, saturatedFat: 0.5, transFat: 0, sodium: 160, sugar: 8, fiber: 1 } },
-    { id: 14, name: 'Chocolate Chip Cookies', brand: 'Chips Ahoy!', isVegetarian: true, servingSize: '33g', image: null, nutrition: { calories: 160, protein: 1, carbs: 22, totalFat: 8, saturatedFat: 2.5, transFat: 0, sodium: 110, sugar: 11, fiber: 1 } },
-{ id: 15, name: 'Double Stuf Oreos', brand: 'Oreo', isVegetarian: true, servingSize: '29g', image: null, nutrition: { calories: 140, protein: 1, carbs: 21, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 13, fiber: 1 } },
-{ id: 16, name: 'Shortbread Cookies', brand: 'Walkers', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 150, protein: 1, carbs: 16, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 80, sugar: 5, fiber: 0 } }
+    { id: 14, name: 'Chocolate Chip Cookies', brand: 'Chips Ahoy!', isVegetarian: true, servingSize: '33g', image: chipsAhoyOriginal, nutrition: { calories: 160, protein: 1, carbs: 22, totalFat: 8, saturatedFat: 2.5, transFat: 0, sodium: 110, sugar: 11, fiber: 1 } },
+    { id: 15, name: 'Double Stuf Oreos', brand: 'Oreo', isVegetarian: true, servingSize: '29g', image: doubleStufOreo, nutrition: { calories: 140, protein: 1, carbs: 21, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 13, fiber: 1 } },
+    { id: 16, name: 'Shortbread Cookies', brand: 'Walkers', isVegetarian: true, servingSize: '28g', image: walkersShortbread, nutrition: { calories: 150, protein: 1, carbs: 16, totalFat: 9, saturatedFat: 6, transFat: 0, sodium: 80, sugar: 5, fiber: 0 } },
+    
+    { id: 17, name: 'Nutter Butter Cookies', brand: 'Nabisco', isVegetarian: true, servingSize: '2 cookies (28g)', image: nutterButterNabisco, nutrition: { calories: 140, protein: 2, carbs: 19, totalFat: 6, saturatedFat: 1, transFat: 0, sodium: 105, sugar: 9, fiber: 1 } },
+    { id: 18, name: 'Biscoff Cookies', brand: 'Lotus', isVegetarian: true, servingSize: '4 cookies (31g)', image: biscoffLotus, nutrition: { calories: 150, protein: 1, carbs: 23, totalFat: 6, saturatedFat: 3, transFat: 0, sodium: 115, sugar: 12, fiber: 0 } },
+    { id: 19, name: 'Milano Dark Chocolate', brand: 'Pepperidge Farm', isVegetarian: true, servingSize: '2 cookies (24g)', image: milanoCookies, nutrition: { calories: 130, protein: 1, carbs: 15, totalFat: 7, saturatedFat: 4, transFat: 0, sodium: 40, sugar: 7, fiber: 1 } },
+    { id: 20, name: 'Digestive Biscuits', brand: "McVitie's", isVegetarian: true, servingSize: '1 biscuit (15g)', image: digestiveBiscuits, nutrition: { calories: 70, protein: 1, carbs: 9, totalFat: 3, saturatedFat: 1.5, transFat: 0, sodium: 65, sugar: 2, fiber: 1 } },
+    { id: 21, name: 'Lorna Doone Shortbread', brand: 'Nabisco', isVegetarian: true, servingSize: '4 cookies (28g)', image: lornaDooneShortbread, nutrition: { calories: 140, protein: 1, carbs: 19, totalFat: 7, saturatedFat: 2, transFat: 0, sodium: 125, sugar: 5, fiber: 0 } },
   ],
 
   'beverages': [
@@ -552,7 +628,7 @@ const FOOD_ITEMS = {
     { id: 2, name: 'Orange Juice No Pulp', brand: 'Tropicana', servingSize: '8 fl oz (240ml)', image: orangeJuiceCalciumVitaminD, nutrition: { calories: 110, protein: 2, carbs: 26, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 22, fiber: 0 } },
     { id: 3, name: 'Red Bull Energy Drink', brand: 'Red Bull', servingSize: '8.4 fl oz (248ml)', image: redBullEnergyDrink, nutrition: { calories: 110, protein: 1, carbs: 28, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 105, sugar: 27, fiber: 0 } },
     { id: 4, name: 'Green Tea', brand: 'Arizona', servingSize: '8 fl oz (240ml)', image: juiceOrganicAppleJuice, nutrition: { calories: 70, protein: 0, carbs: 18, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 15, sugar: 17, fiber: 0 } },
-    { id: 5, name: 'Sprite', brand: 'Coca-Cola', servingSize: '12 fl oz (355ml)', image: null, nutrition: { calories: 140, protein: 0, carbs: 38, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 38, fiber: 0 } },
+    { id: 5, name: 'Sprite', brand: 'Coca-Cola', servingSize: '12 fl oz (355ml)', image: smartWaterVaporDistilled, nutrition: { calories: 140, protein: 0, carbs: 38, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 38, fiber: 0 } },
     { id: 6, name: 'Apple Juice', brand: 'Mott\'s', servingSize: '8 fl oz (240ml)', image: appleJuice, nutrition: { calories: 110, protein: 0, carbs: 28, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 24, fiber: 0 } },
     { id: 7, name: 'Gatorade Lemon-Lime', brand: 'Gatorade', servingSize: '12 fl oz (355ml)', image: packPinkLemonade, nutrition: { calories: 80, protein: 0, carbs: 21, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 21, fiber: 0 } },
     { id: 8, name: 'Iced Tea Lemon', brand: 'Lipton', servingSize: '12 fl oz (355ml)', image: redBullEnergyDrinkPlumTwist, nutrition: { calories: 80, protein: 0, carbs: 21, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 100, sugar: 21, fiber: 0 } },
@@ -562,9 +638,15 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Sparkling Water Lime', brand: 'La Croix', servingSize: '12 fl oz (355ml)', image: trueLemonRaspberryLemonade, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
     { id: 13, name: 'Grape Juice', brand: 'Welch\'s', servingSize: '8 fl oz (240ml)', image: trueLemonStrawberryLemonade, nutrition: { calories: 140, protein: 0, carbs: 36, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 15, sugar: 36, fiber: 0 } },
     { id: 14, name: 'Cranberry Juice', brand: 'Ocean Spray', servingSize: '8 fl oz (240ml)', image: naturallyCranberryJuice, nutrition: { calories: 110, protein: 0, carbs: 28, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 28, fiber: 0 } },
-    { id: 15, name: 'Coconut Water', brand: 'Vita Coco', isVegetarian: true, servingSize: '330ml', image: null, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 13, fiber: 0 } },
-{ id: 16, name: 'Diet Coke', brand: 'Coca-Cola', isVegetarian: true, servingSize: '355ml', image: null, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
-{ id: 17, name: 'Pomegranate Juice', brand: 'POM Wonderful', isVegetarian: true, servingSize: '240ml', image: null, nutrition: { calories: 160, protein: 0, carbs: 39, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 34, fiber: 0 } }
+    { id: 15, name: 'Coconut Water', brand: 'Vita Coco', isVegetarian: true, servingSize: '330ml', image: coconutWater, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 13, fiber: 0 } },
+    { id: 16, name: 'Diet Coke', brand: 'Coca-Cola', isVegetarian: true, servingSize: '355ml', image: dietCoke, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 40, sugar: 0, fiber: 0 } },
+    { id: 17, name: 'Pomegranate Juice', brand: 'POM Wonderful', isVegetarian: true, servingSize: '240ml', image: pomegranateJuice, nutrition: { calories: 160, protein: 0, carbs: 39, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 10, sugar: 34, fiber: 0 } },
+    
+    { id: 18, name: 'Unsweetened Almond Milk', brand: 'Silk', isVegetarian: true, servingSize: '240ml', image: almondMilkUnsweetened, nutrition: { calories: 30, protein: 1, carbs: 1, totalFat: 2.5, saturatedFat: 0, transFat: 0, sodium: 160, sugar: 0, fiber: 1 } },
+    { id: 19, name: 'Original Vegetable Juice', brand: 'V8', isVegetarian: true, servingSize: '240ml', image: vegetableJuiceV8, nutrition: { calories: 45, protein: 2, carbs: 9, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 640, sugar: 7, fiber: 2 } },
+    { id: 20, name: 'Mountain Dew', brand: 'PepsiCo', isVegetarian: true, servingSize: '355ml', image: mountainDewSoda, nutrition: { calories: 170, protein: 0, carbs: 46, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 60, sugar: 46, fiber: 0 } },
+    { id: 21, name: 'Smartwater', brand: 'Glaceau', isVegetarian: true, servingSize: '591ml', image: smartWaterVaporDistilled, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
+    { id: 22, name: 'Unsweetened Black Tea', brand: 'Pure Leaf', isVegetarian: true, servingSize: '547ml', image: blackTeaUnsweetened, nutrition: { calories: 0, protein: 0, carbs: 0, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 0, fiber: 0 } },
   ],
 
   'pasta': [
@@ -580,9 +662,15 @@ const FOOD_ITEMS = {
     { id: 10, name: 'One Pot White Cheddar & Shells', brand: "Annie's Homegrown", isVegetarian: true, servingSize: '108g (1 cup)', image: anniesOnePotWhiteCheddarPasta, nutrition: { calories: 270, protein: 10, carbs: 46, totalFat: 5, saturatedFat: 3, transFat: 0, sodium: 540, sugar: 5, fiber: 2 } },
     { id: 11, name: 'Provolone & Prosciutto Tortelloni', brand: 'Buitoni', isVegetarian: false, servingSize: '100g (3/4 cup)', image: agedProvoloneAndProsciuttoTortelloni, nutrition: { calories: 290, protein: 12, carbs: 42, totalFat: 8, saturatedFat: 4, transFat: 0, sodium: 680, sugar: 2, fiber: 2 } },
     { id: 12, name: 'Chickpea Alphabets', brand: 'Banza', isVegetarian: true, servingSize: '56g (2 oz)', image: banzaChickpeaPastaAlphabets, nutrition: { calories: 190, protein: 11, carbs: 35, totalFat: 3, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 2, fiber: 8 } },
-    { id: 13, name: 'Classic Fettuccine', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: null, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
-{ id: 14, name: 'Whole Grain Penne', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: null, nutrition: { calories: 180, protein: 8, carbs: 39, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 7 } },
-{ id: 15, name: 'Potato Gnocchi', brand: 'De Cecco', isVegetarian: true, servingSize: '100g', image: null, nutrition: { calories: 150, protein: 4, carbs: 32, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 1, fiber: 1 } }
+    { id: 13, name: 'Classic Fettuccine', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: classicFettuccine, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 14, name: 'Whole Grain Penne', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: wholeGrainPenne, nutrition: { calories: 180, protein: 8, carbs: 39, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 7 } },
+    { id: 15, name: 'Potato Gnocchi', brand: 'De Cecco', isVegetarian: true, servingSize: '100g', image: potatoGnocchi, nutrition: { calories: 150, protein: 4, carbs: 32, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 480, sugar: 1, fiber: 1 } },
+    
+    { id: 16, name: 'Rigatoni', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: rigatoniBarilla, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 17, name: 'Gluten Free Fusilli', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: glutenFreeFusilli, nutrition: { calories: 200, protein: 4, carbs: 44, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 18, name: 'Farfalle (Bow Ties)', brand: 'De Cecco', isVegetarian: true, servingSize: '56g', image: farfalleBowtie, nutrition: { calories: 200, protein: 7, carbs: 41, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 3 } },
+    { id: 19, name: 'Oven-Ready Lasagna', brand: 'Barilla', isVegetarian: true, servingSize: '56g', image: lasagnaNoodlesWheat, nutrition: { calories: 200, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 1, fiber: 2 } },
+    { id: 20, name: 'Elbow Macaroni', brand: 'Mueller\'s', isVegetarian: true, servingSize: '56g', image: elbowMacaroni, nutrition: { calories: 210, protein: 7, carbs: 42, totalFat: 1, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 2, fiber: 2 } },
   ],
 
   'snacks': [
@@ -600,9 +688,15 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Deluxe Mixed Nuts', brand: 'Planters', isVegetarian: true, servingSize: '28g (1 oz)', image: roastedSeaweedSnacks, nutrition: { calories: 170, protein: 5, carbs: 6, totalFat: 15, saturatedFat: 2, transFat: 0, sodium: 90, sugar: 1, fiber: 2 } },
     { id: 13, name: 'Oats \'n Honey Crunchy Granola Bars', brand: 'Nature Valley', isVegetarian: true, servingSize: '42g (2 bars)', image: alaniNutritionProteinBar, nutrition: { calories: 190, protein: 3, carbs: 29, totalFat: 7, saturatedFat: 1, transFat: 0, sodium: 180, sugar: 11, fiber: 2 } },
     { id: 14, name: 'Original Beef Jerky', brand: "Jack Link's", isVegetarian: false, servingSize: '28g (1 oz)', image: annieChun, nutrition: { calories: 80, protein: 12, carbs: 6, totalFat: 1, saturatedFat: 0.5, transFat: 0, sodium: 590, sugar: 6, fiber: 0 } },
-    { id: 15, name: 'Roasted Almonds', brand: 'Blue Diamond', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 170, protein: 6, carbs: 5, totalFat: 15, saturatedFat: 1, transFat: 0, sodium: 150, sugar: 1, fiber: 3 } },
-{ id: 16, name: 'Classic Hummus', brand: 'Sabra', isVegetarian: true, servingSize: '28g', image: null, nutrition: { calories: 70, protein: 2, carbs: 4, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 130, sugar: 0, fiber: 1 } },
-{ id: 17, name: 'SkinnyPop Popcorn', brand: 'SkinnyPop', isVegetarian: true, servingSize: '14g', image: null, nutrition: { calories: 80, protein: 1, carbs: 7, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 45, sugar: 0, fiber: 1 } }
+    { id: 15, name: 'Roasted Almonds', brand: 'Blue Diamond', isVegetarian: true, servingSize: '28g', image: roastedAlmonds, nutrition: { calories: 170, protein: 6, carbs: 5, totalFat: 15, saturatedFat: 1, transFat: 0, sodium: 150, sugar: 1, fiber: 3 } },
+    { id: 16, name: 'Classic Hummus', brand: 'Sabra', isVegetarian: true, servingSize: '28g', image: sabraHummus, nutrition: { calories: 70, protein: 2, carbs: 4, totalFat: 5, saturatedFat: 1, transFat: 0, sodium: 130, sugar: 0, fiber: 1 } },
+    { id: 17, name: 'SkinnyPop Popcorn', brand: 'SkinnyPop', isVegetarian: true, servingSize: '14g', image: skinnyPop, nutrition: { calories: 80, protein: 1, carbs: 7, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 45, sugar: 0, fiber: 1 } },
+    
+    { id: 18, name: 'Sea Salt Pita Chips', brand: "Stacy's", isVegetarian: true, servingSize: '28g', image: stacysPitaChips, nutrition: { calories: 130, protein: 3, carbs: 18, totalFat: 5, saturatedFat: 0.5, transFat: 0, sodium: 270, sugar: 0, fiber: 1 } },
+    { id: 19, name: 'Aged White Cheddar Puffs', brand: "Pirate's Booty", isVegetarian: true, servingSize: '28g', image: piratesBooty, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 6, saturatedFat: 1, transFat: 0, sodium: 190, sugar: 1, fiber: 0 } },
+    { id: 20, name: 'Veggie Straws (Sea Salt)', brand: 'Sensible Portions', isVegetarian: true, servingSize: '28g', image: veggieStraws, nutrition: { calories: 130, protein: 1, carbs: 16, totalFat: 7, saturatedFat: 0.5, transFat: 0, sodium: 220, sugar: 0, fiber: 0 } },
+    { id: 21, name: 'Original Smoked Beef Stick', brand: 'Slim Jim', isVegetarian: false, servingSize: '28g', image: slimJimBeefStick, nutrition: { calories: 160, protein: 6, carbs: 4, totalFat: 13, saturatedFat: 5, transFat: 0, sodium: 480, sugar: 1, fiber: 0 } },
+    { id: 22, name: 'Chocolate Chip Granola Bar', brand: 'Quaker', isVegetarian: true, servingSize: '24g (1 bar)', image: quakerGranolaBar, nutrition: { calories: 100, protein: 1, carbs: 17, totalFat: 3.5, saturatedFat: 1, transFat: 0, sodium: 70, sugar: 7, fiber: 1 } },
   ],
 
   'produce': [
@@ -620,9 +714,15 @@ const FOOD_ITEMS = {
     { id: 12, name: 'Diced Peaches in Juice', brand: 'Dole', isVegetarian: true, servingSize: '113g (1 cup)', image: orangesIn100PercentFruitJuice, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 14, fiber: 1 } },
     { id: 13, name: 'Organic Unsweetened Coconut Flakes', brand: 'Edward & Sons', isVegetarian: true, servingSize: '15g (3 tbsp)', image: organicCoconutFlakes, nutrition: { calories: 100, protein: 1, carbs: 4, totalFat: 9, saturatedFat: 8, transFat: 0, sodium: 5, sugar: 1, fiber: 2 } },
     { id: 14, name: '100% Pure Vermont Maple Syrup', brand: 'Hidden Springs', isVegetarian: true, servingSize: '20g (1 tbsp)', image: pureVermontMapleSyrup, nutrition: { calories: 52, protein: 0, carbs: 13, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 2, sugar: 13, fiber: 0 } },
-    { id: 15, name: 'Fresh Baby Spinach', brand: 'Dole', isVegetarian: true, servingSize: '85g', image: null, nutrition: { calories: 20, protein: 2, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 0, fiber: 2 } },
-{ id: 16, name: 'Hass Avocado', brand: 'Avocados from Mexico', isVegetarian: true, servingSize: '50g', image: null, nutrition: { calories: 80, protein: 1, carbs: 4, totalFat: 7, saturatedFat: 1, transFat: 0, sodium: 0, sugar: 0, fiber: 3 } },
-{ id: 17, name: 'Fresh Blueberries', brand: 'Driscoll\'s', isVegetarian: true, servingSize: '148g', image: null, nutrition: { calories: 80, protein: 1, carbs: 21, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 15, fiber: 4 } }
+    { id: 15, name: 'Fresh Baby Spinach', brand: 'Dole', isVegetarian: true, servingSize: '85g', image: babySpinach, nutrition: { calories: 20, protein: 2, carbs: 3, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 0, fiber: 2 } },
+    { id: 16, name: 'Hass Avocado', brand: 'Avocados from Mexico', isVegetarian: true, servingSize: '50g', image: hassAvocado, nutrition: { calories: 80, protein: 1, carbs: 4, totalFat: 7, saturatedFat: 1, transFat: 0, sodium: 0, sugar: 0, fiber: 3 } },
+    { id: 17, name: 'Fresh Blueberries', brand: 'Driscoll\'s', isVegetarian: true, servingSize: '148g', image: freshBlueberries, nutrition: { calories: 80, protein: 1, carbs: 21, totalFat: 0.5, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 15, fiber: 4 } },
+   
+    { id: 18, name: 'Fresh Gala Apples', brand: "Washington State", isVegetarian: true, servingSize: '182g (1 apple)', image: galaApples, nutrition: { calories: 95, protein: 0.5, carbs: 25, totalFat: 0.3, saturatedFat: 0, transFat: 0, sodium: 2, sugar: 19, fiber: 4 } },
+    { id: 19, name: 'Baby Carrots', brand: 'Grimmway Farms', isVegetarian: true, servingSize: '85g', image: babyCarrots, nutrition: { calories: 35, protein: 1, carbs: 8, totalFat: 0.1, saturatedFat: 0, transFat: 0, sodium: 65, sugar: 5, fiber: 3 } },
+    { id: 20, name: 'Sweet Banana', brand: 'Dole', isVegetarian: true, servingSize: '118g (1 banana)', image: doleBanana, nutrition: { calories: 105, protein: 1, carbs: 27, totalFat: 0.4, saturatedFat: 0, transFat: 0, sodium: 1, sugar: 14, fiber: 3 } },
+    { id: 21, name: 'Fresh Broccoli Crowns', brand: 'Taylor Farms', isVegetarian: true, servingSize: '91g', image: broccoliCrowns, nutrition: { calories: 30, protein: 2.5, carbs: 6, totalFat: 0.3, saturatedFat: 0, transFat: 0, sodium: 30, sugar: 1.5, fiber: 2.5 } },
+    { id: 22, name: 'Red Bell Pepper', brand: 'NatureSweet', isVegetarian: true, servingSize: '119g', image: redBellPepper, nutrition: { calories: 30, protein: 1, carbs: 7, totalFat: 0.3, saturatedFat: 0, transFat: 0, sodium: 5, sugar: 5, fiber: 2.5 } },
   ],
 
   'ice-cream': [
@@ -650,28 +750,22 @@ const FOOD_ITEMS = {
   ],
 
   'frozen-foods': [
-    { id: 1, name: 'Lasagna with Meat Sauce', brand: "Stouffer's", isVegetarian: false, servingSize: '305g (1 tray)', image: null, nutrition: { calories: 380, protein: 18, carbs: 39, totalFat: 16, saturatedFat: 7, transFat: 0, sodium: 930, sugar: 7, fiber: 4 } },
-    { id: 2, name: 'Chicken Pot Pie', brand: "Marie Callender's", isVegetarian: false, servingSize: '425g (1 pie)', image: null, nutrition: { calories: 630, protein: 17, carbs: 51, totalFat: 38, saturatedFat: 17, transFat: 0, sodium: 1000, sugar: 5, fiber: 4 } },
-    { id: 3, name: 'Steamfresh Mixed Vegetables', brand: 'Birds Eye', isVegetarian: true, servingSize: '82g (2/3 cup)', image: null, nutrition: { calories: 50, protein: 2, carbs: 11, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 35, sugar: 3, fiber: 3 } },
-    { id: 4, name: 'Combination Pizza Rolls', brand: "Totino's", isVegetarian: false, servingSize: '85g (6 rolls)', image: null, nutrition: { calories: 210, protein: 5, carbs: 26, totalFat: 9, saturatedFat: 2.5, transFat: 0, sodium: 380, sugar: 3, fiber: 1 } },
-    { id: 5, name: 'Any\'tizers Chicken Nuggets', brand: 'Tyson', isVegetarian: false, servingSize: '84g (5 nuggets)', image: null, nutrition: { calories: 270, protein: 14, carbs: 15, totalFat: 17, saturatedFat: 3.5, transFat: 0, sodium: 470, sugar: 0, fiber: 1 } },
-    { id: 6, name: 'Macaroni & Cheese', brand: "Stouffer's", isVegetarian: true, servingSize: '340g (1 tray)', image: null, nutrition: { calories: 490, protein: 21, carbs: 43, totalFat: 26, saturatedFat: 13, transFat: 0, sodium: 1400, sugar: 4, fiber: 2 } },
-    { id: 7, name: 'Steamfresh Broccoli Florets', brand: 'Birds Eye', isVegetarian: true, servingSize: '85g (1 cup)', image: null, nutrition: { calories: 30, protein: 2, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 2, fiber: 2 } },
-    { id: 8, name: 'Golden Crinkle Fries', brand: 'Ore-Ida', isVegetarian: true, servingSize: '84g (3 oz)', image: null, nutrition: { calories: 100, protein: 1, carbs: 16, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 290, sugar: 0, fiber: 2 } },
-    { id: 9, name: 'Four Cheese Frozen Pizza', brand: 'DiGiorno', isVegetarian: true, servingSize: '140g (1/4 pizza)', image: null, nutrition: { calories: 310, protein: 13, carbs: 39, totalFat: 11, saturatedFat: 5, transFat: 0, sodium: 730, sugar: 6, fiber: 2 } },
-    { id: 10, name: 'Crunchy Breaded Fish Sticks', brand: 'Gorton\'s', isVegetarian: false, servingSize: '108g (6 sticks)', image: null, nutrition: { calories: 250, protein: 12, carbs: 21, totalFat: 13, saturatedFat: 3, transFat: 0, sodium: 380, sugar: 2, fiber: 1 } },
-    { id: 11, name: 'Italian Style Meatballs', brand: 'Cooked Perfect', isVegetarian: false, servingSize: '84g (6 meatballs)', image: null, nutrition: { calories: 240, protein: 11, carbs: 5, totalFat: 20, saturatedFat: 9, transFat: 0, sodium: 520, sugar: 2, fiber: 0 } },
-    { id: 12, name: 'Chicken Alfredo Single Serve', brand: "Stouffer's", isVegetarian: false, servingSize: '283g (1 tray)', image: null, nutrition: { calories: 540, protein: 22, carbs: 52, totalFat: 26, saturatedFat: 12, transFat: 0, sodium: 1170, sugar: 4, fiber: 4 } },
-    { id: 13, name: 'Beef & Bean Burrito', brand: 'El Monterey', isVegetarian: false, servingSize: '142g (1 burrito)', image: null, nutrition: { calories: 310, protein: 10, carbs: 39, totalFat: 13, saturatedFat: 4, transFat: 0, sodium: 430, sugar: 1, fiber: 3 } },
-    { id: 14, name: 'Veggie Burgers', brand: 'MorningStar Farms', isVegetarian: true, servingSize: '67g (1 burger)', image: veggieBurger, nutrition: { calories: 110, protein: 9, carbs: 9, totalFat: 4.5, saturatedFat: 0.5, transFat: 0, sodium: 350, sugar: 1, fiber: 3 } },
-    { id: 15, name: 'Frozen Sweet Peas', brand: 'Birds Eye', isVegetarian: true, servingSize: '85g', image: frozenSweetPeas, nutrition: { calories: 70, protein: 4, carbs: 12, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 100, sugar: 4, fiber: 4 } },
-    { id: 16, name: 'Meatball Sub', brand: 'Hot Pockets', isVegetarian: false, servingSize: '127g (1 sandwich)', image: meatballSub, nutrition: { calories: 320, protein: 11, carbs: 36, totalFat: 15, saturatedFat: 7, transFat: 0, sodium: 660, sugar: 4, fiber: 2 } },
-    
-    { id: 17, name: 'Orange Chicken', brand: "P.F. Chang's", isVegetarian: false, servingSize: '312g (1 meal)', image: orangeChicken, nutrition: { calories: 430, protein: 18, carbs: 64, totalFat: 11, saturatedFat: 2, transFat: 0, sodium: 980, sugar: 32, fiber: 2 } },
-    { id: 18, name: 'Salisbury Steak', brand: "Stouffer's", isVegetarian: false, servingSize: '273g (1 meal)', image: salisburySteak, nutrition: { calories: 340, protein: 17, carbs: 23, totalFat: 21, saturatedFat: 8, transFat: 0.5, sodium: 1090, sugar: 4, fiber: 3 } },
-    { id: 19, name: 'Sweet Corn on the Cob', brand: 'Birds Eye', isVegetarian: true, servingSize: '128g (1 ear)', image: cornOnTheCob, nutrition: { calories: 110, protein: 4, carbs: 24, totalFat: 1.5, saturatedFat: 0, transFat: 0, sodium: 15, sugar: 4, fiber: 3 } },
-    { id: 20, name: 'Beef Shepherd\'s Pie', brand: "Marie Callender's", isVegetarian: false, servingSize: '326g (1 meal)', image: beefShepherdsPie, nutrition: { calories: 340, protein: 15, carbs: 34, totalFat: 16, saturatedFat: 8, transFat: 0, sodium: 1050, sugar: 5, fiber: 5 } },
-    { id: 21, name: 'Mozzarella Sticks', brand: 'Farm Rich', isVegetarian: true, servingSize: '84g (3 sticks)', image: mozzarellaSticks, nutrition: { calories: 250, protein: 11, carbs: 21, totalFat: 13, saturatedFat: 5, transFat: 0, sodium: 590, sugar: 1, fiber: 1 } },
+    { id: 1, name: 'Lasagna with Meat Sauce', brand: "Stouffer's", isVegetarian: false, servingSize: '305g (1 tray)', image: lasagnaMeatSauce, nutrition: { calories: 380, protein: 18, carbs: 39, totalFat: 16, saturatedFat: 7, transFat: 0, sodium: 930, sugar: 7, fiber: 4 } },
+    { id: 2, name: 'Chicken Pot Pie', brand: "Marie Callender's", isVegetarian: false, servingSize: '425g (1 pie)', image: chickenPotPie, nutrition: { calories: 630, protein: 17, carbs: 51, totalFat: 38, saturatedFat: 17, transFat: 0, sodium: 1000, sugar: 5, fiber: 4 } },
+    { id: 3, name: 'Steamfresh Mixed Vegetables', brand: 'Birds Eye', isVegetarian: true, servingSize: '82g (2/3 cup)', image: mixedVegetables, nutrition: { calories: 50, protein: 2, carbs: 11, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 35, sugar: 3, fiber: 3 } },
+    { id: 4, name: 'Combination Pizza Rolls', brand: "Totino's", isVegetarian: false, servingSize: '85g (6 rolls)', image: pizzaRolls, nutrition: { calories: 210, protein: 5, carbs: 26, totalFat: 9, saturatedFat: 2.5, transFat: 0, sodium: 380, sugar: 3, fiber: 1 } },
+    { id: 5, name: "Any'tizers Chicken Nuggets", brand: 'Tyson', isVegetarian: false, servingSize: '84g (5 nuggets)', image: chickenNuggets, nutrition: { calories: 270, protein: 14, carbs: 15, totalFat: 17, saturatedFat: 3.5, transFat: 0, sodium: 470, sugar: 0, fiber: 1 } },
+    { id: 6, name: 'Macaroni & Cheese', brand: "Stouffer's", isVegetarian: true, servingSize: '340g (1 tray)', image: macAndCheese, nutrition: { calories: 490, protein: 21, carbs: 43, totalFat: 26, saturatedFat: 13, transFat: 0, sodium: 1400, sugar: 4, fiber: 2 } },
+    { id: 7, name: 'Steamfresh Broccoli Florets', brand: 'Birds Eye', isVegetarian: true, servingSize: '85g (1 cup)', image: broccoliFlorets, nutrition: { calories: 30, protein: 2, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 2, fiber: 2 } },
+    { id: 8, name: 'Golden Crinkle Fries', brand: 'Ore-Ida', isVegetarian: true, servingSize: '84g (3 oz)', image: crinkleFries, nutrition: { calories: 100, protein: 1, carbs: 16, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 290, sugar: 0, fiber: 2 } },
+    { id: 9, name: 'Four Cheese Frozen Pizza', brand: 'DiGiorno', isVegetarian: true, servingSize: '140g (1/4 pizza)', image: fourCheesePizza, nutrition: { calories: 310, protein: 13, carbs: 39, totalFat: 11, saturatedFat: 5, transFat: 0, sodium: 730, sugar: 6, fiber: 2 } },
+    { id: 10, name: 'Crunchy Breaded Fish Sticks', brand: "Gorton's", isVegetarian: false, servingSize: '108g (6 sticks)', image: fishSticks, nutrition: { calories: 250, protein: 12, carbs: 21, totalFat: 13, saturatedFat: 3, transFat: 0, sodium: 380, sugar: 2, fiber: 1 } },
+    { id: 11, name: 'Italian Style Meatballs', brand: 'Cooked Perfect', isVegetarian: false, servingSize: '84g (6 meatballs)', image: italianMeatballs, nutrition: { calories: 240, protein: 11, carbs: 5, totalFat: 20, saturatedFat: 9, transFat: 0, sodium: 520, sugar: 2, fiber: 0 } },
+    { id: 12, name: 'Chicken Alfredo Single Serve', brand: "Stouffer's", isVegetarian: false, servingSize: '283g (1 tray)', image: chickenAlfredo, nutrition: { calories: 540, protein: 22, carbs: 52, totalFat: 26, saturatedFat: 12, transFat: 0, sodium: 1170, sugar: 4, fiber: 4 } },
+    { id: 13, name: 'Beef & Bean Burrito', brand: 'El Monterey', isVegetarian: false, servingSize: '142g (1 burrito)', image: beefBeanBurrito, nutrition: { calories: 310, protein: 10, carbs: 39, totalFat: 13, saturatedFat: 4, transFat: 0, sodium: 430, sugar: 1, fiber: 3 } },
+    { id: 14, name: 'Veggie Burgers', brand: 'MorningStar Farms', isVegetarian: true, servingSize: '67g', image: null, nutrition: { calories: 110, protein: 9, carbs: 9, totalFat: 4.5, saturatedFat: 0.5, transFat: 0, sodium: 350, sugar: 1, fiber: 3 } },
+{ id: 15, name: 'Frozen Sweet Peas', brand: 'Birds Eye', isVegetarian: true, servingSize: '85g', image: null, nutrition: { calories: 70, protein: 4, carbs: 12, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 100, sugar: 4, fiber: 4 } },
+{ id: 16, name: 'Meatball Sub', brand: 'Hot Pockets', isVegetarian: false, servingSize: '127g', image: null, nutrition: { calories: 320, protein: 11, carbs: 36, totalFat: 15, saturatedFat: 7, transFat: 0, sodium: 660, sugar: 4, fiber: 2 } }
   ],
 };
 

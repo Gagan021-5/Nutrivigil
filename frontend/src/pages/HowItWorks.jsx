@@ -3,36 +3,38 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Upload, Brain, Target, CheckCircle, Scan, Zap, Shield, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useTheme } from '../contexts/ThemeContext';
+import { useTranslation } from 'react-i18next';
 
 const HowItWorks = () => {
     const { theme } = useTheme();
+    const { t } = useTranslation();
     const steps = [
         {
             number: "01",
             icon: <Upload className="w-8 h-8" />,
-            title: "Upload Food Photo",
-            description: "Take a picture of your food package, label, or meal. Our AI works with any food image - from restaurant dishes to grocery items.",
+            title: t('howItWorks.steps.step1.title'),
+            description: t('howItWorks.steps.step1.description'),
             color: "from-purple-500 to-indigo-500"
         },
         {
             number: "02",
             icon: <Scan className="w-8 h-8" />,
-            title: "AI Identifies Food",
-            description: "Powered by Gemini 2.5 AI, our system instantly recognizes the food item and extracts nutritional information from labels or databases.",
+            title: t('howItWorks.steps.step2.title'),
+            description: t('howItWorks.steps.step2.description'),
             color: "from-indigo-500 to-blue-500"
         },
         {
             number: "03",
             icon: <Brain className="w-8 h-8" />,
-            title: "Health Analysis",
-            description: "Based on your health condition (diabetes, hypertension, etc.), our AI analyzes if the food is safe, providing a color-coded verdict.",
+            title: t('howItWorks.steps.step3.title'),
+            description: t('howItWorks.steps.step3.description'),
             color: "from-blue-500 to-cyan-500"
         },
         {
             number: "04",
             icon: <Target className="w-8 h-8" />,
-            title: "Get Recommendations",
-            description: "Receive personalized suggestions, healthier alternatives, and detailed nutritional breakdowns tailored to your health goals.",
+            title: t('howItWorks.steps.step4.title'),
+            description: t('howItWorks.steps.step4.description'),
             color: "from-cyan-500 to-teal-500"
         }
     ];
@@ -40,18 +42,18 @@ const HowItWorks = () => {
     const features = [
         {
             icon: <CheckCircle className="w-6 h-6" />,
-            title: "Traffic Light System",
-            description: "Quick visual indicators: Green (Safe), Yellow (Moderate), Red (Avoid)"
+            title: t('howItWorks.features.trafficLight.title'),
+            description: t('howItWorks.features.trafficLight.description')
         },
         {
             icon: <Shield className="w-6 h-6" />,
-            title: "Privacy First",
-            description: "All analysis happens securely. Your health data stays private."
+            title: t('howItWorks.features.privacy.title'),
+            description: t('howItWorks.features.privacy.description')
         },
         {
             icon: <Zap className="w-6 h-6" />,
-            title: "Real-Time Results",
-            description: "Get comprehensive analysis in under 3 seconds"
+            title: t('howItWorks.features.realTime.title'),
+            description: t('howItWorks.features.realTime.description')
         }
     ];
 
@@ -72,19 +74,18 @@ const HowItWorks = () => {
                         }`}
                     >
                         <ArrowLeft className="w-4 h-4" />
-                        Back to Home
+                        {t('howItWorks.backToHome')}
                     </Link>
 
                     {/* Hero Content */}
                     <div className="text-center">
                         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                            How It Works
+                            {t('howItWorks.title')}
                         </h1>
                         <p className={`text-xl sm:text-2xl max-w-3xl mx-auto leading-relaxed ${
                             theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                         }`}>
-                            From photo to personalized health insights in 4 simple steps. 
-                            Let AI guide your nutrition journey.
+                            {t('howItWorks.subtitle')}
                         </p>
                     </div>
                 </div>
@@ -147,7 +148,7 @@ const HowItWorks = () => {
             }`}>
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
-                        What Makes It Special
+                        {t('howItWorks.featuresTitle')}
                     </h2>
                     <div className="grid md:grid-cols-3 gap-6">
                         {features.map((feature, index) => (
@@ -185,12 +186,12 @@ const HowItWorks = () => {
                             : 'bg-gradient-to-r from-purple-100 to-pink-100 border-purple-300'
                     }`}>
                         <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                            Ready to Try It?
+                            {t('howItWorks.ctaTitle')}
                         </h2>
                         <p className={`text-xl mb-8 max-w-2xl mx-auto ${
                             theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                         }`}>
-                            Join thousands of users making smarter food choices with AI-powered nutrition analysis.
+                            {t('howItWorks.ctaDesc')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link 
@@ -198,7 +199,7 @@ const HowItWorks = () => {
                                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
                             >
                                 <Scan className="w-5 h-5" />
-                                Start Scanning Now
+                                {t('howItWorks.startScanning')}
                                 <ArrowRight className="w-5 h-5" />
                             </Link>
                             <Link 
@@ -209,7 +210,7 @@ const HowItWorks = () => {
                                         : 'bg-white hover:bg-gray-50 text-gray-900 border-gray-300'
                                 }`}
                             >
-                                Learn More About Us
+                                {t('howItWorks.learnMore')}
                             </Link>
                         </div>
                     </div>

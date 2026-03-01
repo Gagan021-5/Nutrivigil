@@ -80,113 +80,49 @@
     }
   },
 
-  "protocolPage": {
-    "backToHome": "Terug naar Home",
-    "heroTitle": "Gezondheidsprotocollen",
-    "heroSubtitle": "Evidentiegerichte voedingsrichtlijnen afgestemd op uw specifieke gezondheidstoestand",
-    "conditionsTitle": "Ondersteunde gezondheidscondities",
-    "dosLabel": "Aanbevolen (wat te doen)",
-    "dontsLabel": "Vermijden (wat niet te doen)",
-    "nutrientsLabel": "Belangrijkste voedingsstoffen om te monitoren",
-    "howHelpTitle": "Hoe NutriVigil helpt",
-    "help": {
-      "ai": {
-        "title": "AI-protocolanalyse",
-        "desc": "Onze AI vergelijkt voedingsmiddelen met uw gekozen gezondheidsprotocollen en geeft nauwkeurige aanbevelingen"
+  "howItWorks": {
+    "backToHome": "Terug naar home",
+    "title": "Hoe het werkt",
+    "subtitle": "Van foto naar gepersonaliseerde gezondheidsinzichten in 4 eenvoudige stappen. Laat AI uw voedingsreis begeleiden.",
+    "steps": {
+      "step1": {
+        "title": "Upload voedingsfoto",
+        "description": "Maak een foto van uw voedselverpakking, etiket of maaltijd. Onze AI werkt met elke voedingsafbeelding - van restaurantgerechten tot kruidenierswaren."
       },
-      "personalized": {
-        "title": "Gepersonaliseerde aanbevelingen",
-        "desc": "Ontvang op maat gemaakt voedingsadvies op basis van uw specifieke gezondheidstoestand en dieetwensen"
+      "step2": {
+        "title": "AI identificeert voedsel",
+        "description": "Aangedreven door Gemini 2.5 AI herkent ons systeem het voedselitem direct en extraheert voedingsinformatie uit etiketten of databases."
       },
-      "safety": {
-        "title": "Realtime veiligheidscontroles",
-        "desc": "Directe verkeerslichtseinen (groen/geel/rood) voor elk voedingsmiddel dat u scant op basis van uw protocollen"
+      "step3": {
+        "title": "Gezondheidsanalyse",
+        "description": "Op basis van uw gezondheidsconditie (diabetes, hypertensie, etc.) analyseert onze AI of het voedsel veilig is en geeft een kleurgecodeerd oordeel."
+      },
+      "step4": {
+        "title": "Ontvang aanbevelingen",
+        "description": "Ontvang gepersonaliseerde suggesties, gezondere alternatieven en gedetailleerde voedingsoverzichten afgestemd op uw gezondheidsdoelen."
       }
     },
-    "disclaimerTitle": "Belangrijke medische disclaimer",
-    "disclaimerP1Bold": "NutriVigil biedt uitsluitend educatieve informatie en algemene richtlijnen.",
-    "disclaimerP1Rest": " Onze aanbevelingen zijn gebaseerd op evidentiegerichte voedingsrichtlijnen, maar mogen professioneel medisch advies, diagnose of behandeling niet vervangen.",
-    "disclaimerP2": "Raadpleeg altijd uw zorgverlener, geregistreerde diëtist of gekwalificeerde medische professional voordat u ingrijpende wijzigingen in uw dieet aanbrengt, zeker als u bestaande gezondheidsproblemen heeft of medicijnen gebruikt.",
-    "disclaimerP3": "Individuele voedingsbehoeften variëren sterk op basis van medische geschiedenis, huidige gezondheidstoestand, medicatie en andere factoren. Wat voor één persoon werkt, is mogelijk niet geschikt voor een ander.",
-    "disclaimerP4": "Zoek bij een noodgeval of ernstige symptomen onmiddellijk medische hulp.",
-    "ctaTitle": "Klaar om te beginnen?",
-    "ctaSubtitle": "Stel uw gezondheidsprofiel in en ontvang gepersonaliseerde voedingsaanbevelingen",
-    "ctaButton": "Begin met voedsel scannen",
-    "protocols": {
-      "diabetes": {
-        "title": "Diabetesbeheer",
-        "description": "Beheer de bloedsuikerspiegel door bewust koolhydraten te eten en evenwichtige voeding te hanteren.",
-        "dos": ["Kies voedingsmiddelen met een lage glycemische index", "Monitor koolhydraatporties", "Neem vezelrijke voedingsmiddelen op", "Eet regelmatige, evenwichtige maaltijden", "Blijf gehydrateerd door water te drinken"],
-        "donts": ["Vermijd suikerhoudende dranken en frisdrank", "Beperk witbrood en geraffineerde granen", "Vermijd bewerkte snacks met veel suiker", "Vermijd vruchtensap met toegevoegde suikers", "Minimaliseer gefrituurde en vette voedingsmiddelen"],
-        "nutrients": [
-          {"name": "Koolhydraten", "note": "Monitor inname, kies complexe koolhydraten"},
-          {"name": "Vezels", "note": "Streef naar 25-30 g per dag"},
-          {"name": "Suiker", "note": "Beperk toegevoegde suikers, let op natuurlijke suikers"},
-          {"name": "Eiwitten", "note": "Neem magere bronnen op bij elke maaltijd"}
-        ]
+    "featuresTitle": "Wat het bijzonder maakt",
+    "features": {
+      "trafficLight": {
+        "title": "Verkeerslichtsysteem",
+        "description": "Snelle visuele indicatoren: Groen (Veilig), Geel (Matig), Rood (Vermijden)"
       },
-      "hypertension": {
-        "title": "Hypertensie",
-        "description": "Beheers de bloeddruk door de natriuminname te verminderen en hartvriendelijke voeding te eten.",
-        "dos": ["Kies verse, volwaardige voedingsmiddelen", "Gebruik kruiden en specerijen voor smaak", "Neem kaliumrijke voedingsmiddelen op", "Eet dagelijks fruit en groenten", "Kies opties met weinig natrium"],
-        "donts": ["Vermijd het toevoegen van tafelzout", "Beperk bewerkte en ingeblikte voedingsmiddelen", "Vermijd zoute snacks en chips", "Vermijd ingelegde en geconserveerde voedingsmiddelen", "Minimaliseer restaurant- en fastfood"],
-        "nutrients": [
-          {"name": "Natrium", "note": "Beperk tot <2.300 mg/dag (ideaal <1.500 mg)"},
-          {"name": "Kalium", "note": "Verhoog de inname (bananen, spinazie)"},
-          {"name": "Calcium", "note": "Ondersteunen met magere zuivelproducten"},
-          {"name": "Magnesium", "note": "Neem noten, zaden en volle granen op"}
-        ]
+      "privacy": {
+        "title": "Privacy eerst",
+        "description": "Alle analyses verlopen veilig. Uw gezondheidsgegevens blijven privé."
       },
-      "heart": {
-        "title": "Hartziekten",
-        "description": "Bescherm de hartgezondheid door cholesterol en vetten te beheren en een gezond gewicht te behouden.",
-        "dos": ["Kies magere eiwitbronnen (vis, gevogelte)", "Neem omega-3-vetzuren op", "Eet voldoende groenten en fruit", "Kies volkoren granen in plaats van geraffineerde", "Gebruik gezonde oliën (olijf, avocado)"],
-        "donts": ["Vermijd transvetten en gedeeltelijk gehydrogeneerde oliën", "Beperk verzadigde vetten (rood vlees, boter)", "Vermijd gefrituurde en vette voedingsmiddelen", "Vermijd voedingsmiddelen met veel cholesterol", "Minimaliseer bewerkt vlees"],
-        "nutrients": [
-          {"name": "Verzadigd vet", "note": "Beperk tot <7% van de dagelijkse calorieën"},
-          {"name": "Cholesterol", "note": "Houd onder 200 mg per dag"},
-          {"name": "Omega-3", "note": "Eet 2x per week vette vis"},
-          {"name": "Vezels", "note": "Helpt het cholesterol te verlagen"}
-        ]
-      },
-      "kidney": {
-        "title": "Nierziekte",
-        "description": "Ondersteun de nierfunctie door eiwitten, kalium, fosfor en natrium te beheren.",
-        "dos": ["Beheers eiwitporties (raadpleeg een diëtist)", "Kies fruit en groenten met weinig kalium", "Kies voedingsmiddelen met weinig fosfor", "Blijf binnen vochtbeperkingen indien voorgeschreven", "Monitor portiegroottes zorgvuldig"],
-        "donts": ["Vermijd voedingsmiddelen met veel kalium (bananen, sinaasappels)", "Beperk zuivel en voedingsmiddelen met veel fosfor", "Vermijd bewerkte voedingsmiddelen met veel natrium", "Vermijd donkere cola en bepaalde dranken", "Minimaliseer eiwitten uit rood vlees"],
-        "nutrients": [
-          {"name": "Eiwitten", "note": "Matige inname volgens doktersadvies"},
-          {"name": "Kalium", "note": "Beperk tot aanbevolen niveaus"},
-          {"name": "Fosfor", "note": "Vermijd additieven in bewerkte voedingsmiddelen"},
-          {"name": "Natrium", "note": "Houd de inname laag"}
-        ]
-      },
-      "obesity": {
-        "title": "Obesitas en gewichtsbeheer",
-        "description": "Bereik een gezond gewicht door evenwichtige voeding, portiecontrole en bewust eten.",
-        "dos": ["Eet nutriëntrijke, caloriearm voedsel", "Oefen portiecontrole", "Neem voldoende groenten op", "Kies magere eiwitbronnen", "Blijf regelmatig lichamelijk actief"],
-        "donts": ["Vermijd suikerhoudende dranken en snacks", "Beperk calorierijke bewerkte voedingsmiddelen", "Vermijd grote porties en bijschenkingen", "Vermijd eten uit verveling of stress", "Minimaliseer gefrituurde en vette voedingsmiddelen"],
-        "nutrients": [
-          {"name": "Calorieën", "note": "Creëer een matig tekort (500-750 cal/dag)"},
-          {"name": "Eiwitten", "note": "Helpt spiermassa te behouden tijdens gewichtsverlies"},
-          {"name": "Vezels", "note": "Bevordert verzadiging en voldoening"},
-          {"name": "Water", "note": "Drink voldoende om de stofwisseling te ondersteunen"}
-        ]
-      },
-      "allergies": {
-        "title": "Voedselallergieën",
-        "description": "Vermijd allergenen en voorkom kruisbesmetting terwijl u een evenwichtige voeding handhaaft.",
-        "dos": ["Lees alle voedseletiketten zorgvuldig", "Vraag naar ingrediënten bij buitenshuis eten", "Draag noodmedicatie (indien voorgeschreven)", "Informeer anderen over uw allergieën", "Vind veilige alternatieven voor voedingsstoffen"],
-        "donts": ["Consumeer nooit bekende allergenen", "Vermijd voedingsmiddelen met onduidelijke ingrediënten", "Ga niet ervan uit dat 'kan bevatten' veilig is", "Vermijd kruisbesmette oppervlakken", "Neem geen risico met nieuwe voedingsmiddelen zonder verificatie"],
-        "nutrients": [
-          {"name": "Veelvoorkomende allergenen", "note": "Melk, eieren, vis, schaal- en schelpdieren, boomvruchten, pinda's, tarwe, soja"},
-          {"name": "Voedingstekorten", "note": "Vervang voedingsstoffen uit vermeden voedingsmiddelen"},
-          {"name": "Kruisbesmetting", "note": "Wees voorzichtig bij de bereiding van voedsel"},
-          {"name": "Noodplan", "note": "Wees altijd voorbereid"}
-        ]
+      "realTime": {
+        "title": "Realtime resultaten",
+        "description": "Ontvang uitgebreide analyse in minder dan 3 seconden"
       }
-    }
+    },
+    "ctaTitle": "Klaar om het te proberen?",
+    "ctaDesc": "Sluit u aan bij duizenden gebruikers die slimmere voedselkeuzes maken met AI-gestuurde voedingsanalyse.",
+    "startScanning": "Nu beginnen met scannen",
+    "learnMore": "Meer over ons"
   },
+
   "howSteps": {
     "upload": {
       "title": "1. Foto uploaden",

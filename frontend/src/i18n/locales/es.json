@@ -80,113 +80,49 @@
     }
   },
 
-  "protocolPage": {
+  "howItWorks": {
     "backToHome": "Volver al inicio",
-    "heroTitle": "Protocolos de Salud",
-    "heroSubtitle": "Guías dietéticas basadas en evidencia adaptadas a sus condiciones de salud específicas",
-    "conditionsTitle": "Condiciones de Salud Soportadas",
-    "dosLabel": "Recomendado (Hacer)",
-    "dontsLabel": "Evitar (No hacer)",
-    "nutrientsLabel": "Nutrientes Clave a Monitorear",
-    "howHelpTitle": "Cómo Ayuda NutriVigil",
-    "help": {
-      "ai": {
-        "title": "Análisis de Protocolo con IA",
-        "desc": "Nuestra IA cruza los alimentos con sus protocolos de salud seleccionados para proporcionar recomendaciones precisas"
+    "title": "Cómo funciona",
+    "subtitle": "De la foto a perspectivas de salud personalizadas en 4 sencillos pasos. Deja que la IA guíe tu viaje nutricional.",
+    "steps": {
+      "step1": {
+        "title": "Sube una foto del alimento",
+        "description": "Toma una foto del envase del alimento, la etiqueta o la comida. Nuestra IA funciona con cualquier imagen de alimento - desde platos de restaurante hasta artículos de tienda."
       },
-      "personalized": {
-        "title": "Recomendaciones Personalizadas",
-        "desc": "Obtenga asesoramiento nutricional personalizado según sus condiciones de salud específicas y necesidades dietéticas"
+      "step2": {
+        "title": "La IA identifica el alimento",
+        "description": "Impulsado por Gemini 2.5 AI, nuestro sistema reconoce instantáneamente el alimento y extrae información nutricional de etiquetas o bases de datos."
       },
-      "safety": {
-        "title": "Verificaciones de Seguridad en Tiempo Real",
-        "desc": "Señales de semáforo instantáneas (Verde/Amarillo/Rojo) para cada alimento que escanea según sus protocolos"
+      "step3": {
+        "title": "Análisis de salud",
+        "description": "Basándose en tu condición de salud (diabetes, hipertensión, etc.), nuestra IA analiza si el alimento es seguro, proporcionando un veredicto con código de colores."
+      },
+      "step4": {
+        "title": "Obtener recomendaciones",
+        "description": "Recibe sugerencias personalizadas, alternativas más saludables y análisis nutricionales detallados adaptados a tus objetivos de salud."
       }
     },
-    "disclaimerTitle": "Aviso Legal Médico Importante",
-    "disclaimerP1Bold": "NutriVigil proporciona únicamente información educativa y orientación general.",
-    "disclaimerP1Rest": " Nuestras recomendaciones se basan en pautas dietéticas basadas en evidencia, pero no deben reemplazar el asesoramiento médico profesional, el diagnóstico o el tratamiento.",
-    "disclaimerP2": "Consulte siempre a su proveedor de atención médica, dietista registrado o profesional médico calificado antes de realizar cambios significativos en su dieta, especialmente si tiene condiciones de salud preexistentes o toma medicamentos.",
-    "disclaimerP3": "Las necesidades nutricionales individuales varían enormemente según el historial médico, el estado de salud actual, los medicamentos y otros factores. Lo que funciona para una persona puede no ser apropiado para otra.",
-    "disclaimerP4": "En caso de emergencia o síntomas graves, busque atención médica inmediata.",
-    "ctaTitle": "¿Listo para Empezar?",
-    "ctaSubtitle": "Configure su perfil de salud y reciba recomendaciones nutricionales personalizadas",
-    "ctaButton": "Empezar a Escanear Alimentos",
-    "protocols": {
-      "diabetes": {
-        "title": "Manejo de la Diabetes",
-        "description": "Controle los niveles de azúcar en sangre mediante una ingesta consciente de carbohidratos y una nutrición equilibrada.",
-        "dos": ["Elija alimentos con bajo índice glucémico", "Controle las porciones de carbohidratos", "Incluya alimentos ricos en fibra", "Coma comidas regulares y equilibradas", "Manténgase hidratado con agua"],
-        "donts": ["Evite las bebidas azucaradas y los refrescos", "Limite el pan blanco y los granos refinados", "Evite los snacks procesados con alto contenido en azúcar", "Evite los jugos de fruta con azúcar añadida", "Minimice los alimentos fritos y grasos"],
-        "nutrients": [
-          {"name": "Carbohidratos", "note": "Controle la ingesta, elija carbohidratos complejos"},
-          {"name": "Fibra", "note": "Apunte a 25-30 g diarios"},
-          {"name": "Azúcar", "note": "Limite los azúcares añadidos, vigile los azúcares naturales"},
-          {"name": "Proteína", "note": "Incluya fuentes magras en cada comida"}
-        ]
+    "featuresTitle": "Qué lo hace especial",
+    "features": {
+      "trafficLight": {
+        "title": "Sistema de semáforo",
+        "description": "Indicadores visuales rápidos: Verde (Seguro), Amarillo (Moderado), Rojo (Evitar)"
       },
-      "hypertension": {
-        "title": "Hipertensión (Presión Arterial Alta)",
-        "description": "Controle la presión arterial mediante una reducción de la ingesta de sodio y alimentos saludables para el corazón.",
-        "dos": ["Elija alimentos frescos e integrales", "Use hierbas y especias para dar sabor", "Incluya alimentos ricos en potasio", "Coma frutas y verduras a diario", "Seleccione opciones bajas en sodio"],
-        "donts": ["Evite añadir sal de mesa", "Limite los alimentos procesados y enlatados", "Evite los snacks salados y las patatas fritas", "Evite los alimentos encurtidos y preservados", "Minimice la comida de restaurante y rápida"],
-        "nutrients": [
-          {"name": "Sodio", "note": "Limite a <2.300 mg diarios (idealmente <1.500 mg)"},
-          {"name": "Potasio", "note": "Aumente la ingesta (plátanos, espinacas)"},
-          {"name": "Calcio", "note": "Apoye con lácteos bajos en grasa"},
-          {"name": "Magnesio", "note": "Incluya nueces, semillas, granos integrales"}
-        ]
+      "privacy": {
+        "title": "Privacidad primero",
+        "description": "Todo el análisis ocurre de forma segura. Tus datos de salud permanecen privados."
       },
-      "heart": {
-        "title": "Enfermedades del Corazón",
-        "description": "Proteja la salud cardíaca gestionando el colesterol, las grasas y manteniendo un peso saludable.",
-        "dos": ["Elija proteínas magras (pescado, aves)", "Incluya ácidos grasos omega-3", "Coma abundante verdura y fruta", "Seleccione granos integrales frente a los refinados", "Use aceites saludables (oliva, aguacate)"],
-        "donts": ["Evite las grasas trans y los aceites parcialmente hidrogenados", "Limite las grasas saturadas (carne roja, mantequilla)", "Evite los alimentos fritos y grasos", "Evite los alimentos con alto contenido en colesterol", "Minimice las carnes procesadas"],
-        "nutrients": [
-          {"name": "Grasa Saturada", "note": "Limite a <7% de las calorías diarias"},
-          {"name": "Colesterol", "note": "Manténgalo por debajo de 200 mg diarios"},
-          {"name": "Omega-3", "note": "Coma pescado graso 2 veces por semana"},
-          {"name": "Fibra", "note": "Ayuda a reducir el colesterol"}
-        ]
-      },
-      "kidney": {
-        "title": "Enfermedad Renal",
-        "description": "Apoye la función renal gestionando proteínas, potasio, fósforo y sodio.",
-        "dos": ["Controle las porciones de proteína (consulte al dietista)", "Elija frutas y verduras bajas en potasio", "Seleccione alimentos bajos en fósforo", "Manténgase dentro de los límites de líquidos si se prescribe", "Controle cuidadosamente el tamaño de las porciones"],
-        "donts": ["Evite alimentos con alto contenido en potasio (plátanos, naranjas)", "Limite los lácteos y alimentos ricos en fósforo", "Evite los alimentos procesados con alto contenido en sodio", "Evite los refrescos de cola oscura y ciertas bebidas", "Minimice la proteína de carne roja"],
-        "nutrients": [
-          {"name": "Proteína", "note": "Ingesta moderada según indicación médica"},
-          {"name": "Potasio", "note": "Limite a los niveles recomendados"},
-          {"name": "Fósforo", "note": "Evite aditivos en alimentos procesados"},
-          {"name": "Sodio", "note": "Mantenga la ingesta baja"}
-        ]
-      },
-      "obesity": {
-        "title": "Obesidad y Control de Peso",
-        "description": "Logre un peso saludable mediante una nutrición equilibrada, control de porciones y alimentación consciente.",
-        "dos": ["Coma alimentos densos en nutrientes y bajos en calorías", "Practique el control de porciones", "Incluya abundantes verduras", "Elija proteínas magras", "Manténgase físicamente activo con regularidad"],
-        "donts": ["Evite las bebidas y snacks azucarados", "Limite los alimentos procesados ricos en calorías", "Evite las porciones grandes y repetir", "Evite comer por aburrimiento o estrés", "Minimice los alimentos fritos y grasos"],
-        "nutrients": [
-          {"name": "Calorías", "note": "Cree un déficit moderado (500-750 cal/día)"},
-          {"name": "Proteína", "note": "Ayuda a preservar el músculo durante la pérdida de peso"},
-          {"name": "Fibra", "note": "Promueve la saciedad y la plenitud"},
-          {"name": "Agua", "note": "Beba abundante para apoyar el metabolismo"}
-        ]
-      },
-      "allergies": {
-        "title": "Alergias Alimentarias",
-        "description": "Evite los alérgenos y prevenga la contaminación cruzada manteniendo una nutrición equilibrada.",
-        "dos": ["Lea todos los etiquetados de alimentos con cuidado", "Pregunte sobre los ingredientes al comer fuera", "Lleve medicación de emergencia (si se prescribe)", "Informe a otros sobre sus alergias", "Encuentre alternativas seguras para los nutrientes"],
-        "donts": ["Nunca consuma alérgenos conocidos", "Evite alimentos con ingredientes poco claros", "No asuma que \"puede contener\" es seguro", "Evite superficies contaminadas de forma cruzada", "No se arriesgue a probar nuevos alimentos sin verificar"],
-        "nutrients": [
-          {"name": "Alérgenos Comunes", "note": "Leche, huevos, pescado, mariscos, nueces de árbol, cacahuetes, trigo, soja"},
-          {"name": "Carencias Nutricionales", "note": "Reemplace los nutrientes de los alimentos evitados"},
-          {"name": "Contaminación Cruzada", "note": "Sea vigilante en la preparación de alimentos"},
-          {"name": "Plan de Emergencia", "note": "Esté siempre preparado"}
-        ]
+      "realTime": {
+        "title": "Resultados en tiempo real",
+        "description": "Obtén un análisis completo en menos de 3 segundos"
       }
-    }
+    },
+    "ctaTitle": "¿Listo para probarlo?",
+    "ctaDesc": "Únete a miles de usuarios que toman decisiones alimentarias más inteligentes con análisis nutricional impulsado por IA.",
+    "startScanning": "Empezar a escanear ahora",
+    "learnMore": "Más información sobre nosotros"
   },
+
   "howSteps": {
     "upload": {
       "title": "1. Subir foto",
