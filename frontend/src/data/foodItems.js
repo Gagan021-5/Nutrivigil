@@ -4,6 +4,19 @@
  * Total: ~220 food items with complete nutrition information
  */
 
+import lasagnaMeatSauce from '../assets/frozen-foods/lasagnaMeatSauce.jpg';
+import chickenPotPie from '../assets/frozen-foods/chickenPotPie.jpg';
+import mixedVegetables from '../assets/frozen-foods/mixedVegetables.jpg';
+import pizzaRolls from '../assets/frozen-foods/pizzaRolls.jpg';
+import chickenNuggets from '../assets/frozen-foods/chickenNuggets.jpg';
+import macAndCheese from '../assets/frozen-foods/macAndCheese.jpg';
+import broccoliFlorets from '../assets/frozen-foods/broccoliFlorets.jpg';
+import crinkleFries from '../assets/frozen-foods/crinkleFries.jpg';
+import fourCheesePizza from '../assets/frozen-foods/fourCheesePizza.jpg';
+import fishSticks from '../assets/frozen-foods/fishSticks.jpg';
+import italianMeatballs from '../assets/frozen-foods/italianMeatballs.jpg';
+import chickenAlfredo from '../assets/frozen-foods/chickenAlfredo.jpg';
+import beefBeanBurrito from '../assets/frozen-foods/beefBeanBurrito.jpg';
 import genericFood from '../assets/generic-food.jpg';
 import appleGrape from '../assets/baby-food/apple-grape.jpg';
 import applePeach from '../assets/baby-food/apple-peach.jpg';
@@ -714,19 +727,19 @@ const FOOD_ITEMS = {
   ],
 
   'frozen-foods': [
-    { id: 1, name: 'Lasagna with Meat Sauce', brand: "Stouffer's", isVegetarian: false, servingSize: '305g (1 tray)', image: null, nutrition: { calories: 380, protein: 18, carbs: 39, totalFat: 16, saturatedFat: 7, transFat: 0, sodium: 930, sugar: 7, fiber: 4 } },
-    { id: 2, name: 'Chicken Pot Pie', brand: "Marie Callender's", isVegetarian: false, servingSize: '425g (1 pie)', image: null, nutrition: { calories: 630, protein: 17, carbs: 51, totalFat: 38, saturatedFat: 17, transFat: 0, sodium: 1000, sugar: 5, fiber: 4 } },
-    { id: 3, name: 'Steamfresh Mixed Vegetables', brand: 'Birds Eye', isVegetarian: true, servingSize: '82g (2/3 cup)', image: null, nutrition: { calories: 50, protein: 2, carbs: 11, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 35, sugar: 3, fiber: 3 } },
-    { id: 4, name: 'Combination Pizza Rolls', brand: "Totino's", isVegetarian: false, servingSize: '85g (6 rolls)', image: null, nutrition: { calories: 210, protein: 5, carbs: 26, totalFat: 9, saturatedFat: 2.5, transFat: 0, sodium: 380, sugar: 3, fiber: 1 } },
-    { id: 5, name: 'Any\'tizers Chicken Nuggets', brand: 'Tyson', isVegetarian: false, servingSize: '84g (5 nuggets)', image: null, nutrition: { calories: 270, protein: 14, carbs: 15, totalFat: 17, saturatedFat: 3.5, transFat: 0, sodium: 470, sugar: 0, fiber: 1 } },
-    { id: 6, name: 'Macaroni & Cheese', brand: "Stouffer's", isVegetarian: true, servingSize: '340g (1 tray)', image: null, nutrition: { calories: 490, protein: 21, carbs: 43, totalFat: 26, saturatedFat: 13, transFat: 0, sodium: 1400, sugar: 4, fiber: 2 } },
-    { id: 7, name: 'Steamfresh Broccoli Florets', brand: 'Birds Eye', isVegetarian: true, servingSize: '85g (1 cup)', image: null, nutrition: { calories: 30, protein: 2, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 2, fiber: 2 } },
-    { id: 8, name: 'Golden Crinkle Fries', brand: 'Ore-Ida', isVegetarian: true, servingSize: '84g (3 oz)', image: null, nutrition: { calories: 100, protein: 1, carbs: 16, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 290, sugar: 0, fiber: 2 } },
-    { id: 9, name: 'Four Cheese Frozen Pizza', brand: 'DiGiorno', isVegetarian: true, servingSize: '140g (1/4 pizza)', image: null, nutrition: { calories: 310, protein: 13, carbs: 39, totalFat: 11, saturatedFat: 5, transFat: 0, sodium: 730, sugar: 6, fiber: 2 } },
-    { id: 10, name: 'Crunchy Breaded Fish Sticks', brand: 'Gorton\'s', isVegetarian: false, servingSize: '108g (6 sticks)', image: null, nutrition: { calories: 250, protein: 12, carbs: 21, totalFat: 13, saturatedFat: 3, transFat: 0, sodium: 380, sugar: 2, fiber: 1 } },
-    { id: 11, name: 'Italian Style Meatballs', brand: 'Cooked Perfect', isVegetarian: false, servingSize: '84g (6 meatballs)', image: null, nutrition: { calories: 240, protein: 11, carbs: 5, totalFat: 20, saturatedFat: 9, transFat: 0, sodium: 520, sugar: 2, fiber: 0 } },
-    { id: 12, name: 'Chicken Alfredo Single Serve', brand: "Stouffer's", isVegetarian: false, servingSize: '283g (1 tray)', image: null, nutrition: { calories: 540, protein: 22, carbs: 52, totalFat: 26, saturatedFat: 12, transFat: 0, sodium: 1170, sugar: 4, fiber: 4 } },
-    { id: 13, name: 'Beef & Bean Burrito', brand: 'El Monterey', isVegetarian: false, servingSize: '142g (1 burrito)', image: null, nutrition: { calories: 310, protein: 10, carbs: 39, totalFat: 13, saturatedFat: 4, transFat: 0, sodium: 430, sugar: 1, fiber: 3 } },
+    { id: 1, name: 'Lasagna with Meat Sauce', brand: "Stouffer's", isVegetarian: false, servingSize: '305g (1 tray)', image: lasagnaMeatSauce, nutrition: { calories: 380, protein: 18, carbs: 39, totalFat: 16, saturatedFat: 7, transFat: 0, sodium: 930, sugar: 7, fiber: 4 } },
+    { id: 2, name: 'Chicken Pot Pie', brand: "Marie Callender's", isVegetarian: false, servingSize: '425g (1 pie)', image: chickenPotPie, nutrition: { calories: 630, protein: 17, carbs: 51, totalFat: 38, saturatedFat: 17, transFat: 0, sodium: 1000, sugar: 5, fiber: 4 } },
+    { id: 3, name: 'Steamfresh Mixed Vegetables', brand: 'Birds Eye', isVegetarian: true, servingSize: '82g (2/3 cup)', image: mixedVegetables, nutrition: { calories: 50, protein: 2, carbs: 11, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 35, sugar: 3, fiber: 3 } },
+    { id: 4, name: 'Combination Pizza Rolls', brand: "Totino's", isVegetarian: false, servingSize: '85g (6 rolls)', image: pizzaRolls, nutrition: { calories: 210, protein: 5, carbs: 26, totalFat: 9, saturatedFat: 2.5, transFat: 0, sodium: 380, sugar: 3, fiber: 1 } },
+    { id: 5, name: "Any'tizers Chicken Nuggets", brand: 'Tyson', isVegetarian: false, servingSize: '84g (5 nuggets)', image: chickenNuggets, nutrition: { calories: 270, protein: 14, carbs: 15, totalFat: 17, saturatedFat: 3.5, transFat: 0, sodium: 470, sugar: 0, fiber: 1 } },
+    { id: 6, name: 'Macaroni & Cheese', brand: "Stouffer's", isVegetarian: true, servingSize: '340g (1 tray)', image: macAndCheese, nutrition: { calories: 490, protein: 21, carbs: 43, totalFat: 26, saturatedFat: 13, transFat: 0, sodium: 1400, sugar: 4, fiber: 2 } },
+    { id: 7, name: 'Steamfresh Broccoli Florets', brand: 'Birds Eye', isVegetarian: true, servingSize: '85g (1 cup)', image: broccoliFlorets, nutrition: { calories: 30, protein: 2, carbs: 4, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 20, sugar: 2, fiber: 2 } },
+    { id: 8, name: 'Golden Crinkle Fries', brand: 'Ore-Ida', isVegetarian: true, servingSize: '84g (3 oz)', image: crinkleFries, nutrition: { calories: 100, protein: 1, carbs: 16, totalFat: 3.5, saturatedFat: 0.5, transFat: 0, sodium: 290, sugar: 0, fiber: 2 } },
+    { id: 9, name: 'Four Cheese Frozen Pizza', brand: 'DiGiorno', isVegetarian: true, servingSize: '140g (1/4 pizza)', image: fourCheesePizza, nutrition: { calories: 310, protein: 13, carbs: 39, totalFat: 11, saturatedFat: 5, transFat: 0, sodium: 730, sugar: 6, fiber: 2 } },
+    { id: 10, name: 'Crunchy Breaded Fish Sticks', brand: "Gorton's", isVegetarian: false, servingSize: '108g (6 sticks)', image: fishSticks, nutrition: { calories: 250, protein: 12, carbs: 21, totalFat: 13, saturatedFat: 3, transFat: 0, sodium: 380, sugar: 2, fiber: 1 } },
+    { id: 11, name: 'Italian Style Meatballs', brand: 'Cooked Perfect', isVegetarian: false, servingSize: '84g (6 meatballs)', image: italianMeatballs, nutrition: { calories: 240, protein: 11, carbs: 5, totalFat: 20, saturatedFat: 9, transFat: 0, sodium: 520, sugar: 2, fiber: 0 } },
+    { id: 12, name: 'Chicken Alfredo Single Serve', brand: "Stouffer's", isVegetarian: false, servingSize: '283g (1 tray)', image: chickenAlfredo, nutrition: { calories: 540, protein: 22, carbs: 52, totalFat: 26, saturatedFat: 12, transFat: 0, sodium: 1170, sugar: 4, fiber: 4 } },
+    { id: 13, name: 'Beef & Bean Burrito', brand: 'El Monterey', isVegetarian: false, servingSize: '142g (1 burrito)', image: beefBeanBurrito, nutrition: { calories: 310, protein: 10, carbs: 39, totalFat: 13, saturatedFat: 4, transFat: 0, sodium: 430, sugar: 1, fiber: 3 } },
     { id: 14, name: 'Veggie Burgers', brand: 'MorningStar Farms', isVegetarian: true, servingSize: '67g', image: null, nutrition: { calories: 110, protein: 9, carbs: 9, totalFat: 4.5, saturatedFat: 0.5, transFat: 0, sodium: 350, sugar: 1, fiber: 3 } },
 { id: 15, name: 'Frozen Sweet Peas', brand: 'Birds Eye', isVegetarian: true, servingSize: '85g', image: null, nutrition: { calories: 70, protein: 4, carbs: 12, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 100, sugar: 4, fiber: 4 } },
 { id: 16, name: 'Meatball Sub', brand: 'Hot Pockets', isVegetarian: false, servingSize: '127g', image: null, nutrition: { calories: 320, protein: 11, carbs: 36, totalFat: 15, saturatedFat: 7, transFat: 0, sodium: 660, sugar: 4, fiber: 2 } }
