@@ -319,6 +319,23 @@ import orangesIn100PercentFruitJuice from '../assets/produce/oranges-in-100-perc
 import organicCoconutFlakes from '../assets/produce/organic-coconut-flakes.jpg';
 import pureVermontMapleSyrup from '../assets/produce/pure-vermont-maple-syrup.jpg';
 import produceGeneric from '../assets/produce.jpg';
+// New Ice Cream Images
+import breyersMintChip from '../assets/icecream/breyers-mint-chip.jpg';
+import saltedCaramelCore from '../assets/icecream/salted-caramel-core.jpg';
+import outshineStrawberry from '../assets/icecream/outshine-strawberry.jpg';
+import cookieDoughIceCream from '../assets/icecream/cookie-dough.jpg';
+import rockyRoadIceCream from '../assets/icecream/rocky-road.jpg';
+import butterPecanIceCream from '../assets/icecream/butter-pecan.jpg';
+import mangoSorbet from '../assets/icecream/mango-sorbet.jpg';
+import neapolitanIceCream from '../assets/icecream/neapolitan.jpg';
+import veggieBurger from '../assets/frozen/veggie-burger.jpg';
+import frozenSweetPeas from '../assets/frozen/sweet-peas.jpg';
+import meatballSub from '../assets/frozen/meatball-sub.jpg';
+import orangeChicken from '../assets/frozen/orange-chicken.jpg';
+import salisburySteak from '../assets/frozen/salisbury-steak.jpg';
+import cornOnTheCob from '../assets/frozen/corn-on-the-cob.jpg';
+import beefShepherdsPie from '../assets/frozen/shepherds-pie.jpg';
+import mozzarellaSticks from '../assets/frozen/mozzarella-sticks.jpg';
 
 // ice-cream image imports (normalized)
 import benAndJerrysCherryGarciaIceCream from '../assets/icecream/ben-and-jerrys-cherry-garcia-ice-cream.jpg';
@@ -721,9 +738,15 @@ const FOOD_ITEMS = {
     { id: 10, name: 'Bananas Foster', brand: 'Häagen-Dazs', isVegetarian: true, servingSize: '102g (1/2 cup)', image: bananasFosterIceCreamYellow, nutrition: { calories: 260, protein: 4, carbs: 31, totalFat: 13, saturatedFat: 8, transFat: 0, sodium: 45, sugar: 25, fiber: 0 } },
     { id: 11, name: 'Fig Mascarpone Gelato', brand: 'Breyers', isVegetarian: true, servingSize: '72g (2/3 cup)', image: balsamicGlazeFigMascarponeicecream, nutrition: { calories: 160, protein: 3, carbs: 22, totalFat: 7, saturatedFat: 4.5, transFat: 0, sodium: 45, sugar: 19, fiber: 0 } },
     { id: 12, name: 'Amaretto Black Cherry Almond', brand: 'Häagen-Dazs', isVegetarian: true, servingSize: '102g (1/2 cup)', image: amarettocherryicecream, nutrition: { calories: 280, protein: 5, carbs: 27, totalFat: 17, saturatedFat: 9, transFat: 0, sodium: 70, sugar: 23, fiber: 1 } },
-    { id: 13, name: 'Mint Chocolate Chip', brand: 'Breyers', isVegetarian: true, servingSize: '66g', image: null, nutrition: { calories: 150, protein: 2, carbs: 18, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 40, sugar: 14, fiber: 0 } },
-{ id: 14, name: 'Salted Caramel Core', brand: "Ben & Jerry's", isVegetarian: true, servingSize: '106g', image: null, nutrition: { calories: 300, protein: 4, carbs: 35, totalFat: 16, saturatedFat: 10, transFat: 0, sodium: 140, sugar: 28, fiber: 0 } },
-{ id: 15, name: 'Strawberry Fruit Bars', brand: 'Outshine', isVegetarian: true, servingSize: '71g', image: null, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 14, fiber: 0 } }
+    { id: 13, name: 'Mint Chocolate Chip', brand: 'Breyers', isVegetarian: true, servingSize: '66g', image: breyersMintChip, nutrition: { calories: 150, protein: 2, carbs: 18, totalFat: 8, saturatedFat: 5, transFat: 0, sodium: 40, sugar: 14, fiber: 0 } },
+    { id: 14, name: 'Salted Caramel Core', brand: "Ben & Jerry's", isVegetarian: true, servingSize: '106g', image: saltedCaramelCore, nutrition: { calories: 300, protein: 4, carbs: 35, totalFat: 16, saturatedFat: 10, transFat: 0, sodium: 140, sugar: 28, fiber: 0 } },
+    { id: 15, name: 'Strawberry Fruit Bars', brand: 'Outshine', isVegetarian: true, servingSize: '71g', image: outshineStrawberry, nutrition: { calories: 60, protein: 0, carbs: 15, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 14, fiber: 0 } },
+    
+    { id: 16, name: 'Chocolate Chip Cookie Dough', brand: "Ben & Jerry's", isVegetarian: true, servingSize: '106g (2/3 cup)', image: cookieDoughIceCream, nutrition: { calories: 280, protein: 4, carbs: 31, totalFat: 16, saturatedFat: 10, transFat: 0, sodium: 75, sugar: 25, fiber: 1 } },
+    { id: 17, name: 'Rocky Road Ice Cream', brand: 'Häagen-Dazs', isVegetarian: true, servingSize: '100g (1/2 cup)', image: rockyRoadIceCream, nutrition: { calories: 290, protein: 4, carbs: 32, totalFat: 17, saturatedFat: 8, transFat: 0, sodium: 65, sugar: 24, fiber: 1 } },
+    { id: 18, name: 'Butter Pecan', brand: 'Breyers', isVegetarian: true, servingSize: '65g (2/3 cup)', image: butterPecanIceCream, nutrition: { calories: 160, protein: 2, carbs: 15, totalFat: 10, saturatedFat: 5, transFat: 0, sodium: 85, sugar: 13, fiber: 0 } },
+    { id: 19, name: 'Mango Sorbet', brand: 'Häagen-Dazs', isVegetarian: true, servingSize: '100g (1/2 cup)', image: mangoSorbet, nutrition: { calories: 150, protein: 0, carbs: 37, totalFat: 0, saturatedFat: 0, transFat: 0, sodium: 0, sugar: 33, fiber: 1 } },
+    { id: 20, name: 'Neapolitan Ice Cream', brand: 'Turkey Hill', isVegetarian: true, servingSize: '66g (1/2 cup)', image: neapolitanIceCream, nutrition: { calories: 140, protein: 2, carbs: 18, totalFat: 7, saturatedFat: 4, transFat: 0, sodium: 50, sugar: 15, fiber: 0 } },
   ],
 
   'frozen-foods': [
